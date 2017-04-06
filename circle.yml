@@ -85,4 +85,5 @@ deployment:
     commands:
       - terminus build-env:merge -n "$TERMINUS_SITE.$TERMINUS_ENV" --yes
       - terminus drush -n $TERMINUS_SITE.dev -- updatedb --yes
+      - terminus drush "$TERMINUS_SITE.dev" -- config-import --yes
       - terminus build-env:delete:pr -n "$TERMINUS_SITE" --yes
