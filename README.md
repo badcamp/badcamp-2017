@@ -50,7 +50,13 @@ $databases['default']['default'] = array (
 ##### Kalabox users
 1. Install "The Box" - http://www.kalabox.io/
 2. Add your Pantheon creds (do the machine token thing)
-3. Add a site - badcamp-2017
-4. Do development stuff... More to come here.
+3. Add a site - badcamp-2017 - dev - Pull Files and Pull Database
+4. You can find out where the code for the site is living by clicking the Actions button/drop-down and Code link or visit it in the Terminal by clicking the Terminal link.
+5. You should add a remote to your git for the github repo (in the code directory for the site).
+```text
+# git remote add github git@github.com:badcamp/badcamp-2017.git
+```
+6. **SUPER IMPORTANT!** Do not click the push link in the Actions drop-down for this site. To give us code you will only go to your command line in the terminal and ```git push github NAME_OF_BRANCH```
+
 #### PR Workflow
 If you want to make a change, you can commit it to an individual branch and the CI will automatically create a Multidev with the same name and push the code there.
