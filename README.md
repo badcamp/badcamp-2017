@@ -41,7 +41,7 @@ $databases['default']['default'] = array (
 );
 ```
 5. Add a .htaccess file to the web directory (need to do this to get to admin paths, etc.). You can just grab this from any other clean Drupal 8 codebase.
-6. On the command line import the configuration using drush **from the web directory**.
+6. On the command line import the configuration using drush **from the web directory**. Remember to do this after you pull from GitHub as well. It gives you the latest config for the site.
 ```text
 #drush cim -y
 ```
@@ -52,3 +52,4 @@ Currently this site's architecture does not play nice with Kalabox. Mike Pirog i
 
 #### PR Workflow
 If you want to make a change, you can commit it to an individual branch and the CI will automatically create a Multidev with the same name and push the code there.
+
