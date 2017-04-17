@@ -25,7 +25,7 @@ mergefields:
   FNAME: 0
   LNAME: 0
 description: ''
-doublein: false
+doublein: true
 send_welcome: null
 include_interest_groups: false
 settings:
@@ -38,5 +38,5 @@ settings:
     FNAME: 0
     LNAME: 0
   description: ''
-  doublein: 0
+  doublein: 1
   include_interest_groups: 0
