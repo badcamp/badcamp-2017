@@ -19,7 +19,7 @@ mc_lists:
   9e1e5e346e: 0
   f2586cbc30: 0
   8560b08cbe: 0
-mode: 3
+mode: 1
 mergefields:
   EMAIL: true
   FNAME: 0
