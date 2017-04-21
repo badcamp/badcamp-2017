@@ -4,9 +4,10 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_drupal_org_username
-    - field.field.user.user.field_subscribe_to_newsletter
+    - field.field.user.user.field_newsletter
     - field.field.user.user.field_volunteer
   module:
+    - mailchimp_lists
     - user
 _core:
   default_config_hash: L2mtwGWH_7wDRCMIR4r_Iu_jmvQ10DV1L8ht8iNZ5qY
@@ -22,15 +23,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_subscribe_to_newsletter:
+  field_newsletter:
     weight: 2
     label: inline
     settings:
-      format: yes-no
-      format_custom_true: ''
-      format_custom_false: ''
+      show_interest_groups: false
     third_party_settings: {  }
-    type: boolean
+    type: mailchimp_lists_subscribe_default
   field_volunteer:
     weight: 3
     label: inline
