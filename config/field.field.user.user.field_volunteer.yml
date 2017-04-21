@@ -1,0 +1,24 @@
+uuid: c33b5855-f719-41aa-b866-ef5d4903f998
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_volunteer
+  module:
+    - user
+id: user.user.field_volunteer
+field_name: field_volunteer
+entity_type: user
+bundle: user
+label: 'I would like to volunteer'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
