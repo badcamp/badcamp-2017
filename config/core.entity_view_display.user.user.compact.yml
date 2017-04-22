@@ -17,5 +17,6 @@ mode: compact
 content: {  }
 hidden:
   field_drupal_org_username: true
+  field_newsletter: true
   field_volunteer: true
   member_for: true
