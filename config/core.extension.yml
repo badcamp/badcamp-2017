@@ -1,5 +1,6 @@
 module:
   automated_cron: 0
+  badcamp_program_details: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -7,12 +8,16 @@ module:
   color: 0
   comment: 0
   config: 0
+  config_update: 0
   contact: 0
   contextual: 0
+  ctools: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  features: 0
+  features_ui: 0
   field: 0
   field_ui: 0
   file: 0
@@ -36,12 +41,14 @@ module:
   system: 0
   taxonomy: 0
   text: 0
+  token: 0
   toolbar: 0
   tour: 0
   update: 0
   user: 0
   views_ui: 0
   menu_link_content: 1
+  pathauto: 1
   views: 10
   standard: 1000
 theme:

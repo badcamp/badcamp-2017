@@ -1,0 +1,22 @@
+uuid: 7c115ad0-1370-47e4-9c46-5f01687ca42c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: basic_page_pathauto_pattern
+label: 'Basic Page Pathauto Pattern'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  3c82e163-1f22-4744-ad3d-c4eaf46d86bc:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 3c82e163-1f22-4744-ad3d-c4eaf46d86bc
+selection_logic: and
+weight: -5
+relationships: {  }
