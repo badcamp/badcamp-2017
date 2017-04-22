@@ -1,0 +1,30 @@
+uuid: 8239acd4-159d-4429-b656-29da301c7031
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.program_dates_and_details
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__program_dates_and_details_block_1
+theme: bartik
+region: content
+weight: -1
+provider: null
+plugin: 'views_block:program_dates_and_details-block_1'
+settings:
+  id: 'views_block:program_dates_and_details-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

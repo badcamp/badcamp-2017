@@ -7,6 +7,10 @@
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/badcamp/badcamp_program_details.git"
     }
   ],
     "require": {
@@ -23,7 +27,8 @@
     "drupal/config_direct_save": "^1.0",
     "drupal/mailchimp": "^1.2",
     "drupal/features": "^3.5",
-    "drupal/pathauto": "^1.0@RC"
+    "drupal/pathauto": "^1.0@RC",
+    "badcamp/badcamp_program_details": "dev-master"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
@@ -42,7 +47,7 @@
   "conflict": {
       "drupal/drupal": "*"
   },
-  "minimum-stability": "alpha",
+  "minimum-stability": "dev",
   "prefer-stable": true,
   "autoload": {
     "classmap": [

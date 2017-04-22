@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fba6c49e0f33726021a0fe5a51ac920e",
+    "content-hash": "e8418c6c8d078aa895af9cced2381f95",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -112,6 +112,29 @@
                 "stack"
             ],
             "time": "2016-08-01T12:05:04+00:00"
+        },
+        {
+            "name": "badcamp/badcamp_program_details",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/badcamp/badcamp_program_details.git",
+                "reference": "fcb6acd5cd55ecf64b5076238e7ec1241b1e3fb6"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides a Feature with content type and view for showing program details. Details include a title (e.g: Summits & Training) and a date.",
+            "homepage": "https://github.com/badcamp/badcamp_program_details",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "issues": "https://github.com/badcamp/badcamp_program_details",
+                "source": "https://github.com/badcamp/badcamp_program_details.git"
+            },
+            "time": "2017-04-22 19:41:37"
         },
         {
             "name": "composer/installers",
@@ -1885,7 +1908,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.0-rc1.zip",
-                "reference": null,
+                "reference": "8.x-1.0-rc1",
                 "shasum": "2460339ac8739317b3c4e66e9ce7142cc02adac3"
             },
             "require": {
@@ -7002,9 +7025,10 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "alpha",
+    "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/pathauto": 5
+        "drupal/pathauto": 5,
+        "badcamp/badcamp_program_details": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

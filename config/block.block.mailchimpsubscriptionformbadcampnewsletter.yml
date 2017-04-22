@@ -10,7 +10,7 @@ dependencies:
 id: mailchimpsubscriptionformbadcampnewsletter
 theme: bartik
 region: content
-weight: -1
+weight: 0
 provider: null
 plugin: 'mailchimp_signup_subscribe_block:badcamp_newsletter'
 settings:
