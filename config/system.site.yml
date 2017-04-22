@@ -1,6 +1,6 @@
 uuid: a92b9b90-4b9b-4b36-96f7-55eb5bdcf510
 name: badcamp-2017
-mail: matt@getpantheon.com
+mail: info@badcamp.net
 slogan: ''
 page:
   403: ''
@@ -12,3 +12,4 @@ langcode: en
 default_langcode: en
 _core:
   default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
+mail_notification: ''
