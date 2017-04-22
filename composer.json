@@ -11,6 +11,10 @@
     {
       "type": "git",
       "url": "https://github.com/badcamp/badcamp_program_details.git"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/badcamp/badcamp_sponsors.git"
     }
   ],
     "require": {
@@ -28,7 +32,8 @@
     "drupal/mailchimp": "^1.2",
     "drupal/features": "^3.5",
     "drupal/pathauto": "^1.0@RC",
-    "badcamp/badcamp_program_details": "dev-master"
+    "badcamp/badcamp_program_details": "dev-master",
+    "badcamp/badcamp_sponsors": "dev-master"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
