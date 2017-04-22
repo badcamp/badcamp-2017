@@ -1,11 +1,11 @@
 uuid: a92b9b90-4b9b-4b36-96f7-55eb5bdcf510
-name: badcamp-2017
+name: 'BADCamp 2017'
 mail: info@badcamp.net
-slogan: ''
+slogan: 'October 18th through October 21st // University of California at Berkeley'
 page:
   403: ''
   404: ''
-  front: /node
+  front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en
