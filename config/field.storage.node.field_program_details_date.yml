@@ -1,0 +1,22 @@
+uuid: 58b264d6-8b6f-4801-a454-cd23daf1c689
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+_core:
+  default_config_hash: caHP-L1djRgeqDzeG2UyJdcbwmHNNG-qxvEMEU6y-aw
+id: node.field_program_details_date
+field_name: field_program_details_date
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
