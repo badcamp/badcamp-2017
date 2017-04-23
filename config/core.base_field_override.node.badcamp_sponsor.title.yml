@@ -1,0 +1,20 @@
+uuid: 87c5ce03-9e5e-436b-9c14-3e3cebec5e60
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.badcamp_sponsor
+_core:
+  default_config_hash: uE4b374w1eAZYaO_YAkny-geZK41rdnxURDAv16MwMc
+id: node.badcamp_sponsor.title
+field_name: title
+entity_type: node
+bundle: badcamp_sponsor
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -119,7 +119,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_program_details.git",
-                "reference": "fcb6acd5cd55ecf64b5076238e7ec1241b1e3fb6"
+                "reference": "a36f9ddab0e54facaa78d1f56c626b6dbdb3bf0d"
             },
             "type": "drupal-module",
             "license": [
@@ -134,7 +134,7 @@
                 "issues": "https://github.com/badcamp/badcamp_program_details",
                 "source": "https://github.com/badcamp/badcamp_program_details.git"
             },
-            "time": "2017-04-22 19:41:37"
+            "time": "2017-04-23 00:28:34"
         },
         {
             "name": "badcamp/badcamp_sponsors",

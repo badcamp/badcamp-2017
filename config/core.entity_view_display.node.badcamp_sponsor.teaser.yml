@@ -1,0 +1,40 @@
+uuid: 49c54165-eb63-4589-b441-3a97377325cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.badcamp_sponsor.body
+    - field.field.node.badcamp_sponsor.field_sponsor_level
+    - field.field.node.badcamp_sponsor.field_sponsor_logo
+    - image.style.thumbnail
+    - node.type.badcamp_sponsor
+  module:
+    - image
+    - text
+    - user
+_core:
+  default_config_hash: IpSA5cxmDAPdlX7z48bQHq2TJFFFtF9FdINRrlgVth4
+id: node.badcamp_sponsor.teaser
+targetEntityType: node
+bundle: badcamp_sponsor
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 400
+    third_party_settings: {  }
+  field_sponsor_logo:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  field_sponsor_level: true
+  links: true

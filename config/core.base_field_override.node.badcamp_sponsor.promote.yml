@@ -1,0 +1,24 @@
+uuid: e8d5f921-9759-49ea-a390-6dce0e4303d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.badcamp_sponsor
+_core:
+  default_config_hash: LvXF8QjmsuFFE_uuB7cQmfa40Ry32410OfFOFoqtCRM
+id: node.badcamp_sponsor.promote
+field_name: promote
+entity_type: node
+bundle: badcamp_sponsor
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

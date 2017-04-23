@@ -1,0 +1,26 @@
+uuid: 93baf0e4-f1ec-41de-a60d-a5704823d72d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_program_details_date
+    - node.type.program_details
+  module:
+    - datetime
+_core:
+  default_config_hash: DiLlz7kMgpDy9Ho-szHXqc9xiBC9Z1TLaBxjLEa35Lk
+id: node.program_details.field_program_details_date
+field_name: field_program_details_date
+entity_type: node
+bundle: program_details
+label: Date
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime
