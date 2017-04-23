@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8418c6c8d078aa895af9cced2381f95",
+    "content-hash": "540d11e15efd3900b150cf883fbe0d09",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -135,6 +135,29 @@
                 "source": "https://github.com/badcamp/badcamp_program_details.git"
             },
             "time": "2017-04-22 19:41:37"
+        },
+        {
+            "name": "badcamp/badcamp_sponsors",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/badcamp/badcamp_sponsors.git",
+                "reference": "93dbce14a712b8b3d2962b44f9bd979d1104b736"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "A Features module that contains all of the configuration related to sponsors.",
+            "homepage": "https://github.com/badcamp/badcamp_sponsors",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "issues": "https://github.com/badcamp/badcamp_sponsors",
+                "source": "https://github.com/badcamp/badcamp_sponsors.git"
+            },
+            "time": "2017-04-22 23:44:08"
         },
         {
             "name": "composer/installers",
@@ -7028,7 +7051,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/pathauto": 5,
-        "badcamp/badcamp_program_details": 20
+        "badcamp/badcamp_program_details": 20,
+        "badcamp/badcamp_sponsors": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
