@@ -1,0 +1,10 @@
+name: BADCamp 2017
+description: A Drupal 8 Theme
+type: theme
+core: 8.x
+libraries:
+  - badcamp2017/global-css
+  - badcamp2017/global-js
+stylesheets-remove:
+  - core/themes/stable/css/views/views.module.css
+  - core/themes/stable/css/system/components/align.module.css
