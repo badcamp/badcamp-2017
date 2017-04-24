@@ -1,0 +1,22 @@
+uuid: 7f81d07f-b781-4d2c-86c9-a0eda5622696
+langcode: en
+status: true
+dependencies:
+  theme:
+    - badcamp2017
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: badcamp2017_local_tasks
+theme: badcamp2017
+region: info
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

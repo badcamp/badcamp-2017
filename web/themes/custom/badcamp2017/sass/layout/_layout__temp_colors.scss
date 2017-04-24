@@ -1,0 +1,54 @@
+$test-color_1: $pale-blue;
+$test-color_2: $dark-blue;
+
+$header-color:   mix($test-color_1, $test-color_2, 0%);
+$menu-color:     mix($test-color_1, $test-color_2, 20%);
+$featured-color: mix($test-color_1, $test-color_2, 40%);
+
+$info-color:     mix($toggler-light, $white, 50%);
+
+$content-color:  mix($white, $white, 80%);
+$footer-color:   mix($test-color_1, $test-color_2, 100%);
+
+
+.section-header {
+  background-color: $header-color;
+  > .section--inner {
+    background-color: desaturate( lighten( $header-color, 10% ), 10%);
+  }
+}
+
+.section-menu {
+  background-color: $menu-extension-color;
+  > .section--inner {
+    background-color: desaturate( lighten( $menu-extension-color, 10% ), 10%);
+  }
+}
+
+.section-featured {
+  background-color: $featured-color;
+  > .section--inner {
+    background-color: desaturate( lighten( $featured-color, 10% ), 10%);
+  }
+}
+
+.section-info {
+  background-color: $info-color;
+  > .section--inner {
+    background-color: desaturate( lighten( $info-color, 10% ), 10%);
+  }
+}
+
+.section-content {
+  background-color: $content-color;
+  > .section--inner {
+    background-color: desaturate( lighten( $content-color, 10% ), 10%);
+  }
+}
+
+.section-footer {
+  background-color: $footer-color;
+  > .section--inner {
+    background-color: desaturate( lighten( $footer-color, 10% ), 10%);
+  }
+}

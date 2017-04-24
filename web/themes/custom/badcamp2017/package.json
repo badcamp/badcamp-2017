@@ -1,0 +1,27 @@
+{
+  "name": "badcamp2017-gulp",
+  "version": "1.0.0",
+  "description": "Gulp dependencies for badcamp2017 theme",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglifyjs": "^0.6.2",
+    "imagemin-pngquant": "^4.2.0",
+    "breakpoint-sass": "2.7.0",
+    "compass-sass-mixins": "0.12.7",
+    "gaze": "^1.1.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-glob": "^1.0.6",
+    "gulp-sourcemaps": "^1.6.0",
+    "normalize-scss": "6.0.0",
+    "susy": "^2.2.12"
+  }
+}

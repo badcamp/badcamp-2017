@@ -1,0 +1,23 @@
+.tabs--primary {
+  margin: 0px;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border: 0px solid;
+}
+
+.tabs.links--inline li {
+  margin-right: .5rem;
+  a {
+    border-radius: .5rem;
+    border: 1px solid #FFFFFF;
+    font-size: .75rem;
+    color: #000000;
+    display: block;
+  }
+}
+
+.messages {
+  margin: .5rem 0;
+  padding: 10px 10px 10px 40px;
+  font-size: .75rem;
+}

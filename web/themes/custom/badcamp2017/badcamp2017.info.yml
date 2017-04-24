@@ -1,0 +1,20 @@
+name: BADCamp 2017
+description: A Drupal 8 Theme
+type: theme
+core: 8.x
+libraries:
+  - badcamp2017/global-css
+  - badcamp2017/global-js
+stylesheets-remove:
+  - core/themes/stable/css/views/views.module.css
+  - core/themes/stable/css/system/components/align.module.css
+regions:
+  header_left: 'Header left'
+  header_right: 'Header right'
+  highlighted: 'Highlighted'
+  info: 'Info'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: 'Footer'
