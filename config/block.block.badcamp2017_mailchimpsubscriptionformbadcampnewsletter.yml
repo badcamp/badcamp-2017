@@ -1,0 +1,26 @@
+uuid: 3f67c092-fd8a-4eb0-9d2c-6e825de041b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - mailchimp_signup
+    - system
+  theme:
+    - badcamp2017
+id: badcamp2017_mailchimpsubscriptionformbadcampnewsletter
+theme: badcamp2017
+region: content
+weight: -2
+provider: null
+plugin: 'mailchimp_signup_subscribe_block:badcamp_newsletter'
+settings:
+  id: 'mailchimp_signup_subscribe_block:badcamp_newsletter'
+  label: 'BADCamp Newsletter'
+  provider: mailchimp_signup
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
