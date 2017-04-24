@@ -1,0 +1,22 @@
+uuid: 6c51f106-a121-45ca-a66d-d1059910161e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - badcamp2017
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: badcamp2017_messages
+theme: badcamp2017
+region: info
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

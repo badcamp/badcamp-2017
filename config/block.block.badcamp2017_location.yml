@@ -1,0 +1,31 @@
+uuid: 0edde015-87f1-47b3-ad22-57990f8edd01
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4f4e7abe-f284-4467-aaa7-0422ebb4c80e'
+  module:
+    - block_content
+    - system
+  theme:
+    - badcamp2017
+id: badcamp2017_location
+theme: badcamp2017
+region: content
+weight: -4
+provider: null
+plugin: 'block_content:4f4e7abe-f284-4467-aaa7-0422ebb4c80e'
+settings:
+  id: 'block_content:4f4e7abe-f284-4467-aaa7-0422ebb4c80e'
+  label: Location
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
