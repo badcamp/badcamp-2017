@@ -1,0 +1,24 @@
+uuid: 0718b6be-dd90-400c-9751-be1db5ff120d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.badcamp_sponsors_view
+  module:
+    - views
+  theme:
+    - badcamp2017
+id: views_block__badcamp_sponsors_view_block_1
+theme: badcamp2017
+region: footer
+weight: 0
+provider: null
+plugin: 'views_block:badcamp_sponsors_view-block_1'
+settings:
+  id: 'views_block:badcamp_sponsors_view-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }
