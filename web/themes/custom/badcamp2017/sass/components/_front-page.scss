@@ -1,0 +1,15 @@
+.section-content.front {
+  .section--inner {
+    background-image: url("../images/homepage-bg-image.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: cover;
+    background-position: top center;
+    > div {
+      padding: 100px 15%;
+    }
+  }
+  p, h1, h2, div {
+    color: white;
+  }
+}

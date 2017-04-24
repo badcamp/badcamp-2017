@@ -1,0 +1,77 @@
+@mixin form-inputs--all {
+  background-color: white;
+  border: 1px solid $mid-grey;
+  display: inline-block;
+  margin: 0 0 1em 0;
+  padding: .4rem .7rem;
+  font-family: $base-font-family;
+  font-size: 1rem;
+  line-height: 1;
+  max-width: 100%;
+}
+
+@mixin form-inputs--textareas {
+  @include form-inputs--all;
+  line-height: 1.4;
+  margin-bottom: 0;
+  max-width: 100%;
+}
+
+@mixin form-inputs--buttons {
+  @include form-inputs--all;
+  // @include heading-font;
+  // font-size: 1.7rem;
+  // background-color: $red;
+  // color: white;
+  // border-width: 0;
+  // padding: .4em .8em;
+}
+
+select,
+input,
+textarea {
+  &:focus {
+    // @include box-shadow(0 0 4px 1px rgba(lighten($orange, 15%), 0.3));
+    // outline: 1px solid lighten($orange, 15%);
+  }
+}
+
+fieldset {
+  margin-left: 0;
+  margin-right: 0;
+  // padding: ($vert-spacing-unit / 2) $horz-spacing-unit $vert-spacing-unit $horz-spacing-unit;
+  // border-color: $light-grey;
+}
+
+legend {
+  // @include font-size(18px);
+  padding: 0 0.8em;
+  color: $mid-grey;
+}
+
+input,
+select {
+  @include form-inputs--all;
+}
+
+.form-textarea-wrapper {
+  margin-bottom: 1em;
+}
+
+textarea {
+  @include form-inputs--textareas;
+}
+
+input[type=submit],
+button {
+  @include form-inputs--buttons;
+}
+
+label {
+  padding:0;
+  margin: 0 0 .5em 0;
+}
+
+.form-item {
+  margin: 0;
+}
