@@ -888,7 +888,11 @@ a.site-slogan {
   font-size: 21px;
 }
 
-.section-content.front .section--inner {
+.section-featured {
+  background-color: transparent;
+}
+
+.section-featured .section--inner {
   background-image: url("../images/homepage-bg-image.jpg");
   background-repeat: no-repeat;
   background-position: 0 center;
@@ -896,12 +900,66 @@ a.site-slogan {
   background-position: top center;
 }
 
-.section-content.front .section--inner > div {
-  padding: 100px 15%;
+.section-featured .section--inner > div {
+  padding: 90px 125px;
 }
 
-.section-content.front p, .section-content.front h1, .section-content.front h2, .section-content.front div {
+.section-featured p, .section-featured h1, .section-featured h2, .section-featured div {
   color: white;
+}
+
+.section-footer .core-sponsors-block {
+  padding: 75px 30px;
+}
+
+.section-footer .core-sponsors-block header h2 {
+  line-height: 1;
+  margin-bottom: 55px;
+}
+
+.section-footer .core-sponsors-block .rows {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-footer .core-sponsors-block .sponsor {
+  display: inline-block;
+}
+
+.section-footer .core-sponsors-block .sponsor a {
+  display: block;
+  padding: 0;
+  margin: 0;
+  background-repeat: no-repeat;
+  height: 130px;
+  text-align: left;
+  text-indent: -999px;
+}
+
+.section-footer .core-sponsors-block .sponsor a.Acquia {
+  background-image: url("../images/acquia-logo.png");
+  width: 350px;
+}
+
+.section-footer .core-sponsors-block .sponsor a.Pantheon {
+  background-image: url("../images/pantheon-logo.png");
+  width: 380px;
+}
+
+.section-footer .core-sponsors-block .sponsor:first-of-type {
+  margin-right: 100px;
+  margin-right: 8%;
+}
+
+.section-footer .core-sponsors-block footer {
+  margin-top: 75px;
+  padding-top: 35px;
+  border-top: 1px solid black;
+  text-align: right;
+}
+
+.section-content.front .section--inner > div {
+  padding: 30px 30px 0 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,17 @@
+.section-featured {
+  background-color: transparent;
+  .section--inner {
+    background-image: url("../images/homepage-bg-image.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    background-size: cover;
+    background-position: top center;
+    > div {
+      padding: 90px 125px;
+    }
+
+  }
+  p, h1, h2, div {
+    color: white;
+  }
+}
