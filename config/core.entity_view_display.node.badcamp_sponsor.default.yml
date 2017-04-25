@@ -4,11 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.badcamp_sponsor.body
+    - field.field.node.badcamp_sponsor.field_link
     - field.field.node.badcamp_sponsor.field_sponsor_level
     - field.field.node.badcamp_sponsor.field_sponsor_logo
     - node.type.badcamp_sponsor
   module:
     - image
+    - link
     - text
     - user
 _core:
@@ -24,6 +26,17 @@ content:
     weight: 101
     settings: {  }
     third_party_settings: {  }
+  field_link:
+    weight: 104
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
   field_sponsor_level:
     weight: 103
     label: above

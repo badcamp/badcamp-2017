@@ -1,0 +1,45 @@
+.section-footer {
+
+  .core-sponsors-block {
+    padding: 75px 30px;
+    header h2 {
+      line-height: 1;
+      margin-bottom: 55px;
+    }
+    .rows {
+      margin: 0 auto;
+      text-align: center;
+    }
+    .sponsor {
+      display: inline-block;
+      a {
+        display: block;
+        padding: 0;
+        margin: 0;
+        background-repeat: no-repeat;
+        height: 130px;
+        text-align: left;
+        text-indent: -999px;
+        &.Acquia {
+          background-image: url("../images/acquia-logo.png");
+          width: 350px;
+        }
+        &.Pantheon {
+          background-image: url("../images/pantheon-logo.png");
+          width: 380px;
+        }
+      }
+      &:first-of-type {
+        margin-right: 100px;
+        margin-right: 8%;
+      }
+    }
+    footer {
+      margin-top: 75px;
+      padding-top: 35px;
+      border-top: 1px solid black;
+      text-align: right;
+    }
+  }
+
+}
