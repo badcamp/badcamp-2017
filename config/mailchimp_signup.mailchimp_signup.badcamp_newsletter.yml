@@ -31,7 +31,7 @@ include_interest_groups: false
 settings:
   path: newsletter/signup
   submit_button: 'Sign Me Up!'
-  confirmation_message: 'You have been successfully subscribed.'
+  confirmation_message: 'Please check your email to confirm your subscription to our newsletter.'
   destination: ''
   mergefields:
     EMAIL: 'O:8:"stdClass":8:{s:3:"tag";s:5:"EMAIL";s:4:"name";s:13:"Email Address";s:4:"type";s:5:"email";s:8:"required";b:1;s:13:"default_value";s:0:"";s:6:"public";b:1;s:13:"display_order";i:1;s:7:"options";O:8:"stdClass":1:{s:4:"size";i:25;}}'

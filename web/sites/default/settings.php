@@ -38,3 +38,18 @@ if (file_exists($local_settings)) {
  * See: tests/installer-features/installer.feature
  */
 $settings['install_profile'] = 'standard';
+
+/**
+ * Load in the api keys from the JSON file in the private files.
+ */
+if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'live') {
+  $json_text = file_get_contents('sites/default/files/private/badcamp_keys.json');
+  $key_data = json_decode($json_text, TRUE);
+  $config['mailchimp.settings']['api_key'] = $key_data['mailchimp_key'];
+}
+else {
+  // We aren't in prod, load a fallback or null key.
+  $json_text = file_get_contents('sites/default/files/private/badcamp_keys.json');
+  $key_data = json_decode($json_text, TRUE);
+  $config['mailchimp.settings']['api_key'] = $key_data['mailchimp_key'];
+}
