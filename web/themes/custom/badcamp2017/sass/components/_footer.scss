@@ -1,10 +1,14 @@
 .section-footer {
 
   .core-sponsors-block {
-    padding: 75px 30px;
-    header h2 {
-      line-height: 1;
-      margin-bottom: 55px;
+    padding: 25px 30px;
+    header {
+      border-top: 1px solid black;
+      padding-top: 55px;
+      h2 {
+        line-height: 1;
+        margin-bottom: 55px;
+      }
     }
     .rows {
       margin: 0 auto;

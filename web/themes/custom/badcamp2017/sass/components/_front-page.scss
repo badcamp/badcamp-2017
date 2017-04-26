@@ -1,7 +1,50 @@
 .section-content.front {
   .section--inner {
     > div {
-      padding: 30px 30px 0 30px;
+      padding: 55px 125px 0 125px;
+    }
+  }
+}
+
+// Home page content blocks.
+#block-badcamp2017-location,
+#block-badcamp2017-views-block-program-dates-and-details-block-1,
+#block-badcamp2017-mailchimpsubscriptionformbadcampnewsletter {
+  margin-bottom: 1.5em;
+}
+
+$form-fontsize: 18px;
+$form-itempadding-v: 8px;
+$form-itempadding-h: $form-itempadding-v * 1.5;
+$form-borderwidth: 1px;
+
+$form-leftpadding: 140px;
+$form-labelpadding-v: $form-itempadding-v + $form-borderwidth;
+$form-itemheight: $form-fontsize + (2 * $form-itempadding-v) + (2 * $form-borderwidth);
+
+form#mailchimp-signup-subscribe-block-badcamp-newsletter-form {
+  font-size: $form-fontsize;
+  .form-item {
+    font-size: $form-fontsize;
+    label {
+      display: block;
+      margin: 0;
+      padding: $form-labelpadding-v 0;
+      line-height: 1;
+      width: $form-leftpadding;
+      float: left;
+      font-size: $form-fontsize;
+    }
+  }
+  input {
+    font-size: $form-fontsize;
+    line-height: 1;
+    padding: $form-itempadding-v $form-itempadding-h;
+    border: $form-borderwidth solid black;
+    margin-bottom: .5em;
+    &[type=submit] {
+      margin-left: $form-leftpadding;
+      font-size: $form-fontsize;
     }
   }
 }
