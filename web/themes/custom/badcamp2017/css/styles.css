@@ -134,11 +134,11 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 
 h2 {
-  font-size: 2.0rem;
+  font-size: 1.75rem;
 }
 
 h3 {
@@ -146,7 +146,7 @@ h3 {
 }
 
 h4 {
-  font-size: 1.0rem;
+  font-size: 1.25rem;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -909,7 +909,12 @@ a.site-slogan {
 }
 
 .section-footer .core-sponsors-block {
-  padding: 75px 30px;
+  padding: 25px 30px;
+}
+
+.section-footer .core-sponsors-block header {
+  border-top: 1px solid black;
+  padding-top: 55px;
 }
 
 .section-footer .core-sponsors-block header h2 {
@@ -959,7 +964,48 @@ a.site-slogan {
 }
 
 .section-content.front .section--inner > div {
-  padding: 30px 30px 0 30px;
+  padding: 55px 125px 0 125px;
+}
+
+#section-info {
+  display: none;
+}
+
+#block-badcamp2017-location,
+#block-badcamp2017-views-block-program-dates-and-details-block-1,
+#block-badcamp2017-mailchimpsubscriptionformbadcampnewsletter {
+  margin-bottom: 1.5em;
+}
+
+form#mailchimp-signup-subscribe-block-badcamp-newsletter-form {
+  font-size: 18px;
+}
+
+form#mailchimp-signup-subscribe-block-badcamp-newsletter-form .form-item {
+  font-size: 18px;
+}
+
+form#mailchimp-signup-subscribe-block-badcamp-newsletter-form .form-item label {
+  display: block;
+  margin: 0;
+  padding: 9px 0;
+  line-height: 1;
+  width: 140px;
+  float: left;
+  font-size: 18px;
+}
+
+form#mailchimp-signup-subscribe-block-badcamp-newsletter-form input {
+  font-size: 18px;
+  line-height: 1;
+  padding: 8px 12px;
+  border: 1px solid black;
+  margin-bottom: .5em;
+}
+
+form#mailchimp-signup-subscribe-block-badcamp-newsletter-form input[type=submit] {
+  margin-left: 140px;
+  font-size: 18px;
 }
 
 /*# sourceMappingURL=styles.css.map */
