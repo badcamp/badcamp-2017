@@ -1,4 +1,4 @@
-uuid: b35f24a7-3c51-4e1b-8bae-41e95bdc92d8
+uuid: b5bd1090-5b99-4b53-8c28-45664860fa8d
 langcode: en
 status: true
 dependencies:
@@ -6,22 +6,20 @@ dependencies:
     - system
   theme:
     - badcamp2017
-_core:
-  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
-id: badcamp2017_content
+id: mainpagecontent
 theme: badcamp2017
-region: content
-weight: -5
+region: highlighted
+weight: -7
 provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: 'Main page content (hidden on home page)'
+  label: 'Main page content (home page only)'
   provider: system
   label_display: '0'
 visibility:
   request_path:
     id: request_path
     pages: '<front>'
-    negate: true
+    negate: false
     context_mapping: {  }
