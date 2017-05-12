@@ -12,7 +12,7 @@ switch($slack_type) {
     $slack_agent = 'CircleCI';
     $slack_icon = 'http://live-drupalcon-github-magic.pantheonsite.io/sites/default/files/icons/circle.png';
     $slack_color = '#229922';
-    $slack_message = 'New code is detected on GitHub! Kicking off a new build - 'https://circleci.com/gh/badcamp/badcamp-2017/' . $argv[2];
+    $slack_message = 'New code is detected on GitHub! Kicking off a new build - https://circleci.com/gh/badcamp/badcamp-2017/' . $argv[2];
     _slack_tell( $slack_message, $slack_channel, $slack_agent, $slack_icon, $slack_color);
     break;
   case 'pantheon_merge':
