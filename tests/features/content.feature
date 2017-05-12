@@ -60,9 +60,12 @@ Feature: Content
   @api
   Scenario: Login as a user created during this scenario
     Given users:
-    | name      | status | mail             |
-    | Test user |      1 | test@example.com |
-    When I am logged in as "Test user"
+    | name      | status | mail             | roles        |
+    # Behat extension checks if a user is logged in by looking for a log out
+    # button. Currently authenticated users don't have a log out button, so we
+    # need to give them the admin role, so they get the button from the toolbar.
+    | Testuser |      1 | test@example.com  | administrator|
+    When I am logged in as "Testuser"
     Then I should see the link "Log out"
 
 # Similarly, 'When I am viewing a ... term' also uses bad characters.
@@ -93,7 +96,7 @@ Feature: Content
     | title          | author   | promote |
     | Article by Joe | Joe User | 1       |
     When I am logged in as a user with the "administrator" role
-    And I am on the homepage
+    And I am on "admin/content"
     Then I should see the link "Article by Joe"
     When I follow "Article by Joe"
     Then I should see the text "Article by Joe"
