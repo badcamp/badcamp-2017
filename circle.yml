@@ -39,6 +39,7 @@ dependencies:
     - ~/.composer/cache
   pre:
     - echo "Begin build for $CIRCLE_ENV${PR_ENV:+ for }$PR_ENV. Pantheon test environment is $TERMINUS_SITE.$TERMINUS_ENV"
+    - php -f scripts/slack/slack_notify.php circle_start "${CIRCLE_BUILD_NUM}" "${TERMINUS_SITE}.${TERMINUS_ENV}"
     - |
       if [ -n "$GITHUB_TOKEN" ] ; then
         composer config --global github-oauth.github.com $GITHUB_TOKEN
@@ -46,16 +47,14 @@ dependencies:
     - git config --global user.email "$GIT_EMAIL"
     - git config --global user.name "Circle CI"
   override:
-    - composer global require -n "hirak/prestissimo:^0.3"
-    - composer global require -n "consolidation/cgr"
-    - cgr "pantheon-systems/terminus:^1"
-    - terminus --version
-    - cgr "drush/drush:~8"
+    - composer global require "pantheon-systems/terminus:^1"
+    - composer global require "drush/drush:~8"
     - mkdir -p ~/.terminus/plugins
     - composer create-project -n -d ~/.terminus/plugins pantheon-systems/terminus-build-tools-plugin:^1
     - composer create-project -n -d ~/.terminus/plugins pantheon-systems/terminus-secrets-plugin:^1
   post:
     - terminus auth:login -n --machine-token="$TERMINUS_TOKEN"
+    - php -f scripts/slack/slack_notify.php pantheon_create "${TERMINUS_ENV}" "${BRANCH}"
     - terminus build-env:delete:ci -n "$TERMINUS_SITE" --keep=2 --yes
     - composer -n build-assets
     - terminus env:wake -n "$TERMINUS_SITE.dev"
@@ -85,6 +84,7 @@ deployment:
   build-assets:
     branch: master
     commands:
+      - php -f scripts/slack/slack_notify.php pantheon_merge "${TERMINUS_ENV}" "${BRANCH}"
       - terminus build-env:merge -n "$TERMINUS_SITE.$TERMINUS_ENV" --yes
       - terminus drush -n $TERMINUS_SITE.$TERMINUS_ENV -- updatedb --yes
       - terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" -- config-import --yes
