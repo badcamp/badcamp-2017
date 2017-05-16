@@ -247,4 +247,14 @@ class FeatureContext extends RawDrupalContext implements Context, SnippetAccepti
         $html = preg_replace('#\</title\>.*\</head\>#sU', '</title></head>', $html);
         return $html;
     }
+
+    /**
+     * @AfterFeature @removeNewUser
+     */
+    public static function removeNewUser(){
+      $user = user_load_by_mail('joe@joesmith.com');
+      user_delete($user->id());
+      echo "Deleted test users";
+    }
+
 }

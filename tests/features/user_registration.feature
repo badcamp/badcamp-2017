@@ -20,6 +20,7 @@ Feature: User Registration
     And I press the "Create new account" button
     Then I should see the text "A welcome message with further instructions has been sent to your email address."
 
+  @removeNewUser
   Scenario: Confirm user cannot sign up more then once
     When I fill in "Email address" with "joe@joesmith.com"
     And I fill in "Username" with "smithyboy143"
