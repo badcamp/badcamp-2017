@@ -1,3 +1,4 @@
+@drush @deleteUser
 Feature: User Registration
   In order to test so basic user registration functionality
   As an anonymous user
@@ -20,7 +21,6 @@ Feature: User Registration
     And I press the "Create new account" button
     Then I should see the text "A welcome message with further instructions has been sent to your email address."
 
-  @removeNewUser
   Scenario: Confirm user cannot sign up more then once
     When I fill in "Email address" with "joe@joesmith.com"
     And I fill in "Username" with "smithyboy143"
@@ -30,3 +30,11 @@ Feature: User Registration
     And I select "America/Los Angeles" from "Time zone"
     And I press the "Create new account" button
     Then I should see the text "The username smithyboy143 is already taken."
+
+  @setNewUserPassword @cleanUp
+  Scenario: Confirm newly registered user can login
+    And I am on "/user/login"
+    When I fill in "Username" with "smithyboy143"
+    And I fill in "Password" with "mysecretpassword"
+    And I press the "Log in" button
+    Then I should see the text "Member for"

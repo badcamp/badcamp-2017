@@ -249,12 +249,19 @@ class FeatureContext extends RawDrupalContext implements Context, SnippetAccepti
     }
 
     /**
-     * @AfterFeature @removeNewUser
+     * @BeforeScenario @setNewUserPassword
      */
-    public static function removeNewUser(){
-      $user = user_load_by_mail('joe@joesmith.com');
-      user_delete($user->id());
-      echo "Deleted test users";
+    public function setNewUserPassword()
+    {
+      $output = $this->getDriver('drush')->upwd('--password="mysecretpassword"','smithyboy143');
+      echo $output;
     }
 
+    /**
+     * @AfterScenario @cleanUp
+     */
+    public function cleanUp()
+    {
+      $this->users[] = (object)array('name' => 'smithyboy143');
+    }
 }
