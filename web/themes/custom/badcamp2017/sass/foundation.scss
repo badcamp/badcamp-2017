@@ -2,3 +2,9 @@
 @import "../node_modules/foundation-sites/scss/foundation";
 
 @include foundation-everything();
+
+.path-frontpage {
+  #zone-highlighted {
+    background-image: url('../images/homepage-bg-image.jpg');
+  }
+}
