@@ -10,9 +10,11 @@
     </div>
   </div>
 
-  <main role="main">
-    {{ page.content }}
-    {{ page.info }}
+  <main role="main" class="row">
+    <div class="columns small-12">
+      {{ page.content }}
+      {{ page.info }}
+    </div>
   </main>
 
   {% if page.footer %}

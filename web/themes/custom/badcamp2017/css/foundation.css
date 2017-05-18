@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto");
 /**
  * Foundation for Sites by ZURB
  * Version 6.3.1
@@ -493,7 +493,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fefefe;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #0a0a0a;
@@ -1706,7 +1706,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   color: inherit;
@@ -5241,8 +5241,51 @@ a.thumbnail image {
   clear: both;
 }
 
+/*
+ * Styles for the header.
+ * COWBOY THEMING, WATCH OUT!
+ */
+#block-badcamp2017-branding {
+  margin: 30px 0;
+}
+
+a.site-logo {
+  float: left;
+  margin-right: 20px;
+}
+
+a.site-name {
+  display: block;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: #222222;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2em;
+  letter-spacing: 4px;
+}
+
+a.site-slogan {
+  display: block;
+  font-size: 18px;
+  color: #222222;
+  line-height: 26px;
+  letter-spacing: normal;
+}
+
 .path-frontpage #zone-highlighted {
   background-image: url("../images/homepage-bg-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+
+.path-frontpage #zone-highlighted > div {
+  padding: 90px 125px;
+}
+
+#zone-highlighted p, #zone-highlighted h1, #zone-highlighted h2, #zone-highlighted div {
+  color: white;
 }
 
 /*# sourceMappingURL=foundation.css.map */

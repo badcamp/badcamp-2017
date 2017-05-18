@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto');
 @import "../node_modules/foundation-sites/scss/foundation";
-
+@import "variables";
 @include foundation-everything();
 
-.path-frontpage {
-  #zone-highlighted {
-    background-image: url('../images/homepage-bg-image.jpg');
-  }
-}
+@import "components/header";
+@import "components/featured";
