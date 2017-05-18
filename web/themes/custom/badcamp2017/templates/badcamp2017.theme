@@ -1,0 +1,5 @@
+<?php
+
+function badcamp2017_theme_suggestions_user_alter(&$suggestions, $vars) {
+  // TODO.
+}
