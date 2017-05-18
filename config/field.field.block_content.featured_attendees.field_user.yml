@@ -1,0 +1,28 @@
+uuid: 2137a531-4ec7-45f2-b416-73ba165d062d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_attendees
+    - field.storage.block_content.field_user
+id: block_content.featured_attendees.field_user
+field_name: field_user
+entity_type: block_content
+bundle: featured_attendees
+label: User
+description: 'Users who will appear as featured attendees.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

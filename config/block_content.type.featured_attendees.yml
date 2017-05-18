@@ -1,0 +1,8 @@
+uuid: 68216967-45bd-44cf-b29b-91405cd57df3
+langcode: en
+status: true
+dependencies: {  }
+id: featured_attendees
+label: 'Featured Attendees'
+revision: 0
+description: 'Slideshow of featured attendees'

@@ -1,0 +1,30 @@
+uuid: b0ba0620-a864-4a3d-8650-4eec49387052
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.featured_attendees
+    - field.field.block_content.featured_attendees.field_user
+id: block_content.featured_attendees.default
+targetEntityType: block_content
+bundle: featured_attendees
+mode: default
+content:
+  field_user:
+    weight: 27
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
