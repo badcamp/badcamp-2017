@@ -1,0 +1,33 @@
+uuid: fd1e41ac-4dcb-452f-82f4-40cbeb3b3323
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.at_a_glance
+    - field.field.block_content.at_a_glance.body
+    - field.field.block_content.at_a_glance.field_quick_links
+  module:
+    - entity_reference_revisions
+    - text
+id: block_content.at_a_glance.default
+targetEntityType: block_content
+bundle: at_a_glance
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_quick_links:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

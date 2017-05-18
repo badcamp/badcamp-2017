@@ -1,0 +1,7 @@
+uuid: 5d475767-8cab-4773-a287-d7a795abd9ec
+langcode: en
+status: true
+dependencies: {  }
+id: quick_links
+label: 'Quick Links'
+behavior_plugins: {  }

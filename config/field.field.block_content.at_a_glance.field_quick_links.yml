@@ -1,0 +1,30 @@
+uuid: 5cd7435d-9d24-4d44-9a31-8f273c0d5c37
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.at_a_glance
+    - field.storage.block_content.field_quick_links
+    - paragraphs.paragraphs_type.quick_links
+  module:
+    - entity_reference_revisions
+id: block_content.at_a_glance.field_quick_links
+field_name: field_quick_links
+entity_type: block_content
+bundle: at_a_glance
+label: 'Quick Links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      quick_links: quick_links
+    target_bundles_drag_drop:
+      quick_links:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

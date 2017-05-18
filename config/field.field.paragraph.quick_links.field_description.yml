@@ -1,0 +1,21 @@
+uuid: 3813b7ab-492d-4533-bc7e-774f7db4963c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.quick_links
+  module:
+    - text
+id: paragraph.quick_links.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: quick_links
+label: Description
+description: 'Brief description of what the quick link is for.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

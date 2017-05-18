@@ -1,0 +1,46 @@
+uuid: 93baa8aa-2dcf-4c6a-b54e-563c2180280d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.at_a_glance
+    - field.field.block_content.at_a_glance.body
+    - field.field.block_content.at_a_glance.field_quick_links
+  module:
+    - paragraphs
+    - text
+id: block_content.at_a_glance.default
+targetEntityType: block_content
+bundle: at_a_glance
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_quick_links:
+    type: entity_reference_paragraphs
+    weight: 27
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

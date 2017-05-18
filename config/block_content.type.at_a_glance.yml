@@ -1,0 +1,8 @@
+uuid: 1bc5faf5-d28b-453e-af3e-71cd4713496b
+langcode: en
+status: true
+dependencies: {  }
+id: at_a_glance
+label: 'At a Glance'
+revision: 0
+description: 'Collection of quick links to other sections of the site.'
