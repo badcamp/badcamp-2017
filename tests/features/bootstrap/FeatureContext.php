@@ -247,4 +247,23 @@ class FeatureContext extends RawDrupalContext implements Context, SnippetAccepti
         $html = preg_replace('#\</title\>.*\</head\>#sU', '</title></head>', $html);
         return $html;
     }
+
+    /**
+     * Reference: http://neverstopbuilding.com/simple-method-for-checking-for-order-with-behat
+     * @Then /^"([^"]*)" should precede "([^"]*)" for the query "([^"]*)"$/
+     */
+    public function shouldPrecedeForTheQuery($textBefore, $textAfter, $cssQuery)
+    {
+      $items = array_map(
+        function ($element) {
+          return $element->getText();
+        },
+        $this->getPage()->findAll('css', $cssQuery)
+      );
+      assertGreaterThan(
+        array_search($textBefore, $items),
+        array_search($textAfter, $items),
+        "$textBefore does not proceed $textAfter"
+      );
+    }
 }
