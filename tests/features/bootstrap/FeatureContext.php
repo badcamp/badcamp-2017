@@ -7,6 +7,7 @@ use Drupal\DrupalExtension\Context\MinkContext;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
 use Behat\Behat\Hook\Scope\AfterStepScope;
+use PHPUnit_Framework_Assert;
 
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 
@@ -258,9 +259,9 @@ class FeatureContext extends RawDrupalContext implements Context, SnippetAccepti
         function ($element) {
           return $element->getText();
         },
-        $this->getPage()->findAll('css', $cssQuery)
+        $this->getSession()->getPage()->findAll('css', $cssQuery)
       );
-      assertGreaterThan(
+      PHPUnit_Framework_Assert::assertGreaterThan(
         array_search($textBefore, $items),
         array_search($textAfter, $items),
         "$textBefore does not proceed $textAfter"
