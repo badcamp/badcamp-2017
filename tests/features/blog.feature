@@ -51,7 +51,10 @@ Feature: Blog Testing
 
   @api
   Scenario: Confirm a general authenticated user cannot create Blog posts
-    Given I am logged in as a user with the "authenticate user" role
+    Given users:
+      | name      | status | mail             | role |
+      | Test user |      1 | test@example.com | Authenticated user |
+    When I am logged in as "Test user"
     And I am on "/node/add/blog"
     Then I should see the text "Access Denied"
 
