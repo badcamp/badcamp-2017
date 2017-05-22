@@ -9,6 +9,7 @@ dependencies:
     - field.field.user.user.field_last_name
     - field.field.user.user.field_newsletter
     - field.field.user.user.field_organization
+    - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
   module:
     - mailchimp_lists
@@ -26,7 +27,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_drupal_org_username:
-    weight: 3
+    weight: 5
     settings:
       size: 60
       placeholder: ''
@@ -40,7 +41,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_interests:
-    weight: 5
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
@@ -55,11 +56,18 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_newsletter:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: mailchimp_lists_select
   field_organization:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_title:
     weight: 4
     settings:
       size: 60
@@ -67,18 +75,18 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_volunteer:
-    weight: 7
+    weight: 8
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
   path:
     type: path
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 8
+    weight: 9
     settings: {  }
     third_party_settings: {  }
 hidden:

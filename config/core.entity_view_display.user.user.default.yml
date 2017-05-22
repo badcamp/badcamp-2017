@@ -9,6 +9,7 @@ dependencies:
     - field.field.user.user.field_last_name
     - field.field.user.user.field_newsletter
     - field.field.user.user.field_organization
+    - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
   module:
     - mailchimp_lists
@@ -21,41 +22,48 @@ bundle: user
 mode: default
 content:
   field_drupal_org_username:
-    weight: 1
+    weight: 5
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_first_name:
-    weight: 2
+    weight: 1
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_interests:
-    weight: 5
+    weight: 6
     label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
   field_last_name:
-    weight: 3
+    weight: 2
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_newsletter:
-    weight: 6
+    weight: 7
     label: inline
     settings:
       show_interest_groups: false
     third_party_settings: {  }
     type: mailchimp_lists_subscribe_default
   field_organization:
+    weight: 3
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_title:
     weight: 4
     label: inline
     settings:
@@ -63,7 +71,7 @@ content:
     third_party_settings: {  }
     type: string
   field_volunteer:
-    weight: 7
+    weight: 8
     label: inline
     settings:
       format: yes-no
