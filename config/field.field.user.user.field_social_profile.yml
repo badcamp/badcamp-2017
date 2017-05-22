@@ -1,0 +1,21 @@
+uuid: aef36953-bcaa-4b72-ac89-21360f8c0598
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_social_profile
+  module:
+    - social_profile_field
+    - user
+id: user.user.field_social_profile
+field_name: field_social_profile
+entity_type: user
+bundle: user
+label: 'Social Profiles'
+description: 'Facebook, Twitter, and others.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: social_profile_url

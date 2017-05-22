@@ -9,11 +9,13 @@ dependencies:
     - field.field.user.user.field_last_name
     - field.field.user.user.field_newsletter
     - field.field.user.user.field_organization
+    - field.field.user.user.field_social_profile
     - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
   module:
     - mailchimp_lists
     - path
+    - social_profile_field
     - user
 _core:
   default_config_hash: LLAieeozVsoZDb-2PbFxRJpQqnKmpR7-4OoRJnduz-U
@@ -41,7 +43,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_interests:
-    weight: 6
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
@@ -56,7 +58,7 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_newsletter:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: mailchimp_lists_select
@@ -67,6 +69,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_social_profile:
+    weight: 6
+    settings:
+      placeholder: 'Put your social profile url'
+      size: 60
+    third_party_settings: {  }
+    type: social_profile_field_default
   field_title:
     weight: 4
     settings:
@@ -75,18 +84,18 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_volunteer:
-    weight: 8
+    weight: 9
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
   path:
     type: path
-    weight: 10
+    weight: 11
     settings: {  }
     third_party_settings: {  }
   timezone:
-    weight: 9
+    weight: 10
     settings: {  }
     third_party_settings: {  }
 hidden:

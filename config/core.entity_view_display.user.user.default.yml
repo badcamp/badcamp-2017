@@ -9,10 +9,12 @@ dependencies:
     - field.field.user.user.field_last_name
     - field.field.user.user.field_newsletter
     - field.field.user.user.field_organization
+    - field.field.user.user.field_social_profile
     - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
   module:
     - mailchimp_lists
+    - social_profile_field
     - user
 _core:
   default_config_hash: L2mtwGWH_7wDRCMIR4r_Iu_jmvQ10DV1L8ht8iNZ5qY
@@ -36,7 +38,7 @@ content:
     third_party_settings: {  }
     type: string
   field_interests:
-    weight: 6
+    weight: 7
     label: inline
     settings:
       link: true
@@ -50,7 +52,7 @@ content:
     third_party_settings: {  }
     type: string
   field_newsletter:
-    weight: 7
+    weight: 8
     label: inline
     settings:
       show_interest_groups: false
@@ -63,6 +65,13 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_social_profile:
+    weight: 6
+    label: inline
+    settings:
+      icons_show: '1'
+    third_party_settings: {  }
+    type: social_profile_field_default
   field_title:
     weight: 4
     label: inline
@@ -71,7 +80,7 @@ content:
     third_party_settings: {  }
     type: string
   field_volunteer:
-    weight: 8
+    weight: 9
     label: inline
     settings:
       format: yes-no
