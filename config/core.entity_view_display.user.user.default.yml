@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_bio
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_first_name
     - field.field.user.user.field_interests
@@ -23,6 +24,12 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_bio:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
   field_drupal_org_username:
     weight: 5
     label: inline
@@ -38,7 +45,7 @@ content:
     third_party_settings: {  }
     type: string
   field_interests:
-    weight: 7
+    weight: 8
     label: inline
     settings:
       link: true
@@ -52,7 +59,7 @@ content:
     third_party_settings: {  }
     type: string
   field_newsletter:
-    weight: 8
+    weight: 9
     label: inline
     settings:
       show_interest_groups: false
@@ -80,7 +87,7 @@ content:
     third_party_settings: {  }
     type: string
   field_volunteer:
-    weight: 9
+    weight: 10
     label: inline
     settings:
       format: yes-no
