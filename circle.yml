@@ -101,8 +101,8 @@ database:
     - cp scripts/circleci/settings.local.php webs/sites/default/
 test:
   pre:
-    - cd web && drush run-server 127.0.0.1
-        background: true
+    - drush --root="web" run-server 127.0.0.1:
+       background: true
   override:
     - curl -i http://badcamp.local
 #     - run-behat
