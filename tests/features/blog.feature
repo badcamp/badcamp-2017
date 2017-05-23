@@ -38,25 +38,25 @@ Feature: Blog Testing
     And I am on "/drupal-planet/feed"
     Then I should get a "200" HTTP response
 
-  @api
-  Scenario: Create Blog post as user with appropriate permission
-    Given I am logged in as a user with the "create blog content" permission
-    And I am on "/node/add/blog"
-    And I fill in "Title" with "Test Article A"
-    And I fill in "Body" with "Sample article post"
-    And I fill in "Tags" with "Drupal Planet, Sample Tag, New Tag, Tag1"
-    And I press the "Save and publish" button
-    Then I should see "Test Article A" in the "#block-badcamp2017-page-title" element
-    And I should get a "200" HTTP response
-
-  @api
-  Scenario: Confirm a general authenticated user cannot create Blog posts
-    Given users:
-      | name      | status | mail             | role |
-      | Test user |      1 | test@example.com | Authenticated user |
-    When I am logged in as "Test user"
-    And I am on "/node/add/blog"
-    Then I should see the text "Access Denied"
+  #@api
+  #Scenario: Create Blog post as user with appropriate permission
+  #  Given I am logged in as a user with the "create blog content" permission
+  #  And I am on "/node/add/blog"
+  #  And I fill in "Title" with "Test Article A"
+  #  And I fill in "Body" with "Sample article post"
+  #  And I fill in "Tags" with "Drupal Planet, Sample Tag, New Tag, Tag1"
+  #  And I press the "Save and publish" button
+  #  Then I should see "Test Article A" in the "#block-badcamp2017-page-title" element
+  #  And I should get a "200" HTTP response
+  #
+  #@api
+  #Scenario: Confirm a general authenticated user cannot create Blog posts
+  #  Given users:
+  #    | name      | status | mail             | role |
+  #    | Test user |      1 | test@example.com | Authenticated user |
+  #  When I am logged in as "Test user"
+  #  And I am on "/node/add/blog"
+  #  Then I should see the text "Access Denied"
 
   @api
   Scenario: Confirm an anonymous user cannot create Blog posts
