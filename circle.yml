@@ -39,7 +39,8 @@ machine:
 dependencies:
   cache_directories:
     - ~/.composer/cache
-  pre:
+  pre
+    - composer clear-cache
     #- echo "Begin build for $CIRCLE_ENV${PR_ENV:+ for }$PR_ENV. Pantheon test environment is $TERMINUS_SITE.$TERMINUS_ENV"
     #- php -f scripts/slack/slack_notify.php circle_start "${CIRCLE_BUILD_NUM}" "${TERMINUS_SITE}.${TERMINUS_ENV}"
     - |
