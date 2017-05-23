@@ -73,12 +73,12 @@ dependencies:
     #- php -f scripts/slack/slack_notify.php pantheon_create "${TERMINUS_ENV}" "${BRANCH}"
     #- terminus build-env:delete:ci -n "$TERMINUS_SITE" --keep=2 --yes
     - composer -n build-assets
+    - terminus env:wake -n "$TERMINUS_SITE.dev"
     - |
-      DBINFO=`terminus connection:info "$TERMINUS_SITE.$TERMINUS_ENV" --field="MySQL Command"` && 
+      DBINFO=`terminus connection:info "$TERMINUS_SITE.dev" --field="MySQL Command"` && 
       DUMP=${DBINFO/mysql /mysqldump } &&
       eval $DUMP " --result-file=/tmp/database.sql"
-    #- terminus env:wake -n "$TERMINUS_SITE.dev"
-    #- terminus build-env:create -n "$TERMINUS_SITE.dev" "$TERMINUS_ENV" --yes $CLONE_CONTENT_FLAG --notify="$NOTIFY"
+   #- terminus build-env:create -n "$TERMINUS_SITE.dev" "$TERMINUS_ENV" --yes $CLONE_CONTENT_FLAG --notify="$NOTIFY"
     #- |
     #  if [ -n "$CLONE_CONTENT" ] ; then
     #    # Re-import configuration if exported configuration exists in config directory.
