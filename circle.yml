@@ -74,7 +74,7 @@ dependencies:
     #- terminus build-env:delete:ci -n "$TERMINUS_SITE" --keep=2 --yes
     - composer -n build-assets
     - |
-      DBINFO=`terminus connection:info kent-school-d7.dev --field="MySQL Command"` && 
+      DBINFO=`terminus connection:info "$TERMINUS_SITE.$TERMINUS_ENV" --field="MySQL Command"` && 
       DUMP=${DBINFO/mysql /mysqldump } &&
       eval $DUMP " --result-file=/tmp/database.sql"
     #- terminus env:wake -n "$TERMINUS_SITE.dev"
