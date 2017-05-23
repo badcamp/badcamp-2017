@@ -98,7 +98,7 @@ database:
   override:
     - mysql -u ubuntu circle_test < /tmp/database.sql
   post:
-    - cp scripts/circleci/settings.local.php webs/sites/default/
+    - cp scripts/circleci/settings.local.php web/sites/default/
 test:
   pre:
     - drush --root="web" run-server 127.0.0.1:
