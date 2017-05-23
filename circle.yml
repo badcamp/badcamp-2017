@@ -101,10 +101,10 @@ database:
     - cp scripts/circleci/settings.local.php web/sites/default/
 test:
   pre:
-    - drush --root="web" run-server 127.0.0.1:
+    - drush --root="web" run-server 8080:
        background: true
   override:
-    - curl -i http://badcamp.local
+    - curl -i http://127.0.0.1:8080
 #     - run-behat
 #  post:
 #    - terminus secrets:set -n "$TERMINUS_SITE.$TERMINUS_ENV" token "$GITHUB_TOKEN" --file='github-secrets.json' --clear --skip-if-empty
