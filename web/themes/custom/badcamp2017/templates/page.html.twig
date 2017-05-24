@@ -1,53 +1,29 @@
 <div class="layout--layoutPage">
+  <header class="row">
+    <div class="column small-12">{{ page.header_left }}</div>
+    {# @todo: Restore the right side of the header when we reimplement the design. #}
+    {#<div class="column small-6">{{ page.header_right }}</div>#}
+  </header>
 
-  <section id="section-header" class="section section-header">
-    <div class="section-header--inner section--inner">
-      {{ page.header_left }}
-      {{ page.header_right }}
+  <div class="row" id="zone-highlighted">
+    <div class="columns small-collapse">
+      {{ page.highlighted }}
     </div>
-  </section>{# /.section.section-header #}
+  </div>
 
-  <section id="section-menu" class="section section-menu">
-    <div class="section-menu--inner section--inner">
-      <div id="zone-menu-wrapper" class="zone-wrapper zone-menu-wrapper clearfix">
-        <div id="zone-menu" class="zone zone-menu clearfix">
-            {{ page.primary_menu }}
-            {{ page.secondary_menu }}
-        </div>
-      </div>
-    </div>{# /.section-menu--inner.section--inner #}
-  </section>
+  <main role="main" class="row">
+    <div class="columns small-push-1 small-10">
+      {{ page.content }}
+      {{ page.info }}
+    </div>
+  </main>
 
-  <section id="section-featured" class="section section-featured">
-    <div class="section-featured--inner section--inner">
-      <div id="zone-featured-wrapper" class="zone-wrapper zone-featured-wrapper clearfix">
-        <div id="zone-featured" class="zone zone-featured clearfix">
-            {{ page.highlighted }}
-        </div>
-      </div>
-    </div>{# /.section-featured--inner.section--inner #}
-  </section>
-
-  <section id="section-info" class="section section-info">
-    <div class="section-info--inner section--inner">
-      <div id="zone-info-wrapper" class="zone-wrapper zone-info-wrapper clearfix">
-        <div id="zone-info" class="zone zone-info clearfix">
-            {{ page.info }}
-        </div>
-      </div>
-    </div>{# /.section-info--inner.section--inner #}
-  </section>
-
-  <section id="section-content" class="section section-content">
-    <div class="section-content--inner section--inner">
-        {{ page.content }}
-    </div>{# /.section-content--inner.section--inner #}
-  </section>
-
-  <section id="section-footer" class="section section-footer">
-    <div class="section-footer--inner section--inner">
+  {% if page.footer %}
+    <footer role="contentinfo" class="row">
+      <div class="columns small-12">
         {{ page.footer }}
-    </div>
-  </section>
+      </div>
+    </footer>
+  {% endif %}
 
 </div>{# /.layout--layoutPage #}
