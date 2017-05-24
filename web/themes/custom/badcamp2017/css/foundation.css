@@ -5288,6 +5288,10 @@ a.site-slogan {
   color: white;
 }
 
+/**
+ * NB: This was left for now, as it was just a copy of how the sponsors block was
+ * themed on the splash page.  It will be replaced during the design implementation.
+ */
 .core-sponsors-block {
   margin: 1em 0;
   padding-top: 55px;
