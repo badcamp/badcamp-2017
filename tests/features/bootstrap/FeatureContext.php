@@ -247,4 +247,21 @@ class FeatureContext extends RawDrupalContext implements Context, SnippetAccepti
         $html = preg_replace('#\</title\>.*\</head\>#sU', '</title></head>', $html);
         return $html;
     }
+
+    /**
+     * @BeforeScenario @setNewUserPassword
+     */
+    public function setNewUserPassword()
+    {
+      $output = $this->getDriver('drush')->upwd('--password="mysecretpassword"','smithyboy143');
+      echo $output;
+    }
+
+    /**
+     * @AfterScenario @cleanUp
+     */
+    public function cleanUp()
+    {
+      $this->users[] = (object)array('name' => 'smithyboy143');
+    }
 }
