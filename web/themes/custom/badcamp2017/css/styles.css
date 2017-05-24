@@ -852,59 +852,18 @@ body:after {
   }
 }
 
-/*
- * Styles for the header.
- * COWBOY THEMING, WATCH OUT!
- */
-#block-badcamp2017-branding {
-  background-image: url("../images/badcamp2017-logo.png");
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 26px;
-  left: 28px;
-  height: 90px;
-  width: 590px;
-}
-
-a.site-name {
-  display: block;
-  background-image: url("../images/badcamp2017-title.png");
-  background-repeat: no-repeat;
-  text-indent: -9999px;
-  position: absolute;
-  top: 2px;
-  left: 90px;
-  width: 550px;
-  height: 50px;
-}
-
-a.site-slogan {
-  display: block;
-  position: absolute;
-  top: 57px;
-  left: 96px;
-  text-decoration: none;
-  color: black;
-  font-size: 21px;
-}
-
-.section-featured {
-  background-color: transparent;
-}
-
-.section-featured .section--inner {
+.path-frontpage #zone-highlighted {
   background-image: url("../images/homepage-bg-image.jpg");
   background-repeat: no-repeat;
-  background-position: 0 center;
   background-size: cover;
   background-position: top center;
 }
 
-.section-featured .section--inner > div {
+.path-frontpage #zone-highlighted > div {
   padding: 90px 125px;
 }
 
-.section-featured p, .section-featured h1, .section-featured h2, .section-featured div {
+#zone-highlighted p, #zone-highlighted h1, #zone-highlighted h2, #zone-highlighted div {
   color: white;
 }
 
