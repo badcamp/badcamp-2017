@@ -37,7 +37,8 @@
     "drupal/features": "^3.5",
     "drupal/pathauto": "^1.0@RC",
     "badcamp/badcamp_program_details": "dev-master",
-    "badcamp/badcamp_sponsors": "dev-master"
+    "badcamp/badcamp_sponsors": "dev-master",
+    "drupal/key": "^1.3"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
