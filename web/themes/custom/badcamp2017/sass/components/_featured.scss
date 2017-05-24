@@ -1,6 +1,6 @@
 
 .path-frontpage {
-  #zone-highlighted {
+  .zone-highlighted {
     background-image: url('../images/homepage-bg-image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,7 +12,7 @@
     }
   }
 }
-#zone-highlighted {
+.zone-highlighted {
   p, h1, h2, div {
     color: white;
   }
