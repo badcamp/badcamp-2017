@@ -1,9 +1,45 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto');
+@import "../node_modules/foundation-sites/scss/foundation";
+@import "variables";
+@include foundation-everything();
 
-@import "../node_modules/susy/sass/susy";
-@import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
+@import "components/header";
+@import "components/featured";
 
-@import "variables/variables";
-@import "base/base";
-@import "layout/layout";
-@import "components/components";
+
+/**
+ * NB: This was left for now, as it was just a copy of how the sponsors block was
+ * themed on the splash page.  It will be replaced during the design implementation.
+ */
+.core-sponsors-block {
+  margin: 1em 0;
+  padding-top: 55px;
+  border-top: 1px solid black;
+  .rows {
+    text-align:center;
+  }
+  .sponsor {
+    display:inline-block;
+    margin-right: 8px;
+  }
+  .Acquia, .Pantheon {
+    width: 350px;
+    height: 130px;
+    display:inline-block;
+    text-indent: -9999em;
+
+  }
+  .Acquia {
+    background-image: url(../images/acquia-logo.png);
+  }
+  .Pantheon {
+    background-image: url(../images/pantheon-logo.png);
+    width: 380px;
+  }
+  footer {
+    margin-top:75px;
+    padding-top:35px;
+    border-top: 1px solid black;
+    text-align:right;
+  }
+}

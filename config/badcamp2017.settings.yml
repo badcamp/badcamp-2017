@@ -5,6 +5,6 @@ features:
   favicon: 0
 logo:
   use_default: 0
-  path: ''
+  path: themes/custom/badcamp2017/images/badcamp2017-logo.png
 favicon:
   use_default: 1
