@@ -267,4 +267,21 @@ class FeatureContext extends RawDrupalContext implements Context, SnippetAccepti
         "$textBefore does not proceed $textAfter"
       );
     }
+
+    /**
+     * @BeforeScenario @setNewUserPassword
+     */
+    public function setNewUserPassword()
+    {
+      $output = $this->getDriver('drush')->upwd('--password="mysecretpassword"','smithyboy143');
+      echo $output;
+    }
+
+    /**
+     * @AfterScenario @cleanUp
+     */
+    public function cleanUp()
+    {
+      $this->users[] = (object)array('name' => 'smithyboy143');
+    }
 }

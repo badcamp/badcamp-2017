@@ -5273,15 +5273,18 @@ a.site-slogan {
   letter-spacing: normal;
 }
 
-.path-frontpage .zone-highlighted {
+.path-frontpage #zone-highlighted {
   background-image: url("../images/homepage-bg-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  padding: 90px 0;
 }
 
-.zone-highlighted p, .zone-highlighted h1, .zone-highlighted h2, .zone-highlighted div {
+.path-frontpage #zone-highlighted > div {
+  padding: 90px 125px;
+}
+
+#zone-highlighted p, #zone-highlighted h1, #zone-highlighted h2, #zone-highlighted div {
   color: white;
 }
 
@@ -5327,4 +5330,4 @@ a.site-slogan {
   text-align: right;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=foundation.css.map */

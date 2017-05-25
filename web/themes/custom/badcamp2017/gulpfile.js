@@ -43,7 +43,7 @@ gulp.task('uglify', function() {
     .pipe(gulp.dest('./js'))
 });
 
-gulp.task('watch', function(){
+gulp.task('watch', ['sass', 'uglify'], function(){
   livereload.listen();
   gulp.watch('./sass/**/*.scss', ['sass']);
   gulp.watch('./lib/*.js', ['uglify']);
@@ -51,3 +51,5 @@ gulp.task('watch', function(){
       livereload.changed(files)
   });
 });
+
+gulp.task('default', ['sass', 'uglify']);

@@ -3,15 +3,19 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_bio
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_first_name
     - field.field.user.user.field_interests
     - field.field.user.user.field_last_name
     - field.field.user.user.field_newsletter
     - field.field.user.user.field_organization
+    - field.field.user.user.field_social_profile
+    - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
   module:
     - mailchimp_lists
+    - social_profile_field
     - user
 _core:
   default_config_hash: L2mtwGWH_7wDRCMIR4r_Iu_jmvQ10DV1L8ht8iNZ5qY
@@ -20,42 +24,62 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_bio:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
   field_drupal_org_username:
-    weight: 1
+    weight: 5
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_first_name:
-    weight: 2
+    weight: 1
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_interests:
-    weight: 5
+    weight: 8
     label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
   field_last_name:
-    weight: 3
+    weight: 2
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_newsletter:
-    weight: 6
+    weight: 9
     label: inline
     settings:
       show_interest_groups: false
     third_party_settings: {  }
     type: mailchimp_lists_subscribe_default
   field_organization:
+    weight: 3
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_social_profile:
+    weight: 6
+    label: inline
+    settings:
+      icons_show: '1'
+    third_party_settings: {  }
+    type: social_profile_field_default
+  field_title:
     weight: 4
     label: inline
     settings:
@@ -63,7 +87,7 @@ content:
     third_party_settings: {  }
     type: string
   field_volunteer:
-    weight: 7
+    weight: 10
     label: inline
     settings:
       format: yes-no
