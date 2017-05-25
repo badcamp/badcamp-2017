@@ -5278,10 +5278,7 @@ a.site-slogan {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-}
-
-.path-frontpage .zone-highlighted > div {
-  padding: 90px 125px;
+  padding: 90px 0;
 }
 
 .zone-highlighted p, .zone-highlighted h1, .zone-highlighted h2, .zone-highlighted div {
