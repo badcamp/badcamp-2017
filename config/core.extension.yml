@@ -1,8 +1,8 @@
 module:
   automated_cron: 0
+  badcamp_blog: 0
   badcamp_program_details: 0
   badcamp_sponsors: 0
-  badcamp_blog: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -10,6 +10,7 @@ module:
   color: 0
   comment: 0
   config: 0
+  config_readonly: 0
   config_update: 0
   contact: 0
   contextual: 0
