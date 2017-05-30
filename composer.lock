@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0bf8f12a6069d64194f30a35b1be2f7d",
+    "content-hash": "7120fc1bf7f96832e8967ecf2231b4aa",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -167,6 +167,32 @@
                 "source": "https://github.com/badcamp/badcamp_sponsors.git"
             },
             "time": "2017-04-22 23:44:08"
+        },
+        {
+            "name": "badcamp/badcamp_stripe_payment",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/badcamp/badcamp_stripe_payment.git",
+                "reference": "37d052b9c8614dc246c66eab9e474cd7dc619164"
+            },
+            "require": {
+                "drupal/stripe_api": "1.x-dev"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides integration of the Stripe payment processing service by providing a charging and refund service as well as an entity that will store the payment data for each payment made.",
+            "homepage": "https://github.com/badcamp/badcamp_stripe_payment",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "issues": "https://github.com/badcamp/badcamp_stripe_payment",
+                "source": "https://github.com/badcamp/badcamp_stripe_payment.git"
+            },
+            "time": "2017-05-30 18:11:55"
         },
         {
             "name": "composer/installers",
@@ -1714,7 +1740,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/ctools-8.x-3.0.zip",
-                "reference": null,
+                "reference": "8.x-3.0",
                 "shasum": "302e869ecd1e59fe55663673999fee2ccac5daa8"
             },
             "require": {
@@ -2004,7 +2030,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.0.zip",
-                "reference": null,
+                "reference": "8.x-1.0",
                 "shasum": "4c82a5689a18421c8c73fcc8be7b333bb21ae02a"
             },
             "require": {
@@ -2061,7 +2087,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/social_profile_field-8.x-0.2.zip",
-                "reference": null,
+                "reference": "8.x-0.2",
                 "shasum": "06c7e91d8fbbfd067f13b7e9a6d62a3299df9fce"
             },
             "require": {
@@ -2106,6 +2132,54 @@
             }
         },
         {
+            "name": "drupal/stripe_api",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/stripe_api",
+                "reference": "cdf51c032cad90f2fcab997dd1dd34d54f7a9ea9"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/key": "*",
+                "stripe/stripe-php": "^3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha1+2-dev",
+                    "datestamp": "1479499739"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "donutdan4114",
+                    "homepage": "https://www.drupal.org/user/1724652"
+                },
+                {
+                    "name": "grasmash",
+                    "homepage": "https://www.drupal.org/user/455714"
+                }
+            ],
+            "description": "Provides an integration to use the Stripe API library",
+            "homepage": "https://www.drupal.org/project/stripe_api",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/stripe_api",
+                "issues": "https://www.drupal.org/project/issues/stripe_api"
+            },
+            "time": "2016-11-18 20:06:11"
+        },
+        {
             "name": "drupal/token",
             "version": "1.0.0",
             "source": {
@@ -2116,7 +2190,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/token-8.x-1.0.zip",
-                "reference": null,
+                "reference": "8.x-1.0",
                 "shasum": "d24c7f1ffddbd0fc56bc92bacae1c4ff769a4442"
             },
             "require": {
@@ -3304,6 +3378,61 @@
             ],
             "description": "Automatic BASH completion for Symfony Console Component based applications.",
             "time": "2016-02-24T05:08:54+00:00"
+        },
+        {
+            "name": "stripe/stripe-php",
+            "version": "v3.23.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "c702a2ed92f4b39603c4a796492d87bcc16c819c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/c702a2ed92f4b39603c4a796492d87bcc16c819c",
+                "reference": "c702a2ed92f4b39603c4a796492d87bcc16c819c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "~0.6.1",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stripe\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
+                }
+            ],
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "time": "2016-09-15T18:16:59+00:00"
         },
         {
             "name": "symfony-cmf/routing",
@@ -7209,7 +7338,8 @@
     "stability-flags": {
         "drupal/pathauto": 5,
         "badcamp/badcamp_program_details": 20,
-        "badcamp/badcamp_sponsors": 20
+        "badcamp/badcamp_sponsors": 20,
+        "badcamp/badcamp_stripe_payment": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

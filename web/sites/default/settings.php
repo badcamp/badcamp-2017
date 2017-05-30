@@ -46,10 +46,16 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'li
   $json_text = file_get_contents('sites/default/files/private/badcamp_keys.json');
   $key_data = json_decode($json_text, TRUE);
   $config['mailchimp.settings']['api_key'] = $key_data['mailchimp_key'];
+  $config['stripe_api.settings']['test_secret_key'] = $key_data['stripe_test_key_secret'];
+  $config['stripe_api.settings']['test_public_key'] = $key_data['stripe_test_key_pub'];
+  $config['stripe_api.settings']['live_secret_key'] = $key_data['stripe_live_key_secret'];
+  $config['stripe_api.settings']['live_public_key'] = $key_data['stripe_live_key_pub'];
 }
 else {
   // We aren't in prod, load a fallback or null key.
   $json_text = file_get_contents('sites/default/files/private/badcamp_keys.json');
   $key_data = json_decode($json_text, TRUE);
   $config['mailchimp.settings']['api_key'] = $key_data['mailchimp_key'];
+  $config['stripe_api.settings']['test_secret_key'] = $key_data['stripe_test_key_secret'];
+  $config['stripe_api.settings']['test_public_key'] = $key_data['stripe_test_key_pub'];
 }
