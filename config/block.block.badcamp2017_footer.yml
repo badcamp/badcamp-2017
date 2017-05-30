@@ -12,7 +12,7 @@ _core:
   default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
 id: badcamp2017_footer
 theme: badcamp2017
-region: '-1'
+region: header_left
 weight: -6
 provider: null
 plugin: 'system_menu_block:footer'

@@ -558,7 +558,7 @@ pre {
 }
 
 .row {
-  max-width: 75rem;
+  max-width: 1300px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -5273,6 +5273,28 @@ a.site-slogan {
   letter-spacing: normal;
 }
 
+.navigation-wrap {
+  position: relative;
+}
+
+@media print, screen and (min-width: 64em) {
+  .navigation-wrap {
+    height: 143px;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .navigation-wrap .menu--main {
+    float: right;
+    margin-top: 15px;
+  }
+  .navigation-wrap .menu--cta-menu {
+    position: absolute;
+    right: 15px;
+    bottom: -15px;
+  }
+}
+
 .path-frontpage .zone-highlighted {
   background-image: url("../images/homepage-bg-image.jpg");
   background-repeat: no-repeat;
@@ -5283,6 +5305,98 @@ a.site-slogan {
 
 .zone-highlighted p, .zone-highlighted h1, .zone-highlighted h2, .zone-highlighted div {
   color: white;
+}
+
+.menu--main li a:last-of-type {
+  padding-right: 0;
+}
+
+.menu--main a {
+  text-transform: uppercase;
+  color: black;
+}
+
+.menu--main a.is-active {
+  font-weight: bold;
+}
+
+.menu--cta-menu li {
+  display: inline-block;
+  width: 100%;
+}
+
+.menu--cta-menu li a {
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  line-height: normal;
+  color: #fff;
+  font-size: 1.125rem;
+  font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.menu--cta-menu li a:last-of-type {
+  margin-right: 0;
+}
+
+.menu--cta-menu li.leaf-0 a {
+  transition-duration: .25s;
+  transition-property: background-color;
+  background-color: #0071bd;
+}
+
+.menu--cta-menu li.leaf-0 a:hover {
+  background-color: #0084dd;
+}
+
+.menu--cta-menu li.leaf-1 a {
+  transition-duration: .25s;
+  transition-property: background-color;
+  background-color: #6cb229;
+}
+
+.menu--cta-menu li.leaf-1 a:hover {
+  background-color: #61a025;
+}
+
+.menu--cta-menu li.leaf-2 a {
+  transition-duration: .25s;
+  transition-property: background-color;
+  background-color: #ed592a;
+}
+
+.menu--cta-menu li.leaf-2 a:hover {
+  background-color: #e84714;
+}
+
+@media print, screen and (min-width: 40em) {
+  .menu--cta-menu li {
+    width: auto;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .menu--cta-menu {
+    text-align: right;
+  }
+  .menu--cta-menu li:last-of-type {
+    margin-right: 0;
+  }
+  .menu--cta-menu li a {
+    width: 150px;
+    height: 75px;
+    display: table-cell;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  .menu--cta-menu li {
+    margin-right: 30px;
+  }
+  .menu--cta-menu li a {
+    width: 200px;
+  }
 }
 
 /**

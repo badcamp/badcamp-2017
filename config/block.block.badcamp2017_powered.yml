@@ -10,7 +10,7 @@ _core:
   default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
 id: badcamp2017_powered
 theme: badcamp2017
-region: '-1'
+region: header_left
 weight: -5
 provider: null
 plugin: system_powered_by_block

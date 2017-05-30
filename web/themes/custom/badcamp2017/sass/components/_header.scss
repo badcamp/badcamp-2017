@@ -29,3 +29,23 @@ a.site-slogan {
   line-height: 26px;
   letter-spacing: normal;
 }
+
+.navigation-wrap {
+  position: relative;
+  @include breakpoint(large) {
+    height: 143px;
+  }
+
+
+  @include breakpoint(large) {
+    .menu--main {
+      float: right;
+      margin-top: 15px;
+    }
+    .menu--cta-menu {
+      position: absolute;
+      right: map_get($grid-column-gutter, medium) / 2;
+      bottom: -15px;
+    }
+  }
+}

@@ -12,7 +12,7 @@ _core:
   default_config_hash: DweBpscQZdG0-fHkSpUzdYucrNH45G_KF7Z82V-oyQM
 id: badcamp2017_account_menu
 theme: badcamp2017
-region: '-1'
+region: header_left
 weight: -4
 provider: null
 plugin: 'system_menu_block:account'

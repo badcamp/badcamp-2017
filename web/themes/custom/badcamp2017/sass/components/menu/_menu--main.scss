@@ -1,0 +1,14 @@
+.menu--main {
+  li a {
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+  a {
+    text-transform: uppercase;
+    color: black;
+    &.is-active {
+      font-weight: bold;
+    }
+  }
+}
