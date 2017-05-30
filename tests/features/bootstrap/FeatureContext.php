@@ -7,6 +7,7 @@ use Drupal\DrupalExtension\Context\MinkContext;
 use Behat\Gherkin\Node\PyStringNode;
 use Behat\Gherkin\Node\TableNode;
 use Behat\Behat\Hook\Scope\AfterStepScope;
+use PHPUnit_Framework_Assert;
 
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 
@@ -246,6 +247,25 @@ class FeatureContext extends RawDrupalContext implements Context, SnippetAccepti
         $html = preg_replace('#\<head\>.*\<title\>#sU', '<head><title>', $html);
         $html = preg_replace('#\</title\>.*\</head\>#sU', '</title></head>', $html);
         return $html;
+    }
+
+    /**
+     * Reference: http://neverstopbuilding.com/simple-method-for-checking-for-order-with-behat
+     * @Then /^"([^"]*)" should precede "([^"]*)" for the query "([^"]*)"$/
+     */
+    public function shouldPrecedeForTheQuery($textBefore, $textAfter, $cssQuery)
+    {
+      $items = array_map(
+        function ($element) {
+          return $element->getText();
+        },
+        $this->getSession()->getPage()->findAll('css', $cssQuery)
+      );
+      PHPUnit_Framework_Assert::assertGreaterThan(
+        array_search($textBefore, $items),
+        array_search($textAfter, $items),
+        "$textBefore does not proceed $textAfter"
+      );
     }
 
     /**
