@@ -26,7 +26,9 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
 hidden:
   body: true
+  field_link: true
   field_sponsor_level: true
   links: true
