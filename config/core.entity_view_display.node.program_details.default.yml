@@ -23,6 +23,8 @@ content:
       timezone_override: ''
     third_party_settings: {  }
     type: datetime_default
+    region: content
   links:
     weight: 100
+    region: content
 hidden: {  }

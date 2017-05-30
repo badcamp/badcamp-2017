@@ -16,7 +16,14 @@ bundle: user
 mode: compact
 content: {  }
 hidden:
+  field_bio: true
   field_drupal_org_username: true
+  field_first_name: true
+  field_interests: true
+  field_last_name: true
   field_newsletter: true
+  field_organization: true
+  field_social_profile: true
+  field_title: true
   field_volunteer: true
   member_for: true

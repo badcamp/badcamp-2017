@@ -30,6 +30,7 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
   field_drupal_org_username:
     weight: 5
     label: inline
@@ -37,6 +38,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_first_name:
     weight: 1
     label: inline
@@ -44,6 +46,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_interests:
     weight: 8
     label: inline
@@ -51,6 +54,7 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
+    region: content
   field_last_name:
     weight: 2
     label: inline
@@ -58,6 +62,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_newsletter:
     weight: 9
     label: inline
@@ -65,6 +70,7 @@ content:
       show_interest_groups: false
     third_party_settings: {  }
     type: mailchimp_lists_subscribe_default
+    region: content
   field_organization:
     weight: 3
     label: inline
@@ -72,6 +78,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_social_profile:
     weight: 6
     label: inline
@@ -79,6 +86,7 @@ content:
       icons_show: '1'
     third_party_settings: {  }
     type: social_profile_field_default
+    region: content
   field_title:
     weight: 4
     label: inline
@@ -86,6 +94,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_volunteer:
     weight: 10
     label: inline
@@ -95,8 +104,10 @@ content:
       format_custom_false: ''
     third_party_settings: {  }
     type: boolean
+    region: content
   member_for:
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden: {  }
