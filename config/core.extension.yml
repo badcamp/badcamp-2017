@@ -2,6 +2,7 @@ module:
   automated_cron: 0
   badcamp_program_details: 0
   badcamp_sponsors: 0
+  badcamp_stripe_payment: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -41,6 +42,7 @@ module:
   search: 0
   shortcut: 0
   social_profile_field: 0
+  stripe_api: 0
   system: 0
   taxonomy: 0
   text: 0
