@@ -71,3 +71,8 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['PANTHEON_ENVIRONMENT']
     exit();
   }
 }
+
+// Prevent Config Changes in Production
+if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live')) {
+  $settings['config_readonly'] = TRUE;
+}
