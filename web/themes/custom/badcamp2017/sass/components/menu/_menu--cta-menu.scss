@@ -28,14 +28,23 @@
     }
   }
   li {
-    &.leaf-0 a {
-      @include hover-bg($bc-blue);
+    &.leaf-0,
+    &.leaf-3 {
+      a {
+        @include hover-bg($bc-blue);
+      }
     }
-    &.leaf-1 a {
-      @include hover-bg($bc-green);
+    &.leaf-1,
+    &.leaf-4 {
+      a {
+        @include hover-bg($bc-green);
+      }
     }
-    &.leaf-2 a {
-      @include hover-bg($bc-orange);
+    &.leaf-2,
+    &.leaf-5 {
+      a {
+        @include hover-bg($bc-orange);
+      }
     }
   }
 

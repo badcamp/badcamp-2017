@@ -5340,33 +5340,33 @@ a.site-slogan {
   margin-right: 0;
 }
 
-.menu--cta-menu li.leaf-0 a {
+.menu--cta-menu li.leaf-0 a, .menu--cta-menu li.leaf-3 a {
   transition-duration: .25s;
   transition-property: background-color;
   background-color: #0071bd;
 }
 
-.menu--cta-menu li.leaf-0 a:hover {
+.menu--cta-menu li.leaf-0 a:hover, .menu--cta-menu li.leaf-3 a:hover {
   background-color: #0084dd;
 }
 
-.menu--cta-menu li.leaf-1 a {
+.menu--cta-menu li.leaf-1 a, .menu--cta-menu li.leaf-4 a {
   transition-duration: .25s;
   transition-property: background-color;
   background-color: #6cb229;
 }
 
-.menu--cta-menu li.leaf-1 a:hover {
+.menu--cta-menu li.leaf-1 a:hover, .menu--cta-menu li.leaf-4 a:hover {
   background-color: #61a025;
 }
 
-.menu--cta-menu li.leaf-2 a {
+.menu--cta-menu li.leaf-2 a, .menu--cta-menu li.leaf-5 a {
   transition-duration: .25s;
   transition-property: background-color;
   background-color: #ed592a;
 }
 
-.menu--cta-menu li.leaf-2 a:hover {
+.menu--cta-menu li.leaf-2 a:hover, .menu--cta-menu li.leaf-5 a:hover {
   background-color: #e84714;
 }
 
