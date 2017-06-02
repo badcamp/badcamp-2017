@@ -60,17 +60,17 @@
         margin-right: 0;
       }
       a {
-        width: 150px;
-        height: 75px;
+        width: rem-calc(150px);
+        height: rem-calc(75px);
         display: table-cell;
       }
     }
   }
   @include breakpoint(xlarge) {
     li {
-      margin-right: 30px;
+      margin-right: rem-calc(30px);
       a {
-        width: 200px;
+        width: rem-calc(200px);
       }
     }
   }

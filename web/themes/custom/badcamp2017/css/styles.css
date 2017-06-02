@@ -558,7 +558,7 @@ pre {
 }
 
 .row {
-  max-width: 1300px;
+  max-width: 81.25rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -5246,12 +5246,12 @@ a.thumbnail image {
  * COWBOY THEMING, WATCH OUT!
  */
 #block-badcamp2017-branding {
-  margin: 30px 0;
+  margin: 1.875rem 0;
 }
 
 a.site-logo {
   float: left;
-  margin-right: 20px;
+  margin-right: 1.25rem;
 }
 
 a.site-name {
@@ -5259,17 +5259,17 @@ a.site-name {
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: #222222;
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: bold;
   line-height: 1.2em;
-  letter-spacing: 4px;
+  letter-spacing: 0.25rem;
 }
 
 a.site-slogan {
   display: block;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #222222;
-  line-height: 26px;
+  line-height: 1.625rem;
   letter-spacing: normal;
 }
 
@@ -5279,14 +5279,14 @@ a.site-slogan {
 
 @media print, screen and (min-width: 64em) {
   .navigation-wrap {
-    height: 143px;
+    height: 8.9375rem;
   }
 }
 
 @media print, screen and (min-width: 64em) {
   .navigation-wrap .menu--main {
     float: right;
-    margin-top: 15px;
+    margin-top: 0.9375rem;
   }
   .navigation-wrap .menu--cta-menu {
     position: absolute;
@@ -5384,18 +5384,18 @@ a.site-slogan {
     margin-right: 0;
   }
   .menu--cta-menu li a {
-    width: 150px;
-    height: 75px;
+    width: 9.375rem;
+    height: 4.6875rem;
     display: table-cell;
   }
 }
 
 @media screen and (min-width: 75em) {
   .menu--cta-menu li {
-    margin-right: 30px;
+    margin-right: 1.875rem;
   }
   .menu--cta-menu li a {
-    width: 200px;
+    width: 12.5rem;
   }
 }
 

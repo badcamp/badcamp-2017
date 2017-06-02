@@ -2,7 +2,7 @@
 $body-font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $header-font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-$grid-row-width: 1300px;
+$grid-row-width: rem-calc(1300px);
 
 $bc-blue: #0071bd;
 $bc-green: #6cb229;
