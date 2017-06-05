@@ -1,6 +1,6 @@
-uuid: b622bd5a-8a0e-4bfe-98b8-4273d2cd5f5b
+uuid: 9f128aa6-e310-46da-9351-2c9872a49777
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.main
@@ -8,12 +8,10 @@ dependencies:
     - system
   theme:
     - badcamp2017
-_core:
-  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
-id: badcamp2017_main_menu
+id: mainnavigation
 theme: badcamp2017
-region: '-1'
-weight: -3
+region: header_right
+weight: -9
 provider: null
 plugin: 'system_menu_block:main'
 settings:
@@ -22,5 +20,5 @@ settings:
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
+  depth: 0
 visibility: {  }

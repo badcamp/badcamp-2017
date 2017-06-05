@@ -1,0 +1,77 @@
+
+@mixin hover-bg($color) {
+  transition-duration: .25s;
+  transition-property: background-color;
+  background-color: $color;
+  &:hover {
+    background-color: smart-scale($color, 10%)
+  }
+}
+
+.menu--cta-menu {
+  li {
+    display: inline-block;
+    width: 100%;
+  }
+  li a {
+    text-transform: uppercase;
+    width: 100%;
+
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+    color: #fff;
+    font-size: rem-calc(18px);
+    font-family: $header-font-family;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+  li {
+    &.leaf-0,
+    &.leaf-3 {
+      a {
+        @include hover-bg($bc-blue);
+      }
+    }
+    &.leaf-1,
+    &.leaf-4 {
+      a {
+        @include hover-bg($bc-green);
+      }
+    }
+    &.leaf-2,
+    &.leaf-5 {
+      a {
+        @include hover-bg($bc-orange);
+      }
+    }
+  }
+
+  @include breakpoint(medium) {
+    li {
+      width: auto;
+    }
+  }
+  @include breakpoint(large) {
+    text-align: right;
+    li {
+      &:last-of-type {
+        margin-right: 0;
+      }
+      a {
+        width: rem-calc(150px);
+        height: rem-calc(75px);
+        display: table-cell;
+      }
+    }
+  }
+  @include breakpoint(xlarge) {
+    li {
+      margin-right: rem-calc(30px);
+      a {
+        width: rem-calc(200px);
+      }
+    }
+  }
+}

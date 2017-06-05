@@ -1,0 +1,24 @@
+uuid: 52b75852-4e4e-4bef-a31f-10733b4073fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.cta-menu
+  module:
+    - system
+  theme:
+    - badcamp2017
+id: ctamenu
+theme: badcamp2017
+region: header_right
+weight: -8
+provider: null
+plugin: 'system_menu_block:cta-menu'
+settings:
+  id: 'system_menu_block:cta-menu'
+  label: 'CTA Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }
