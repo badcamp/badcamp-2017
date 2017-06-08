@@ -38,7 +38,10 @@ gulp.task('sass', function () {
 });
 
 gulp.task('uglify', function() {
-  gulp.src('./lib/*.js')
+  gulp.src([
+    './node_modules/foundation-sites/dist/js/foundation.js',
+    './lib/*.js'
+  ])
     .pipe(uglify('main.js'))
     .pipe(gulp.dest('./js'))
 });
