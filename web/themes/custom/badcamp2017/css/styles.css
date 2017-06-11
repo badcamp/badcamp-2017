@@ -5304,22 +5304,6 @@ a.site-slogan {
   margin-right: 8px;
 }
 
-.core-sponsors-block .Acquia, .core-sponsors-block .Pantheon {
-  width: 350px;
-  height: 130px;
-  display: inline-block;
-  text-indent: -9999em;
-}
-
-.core-sponsors-block .Acquia {
-  background-image: url(../images/acquia-logo.png);
-}
-
-.core-sponsors-block .Pantheon {
-  background-image: url(../images/pantheon-logo.png);
-  width: 380px;
-}
-
 .core-sponsors-block footer {
   margin-top: 75px;
   padding-top: 35px;
