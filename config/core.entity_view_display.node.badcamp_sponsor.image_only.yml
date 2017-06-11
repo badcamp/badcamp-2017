@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.badcamp_sponsor.field_link
     - field.field.node.badcamp_sponsor.field_sponsor_level
     - field.field.node.badcamp_sponsor.field_sponsor_logo
+    - image.style.sponsor_logo_footer
     - node.type.badcamp_sponsor
   module:
     - image
@@ -36,7 +37,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      image_style: sponsor_logo_footer
       image_link: ''
     third_party_settings: {  }
     type: image
