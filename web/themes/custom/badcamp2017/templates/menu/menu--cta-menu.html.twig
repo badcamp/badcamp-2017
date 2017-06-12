@@ -1,0 +1,9 @@
+{% import '@badcamp2017/macros.twig' as macros %}
+
+{% set menu_level_settings = [
+  {'classes': 'vertical medium-horizontal', 'attributes': {}},
+] %}
+
+{% block content %}
+  {{ macros.foundation_menu_links(items, attributes, 0, menu_level_settings) }}
+{% endblock %}

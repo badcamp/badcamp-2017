@@ -5241,10 +5241,6 @@ a.thumbnail image {
   clear: both;
 }
 
-/*
- * Styles for the header.
- * COWBOY THEMING, WATCH OUT!
- */
 #block-badcamp2017-branding {
   margin: 1.875rem 0;
 }
@@ -5273,8 +5269,29 @@ a.site-slogan {
   letter-spacing: normal;
 }
 
+.responsive-menu-button-wrap {
+  background: #333;
+}
+
+.responsive-menu-button-wrap button {
+  margin-top: 0.9375rem;
+  margin-bottom: 0.9375rem;
+}
+
 .navigation-wrap {
   position: relative;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .navigation-wrap {
+    padding: 0;
+    overflow: hidden;
+    transition: max-height .5s;
+    max-height: 0;
+  }
+  .navigation-wrap.opened {
+    max-height: 600px;
+  }
 }
 
 @media print, screen and (min-width: 64em) {
@@ -5328,7 +5345,6 @@ a.site-slogan {
 .menu--cta-menu li a {
   text-transform: uppercase;
   width: 100%;
-  text-align: center;
   vertical-align: middle;
   line-height: normal;
   color: #fff;
@@ -5373,6 +5389,9 @@ a.site-slogan {
 @media print, screen and (min-width: 40em) {
   .menu--cta-menu li {
     width: auto;
+  }
+  .menu--cta-menu li a {
+    text-align: center;
   }
 }
 
