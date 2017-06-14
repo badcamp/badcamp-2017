@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: date_only_with_day
+label: 'Date Only with Day'
+locked: false
+pattern: 'D, F j, Y'
