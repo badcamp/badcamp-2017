@@ -151,7 +151,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_program_details.git",
-                "reference": "a36f9ddab0e54facaa78d1f56c626b6dbdb3bf0d"
+                "reference": "c06b2bb64643b9d37e3904f2242de320018ef353"
             },
             "type": "drupal-module",
             "license": [
@@ -166,7 +166,7 @@
                 "issues": "https://github.com/badcamp/badcamp_program_details",
                 "source": "https://github.com/badcamp/badcamp_program_details.git"
             },
-            "time": "2017-04-23 00:28:34"
+            "time": "2017-06-14 17:22:48"
         },
         {
             "name": "badcamp/badcamp_sponsors",
@@ -1252,7 +1252,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/config_readonly-8.x-1.0-beta2.zip",
-                "reference": null,
+                "reference": "8.x-1.0-beta2",
                 "shasum": "d3309a69ee9950a3e696a407981673ce5b041a16"
             },
             "require": {
