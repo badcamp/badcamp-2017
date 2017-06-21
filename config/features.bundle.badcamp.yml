@@ -1,9 +1,6 @@
-uuid: 83656647-b57d-4842-bac4-0a8ebc97f683
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: RGHCoXmHYB6FmoFSjCJuuvf674mbBWIPrpM4SW0_RWM
 name: BADCamp
 machine_name: badcamp
 description: 'BADCamp Camp Site Features'

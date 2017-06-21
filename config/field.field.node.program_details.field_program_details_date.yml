@@ -1,4 +1,3 @@
-uuid: 93baf0e4-f1ec-41de-a60d-a5704823d72d
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - node.type.program_details
   module:
     - datetime
-_core:
-  default_config_hash: DiLlz7kMgpDy9Ho-szHXqc9xiBC9Z1TLaBxjLEa35Lk
 id: node.program_details.field_program_details_date
 field_name: field_program_details_date
 entity_type: node
