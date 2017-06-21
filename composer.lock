@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4767cfc11cf675b99c8b47f8a8fb4816",
+    "content-hash": "c495456cb3aa3dcbf037188011b88064",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -170,26 +170,29 @@
         },
         {
             "name": "badcamp/badcamp_sponsors",
-            "version": "dev-master",
+            "version": "dev-98_remove_hard_coded_sponsors_from_css",
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_sponsors.git",
-                "reference": "93dbce14a712b8b3d2962b44f9bd979d1104b736"
+                "reference": "dc5dd7fa15a0f7cf737264cf190289550e83cd7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/badcamp/badcamp_sponsors/zipball/dc5dd7fa15a0f7cf737264cf190289550e83cd7b",
+                "reference": "dc5dd7fa15a0f7cf737264cf190289550e83cd7b",
+                "shasum": ""
             },
             "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "A Features module that contains all of the configuration related to sponsors.",
             "homepage": "https://github.com/badcamp/badcamp_sponsors",
             "keywords": [
-                "Drupal"
+                "drupal"
             ],
-            "support": {
-                "issues": "https://github.com/badcamp/badcamp_sponsors",
-                "source": "https://github.com/badcamp/badcamp_sponsors.git"
-            },
-            "time": "2017-04-22 23:44:08"
+            "time": "2017-06-21 18:45:55"
         },
         {
             "name": "composer/installers",
@@ -1252,7 +1255,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/config_readonly-8.x-1.0-beta2.zip",
-                "reference": null,
+                "reference": "8.x-1.0-beta2",
                 "shasum": "d3309a69ee9950a3e696a407981673ce5b041a16"
             },
             "require": {
@@ -1974,10 +1977,6 @@
                 "GPL-2.0+"
             ],
             "authors": [
-                {
-                    "name": "Cellar Door",
-                    "homepage": "https://www.drupal.org/user/658076"
-                },
                 {
                     "name": "CrashTest_",
                     "homepage": "https://www.drupal.org/user/261457"
