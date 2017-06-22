@@ -7,18 +7,6 @@
     {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/badcamp/badcamp_program_details.git"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/badcamp/badcamp_sponsors.git"
-    },
-    {
-      "type": "git",
-      "url": "https://github.com/badcamp/badcamp_blog.git"
     }
   ],
     "require": {

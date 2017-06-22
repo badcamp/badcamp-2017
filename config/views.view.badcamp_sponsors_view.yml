@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.image_only
+    - core.entity_view_mode.node.teaser
     - field.storage.node.field_link
     - node.type.badcamp_sponsor
     - taxonomy.vocabulary.sponsor_level
@@ -68,12 +70,9 @@ display:
           row_class: sponsor
           default_row_class: false
       row:
-        type: fields
+        type: 'entity:node'
         options:
-          default_field_elements: false
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          view_mode: teaser
       fields:
         field_link:
           id: field_link
@@ -162,6 +161,8 @@ display:
         footer: false
         css_class: false
         header: false
+        style: false
+        row: false
       display_description: ''
       filters:
         status:
@@ -326,6 +327,17 @@ display:
           tokenize: false
           content: '<h2>Sponsors</h2>'
           plugin_id: text_custom
+      style:
+        type: default
+        options:
+          grouping: {  }
+          row_class: sponsor
+          default_row_class: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: image_only
     cache_metadata:
       max-age: 0
       contexts:

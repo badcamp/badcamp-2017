@@ -5,11 +5,14 @@ dependencies:
   config:
     - core.entity_view_mode.node.image_only
     - field.field.node.badcamp_sponsor.body
+    - field.field.node.badcamp_sponsor.field_link
     - field.field.node.badcamp_sponsor.field_sponsor_level
     - field.field.node.badcamp_sponsor.field_sponsor_logo
+    - image.style.sponsor_logo_footer
     - node.type.badcamp_sponsor
   module:
     - image
+    - link
     - user
 _core:
   default_config_hash: 2J-oogJoAjbbM67F19IlqOtkFFB12y5Yyo8oSGuAhHA
@@ -18,17 +21,28 @@ targetEntityType: node
 bundle: badcamp_sponsor
 mode: image_only
 content:
+  field_link:
+    type: link
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
   field_sponsor_logo:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      image_style: sponsor_logo_footer
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
 hidden:
   body: true
-  field_link: true
   field_sponsor_level: true
   links: true
