@@ -74,18 +74,8 @@
 #}
 <article{{ attributes }}>
 
-  {% if display_submitted %}
-    <footer>
-      {{ author_picture }}
-      <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-        {{ metadata }}
-      </div>
-    </footer>
-  {% endif %}
-
   <div{{ content_attributes }}>
-    <a href="{{ content.field_link.0['#url'] }}">{{ content.field_sponsor_logo }}</a>
+    <a href="{{ url }}">{{ content.field_sponsor_logo }}</a>
   </div>
 
 </article>

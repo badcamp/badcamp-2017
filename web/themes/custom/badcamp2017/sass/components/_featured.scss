@@ -1,7 +1,7 @@
 
-.path-frontpage {
+.path-frontpage{
   .zone-highlighted {
-    background-image: url('../images/homepage-bg-image.jpg');
+    background-image: url($bg_image);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;

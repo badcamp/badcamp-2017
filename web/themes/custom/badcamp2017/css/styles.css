@@ -5312,7 +5312,7 @@ a.site-slogan {
   }
 }
 
-.path-frontpage .zone-highlighted {
+.path-frontpage .zone-highlighted, .path-sponsors .zone-highlighted {
   background-image: url("../images/homepage-bg-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -5322,6 +5322,71 @@ a.site-slogan {
 
 .zone-highlighted p, .zone-highlighted h1, .zone-highlighted h2, .zone-highlighted div {
   color: white;
+}
+
+/**
+ * NB: This was left for now, as it was just a copy of how the sponsors block was
+ * themed on the splash page.  It will be replaced during the design implementation.
+ */
+.core-sponsors-block {
+  margin: 1em 0;
+  padding-top: 55px;
+  border-top: 1px solid black;
+}
+
+.core-sponsors-block .rows {
+  text-align: center;
+}
+
+.core-sponsors-block .sponsor {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.core-sponsors-block footer {
+  margin-top: 75px;
+  padding-top: 35px;
+  border-top: 1px solid black;
+  text-align: right;
+}
+
+/**
+ * Sponsors Page
+ */
+.path-sponsors #block-badcampsponsorstext {
+  text-align: center;
+}
+
+.path-sponsors #block-badcampsponsorstext h2 {
+  font-weight: bold;
+}
+
+.path-sponsors .sponsor-level {
+  margin-bottom: 3em;
+}
+
+.path-sponsors .sponsor-level h3 {
+  color: white;
+  padding: 1.75rem 1.5rem;
+  max-width: 400px;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.path-sponsors .core-level h3 {
+  background-color: #0071bd;
+}
+
+.path-sponsors .contrib-level h3 {
+  background-color: #6cb229;
+}
+
+.path-sponsors .supporting-level h3 {
+  background-color: #ed592a;
+}
+
+.path-sponsors .individual-sponsors h3 {
+  background-color: #585858;
 }
 
 .menu--main li a:last-of-type {
@@ -5416,32 +5481,6 @@ a.site-slogan {
   .menu--cta-menu li a {
     width: 12.5rem;
   }
-}
-
-/**
- * NB: This was left for now, as it was just a copy of how the sponsors block was
- * themed on the splash page.  It will be replaced during the design implementation.
- */
-.core-sponsors-block {
-  margin: 1em 0;
-  padding-top: 55px;
-  border-top: 1px solid black;
-}
-
-.core-sponsors-block .rows {
-  text-align: center;
-}
-
-.core-sponsors-block .sponsor {
-  display: inline-block;
-  margin-right: 8px;
-}
-
-.core-sponsors-block footer {
-  margin-top: 75px;
-  padding-top: 35px;
-  border-top: 1px solid black;
-  text-align: right;
 }
 
 /*# sourceMappingURL=styles.css.map */
