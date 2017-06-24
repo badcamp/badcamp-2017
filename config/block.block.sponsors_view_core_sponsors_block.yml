@@ -5,6 +5,7 @@ dependencies:
   config:
     - views.view.badcamp_sponsors_view
   module:
+    - system
     - views
   theme:
     - badcamp2017
@@ -21,4 +22,9 @@ settings:
   label_display: '0'
   views_label: ''
   items_per_page: none
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /sponsors
+    negate: true
+    context_mapping: {  }

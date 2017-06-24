@@ -1,0 +1,26 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements template_preprocess_views_view_unformatted().
+ */
+function badcamp2017_preprocess_views_view_unformatted__badcamp_sponsors_view__page_1(&$vars){
+  //kint($vars['rows']);
+  $vars['level_class'] = HTML::cleanCssIdentifier(strtolower(strip_tags($vars['title'])));
+
+  switch($vars['level_class']){
+    case 'core-level':
+      foreach($vars['rows'] AS &$row){
+        $row['attributes']->addClass('medium-6','columns');
+      }
+      break;
+    case 'contrib-level':
+    case 'supporting-level':
+      foreach($vars['rows'] AS &$row){
+        $row['attributes']->addClass('medium-3','columns');
+      }
+      break;
+
+  }
+}
