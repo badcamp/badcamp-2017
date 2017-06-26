@@ -1,9 +1,0 @@
-uuid: 3f1481fe-47ca-4045-8d1d-f385eed46f78
-langcode: en
-status: true
-dependencies: {  }
-name: 'Blog Tags'
-vid: blog_tags
-description: ''
-hierarchy: 0
-weight: 0
