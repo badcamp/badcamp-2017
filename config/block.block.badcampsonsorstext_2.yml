@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:basic:d7696fb2-6abe-4b3b-9788-b1700eab792f'
   module:
     - block_content
+    - system
   theme:
     - badcamp2017
 id: badcampsponsorstext_2
@@ -22,4 +23,9 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: /sponsors
+    negate: false
+    context_mapping: {  }
