@@ -172,13 +172,6 @@ display:
       arguments: {  }
       display_extenders: {  }
       css_class: blog-list-page
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_interface'
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
   page_1:
     display_plugin: page
     id: page_1
@@ -187,10 +180,3 @@ display:
     display_options:
       display_extenders: {  }
       path: news
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_interface'
-        - url.query_args
-        - 'user.node_grants:view'
-        - user.permissions
