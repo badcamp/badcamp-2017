@@ -24,3 +24,14 @@ function badcamp2017_preprocess_views_view_unformatted__badcamp_sponsors_view__p
 
   }
 }
+
+/**
+ * Implements hook_preprocess_field();
+ */
+function badcamp2017_preprocess_field__node__field_tags__blog(&$vars){
+  $vars['attributes']['class'][] = 'button-group';
+
+  foreach($vars['items'] AS &$item){
+    $item['content']['#attributes']['class'][] = 'button';
+  }
+}
