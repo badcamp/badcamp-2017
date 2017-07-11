@@ -1,3 +1,4 @@
+uuid: 59d9b360-22ae-4c09-9f50-6ae34349fecd
 langcode: en
 status: true
 dependencies:
@@ -8,6 +9,8 @@ dependencies:
     - datetime
     - node
     - user
+_core:
+  default_config_hash: PSGvdBKx4fkTg_P_EqYs4kfNOyMzekoyx-Qy31BBLVs
 id: program_dates_and_details
 label: 'Program Dates and Details'
 module: views
