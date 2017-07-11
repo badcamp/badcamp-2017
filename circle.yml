@@ -88,6 +88,6 @@ deployment:
       - php -f scripts/slack/slack_notify.php pantheon_merge "${TERMINUS_ENV}" "${BRANCH}"
       - terminus build-env:merge -n "$TERMINUS_SITE.$TERMINUS_ENV" --yes
       - terminus drush -n $TERMINUS_SITE.$TERMINUS_ENV -- updatedb --yes
-      - terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" -- config-import --yes
       - terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" -- features-import-all --yes
+      - terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" -- config-import --yes
       - terminus build-env:delete:pr -n "$TERMINUS_SITE" --yes
