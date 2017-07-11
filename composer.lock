@@ -128,12 +128,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_blog.git",
-                "reference": "f3cf3a0ff6be9a4c3ed5dab649fc4cad045726b2"
+                "reference": "4d3fc846372e3e8e5c669d4df3e532ab17ea10df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_blog/zipball/f3cf3a0ff6be9a4c3ed5dab649fc4cad045726b2",
-                "reference": "f3cf3a0ff6be9a4c3ed5dab649fc4cad045726b2",
+                "url": "https://api.github.com/repos/badcamp/badcamp_blog/zipball/4d3fc846372e3e8e5c669d4df3e532ab17ea10df",
+                "reference": "4d3fc846372e3e8e5c669d4df3e532ab17ea10df",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -146,7 +146,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-07-05 21:32:33"
+            "time": "2017-07-11 22:14:03"
         },
         {
             "name": "badcamp/badcamp_program_details",
