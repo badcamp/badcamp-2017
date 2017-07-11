@@ -8,3 +8,4 @@ global-js:
     js/main.js: {}
   dependencies:
     - core/jquery
+    - core/drupal
