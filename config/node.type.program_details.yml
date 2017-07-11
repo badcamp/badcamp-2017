@@ -1,3 +1,4 @@
+uuid: c7da27da-f1f9-48ac-9a62-26645560d31b
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
+_core:
+  default_config_hash: BNfSEfH0x4Vmt1_FAZruVhL6Ds_cP3jHQDz0SFiuRGg
 name: 'Program Details'
 type: program_details
 description: 'Dates and Details for your camp''s planned program.'
