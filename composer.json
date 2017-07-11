@@ -30,7 +30,7 @@
     "badcamp/badcamp_blog": "dev-master",
     "drupal/social_profile_field": "^0.2.0",
     "drupal/config_readonly": "^1.0@beta",
-    "drupal/default_content": "^1.0@alpha",
+    "drupal/default_content": "1.x-dev",
     "drupal/devel": "^1.0@RC"
   },
   "require-dev": {
@@ -99,6 +99,13 @@
         ".htaccess",
         "web.config"
       ]
+    },
+    "extra": {
+      "patches": {
+        "drupal/default_content": {
+          "Allow manual imports": "https://www.drupal.org/files/issues/allow_manual_imports-2640734-67.patch"
+        }
+      }
     }
   }
 }
