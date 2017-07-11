@@ -1,3 +1,4 @@
+uuid: 2101088d-6c0c-491a-a476-ca6f365e476d
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
     - node.type.program_details
   module:
     - user
+_core:
+  default_config_hash: JqjSds96oT8yQOLSLclgDsYJ07HXdF3TQZV-5lJZMqQ
 id: node.program_details.teaser
 targetEntityType: node
 bundle: program_details
