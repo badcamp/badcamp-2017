@@ -180,12 +180,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_sponsors.git",
-                "reference": "33e0a13a8ba9e71a42005c078a4da457061b93a5"
+                "reference": "47d6f8782d1252f2c1d7fbfdf663bf79756790b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_sponsors/zipball/33e0a13a8ba9e71a42005c078a4da457061b93a5",
-                "reference": "33e0a13a8ba9e71a42005c078a4da457061b93a5",
+                "url": "https://api.github.com/repos/badcamp/badcamp_sponsors/zipball/47d6f8782d1252f2c1d7fbfdf663bf79756790b9",
+                "reference": "47d6f8782d1252f2c1d7fbfdf663bf79756790b9",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -198,7 +198,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-07-16 03:42:55"
+            "time": "2017-07-16 03:51:14"
         },
         {
             "name": "composer/installers",
