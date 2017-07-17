@@ -28,7 +28,7 @@ module:
   features: 0
   features_ui: 0
   field: 0
-  field_permission: 0
+  field_permissions: 0
   field_ui: 0
   file: 0
   filter: 0
