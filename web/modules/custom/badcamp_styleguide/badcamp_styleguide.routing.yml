@@ -1,0 +1,7 @@
+
+badcamp_styleguide.guide:
+  path: /styleguide
+  defaults:
+    _form: Drupal\badcamp_styleguide\Form\StyleguideForm
+  requirements:
+    _permission: 'access content'
