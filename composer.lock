@@ -180,13 +180,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_sponsors.git",
-                "reference": "41a2e397f52b085fada97ab87229bae708b4ac87"
+                "reference": "08f99f0eec49ceff28efde34ca3a19d5a43eb1a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_sponsors/zipball/41a2e397f52b085fada97ab87229bae708b4ac87",
-                "reference": "41a2e397f52b085fada97ab87229bae708b4ac87",
+                "url": "https://api.github.com/repos/badcamp/badcamp_sponsors/zipball/08f99f0eec49ceff28efde34ca3a19d5a43eb1a0",
+                "reference": "08f99f0eec49ceff28efde34ca3a19d5a43eb1a0",
                 "shasum": ""
+            },
+            "require": {
+                "drupal/default_content": "^1.0"
             },
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -198,7 +201,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-07-17 04:01:20"
+            "time": "2017-07-17 21:38:44"
         },
         {
             "name": "badcamp/badcamp_venue",
@@ -2153,6 +2156,77 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
+            }
+        },
+        {
+            "name": "drupal/default_content",
+            "version": "1.0.0-alpha6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/default_content",
+                "reference": "8.x-1.0-alpha6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/default_content-8.x-1.0-alpha6.zip",
+                "reference": null,
+                "shasum": "ec378158521afff8181f3536e140a31c161fc867"
+            },
+            "require": {
+                "drupal/core": "~8.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha6",
+                    "datestamp": "1493675943"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Sam152",
+                    "homepage": "https://www.drupal.org/user/1485048"
+                },
+                {
+                    "name": "andypost",
+                    "homepage": "https://www.drupal.org/user/118908"
+                },
+                {
+                    "name": "benjy",
+                    "homepage": "https://www.drupal.org/user/1852732"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "jibran",
+                    "homepage": "https://www.drupal.org/user/1198144"
+                },
+                {
+                    "name": "larowlan",
+                    "homepage": "https://www.drupal.org/user/395439"
+                },
+                {
+                    "name": "matslats",
+                    "homepage": "https://www.drupal.org/user/140053"
+                }
+            ],
+            "description": "Imports default content when a module is enabled",
+            "homepage": "https://www.drupal.org/project/default_content",
+            "support": {
+                "source": "http://cgit.drupalcode.org/default_content"
             }
         },
         {
