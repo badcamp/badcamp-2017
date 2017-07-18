@@ -10,16 +10,15 @@ module:
   color: 0
   comment: 0
   config: 0
+  config_filter: 0
   config_readonly: 0
+  config_split: 0
   config_update: 0
   contact: 0
   contextual: 0
   ctools: 0
   datetime: 0
   dblog: 0
-  default_content: 0
-  devel: 0
-  devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   features: 0
