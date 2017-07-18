@@ -180,12 +180,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_sponsors.git",
-                "reference": "2a764a6dea7bd3c848fe2a8630a646c4e38386a6"
+                "reference": "044119c7b61ca637a0fc8cee4e27f5967a9e92d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_sponsors/zipball/2a764a6dea7bd3c848fe2a8630a646c4e38386a6",
-                "reference": "2a764a6dea7bd3c848fe2a8630a646c4e38386a6",
+                "url": "https://api.github.com/repos/badcamp/badcamp_sponsors/zipball/044119c7b61ca637a0fc8cee4e27f5967a9e92d8",
+                "reference": "044119c7b61ca637a0fc8cee4e27f5967a9e92d8",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -198,7 +198,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-06-23 23:01:31"
+            "time": "2017-07-18 22:35:27"
         },
         {
             "name": "composer/installers",
@@ -1403,7 +1403,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/config_split-8.x-1.0-beta6.zip",
-                "reference": null,
+                "reference": "8.x-1.0-beta6",
                 "shasum": "c816e0e24375b697daeacd36d2112b48ed857ae2"
             },
             "require": {
