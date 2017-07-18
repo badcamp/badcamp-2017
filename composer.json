@@ -30,7 +30,8 @@
     "badcamp/badcamp_blog": "dev-master",
     "drupal/social_profile_field": "^0.2.0",
     "drupal/config_readonly": "^1.0@beta",
-    "drupal/config_split": "^1.0@beta"
+    "drupal/config_split": "^1.0@beta",
+    "drupal/devel": "^1.0@RC"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
