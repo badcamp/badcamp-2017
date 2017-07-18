@@ -1,3 +1,4 @@
+uuid: a514266f-c724-4e96-b897-ed3eb8bc6b04
 langcode: en
 status: true
 dependencies:
@@ -7,11 +8,11 @@ dependencies:
     - system
     - views
   theme:
-    - bartik
-id: views_block__program_dates_and_details_block_1
-theme: bartik
+    - badcamp2017
+id: badcamp2017_views_block__program_dates_and_details_block_1
+theme: badcamp2017
 region: content
-weight: -1
+weight: -3
 provider: null
 plugin: 'views_block:program_dates_and_details-block_1'
 settings:

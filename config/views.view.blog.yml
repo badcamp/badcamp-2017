@@ -8,6 +8,8 @@ dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: oLiKJfclZ1LFI11quSSMs-pdC4NHporBOfGESzje9W0
 id: blog
 label: Blog
 module: views
@@ -172,6 +174,23 @@ display:
       arguments: {  }
       display_extenders: {  }
       css_class: blog-list-page
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:core.entity_view_display.node.article.default'
+        - 'config:core.entity_view_display.node.article.rss'
+        - 'config:core.entity_view_display.node.article.teaser'
+        - 'config:core.entity_view_display.node.blog.default'
+        - 'config:core.entity_view_display.node.blog.teaser'
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.program_details.default'
+        - 'config:core.entity_view_display.node.program_details.teaser'
   page_1:
     display_plugin: page
     id: page_1
@@ -180,3 +199,20 @@ display:
     display_options:
       display_extenders: {  }
       path: news
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:core.entity_view_display.node.article.default'
+        - 'config:core.entity_view_display.node.article.rss'
+        - 'config:core.entity_view_display.node.article.teaser'
+        - 'config:core.entity_view_display.node.blog.default'
+        - 'config:core.entity_view_display.node.blog.teaser'
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.program_details.default'
+        - 'config:core.entity_view_display.node.program_details.teaser'

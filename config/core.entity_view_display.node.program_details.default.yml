@@ -1,3 +1,4 @@
+uuid: 3c7e8cd9-61a9-4e37-ab85-ff70c14dc802
 langcode: en
 status: true
 dependencies:
@@ -7,6 +8,8 @@ dependencies:
   module:
     - datetime
     - user
+_core:
+  default_config_hash: '-fzWSDtBTrRZjIJeHsMWSmp2XXBvznI9u0CL-stkC3U'
 id: node.program_details.default
 targetEntityType: node
 bundle: program_details
