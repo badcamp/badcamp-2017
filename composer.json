@@ -34,7 +34,8 @@
     "drupal/address": "^1.1",
     "drupal/field_permissions": "^1.0@beta",
     "drupal/eva": "^1.1",
-    "drupal/field_group": "^1.0@RC"
+    "drupal/field_group": "^1.0@RC",
+    "drupal/video_embed_field": "^1.5"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
