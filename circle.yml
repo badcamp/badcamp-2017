@@ -62,12 +62,10 @@ dependencies:
     - |
       if [ -n "$CLONE_CONTENT" ] ; then
         # Re-import configuration if exported configuration exists in config directory.
-        terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" -- features-import-all --yes
         terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" -- config-import --yes
       elif [ ! -f "config/system.site.yml" ] ; then
         # Install with the standard profile, and enable config_direct_save
         terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" -- site-install standard --yes --site-name="$TEST_SITE_NAME" --account-mail="$ADMIN_EMAIL" --account-pass="$ADMIN_PASSWORD"
-        terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" -- features-import-all --yes
         terminus drush -n "$TERMINUS_SITE.$TERMINUS_ENV" -- pm-enable --yes config_direct_save
       else
         # Re-install with the config_installer to re-import configuration
@@ -89,5 +87,4 @@ deployment:
       - terminus build-env:merge -n "$TERMINUS_SITE.$TERMINUS_ENV" --yes
       - terminus drush -n $TERMINUS_SITE.$TERMINUS_ENV -- updatedb --yes
       - terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" -- config-import --yes
-      - terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" -- features-import-all --yes
       - terminus build-env:delete:pr -n "$TERMINUS_SITE" --yes
