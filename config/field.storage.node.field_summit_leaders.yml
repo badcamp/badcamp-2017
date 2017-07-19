@@ -1,0 +1,20 @@
+uuid: 7ef9e427-23ab-4447-b4c0-f866c61bc757
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: node.field_summit_leaders
+field_name: field_summit_leaders
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 582f0989-b7c5-4ae0-8c84-b13ef364d051
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sold_out
+    - node.type.event
+id: node.event.field_sold_out
+field_name: field_sold_out
+entity_type: node
+bundle: event
+label: 'Sold out'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Sold Out'
+  off_label: 'Not Sold Out'
+field_type: boolean

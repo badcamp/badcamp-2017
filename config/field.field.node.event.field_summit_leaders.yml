@@ -1,0 +1,29 @@
+uuid: d797bc05-65f5-4398-815a-c3d8559be1ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summit_leaders
+    - node.type.event
+id: node.event.field_summit_leaders
+field_name: field_summit_leaders
+entity_type: node
+bundle: event
+label: 'Summit leaders'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference
