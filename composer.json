@@ -33,7 +33,8 @@
     "drupal/geolocation": "1.x-dev",
     "drupal/address": "^1.1",
     "drupal/field_permissions": "^1.0@beta",
-    "drupal/eva": "^1.1"
+    "drupal/eva": "^1.1",
+    "drupal/field_group": "^1.0@RC"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
