@@ -1,0 +1,32 @@
+uuid: 97e240d9-08d9-4771-9047-ae7fdc2cae22
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.badcamp_sponsors_view
+  module:
+    - system
+    - views
+  theme:
+    - badcamp2017
+_core:
+  default_config_hash: TG1c6mbFJ4o7uvlY1Qwwi81T8MYcMdGpTltxc3LFVwg
+id: sponsors_view_core_sponsors_block
+theme: badcamp2017
+region: footer
+weight: 0
+provider: null
+plugin: 'views_block:badcamp_sponsors_view-core_sponsors_block'
+settings:
+  id: 'views_block:badcamp_sponsors_view-core_sponsors_block'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /sponsors
+    negate: true
+    context_mapping: {  }
