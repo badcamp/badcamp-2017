@@ -19,14 +19,10 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
-  default_content: 0
-  devel: 0
-  devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   eva: 0
   features: 0
-  features_ui: 0
   field: 0
   field_permissions: 0
   field_ui: 0

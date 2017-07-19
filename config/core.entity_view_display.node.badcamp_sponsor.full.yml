@@ -1,0 +1,54 @@
+uuid: c7117469-6a1b-44f3-a4af-d358363aa52e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.badcamp_sponsor.body
+    - field.field.node.badcamp_sponsor.field_link
+    - field.field.node.badcamp_sponsor.field_sponsor_level
+    - field.field.node.badcamp_sponsor.field_sponsor_logo
+    - image.style.large
+    - node.type.badcamp_sponsor
+  module:
+    - image
+    - text
+    - user
+_core:
+  default_config_hash: OC4t0JavK450l2b_zz8KUI4OYmNwq6t76Vqp1i_SQtQ
+id: node.badcamp_sponsor.full
+targetEntityType: node
+bundle: badcamp_sponsor
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_sponsor_level:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_sponsor_logo:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_link: true
