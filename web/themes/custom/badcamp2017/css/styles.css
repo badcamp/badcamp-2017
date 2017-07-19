@@ -5353,11 +5353,11 @@ a.site-slogan {
 /**
  * Sponsors Page
  */
-.path-sponsors #block-badcampsponsorstext-2 {
+.path-sponsors #block-badcampsponsorstext {
   text-align: center;
 }
 
-.path-sponsors #block-badcampsponsorstext-2 h2 {
+.path-sponsors #block-badcampsponsorstext h2 {
   font-weight: bold;
 }
 
@@ -5481,6 +5481,15 @@ a.site-slogan {
   .menu--cta-menu li a {
     width: 12.5rem;
   }
+}
+
+.blog-list-page .views-row {
+  border-bottom: 1px solid;
+  margin: 1em 0;
+}
+
+.blog-list-page .views-row:last-child {
+  border-bottom: 0px;
 }
 
 /*# sourceMappingURL=styles.css.map */

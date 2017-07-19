@@ -12,13 +12,13 @@ function badcamp2017_preprocess_views_view_unformatted__badcamp_sponsors_view__p
   switch($vars['level_class']){
     case 'core-level':
       foreach($vars['rows'] AS &$row){
-        $row['attributes']->addClass('medium-6','columns');
+        $row['attributes']->addClass('medium-6','columns','text-center');
       }
       break;
     case 'contrib-level':
     case 'supporting-level':
       foreach($vars['rows'] AS &$row){
-        $row['attributes']->addClass('medium-3','columns');
+        $row['attributes']->addClass('medium-3','columns','text-center');
       }
       break;
 
@@ -34,4 +34,15 @@ function badcamp2017_preprocess_field__node__field_tags__blog(&$vars){
   foreach($vars['items'] AS &$item){
     $item['content']['#attributes']['class'][] = 'button';
   }
+}
+
+/**
+ * Implements template_preprocess_node__node_type__node_display().
+ */
+function badcamp2017_preprocess_node__badcamp_sponsor__full(&$vars){
+  $vars['sponsor_url'] = $vars['content']['field_link'][0]['#url']->getUri();
+  unset($vars['content']['field_link']);
+  $vars['logo'] = $vars['content']['field_sponsor_logo'];
+  unset($vars['content']['field_sponsor_logo']);
+  $vars['content'] = drupal_render_children($vars['content']);
 }
