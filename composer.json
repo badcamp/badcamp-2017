@@ -14,9 +14,7 @@
     "rvtraveller/qs-composer-installer": "^1.1",
     "drupal-composer/drupal-scaffold": "^2.0.1",
     "cweagans/composer-patches": "^1.0",
-
     "drupal/core": "~8",
-
     "drupal/console": "~1.0",
     "drush/drush": "~8",
     "drupal/config_installer": "^1.0",
