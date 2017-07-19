@@ -1,0 +1,22 @@
+uuid: 43fcd158-9fb1-4f98-9b87-46ec4467a5c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_description
+    - node.type.session
+  module:
+    - text
+id: node.session.field_session_description
+field_name: field_session_description
+entity_type: node
+bundle: session
+label: 'Session Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
