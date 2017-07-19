@@ -5483,4 +5483,13 @@ a.site-slogan {
   }
 }
 
+.blog-list-page .views-row {
+  border-bottom: 1px solid;
+  margin: 1em 0;
+}
+
+.blog-list-page .views-row:last-child {
+  border-bottom: 0px;
+}
+
 /*# sourceMappingURL=styles.css.map */
