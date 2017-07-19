@@ -72,7 +72,7 @@ dependencies:
         chmod +w web/sites/default web/sites/default/settings.php
         terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" -- site-install config_installer --yes --site-name="$TEST_SITE_NAME" --account-mail="$ADMIN_EMAIL" --account-pass="$ADMIN_PASSWORD"
       fi
-    - terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" cr
+    - terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" -- cr
 test:
   override:
      - run-behat
