@@ -58,7 +58,9 @@ dependencies:
     - terminus build-env:delete:ci -n "$TERMINUS_SITE" --keep=2 --yes
     - composer -n build-assets
     - terminus env:wake -n "$TERMINUS_SITE.dev"
-    - terminus build-env:create -n "$TERMINUS_SITE.live" "$TERMINUS_ENV" --yes $CLONE_CONTENT_FLAG --notify="$NOTIFY"
+    - terminus build-env:create -n "$TERMINUS_SITE.dev" "$TERMINUS_ENV" --yes $CLONE_CONTENT_FLAG --notify="$NOTIFY"
+    # Above command does not update with live environment data. Dev isn't always updated with live data.
+    - terminus env:clone-content "$TERMINUS_SITE.live" "$TERMINUS_ENV" --yes
     - |
       if [ -n "$CLONE_CONTENT" ] ; then
         # Re-import configuration if exported configuration exists in config directory.
