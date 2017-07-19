@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+
+## Refresh Bad Camp database, files, and import configuration
+##
+## Usage: fin refresh
+
+# Abort if anything fails
+set -e
+
+TMP_USER=$(terminus whoami);
+
+if [ "$TMP_USER" != "$TERMINUS_EMAIL" ]; then
+    terminus login --machine-token=$TERMINUS_TOKEN
+fi;
+
+DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
+SITEDIR_PATH="${DOCROOT_PATH}/sites/${SITE_DIRECTORY}"
+
+cd $PROJECT_ROOT
+#composer update
+
+cd $SITEDIR_PATH
+
+# Rsync all files
+echo "Downloading latest set of files from ${PANTHEON_SITE}"
+terminus rsync ${PANTHEON_SITE}.${PANTHEON_ENV}:files .
+
+echo "Fixing files directory permissions"
+chmod -R 755 files
+
+echo 'Exporting latest database'
+if [ -f /tmp/badcamp.sql ]; then
+  rm -rf /tmp/badcamp.sql
+fi
+
+DBCONN=$(terminus connection:info ${PANTHEON_SITE}.${PANTHEON_ENV} --field="MySQL Command");
+DBDUMP=${DBCONN/mysql /mysqldump }
+eval $DBDUMP " --result-file=/tmp/badcamp.sql"
+
+fin db import /tmp/badcamp.sql
+
+fin exec "if [ ! -d ~/tmp ]; then mkdir ~/tmp; fi"
+
+cd ${DOCROOT_PATH}
+
+echo "Importing Configuration"
+#fin drush config-import --yes
+
+echo "Importing Features Configuration"
+#fin drush features-import-all --yes
+
+echo "Running Update.php"
+fin drush updatedb -y
+
+echo "Reseting user 1 password to admin"
+fin drush user-password admin --password=admin
+
+if [ "$TMP_USER" != "$TERMINUS_EMAIL" ]; then
+    terminus login --email=$TMP_USER
+fi

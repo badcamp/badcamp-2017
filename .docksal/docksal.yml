@@ -1,0 +1,40 @@
+# Basic LAMP stack
+
+version: "2.1"
+
+services:
+  # Behat
+  behat:
+    hostname: behat
+    image: docksal/behat
+    volumes:
+      - ${PROJECT_ROOT}/tests/behat:/src
+    # Keep the container running
+    entrypoint: "top -b"
+
+  # Selenium
+  browser:
+    hostname: browser
+    image: selenium/standalone-chrome
+
+  # Web
+  web:
+    extends:
+      file: ${HOME}/.docksal/stacks/services.yml
+      service: web
+    depends_on:
+      - cli
+
+  # DB
+  db:
+    extends:
+      file: ${HOME}/.docksal/stacks/services.yml
+      service: db
+    volumes:
+      - ${PROJECT_ROOT}/db:/docker-entrypoint-initdb.d:ro
+
+  # CLI
+  cli:
+    extends:
+      file: ${HOME}/.docksal/stacks/services.yml
+      service: cli
