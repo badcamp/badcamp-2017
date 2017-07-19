@@ -59,6 +59,8 @@ dependencies:
     - composer -n build-assets
     - terminus env:wake -n "$TERMINUS_SITE.dev"
     - terminus build-env:create -n "$TERMINUS_SITE.dev" "$TERMINUS_ENV" --yes $CLONE_CONTENT_FLAG --notify="$NOTIFY"
+    # Above command does not update with live environment data. Dev isn't always updated with live data.
+    - terminus env:clone-content "$TERMINUS_SITE.live" "$TERMINUS_ENV" --yes
     - |
       if [ -n "$CLONE_CONTENT" ] ; then
         # Re-import configuration if exported configuration exists in config directory.
@@ -72,7 +74,7 @@ dependencies:
         chmod +w web/sites/default web/sites/default/settings.php
         terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" -- site-install config_installer --yes --site-name="$TEST_SITE_NAME" --account-mail="$ADMIN_EMAIL" --account-pass="$ADMIN_PASSWORD"
       fi
-    - terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" cr
+    - terminus drush "$TERMINUS_SITE.$TERMINUS_ENV" -- cr
 test:
   override:
      - run-behat
