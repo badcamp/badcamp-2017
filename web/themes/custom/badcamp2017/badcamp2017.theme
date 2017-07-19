@@ -12,13 +12,13 @@ function badcamp2017_preprocess_views_view_unformatted__badcamp_sponsors_view__p
   switch($vars['level_class']){
     case 'core-level':
       foreach($vars['rows'] AS &$row){
-        $row['attributes']->addClass('medium-6','columns');
+        $row['attributes']->addClass('medium-6','columns','text-center');
       }
       break;
     case 'contrib-level':
     case 'supporting-level':
       foreach($vars['rows'] AS &$row){
-        $row['attributes']->addClass('medium-3','columns');
+        $row['attributes']->addClass('medium-3','columns','text-center');
       }
       break;
 
