@@ -46,6 +46,10 @@ dependencies:
       fi
     - git config --global user.email "$GIT_EMAIL"
     - git config --global user.name "Circle CI"
+    - |
+      cd web/themes/custom/badcamp2017/
+      npm install -g gulp
+      npm install
   override:
     - composer global require "pantheon-systems/terminus:^1"
     - composer global require "drush/drush:~8"
@@ -57,11 +61,6 @@ dependencies:
     - php -f scripts/slack/slack_notify.php pantheon_create "${TERMINUS_ENV}" "${BRANCH}"
     - terminus build-env:delete:ci -n "$TERMINUS_SITE" --keep=2 --yes
     - composer -n build-assets
-    - |
-      cd web/themes/custom/badcamp2017/
-      npm install -g gulp
-      npm install
-      gulp sass
     - terminus env:wake -n "$TERMINUS_SITE.dev"
     - terminus build-env:create -n "$TERMINUS_SITE.dev" "$TERMINUS_ENV" --yes $CLONE_CONTENT_FLAG --notify="$NOTIFY"
     # Above command does not update with live environment data. Dev isn't always updated with live data.

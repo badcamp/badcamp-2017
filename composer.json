@@ -60,7 +60,8 @@
   "scripts": {
     "build-assets": [
       "@prepare-for-pantheon",
-      "./scripts/composer/install-or-update"
+      "./scripts/composer/install-or-update",
+      "./scripts/composer/gulp-sass"
     ],
     "drupal-unit-tests": "cd web/core && ../../vendor/bin/phpunit --testsuite=unit --exclude-group Composer,DependencyInjection,PageCache",
     "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
