@@ -59,6 +59,7 @@ dependencies:
     - composer -n build-assets
     - |
       cd web/themes/custom/badcamp2017/
+      npm install -g gulp
       npm install
       gulp sass
     - terminus env:wake -n "$TERMINUS_SITE.dev"
