@@ -1,0 +1,9 @@
+.blog-list-page{
+  .views-row{
+    border-bottom: 1px solid;
+    margin: 1em 0;
+    &:last-child{
+      border-bottom: 0px;
+    }
+  }
+}

@@ -284,4 +284,21 @@ class FeatureContext extends RawDrupalContext implements Context, SnippetAccepti
     {
       $this->users[] = (object)array('name' => 'smithyboy143');
     }
+
+  /**
+   * @Then I should see a link pointing to :arg1
+   */
+  public function iShouldSeeALinkPointingTo($arg1)
+  {
+    $links = $this->getSession()->getPage()->findAll('css', 'a');
+    /** @var \Behat\Mink\Element\NodeElement $link */
+    foreach ($links as $link) {
+      ($link->getAttribute('href'));
+      if ($link->getAttribute('href') == $arg1) {
+        return;
+      }
+    }
+    throw new \Exception(strtr('No links with path @path were found', ['@path' => $arg1]));
+  }
+
 }

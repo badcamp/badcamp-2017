@@ -15,3 +15,46 @@
     color: white;
   }
 }
+
+#block-pagetitle{
+  h1{
+    text-align: center;
+  }
+}
+
+#block-mainpagecontent{
+  p{
+    font-size: 1.2em;
+  }
+  .statistics-block{
+    margin-top: 30px;
+    .statistics{
+      text-align: center;
+      span{
+        display: block;
+      }
+      &.trained .bar{
+        background-color: $bc-blue;
+      }
+      &.attendeees .bar{
+        background-color: $bc-green;
+      }
+      &.cost .bar{
+        background-color: $bc-orange;
+      }
+
+      .number{
+        font-size: 4em;
+        line-height: 1;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      .bar{
+        height: 5px;
+      }
+      .caption{
+        margin-top: 7px;
+      }
+    }
+  }
+}

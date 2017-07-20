@@ -5324,6 +5324,53 @@ a.site-slogan {
   color: white;
 }
 
+#block-pagetitle h1 {
+  text-align: center;
+}
+
+#block-mainpagecontent p {
+  font-size: 1.2em;
+}
+
+#block-mainpagecontent .statistics-block {
+  margin-top: 30px;
+}
+
+#block-mainpagecontent .statistics-block .statistics {
+  text-align: center;
+}
+
+#block-mainpagecontent .statistics-block .statistics span {
+  display: block;
+}
+
+#block-mainpagecontent .statistics-block .statistics.trained .bar {
+  background-color: #0071bd;
+}
+
+#block-mainpagecontent .statistics-block .statistics.attendeees .bar {
+  background-color: #6cb229;
+}
+
+#block-mainpagecontent .statistics-block .statistics.cost .bar {
+  background-color: #ed592a;
+}
+
+#block-mainpagecontent .statistics-block .statistics .number {
+  font-size: 4em;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+#block-mainpagecontent .statistics-block .statistics .bar {
+  height: 5px;
+}
+
+#block-mainpagecontent .statistics-block .statistics .caption {
+  margin-top: 7px;
+}
+
 /**
  * NB: This was left for now, as it was just a copy of how the sponsors block was
  * themed on the splash page.  It will be replaced during the design implementation.
@@ -5353,11 +5400,11 @@ a.site-slogan {
 /**
  * Sponsors Page
  */
-.path-sponsors #block-badcampsponsorstext-2 {
+.path-sponsors #block-badcampsponsorstext {
   text-align: center;
 }
 
-.path-sponsors #block-badcampsponsorstext-2 h2 {
+.path-sponsors #block-badcampsponsorstext h2 {
   font-weight: bold;
 }
 
@@ -5481,6 +5528,15 @@ a.site-slogan {
   .menu--cta-menu li a {
     width: 12.5rem;
   }
+}
+
+.blog-list-page .views-row {
+  border-bottom: 1px solid;
+  margin: 1em 0;
+}
+
+.blog-list-page .views-row:last-child {
+  border-bottom: 0px;
 }
 
 /*# sourceMappingURL=styles.css.map */
