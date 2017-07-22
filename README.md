@@ -20,6 +20,37 @@ Please do all of your code commits directly to GitHub. Do not commit anything di
 To setup a local development environment, checkout the code from this repository and then run composer install to get everything up to date. Do not commit the vendor directory to the project (there is a .gitignore to help).
 
 Speaking of picking a box...
+
+##### Docksal
+
+###### Setup
+
+1. Generate a Terminus Token Through Pantheon [here](https://dashboard.pantheon.io/machine-token/create/badcamp-docksal)
+2. Clone the repository into your local system
+3. Navigate to project root
+4. Run Set Up Docksal
+
+*NOTE* This will install docksal, terminus, and terminus-rsync if they are 
+currently not installed on the machine.
+
+```
+./scripts/docksal/setup
+```
+
+###### Starting Project
+
+Starting the project can be done executing the following command
+```
+fin @badcamp2017 start
+```
+
+###### Stopping Project
+
+If you are done working on badcamp for the day. You can turn off the docksal project doing the following:
+```
+fin @badcamp2017 stop
+```
+
 ##### MAMP Pro Users
 After you have run composer install:
 1. Set up a new site **Important:** Your document root is the web subdirectory of the repo. You might want to have MAMP set up the database for you while creating the site, you're going to need one anyway.

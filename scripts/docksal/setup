@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+TERMINUS_TOKEN=$1
+TERMINUS_EMAIL=$2
+
+TERMINUS=`which terminus`
+FIN=`which fin`
+
+if [ -z "$FIN" ]; then
+  curl -fsSL get.docksal.io | sh
+  FIN=`which fin`
+fi
+
+if [ -z "$TERMINUS" ]; then
+  echo "Installing Terminus"
+  cd /tmp
+  curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar
+  installer.phar install
+  rm installer.php
+  TERMINUS=`which terminus`
+fi
+
+TERMINUS_RSYNC="~/.terminus/plugins/terminus-rsync-plugin"
+if [[ -n "$TERMINUS" && -e "$TERMINUS_RSYNC" ]]; then
+  echo "Installing Terminus Rsync Plugin"
+  mkdir -p ~/.terminus/plugins
+  composer create-project --no-dev -d ~/.terminus/plugins pantheon-systems/terminus-rsync-plugin:~1
+fi
+
+TERMINUS_WHOAMI=`terminus auth:whoami`
+if [ -z $TERMINUS_WHOAMI ]; then
+  echo "Authenticating Terminus"
+  terminus auth:login --machine-token=$TERMINUS_TOKEN
+fi
+
+echo "Exporting Data to .docksal/docksal-local.env"
+echo "TERMINUS_TOKEN=${TERMINUS_TOKEN}" >> .docksal/docksal-local.env
+echo "TERMINUS_EMAIL=${TERMINUS_EMAIL}" >> .docksal/docksal-local.env
+
+
+echo "Running Composer Update"
+composer update
+
+echo "Starting Docksal Project"
+fin start
