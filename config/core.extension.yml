@@ -1,9 +1,8 @@
 module:
   automated_cron: 0
   badcamp_blog: 0
+  badcamp_content: 0
   badcamp_program_details: 0
-  badcamp_sponsors: 0
-  badcamp_styleguide: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -18,6 +17,8 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
+  default_content: 0
+  devel: 0
   dynamic_page_cache: 0
   editor: 0
   features: 0
@@ -25,10 +26,12 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  hal: 0
   help: 0
   history: 0
   image: 0
   key: 0
+  kint: 0
   link: 0
   mailchimp: 0
   mailchimp_lists: 0
@@ -41,6 +44,7 @@ module:
   quickedit: 0
   rdf: 0
   search: 0
+  serialization: 0
   shortcut: 0
   social_profile_field: 0
   system: 0

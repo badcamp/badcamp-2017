@@ -5312,6 +5312,11 @@ a.site-slogan {
   }
 }
 
+.columns.nopadding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .path-frontpage .zone-highlighted, .path-sponsors .zone-highlighted {
   background-image: url("../images/homepage-bg-image.jpg");
   background-repeat: no-repeat;
@@ -5369,6 +5374,103 @@ a.site-slogan {
 
 #block-mainpagecontent .statistics-block .statistics .caption {
   margin-top: 7px;
+}
+
+#block-homepageeventsataglancespecial .banner-image {
+  background-image: url("../images/badcamp-events-at-a-glance.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #222;
+  background-position: center center;
+  min-height: 200px;
+}
+
+@media print, screen and (min-width: 64em) {
+  #block-homepageeventsataglancespecial .banner-image {
+    background-position: top center;
+    min-height: inherit;
+  }
+}
+
+#block-homepageeventsataglancespecial .banner-image .banner-title {
+  text-align: left;
+  margin-top: -2.5rem;
+  line-height: 2.3;
+}
+
+@media print, screen and (min-width: 40em) {
+  #block-homepageeventsataglancespecial .banner-image .banner-title {
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+#block-homepageeventsataglancespecial .banner-image .banner-title span {
+  background: #222;
+  color: white;
+  font-weight: 700;
+  display: block;
+  padding: 1rem 2rem;
+}
+
+@media print, screen and (min-width: 40em) {
+  #block-homepageeventsataglancespecial .banner-image .banner-title span {
+    display: inline;
+  }
+}
+
+#block-homepageeventsataglancespecial .item .title, #block-homepageeventsataglancespecial .item .accordion-title h3, #block-homepageeventsataglancespecial .accordion-item .title, #block-homepageeventsataglancespecial .accordion-item .accordion-title h3 {
+  font-weight: 700;
+}
+
+#block-homepageeventsataglancespecial .item .block-content p:first-child, #block-homepageeventsataglancespecial .accordion-item .block-content p:first-child {
+  min-height: 200px;
+}
+
+@media print, screen and (min-width: 64em) {
+  #block-homepageeventsataglancespecial .item .block-content p:first-child, #block-homepageeventsataglancespecial .accordion-item .block-content p:first-child {
+    min-height: 115px;
+  }
+}
+
+#block-homepageeventsataglancespecial .main-content .row {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+#block-homepageeventsataglancespecial .main-content .row .item {
+  padding: 2rem 2.5rem 1rem 2.5rem;
+}
+
+#block-homepageeventsataglancespecial .main-content .row .item.item-even {
+  border-right: 1px solid #e6e6e6;
+}
+
+#block-homepageeventsataglancespecial .main-content .row:last-child {
+  border-bottom: 0px solid;
+}
+
+#block-homepageeventsataglancespecial .blue-section .title, #block-homepageeventsataglancespecial .blue-section .accordion-title {
+  color: #0071bd;
+}
+
+#block-homepageeventsataglancespecial .blue-section .button {
+  background-color: #0071bd;
+}
+
+#block-homepageeventsataglancespecial .green-section .title, #block-homepageeventsataglancespecial .green-section .accordion-title {
+  color: #6cb229;
+}
+
+#block-homepageeventsataglancespecial .green-section .button {
+  background-color: #6cb229;
+}
+
+#block-homepageeventsataglancespecial .orange-section .title, #block-homepageeventsataglancespecial .orange-section .accordion-title {
+  color: #ed592a;
+}
+
+#block-homepageeventsataglancespecial .orange-section .button {
+  background-color: #ed592a;
 }
 
 /**
