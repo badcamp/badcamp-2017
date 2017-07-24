@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc71fff32402cae316a81337f1527316",
+    "content-hash": "45d88c0bfa876846a89548e771c1eae7",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2061,17 +2061,11 @@
         },
         {
             "name": "drupal/default_content",
-            "version": "1.0.0-alpha6",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/default_content",
-                "reference": "8.x-1.0-alpha6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/default_content-8.x-1.0-alpha6.zip",
-                "reference": null,
-                "shasum": "ec378158521afff8181f3536e140a31c161fc867"
+                "reference": "68c30918ecd4c48f578070641c97a3b35c86a5df"
             },
             "require": {
                 "drupal/core": "~8.3"
@@ -2082,8 +2076,13 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha6",
+                    "version": "8.x-1.0-alpha6+0-dev",
                     "datestamp": "1493675943"
+                },
+                "patches_applied": {
+                    "Allow manual imports": "https://www.drupal.org/files/issues/allow_manual_imports-2640734-67.patch",
+                    "Issue: 2703607 - drush command default-content-export-module-with-references": "https://www.drupal.org/files/issues/default_content-drush_dcemr-2703607-17.patch",
+                    "Issue: 2698425 - Do not reimport existing entities": "https://www.drupal.org/files/issues/do_not_reimport-2698425-64.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2128,7 +2127,8 @@
             "homepage": "https://www.drupal.org/project/default_content",
             "support": {
                 "source": "http://cgit.drupalcode.org/default_content"
-            }
+            },
+            "time": "2017-05-01 21:54:12"
         },
         {
             "name": "drupal/devel",
@@ -7744,7 +7744,7 @@
         "drupal/config_readonly": 10,
         "drupal/config_split": 10,
         "drupal/devel": 5,
-        "drupal/default_content": 15
+        "drupal/default_content": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
