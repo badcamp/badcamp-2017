@@ -12,6 +12,7 @@ regions:
   header_left: 'Header left'
   header_right: 'Header right'
   highlighted: 'Highlighted'
+  content_full: 'Content Full Width'
   info: 'Info'
   help: 'Help'
   content: 'Content'

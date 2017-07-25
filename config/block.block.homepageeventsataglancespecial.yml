@@ -1,0 +1,31 @@
+uuid: 750afda4-de33-4401-a3b4-dcb40fe2db6f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:block_reference:010401b2-8a3d-424e-aed2-9c448c6bcadc'
+  module:
+    - block_content
+    - system
+  theme:
+    - badcamp2017
+id: homepageeventsataglancespecial
+theme: badcamp2017
+region: content_full
+weight: -7
+provider: null
+plugin: 'block_content:010401b2-8a3d-424e-aed2-9c448c6bcadc'
+settings:
+  id: 'block_content:010401b2-8a3d-424e-aed2-9c448c6bcadc'
+  label: 'Homepage Events At A Glance Special'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

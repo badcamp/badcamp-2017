@@ -1,6 +1,8 @@
 <?php
 
 use Drupal\Component\Utility\Html;
+use Drupal\Core\Render\Element;
+
 
 /**
  * Implements template_preprocess_views_view_unformatted().
@@ -69,4 +71,36 @@ function badcamp2017_preprocess_node__badcamp_sponsor__full(&$vars){
   $vars['logo'] = $vars['content']['field_sponsor_logo'];
   unset($vars['content']['field_sponsor_logo']);
   $vars['content'] = drupal_render_children($vars['content']);
+}
+
+/**
+ * Implements template_preprocess_block__block_type().
+ */
+function badcamp2017_preprocess_block__homepageeventsataglancespecial(&$vars){
+  $vars['block_count'] = sizeof(Element::children($vars['content']['field_blocks']));
+  $titles = [];
+  for($x = 0; $x < $vars['block_count']; $x++) {
+    $titles[] = $vars['content']['field_blocks'][$x]['#block_content']->info->value;
+  }
+  $vars['titles'] = $titles;
+  $vars['sectionClasses'] = [];
+  $vars['context_links'] = [];
+  for($x = 0; $x < $vars['block_count']; $x++){
+    $class = '';
+    switch($x%3){
+      case 0:
+        $class = 'blue-section';
+        break;
+      case 1:
+        $class = 'green-section';
+        break;
+      case 2:
+        $class = 'orange-section';
+    }
+    $vars['sectionClasses'][$x] = $class;
+    $vars['context_links'][$x]['contextual_links'] = [
+      '#type' => 'contextual_links_placeholder',
+      '#id' => _contextual_links_to_id($vars['content']['field_blocks'][$x]['#contextual_links']),
+    ];
+  }
 }

@@ -8,6 +8,14 @@ dependencies:
   - default_content
 
 default_content:
+  block_content:
+    - 010401b2-8a3d-424e-aed2-9c448c6bcadc
+    - aa58cd9c-fad5-47a4-bc89-f41dec9c9e18
+    - cf2208d9-4778-449c-a1a8-301756e50a98
+    - 7718ae04-128c-4e45-b8ec-4106affaf5a9
+    - e2ea07ce-2b8a-4dc5-b523-4be6348e0a4f
+    - 3c7d737d-6ee5-41c6-8e6c-ac3d13e3d43c
+    - debd7925-fd5c-4be7-bd5d-edf960ad97e4
   taxonomy_term:
     - 98f391da-861e-4a85-a874-01d16752afd4
     - ed9a1339-21c7-45b0-a45c-707dda60b7d5
@@ -24,4 +32,3 @@ default_content:
     - 982b6965-9249-430b-b623-101e7588ac0b
   node:
     - 95c7dd68-189d-455b-9645-aa2b6fee7034
-

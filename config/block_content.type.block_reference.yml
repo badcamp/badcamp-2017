@@ -1,0 +1,8 @@
+uuid: dd2659aa-b9f0-4657-bdee-c9e82d447699
+langcode: en
+status: true
+dependencies: {  }
+id: block_reference
+label: 'Block Reference'
+revision: 0
+description: ''
