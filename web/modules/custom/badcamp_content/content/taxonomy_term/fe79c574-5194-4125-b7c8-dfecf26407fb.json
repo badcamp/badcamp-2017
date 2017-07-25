@@ -1,0 +1,54 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/sponsorship-level\/contrib-level?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/sponsor_level"
+        }
+    },
+    "tid": [
+        {
+            "value": 2
+        }
+    ],
+    "uuid": [
+        {
+            "value": "fe79c574-5194-4125-b7c8-dfecf26407fb"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "sponsor_level"
+        }
+    ],
+    "name": [
+        {
+            "value": "Contrib Level",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 1
+        }
+    ],
+    "changed": [
+        {
+            "value": 1499920368,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ]
+}

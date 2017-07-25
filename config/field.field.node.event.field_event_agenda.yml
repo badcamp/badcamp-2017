@@ -1,0 +1,21 @@
+uuid: 85e3bad2-a0ea-483e-b80f-c939b611cd7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_agenda
+    - node.type.event
+  module:
+    - text
+id: node.event.field_event_agenda
+field_name: field_event_agenda
+entity_type: node
+bundle: event
+label: 'Event agenda'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

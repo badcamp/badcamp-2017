@@ -1,0 +1,18 @@
+uuid: 4f3fd2a0-c525-41e6-a45e-75668f913f49
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Session
+type: session
+description: '<em>Sessions</em> are talks given by individuals.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false
