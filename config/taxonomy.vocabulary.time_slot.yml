@@ -1,9 +1,0 @@
-uuid: c62503ab-543b-402d-8633-1ec116a02757
-langcode: en
-status: true
-dependencies: {  }
-name: 'Time slot'
-vid: time_slot
-description: ''
-hierarchy: 0
-weight: 0

@@ -35,5 +35,7 @@ content:
       image_link: content
     third_party_settings: {  }
 hidden:
+  body: true
+  field_address: true
   field_location: true
   links: true

@@ -15,4 +15,14 @@ content:
   links:
     weight: 100
     region: content
-hidden: {  }
+hidden:
+  field_event_agenda: true
+  field_event_date_and_time: true
+  field_event_description: true
+  field_event_sponsors: true
+  field_event_type: true
+  field_event_venue: true
+  field_maximum_registration: true
+  field_more_info_rsvp: true
+  field_sold_out: true
+  field_summit_leaders: true
