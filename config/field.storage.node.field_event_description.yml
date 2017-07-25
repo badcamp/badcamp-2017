@@ -1,0 +1,19 @@
+uuid: c2b9e5cd-39d0-4b45-9b50-1c22b8f4e86a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_event_description
+field_name: field_event_description
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

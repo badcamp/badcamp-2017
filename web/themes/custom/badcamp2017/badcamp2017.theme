@@ -39,6 +39,30 @@ function badcamp2017_preprocess_field__node__field_tags__blog(&$vars){
 }
 
 /**
+ * Implements hook_node__node_type__view_mode().
+ */
+function badcamp2017_preprocess_node__venue__full(&$vars){
+  $vars['map'] = $vars['content']['field_location'];
+  $vars['image'] = $vars['content']['field_venue_image'];
+  $vars['schedule'] = $vars['content']['venue_events_entity_view_1'];
+  unset($vars['content']['field_location']);
+  unset($vars['content']['field_venue_image']);
+  unset($vars['content']['venue_events_entity_view_1']);
+
+  $address = urlencode(str_ireplace("\r\n","",$vars['map'][0]['#locations'][0]['#content']));
+  $lat = $vars['map'][0]['#locations'][0]['#position']['lat'];
+  $lng = $vars['map'][0]['#locations'][0]['#position']['lng'];
+  $url = Url::fromUri('https://www.google.com/maps/dir//' . $address.'/@'. $lat . ',' . $lng .',17z');
+  $link = Link::fromTextAndUrl('Get Directions', $url)->toRenderable();
+  $link['#attributes'] = [
+    'target' => '_blank',
+    'class' => 'success button'
+  ];
+  $vars['directionsLink'] = $link;
+
+}
+
+/**
  * Implements template_preprocess_node__node_type__node_display().
  */
 function badcamp2017_preprocess_node__badcamp_sponsor__full(&$vars){

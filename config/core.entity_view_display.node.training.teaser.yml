@@ -1,0 +1,24 @@
+uuid: 772643ac-2b7f-4437-a3a8-aec2ba3e55ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.training
+  module:
+    - user
+id: node.training.teaser
+targetEntityType: node
+bundle: training
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_description: true
+  field_event_date_and_time: true
+  field_event_venue: true
+  field_maximum_registration: true
+  field_session_room: true
+  field_session_skill_level: true
