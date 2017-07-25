@@ -22,4 +22,6 @@ default_content:
     - 5e14b057-74b2-4f71-8580-6a2e409bb135
     - cf7602d5-7e9c-4ff0-8138-f9cb7a144d35
     - 982b6965-9249-430b-b623-101e7588ac0b
+  node:
+    - 95c7dd68-189d-455b-9645-aa2b6fee7034
 
