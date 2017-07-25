@@ -1,0 +1,204 @@
+uuid: 8f6ad980-fbd5-4e7f-abfa-ead31b92bce3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event.field_event_agenda
+    - field.field.node.event.field_event_date_and_time
+    - field.field.node.event.field_event_description
+    - field.field.node.event.field_event_sponsors
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_event_venue
+    - field.field.node.event.field_maximum_registration
+    - field.field.node.event.field_more_info_rsvp
+    - field.field.node.event.field_sold_out
+    - field.field.node.event.field_summit_leaders
+    - node.type.event
+  module:
+    - datetime_range
+    - field_group
+    - path
+    - text
+third_party_settings:
+  field_group:
+    group_event_info:
+      children:
+        - group_event_information
+        - group_event_description
+        - group_event_sponsors
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: 'Event Info'
+    group_event_information:
+      children:
+        - title
+        - field_event_type
+        - field_event_date_and_time
+        - field_event_venue
+        - field_maximum_registration
+        - field_sold_out
+        - field_summit_leaders
+      parent_name: group_event_info
+      weight: 2
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Event Information'
+    group_event_description:
+      children:
+        - field_event_description
+        - field_event_agenda
+        - field_more_info_rsvp
+      parent_name: group_event_info
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Event Description'
+    group_event_sponsors:
+      children:
+        - field_event_sponsors
+      parent_name: group_event_info
+      weight: 4
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+      label: 'Event Sponsor(s)'
+id: node.event.default
+targetEntityType: node
+bundle: event
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_event_agenda:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_event_date_and_time:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_event_description:
+    weight: 13
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_event_sponsors:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_event_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_event_venue:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_maximum_registration:
+    weight: 5
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_more_info_rsvp:
+    weight: 15
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_sold_out:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_summit_leaders:
+    weight: 7
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  path:
+    type: path
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

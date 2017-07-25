@@ -1,0 +1,66 @@
+uuid: b9b7080d-74d7-4ace-af77-b02f493ae14f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.session.field_comments
+    - field.field.node.session.field_event_date_and_time
+    - field.field.node.session.field_event_venue
+    - field.field.node.session.field_session_description
+    - field.field.node.session.field_session_files
+    - field.field.node.session.field_session_skill_level
+    - field.field.node.session.field_session_speakers
+    - field.field.node.session.field_session_status
+    - field.field.node.session.field_session_track
+    - field.field.node.session.field_video
+    - node.type.session
+  module:
+    - text
+    - user
+id: node.session.teaser
+targetEntityType: node
+bundle: session
+mode: teaser
+content:
+  field_session_description:
+    type: text_summary_or_trimmed
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_session_skill_level:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_session_speakers:
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_session_track:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  field_comments: true
+  field_event_date_and_time: true
+  field_event_venue: true
+  field_session_files: true
+  field_session_status: true
+  field_session_time_slot: true
+  field_video: true
+  links: true

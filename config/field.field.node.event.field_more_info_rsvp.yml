@@ -1,0 +1,21 @@
+uuid: 9735e6c9-a25b-4b80-a68f-85b414f5675e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_more_info_rsvp
+    - node.type.event
+  module:
+    - text
+id: node.event.field_more_info_rsvp
+field_name: field_more_info_rsvp
+entity_type: node
+bundle: event
+label: 'More Information / RSVP information'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

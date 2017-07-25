@@ -1,0 +1,8 @@
+uuid: 7eae6e61-cceb-49a0-b371-bc64a59f9079
+langcode: en
+status: true
+dependencies: {  }
+id: session_comments
+label: 'Session Comments'
+target_entity_type_id: node
+description: ''
