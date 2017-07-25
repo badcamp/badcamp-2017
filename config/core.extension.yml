@@ -6,6 +6,8 @@ module:
   badcamp_content: 0
   badcamp_program_details: 0
   better_exposed_filters: 0
+  badcamp_sponsors: 0
+  badcamp_styleguide: 0
   block: 0
   block_content: 0
   breakpoint: 0
