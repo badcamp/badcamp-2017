@@ -1,0 +1,29 @@
+uuid: 0f79541a-4ce2-4cc3-9700-cdb846143889
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_speakers
+    - node.type.session
+id: node.session.field_session_speakers
+field_name: field_session_speakers
+entity_type: node
+bundle: session
+label: 'Session Speaker(s)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: name
+      direction: ASC
+    auto_create: false
+field_type: entity_reference
