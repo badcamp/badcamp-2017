@@ -1,0 +1,7 @@
+uuid: 77f14c51-f127-4472-8587-f27c114f9776
+langcode: en
+status: false
+dependencies: {  }
+formId: node_badcamp_sponsor_form
+captchaType: default
+label: null

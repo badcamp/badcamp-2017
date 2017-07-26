@@ -46,11 +46,11 @@ dependencies:
       fi
     - git config --global user.email "$GIT_EMAIL"
     - git config --global user.name "Circle CI"
+  override:
     - |
       cd web/themes/custom/badcamp2017/
       npm install -g gulp
       npm install
-  override:
     - composer global require "pantheon-systems/terminus:^1"
     - composer global require "drush/drush:~8"
     - mkdir -p ~/.terminus/plugins
