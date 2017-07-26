@@ -1,0 +1,28 @@
+uuid: 5cabb5e0-3509-4aba-b2cf-ad962d4206ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - badcamp_stripe_payment
+    - system
+  theme:
+    - badcamp2017
+id: skipdonationblock
+theme: badcamp2017
+region: content
+weight: -1
+provider: null
+plugin: skip_donation_block
+settings:
+  id: skip_donation_block
+  label: 'Skip donation block'
+  provider: badcamp_stripe_payment
+  label_display: '0'
+  path: /
+  button_text: Skip
+visibility:
+  request_path:
+    id: request_path
+    pages: /donate
+    negate: false
+    context_mapping: {  }

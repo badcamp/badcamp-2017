@@ -1,0 +1,40 @@
+uuid: 727cf3b4-adb0-4e77-bd51-3c39ac3a3180
+langcode: en
+status: true
+dependencies:
+  module:
+    - badcamp_stripe_payment
+    - system
+    - user
+  theme:
+    - badcamp2017
+id: stripecheckoutblock_3
+theme: badcamp2017
+region: content
+weight: -2
+provider: null
+plugin: stripe_checkout_block
+settings:
+  id: stripe_checkout_block
+  label: $100
+  provider: badcamp_stripe_payment
+  label_display: visible
+  turn_on_avs: 0
+  amount: '10000'
+  description:
+    value: "<p><strong>Benefits</strong></p>\r\n\r\n<ul>\r\n\t<li>Much love and respect</li>\r\n\t<li>BADCamp T-shirt</li>\r\n\t<li>Surprise Swag!</li>\r\n\t<li>Limited-edition BADCamp hoodie</li>\r\n</ul>\r\n"
+    format: basic_html
+  payment_type: donation
+visibility:
+  request_path:
+    id: request_path
+    pages: /donate
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

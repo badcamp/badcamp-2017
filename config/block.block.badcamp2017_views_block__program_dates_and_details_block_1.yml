@@ -12,7 +12,7 @@ dependencies:
 id: badcamp2017_views_block__program_dates_and_details_block_1
 theme: badcamp2017
 region: content
-weight: -3
+weight: -6
 provider: null
 plugin: 'views_block:program_dates_and_details-block_1'
 settings:
