@@ -1,0 +1,75 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+<div{{ attributes }}>
+    <div class="clearfix" data-equalizer="holder" data-equalizer-mq="medium-up">
+        {{ title_suffix }}
+
+        <div class="columns small-12 medium-12 large-5 banner-image nopadding" data-equalizer-watch="holder">
+            <h3 class="banner-title">
+                <span>Events at a Glance</span>
+            </h3>
+        </div>
+        <div class="columns small-12 small-pull-0 medium-12 medium-pull-0 large-6 large-pull-1 main-content" data-equalizer-watch="holder">
+            <div class="show-for-large">
+                {%  for i in 0..(block_count-1) %}
+                    {% if loop.index0 is even %}
+                        <div class="row" data-equalizer="rowholder">
+                    {% endif %}
+
+                        {% set itemIndex = "item-" ~ loop.index0 %}
+                        {% set itemEvenOdd = "item-" ~ (loop.index0 is even ? 'even' : 'odd') %}
+                        <div{{ content.field_blocks[ loop.index0 ]['#attributes'] }} class="contextual-region columns item medium-6 small-12 {{ sectionClasses[ loop.index0 ] }} {{ itemIndex }} {{ itemEvenOdd }}" data-equalizer-watch="rowholder">
+                            {{ context_links[loop.index0] }}
+                            <h4 class="title">{{ titles[ loop.index0 ] }}</h4>
+                            <div class="block-content">
+                                {{ content.field_blocks[ loop.index0 ] }}
+                            </div>
+                        </div>
+
+                    {% if ( loop.index0 is odd ) or ( loop.last ) %}
+                        </div>
+                    {% endif %}
+                {%  endfor %}
+            </div>
+            <div class="hide-for-large">
+                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                    {% for i in 0..(block_count-1) %}
+                        <li class="accordion-item {{ sectionClasses[ loop.index0 ] }}" data-accordion-item>
+                            <a href="#" class="accordion-title"><h4>{{ titles[ loop.index0 ] }}</h4></a>
+                            <div class="accordion-content" data-tab-content>
+                                {{ content.field_blocks[ loop.index0 ] }}
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

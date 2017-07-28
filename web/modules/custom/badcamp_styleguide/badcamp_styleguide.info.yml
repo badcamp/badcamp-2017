@@ -1,0 +1,5 @@
+name: Styleguide
+description: 'Provides a styleguide for theming purposes.'
+type: module
+core: 8.x
+package: BADCamp

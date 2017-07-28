@@ -1,0 +1,22 @@
+uuid: 8137f698-189c-4a6a-ad3e-f6df5af16a22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.venue
+  module:
+    - text
+id: node.venue.body
+field_name: body
+entity_type: node
+bundle: venue
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

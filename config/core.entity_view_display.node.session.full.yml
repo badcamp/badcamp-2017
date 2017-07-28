@@ -1,0 +1,120 @@
+uuid: d0d49652-8c09-4f83-b61d-2278dfcf5e21
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.session_comments.default
+    - core.entity_view_mode.node.full
+    - field.field.node.session.field_comments
+    - field.field.node.session.field_event_date_and_time
+    - field.field.node.session.field_event_venue
+    - field.field.node.session.field_session_description
+    - field.field.node.session.field_session_files
+    - field.field.node.session.field_session_skill_level
+    - field.field.node.session.field_session_speakers
+    - field.field.node.session.field_session_status
+    - field.field.node.session.field_session_track
+    - field.field.node.session.field_video
+    - node.type.session
+  module:
+    - comment
+    - datetime_range
+    - file
+    - options
+    - text
+    - user
+    - video_embed_field
+id: node.session.full
+targetEntityType: node
+bundle: session
+mode: full
+content:
+  field_comments:
+    type: comment_default
+    weight: 10
+    region: content
+    label: hidden
+    settings:
+      pager_id: 0
+      view_mode: default
+    third_party_settings: {  }
+  field_event_date_and_time:
+    type: daterange_default
+    weight: 5
+    region: content
+    label: inline
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+  field_event_venue:
+    type: entity_reference_label
+    weight: 6
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_session_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_session_files:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_table
+    region: content
+  field_session_skill_level:
+    weight: 3
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_session_speakers:
+    weight: 4
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_session_status:
+    type: list_default
+    weight: 7
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_session_track:
+    weight: 2
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_video:
+    weight: 0
+    label: hidden
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: false
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+  links:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

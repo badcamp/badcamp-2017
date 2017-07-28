@@ -1,0 +1,34 @@
+name: Content
+description: 'Provides migratable content'
+type: module
+core: 8.x
+package: BADCamp
+
+dependencies:
+  - default_content
+
+default_content:
+  block_content:
+    - 010401b2-8a3d-424e-aed2-9c448c6bcadc
+    - aa58cd9c-fad5-47a4-bc89-f41dec9c9e18
+    - cf2208d9-4778-449c-a1a8-301756e50a98
+    - 7718ae04-128c-4e45-b8ec-4106affaf5a9
+    - e2ea07ce-2b8a-4dc5-b523-4be6348e0a4f
+    - 3c7d737d-6ee5-41c6-8e6c-ac3d13e3d43c
+    - debd7925-fd5c-4be7-bd5d-edf960ad97e4
+  taxonomy_term:
+    - 98f391da-861e-4a85-a874-01d16752afd4
+    - ed9a1339-21c7-45b0-a45c-707dda60b7d5
+    - 1471e9ef-86b4-4acf-8ab5-4b79bed1be56
+    - d31e8168-12ae-4760-ad90-655509b07e5a
+    - fe79c574-5194-4125-b7c8-dfecf26407fb
+    - 7fd701da-e7ef-4566-a70c-c80820a9e8ee
+    - 196131d3-a333-4dc3-b1dc-e53ed113fe39
+    - c1f34dff-0b75-4c3b-8404-e9369bb183b8
+    - 1f1f685b-e43d-430e-af02-227f50cf4bc3
+    - d58eb364-4559-45f1-b4f5-5f3e3da4775f
+    - 5e14b057-74b2-4f71-8580-6a2e409bb135
+    - cf7602d5-7e9c-4ff0-8138-f9cb7a144d35
+    - 982b6965-9249-430b-b623-101e7588ac0b
+  node:
+    - 95c7dd68-189d-455b-9645-aa2b6fee7034

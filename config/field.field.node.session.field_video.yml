@@ -1,0 +1,25 @@
+uuid: c961b8d8-e5c5-4b96-a632-ac77b9670eca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - node.type.session
+  module:
+    - video_embed_field
+id: node.session.field_video
+field_name: field_video
+entity_type: node
+bundle: session
+label: Video
+description: "<p><em>YouTube</em> and <em>Vimeo</em> support.</p>\r\n<p>Paste the link to the video page. These are videos used for supporting your session.</p>"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    vimeo: vimeo
+    youtube: youtube
+    youtube_playlist: youtube_playlist
+field_type: video_embed_field

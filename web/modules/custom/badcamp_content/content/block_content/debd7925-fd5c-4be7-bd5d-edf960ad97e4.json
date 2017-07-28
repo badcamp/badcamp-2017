@@ -1,0 +1,73 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/10?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+            "value": 10
+        }
+    ],
+    "uuid": [
+        {
+            "value": "debd7925-fd5c-4be7-bd5d-edf960ad97e4"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 10
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "info": [
+        {
+            "value": "Networking",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1500791768,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1500754433
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>Looking for a job? Looking to find great Drupal talent? BADCamp is a great place to find either.<\/p>\r\n\r\n<p><a href=\"#\" class=\"button\">View the Jobs Listing<\/a><\/p>\r\n",
+            "format": "full_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}
