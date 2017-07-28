@@ -32,7 +32,6 @@ Speaking of picking a box...
 
 *NOTE* This will install docksal, terminus, and terminus-rsync if they are 
 currently not installed on the machine.
-
 ```
 ./scripts/docksal/setup
 ```
