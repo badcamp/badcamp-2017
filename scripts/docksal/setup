@@ -3,8 +3,39 @@
 TERMINUS_TOKEN=$1
 TERMINUS_EMAIL=$2
 
+while true; do
+  read -p "By continuing the following script will install Docksal, Virtualbox, Terminus, and the Terminus Rsync Plugin. Do you want to continue?" yn
+  case $yn in
+    [Yy]* ) echo "Starting Install..." break;;
+    [Nn]* ) exit;;
+    * ) echo "Please answer yes or no.";;
+  esac
+done
+
+PHP=`which php`
+COMPOSER=`which composer`
 TERMINUS=`which terminus`
 FIN=`which fin`
+
+if [ -z "$TERMINUS_TOKEN" ]; then
+  echo "Terminus Token is required in order to continue";
+  exit 1;
+fi;
+
+if [ -z "$TERMINUS_EMAIL" ]; then
+  echo "Terminus Email is required in order to continue";
+  exit 1;
+fi;
+
+if [ -z "$PHP" ]; then
+  echo "PHP is required in order to install Terminus";
+  exit 1;
+fi
+
+if [ -z "$COMPOSER" ]; then
+  echo "Composer must be installed before hand";
+  exit;
+fi
 
 if [ -z "$FIN" ]; then
   curl -fsSL get.docksal.io | sh
@@ -36,7 +67,6 @@ fi
 echo "Exporting Data to .docksal/docksal-local.env"
 echo "TERMINUS_TOKEN=${TERMINUS_TOKEN}" >> .docksal/docksal-local.env
 echo "TERMINUS_EMAIL=${TERMINUS_EMAIL}" >> .docksal/docksal-local.env
-
 
 echo "Running Composer Update"
 composer update

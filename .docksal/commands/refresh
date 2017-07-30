@@ -7,6 +7,19 @@
 # Abort if anything fails
 set -e
 
+UPDATECOMPOSER=false
+
+while getopts 's:e:' flag; do
+  case $flag in
+    s)
+      PANTHEON_SITE=${OPTARG}
+      ;;
+    e)
+      PANTHEON_ENV=${OPTARG}
+      ;;
+  esac
+done
+
 TMP_USER=$(terminus whoami);
 
 if [ "$TMP_USER" != "$TERMINUS_EMAIL" ]; then
@@ -17,18 +30,19 @@ DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
 SITEDIR_PATH="${DOCROOT_PATH}/sites/${SITE_DIRECTORY}"
 
 cd $PROJECT_ROOT
-#composer update
+echo "Running composer update..."
+composer update
 
 cd $SITEDIR_PATH
 
 # Rsync all files
-echo "Downloading latest set of files from ${PANTHEON_SITE}"
+echo "Downloading latest set of files from ${PANTHEON_SITE}..."
 terminus rsync ${PANTHEON_SITE}.${PANTHEON_ENV}:files .
 
-echo "Fixing files directory permissions"
+echo "Fixing files directory permissions..."
 chmod -R 755 files
 
-echo 'Exporting latest database'
+echo 'Exporting latest database...'
 if [ -f /tmp/badcamp.sql ]; then
   rm -rf /tmp/badcamp.sql
 fi
@@ -43,13 +57,13 @@ fin exec "if [ ! -d ~/tmp ]; then mkdir ~/tmp; fi"
 
 cd ${DOCROOT_PATH}
 
-echo "Importing Configuration"
+echo "Importing Configuration..."
 fin drush config-import --yes
 
-echo "Running Update.php"
+echo "Running Update.php..."
 fin drush updatedb -y
 
-echo "Reseting user 1 password to admin"
+echo "Reseting user 1 password to admin..."
 fin drush user-password admin --password=admin
 
 if [ "$TMP_USER" != "$TERMINUS_EMAIL" ]; then
