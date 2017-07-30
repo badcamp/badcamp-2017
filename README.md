@@ -83,6 +83,24 @@ By default this will always pull the data from the `live` database. If you would
 fin @badcamp2017 refresh -e 'dev'
 ```
 
+###### Drush / Drupal Console
+
+All interaction can be done using drush within the project. Therefore, if you require to export configuration or enable a module, that may be done using drush. To use either tool with the project you may can do so by executing the commands through the project's `web` directory.
+
+After navigating to that folder you will have to prefix you commands with `fin`.
+
+*Drush*
+
+```
+fin drush cr
+```
+
+*Drupal Console*
+
+```
+fin drupal module:download examples
+```
+
 ##### MAMP Pro Users
 After you have run composer install:
 1. Set up a new site **Important:** Your document root is the web subdirectory of the repo. You might want to have MAMP set up the database for you while creating the site, you're going to need one anyway.
