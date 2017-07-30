@@ -25,30 +25,59 @@ Speaking of picking a box...
 
 ###### Setup
 
-1. Generate a Terminus Token Through Pantheon [here](https://dashboard.pantheon.io/machine-token/create/badcamp-docksal)
+*IMPORTANT* This script has only been tested on macOS. It should translate properly into Linux, but is currently untested.
+
+1. Generate a Terminus Token Through Pantheon [here](https://dashboard.pantheon.io/machine-token/create/badcamp-docksal). You must copy this and save it somewhere else as this will be used for setup.
 2. Clone the repository into your local system
 3. Navigate to project root
-4. Run Set Up Docksal
+4. Run Docksal Setup
 
-*NOTE* This will install docksal, terminus, and terminus-rsync if they are 
+_NOTE_ This will install docksal, terminus, and terminus-rsync if they are 
 currently not installed on the machine.
+
 ```
-./scripts/docksal/setup
+export TERMINUS_TOKEN="[TERMINUS TOKEN HERE]" \
+export TERMINUS_EMAIL="[PANTHEON_EMAIL]" \
+./scripts/docksal/setup $TERMINUS_TOKEN $TERMINUS_EMAIL
 ```
 
 ###### Starting Project
 
-Starting the project can be done executing the following command
-```
+Starting the project can be done executing the following command. This should be possible *AFTER* the setup script has ran or after the first time running docksal in this project.
+
+`
 fin @badcamp2017 start
-```
+`
+
+If you have bypassed the setup script above then. Navigate to the project directory, and run the following command:
+
+`
+fin start
+`
 
 ###### Stopping Project
 
 If you are done working on badcamp for the day. You can turn off the docksal project doing the following:
-```
+
+`
 fin @badcamp2017 stop
-```
+`
+
+###### Terminus / Pantheon
+
+This project uses the terminus cli tool for constant interaction with the pantheon project. Mainly for downloading a copy of the database from live and rsyncing the files to your local environment.
+
+The following command will allow you to pull down and refresh your local database and/or files from the badcamp site.
+
+`
+fin @badcamp2017 refresh
+`
+
+By default this will always pull the data from the `live` database. If you would like to pull from a different database you can specify the `-e` flag and use the name of the environment to pull the database from.
+
+`
+fin @badcamp2017 refresh -e 'dev'
+`
 
 ##### MAMP Pro Users
 After you have run composer install:
