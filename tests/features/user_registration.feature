@@ -37,4 +37,4 @@ Feature: User Registration
     When I fill in "Username" with "smithyboy143"
     And I fill in "Password" with "mysecretpassword"
     And I press the "Log in" button
-    Then I should see the text "Member for"
+    Then I should see the text "Donate"

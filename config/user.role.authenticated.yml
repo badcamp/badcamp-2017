@@ -14,6 +14,7 @@ permissions:
   - 'access mailchimp signup pages'
   - 'access shortcuts'
   - 'access site-wide contact form'
+  - 'add stripe payment entities'
   - 'create session content'
   - 'delete own session content'
   - 'edit own session content'

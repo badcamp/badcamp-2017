@@ -12,7 +12,7 @@ dependencies:
 id: views_block__sessions_proposed_sessions
 theme: badcamp2017
 region: content
-weight: 0
+weight: -6
 provider: null
 plugin: 'views_block:sessions-proposed_sessions'
 settings:
