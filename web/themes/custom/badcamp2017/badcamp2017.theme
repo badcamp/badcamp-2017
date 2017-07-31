@@ -2,6 +2,18 @@
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Render\Element;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function badcamp2017_preprocess_page(&$vars){
+  $current_path = \Drupal::service('path.current')->getPath();
+  $current_uri = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+  $class_path = 'page-' . HTML::cleanCssIdentifier(trim($current_path , '/'));
+  $class_url = 'page-' . HTML::cleanCssIdentifier(trim($current_uri, '/'));
+  $vars['attributes']['class'] = array('layout--layoutPage', $class_url, $class_path);
+}
 
 
 /**
@@ -59,7 +71,18 @@ function badcamp2017_preprocess_node__venue__full(&$vars){
     'class' => 'success button'
   ];
   $vars['directionsLink'] = $link;
+}
 
+/**
+ * Implements hook_node__node_type__view_mode().
+ */
+function badcamp2017_preprocess_node__session__teaser(&$vars){
+  $vars['track'] = [
+    'field_session_skill_level' => $vars['content']['field_session_skill_level'],
+    'field_session_track' => $vars['content']['field_session_track']
+  ];
+  unset($vars['content']['field_session_skill_level']);
+  unset($vars['content']['field_session_track']);
 }
 
 /**
@@ -102,5 +125,30 @@ function badcamp2017_preprocess_block__homepageeventsataglancespecial(&$vars){
       '#type' => 'contextual_links_placeholder',
       '#id' => _contextual_links_to_id($vars['content']['field_blocks'][$x]['#contextual_links']),
     ];
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function badcamp2017_theme_suggestions_bef_radios_alter(&$suggestions, $vars){
+  $suggestions[] = 'bef_radios__' . str_ireplace('-', '_', $vars['element']['#name']);
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function badcamp2017_theme_suggestions_form_element_alter(&$suggestions, $vars){
+  if($vars['element']['#name'] == 'session-track'){
+    $suggestions[] = 'form_element__session_track';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function badcamp2017_theme_suggestions_form_element_label_alter(&$suggestions, $vars){
+  if(stripos($vars['element']['#id'], 'session-track') !== FALSE){
+    $suggestions[] = 'form_element_label__session_track';
   }
 }

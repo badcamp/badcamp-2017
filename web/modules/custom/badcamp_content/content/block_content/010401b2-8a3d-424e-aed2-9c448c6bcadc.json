@@ -1,15 +1,12 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/block\/11?_format=hal_json"
+            "href": "http:\/\/default\/block\/12?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/block_reference"
         },
         "http:\/\/drupal.org\/rest\/relation\/block_content\/block_reference\/field_blocks": [
-            {
-                "href": "http:\/\/default\/block\/5?_format=hal_json"
-            },
             {
                 "href": "http:\/\/default\/block\/6?_format=hal_json"
             },
@@ -24,12 +21,15 @@
             },
             {
                 "href": "http:\/\/default\/block\/10?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/block\/11?_format=hal_json"
             }
         ]
     },
     "id": [
         {
-            "value": 11
+            "value": 12
         }
     ],
     "uuid": [
@@ -39,7 +39,7 @@
     ],
     "revision_id": [
         {
-            "value": 11
+            "value": 12
         }
     ],
     "langcode": [
@@ -87,7 +87,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/block\/5?_format=hal_json"
+                        "href": "http:\/\/default\/block\/6?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
@@ -102,7 +102,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/block\/6?_format=hal_json"
+                        "href": "http:\/\/default\/block\/7?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
@@ -117,7 +117,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/block\/7?_format=hal_json"
+                        "href": "http:\/\/default\/block\/8?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
@@ -132,7 +132,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/block\/8?_format=hal_json"
+                        "href": "http:\/\/default\/block\/9?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
@@ -147,7 +147,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/block\/9?_format=hal_json"
+                        "href": "http:\/\/default\/block\/10?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
@@ -162,7 +162,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/block\/10?_format=hal_json"
+                        "href": "http:\/\/default\/block\/11?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"

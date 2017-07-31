@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/block\/9?_format=hal_json"
+            "href": "http:\/\/default\/block\/13?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
@@ -9,17 +9,17 @@
     },
     "id": [
         {
-            "value": 9
+            "value": 13
         }
     ],
     "uuid": [
         {
-            "value": "3c7d737d-6ee5-41c6-8e6c-ac3d13e3d43c"
+            "value": "92db5055-a598-4525-a4b8-a15f9b46d67a"
         }
     ],
     "revision_id": [
         {
-            "value": 9
+            "value": 13
         }
     ],
     "langcode": [
@@ -35,19 +35,19 @@
     ],
     "info": [
         {
-            "value": "Contribution Sprints",
+            "value": "BADCamp Session Text",
             "lang": "en"
         }
     ],
     "changed": [
         {
-            "value": 1500791684,
+            "value": 1501452782,
             "lang": "en"
         }
     ],
     "revision_created": [
         {
-            "value": 1500754423
+            "value": 1501452782
         }
     ],
     "revision_translation_affected": [
@@ -64,8 +64,8 @@
     ],
     "body": [
         {
-            "value": "<p>It's amazing what can happen when we bring everyone together. Get ready to give back to Drupal, and let's get some serious work accomplished.<\/p>\r\n\r\n<p><a href=\"#\" class=\"button\">View the Sprints Schedule<\/a><\/p>\r\n",
-            "format": "full_html",
+            "value": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultricies ex vitae nunc luctus, nec sodales urna ornare. Phasellus iaculis, arcu vitae placerat blandit, lectus nisl pellentesque metus, sit amet sagittis nisi quam ac augue. Nulla dignissim arcu nulla, eu viverra sem auctor vel. Vivamus elementum lacinia tempus. Nam vel accumsan dolor. Vestibulum euismod vulputate eleifend. Integer vestibulum quam eget ligula elementum blandit a non odio. Nam tempus augue lacinia nulla tempus bibendum. Praesent luctus libero orci, et placerat lorem dignissim sit amet.<\/p>\r\n",
+            "format": "basic_html",
             "summary": "",
             "lang": "en"
         }
