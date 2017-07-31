@@ -19,7 +19,7 @@ settings:
   label: 'Skip donation block'
   provider: badcamp_stripe_payment
   label_display: '0'
-  path: /user
+  path: /
   button_text: Skip
 visibility:
   request_path:
