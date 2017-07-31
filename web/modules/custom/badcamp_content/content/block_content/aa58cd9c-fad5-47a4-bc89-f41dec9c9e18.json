@@ -1,0 +1,73 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/5?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+            "value": 5
+        }
+    ],
+    "uuid": [
+        {
+            "value": "aa58cd9c-fad5-47a4-bc89-f41dec9c9e18"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 5
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "info": [
+        {
+            "value": "Free Drupal Training",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1500919758,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1500754383
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>FREE Expert Drupal Training is back! On October 18th and 19th, we're proud to offer lessons from top Drupal Experts.<\/p>\r\n\r\n<p><a class=\"button\" href=\"#\">View The Training Schedule<\/a><\/p>\r\n",
+            "format": "full_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

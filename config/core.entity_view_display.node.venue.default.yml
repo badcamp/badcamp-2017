@@ -1,0 +1,90 @@
+uuid: ac89c7ce-bed0-4ef6-b371-b49e845766d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.venue.body
+    - field.field.node.venue.field_address
+    - field.field.node.venue.field_location
+    - field.field.node.venue.field_room_number_name
+    - field.field.node.venue.field_venue_image
+    - node.type.venue
+  module:
+    - address
+    - geolocation
+    - image
+    - user
+id: node.venue.default
+targetEntityType: node
+bundle: venue
+mode: default
+content:
+  field_address:
+    weight: 0
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_location:
+    weight: 2
+    label: hidden
+    settings:
+      set_marker: '1'
+      title: '[node:title]'
+      info_text: "[node:field_address:address_line1]\n[node:field_address:address_line2]\n[node:field_address:locality], [node:field_address:administrative_area] [node:field_address:postal_code]"
+      google_map_settings:
+        height: 400px
+        width: 100%
+        type: SATELLITE
+        zoom: '17'
+        maxZoom: 18
+        minZoom: 0
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        rotateControl: 1
+        scrollwheel: 1
+        gestureHandling: auto
+        draggable: 1
+        style: ''
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        fullscreenControl: 0
+        preferScrollingToZooming: 0
+        disableDoubleClickZoom: 0
+      use_overridden_map_settings: 1
+      common_map: ''
+    third_party_settings: {  }
+    type: geolocation_map
+    region: content
+  field_room_number_name:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_venue_image:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  venue_events_entity_view_1:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true

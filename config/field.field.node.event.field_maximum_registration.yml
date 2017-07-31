@@ -1,0 +1,25 @@
+uuid: 81317549-17ab-4aaa-a707-2acd123820a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_maximum_registration
+    - node.type.event
+id: node.event.field_maximum_registration
+field_name: field_maximum_registration
+entity_type: node
+bundle: event
+label: 'Maximum registration'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

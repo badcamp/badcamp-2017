@@ -1,0 +1,73 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/8?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+            "value": 8
+        }
+    ],
+    "uuid": [
+        {
+            "value": "3c7d737d-6ee5-41c6-8e6c-ac3d13e3d43c"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 8
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "info": [
+        {
+            "value": "Contribution Sprints",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1500791684,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1500754423
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>It's amazing what can happen when we bring everyone together. Get ready to give back to Drupal, and let's get some serious work accomplished.<\/p>\r\n\r\n<p><a href=\"#\" class=\"button\">View the Sprints Schedule<\/a><\/p>\r\n",
+            "format": "full_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

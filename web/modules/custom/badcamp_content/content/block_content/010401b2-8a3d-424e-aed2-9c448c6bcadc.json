@@ -1,0 +1,179 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/11?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/block_reference"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/block_reference\/field_blocks": [
+            {
+                "href": "http:\/\/default\/block\/5?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/block\/6?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/block\/7?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/block\/8?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/block\/9?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/block\/10?_format=hal_json"
+            }
+        ]
+    },
+    "id": [
+        {
+            "value": 11
+        }
+    ],
+    "uuid": [
+        {
+            "value": "010401b2-8a3d-424e-aed2-9c448c6bcadc"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 11
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "block_reference"
+        }
+    ],
+    "info": [
+        {
+            "value": "Homepage Events At A Glance Special",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1500912397,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1500756288
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/block_reference\/field_blocks": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/block\/5?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "aa58cd9c-fad5-47a4-bc89-f41dec9c9e18"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/block\/6?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7718ae04-128c-4e45-b8ec-4106affaf5a9"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/block\/7?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "e2ea07ce-2b8a-4dc5-b523-4be6348e0a4f"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/block\/8?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3c7d737d-6ee5-41c6-8e6c-ac3d13e3d43c"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/block\/9?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "debd7925-fd5c-4be7-bd5d-edf960ad97e4"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/block\/10?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "cf2208d9-4778-449c-a1a8-301756e50a98"
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,6 +1,11 @@
+.columns.nopadding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 
 .path-frontpage{
-  .zone-highlighted {
+  .zone-highlighted{
     background-image: url($bg_image);
     background-repeat: no-repeat;
     background-size: cover;
@@ -36,7 +41,7 @@
       &.trained .bar{
         background-color: $bc-blue;
       }
-      &.attendeees .bar{
+      &.attendees .bar{
         background-color: $bc-green;
       }
       &.cost .bar{
@@ -55,6 +60,105 @@
       .caption{
         margin-top: 7px;
       }
+    }
+  }
+}
+
+
+#block-homepageeventsataglancespecial{
+
+  .banner-image{
+    background-image: url("../images/badcamp-events-at-a-glance.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #222;
+    background-position: center center;
+    min-height: 200px;
+
+    @include breakpoint(large) {
+      background-position: top center;
+      min-height: inherit;
+    }
+
+
+    .banner-title{
+      text-align: left;
+      margin-top: -2.5rem;
+      line-height: 2.3;
+      @include breakpoint(medium){
+        text-align: center;
+        margin-top: 0;
+      }
+
+      span{
+        background: #222;
+        color: white;
+        font-weight: 700;
+        display: block;
+        padding: 1rem 2rem;
+
+        @include breakpoint(medium){
+          display: inline;
+        }
+      }
+    }
+  }
+
+
+  .item, .accordion-item {
+    .title, .accordion-title h3{
+      font-weight: 700;
+    }
+
+    .block-content{
+      p:first-child {
+        min-height: 200px;
+        @include breakpoint(large) {
+          min-height: 115px;
+        }
+      }
+    }
+  }
+
+  .main-content{
+    .row{
+      border-bottom: 1px solid $light-gray;
+      .item{
+        padding: 2rem 2.5rem 1rem 2.5rem;
+        &.item-even{
+          border-right: 1px solid $light-gray;
+        }
+      }
+      &:last-child{
+        border-bottom: 0px solid;
+      }
+    }
+  }
+
+  .blue-section{
+    .title, .accordion-title{
+      color: $bc-blue;
+    }
+    .button{
+      background-color: $bc-blue;
+    }
+  }
+
+  .green-section{
+    .title, .accordion-title{
+      color: $bc-green;
+    }
+    .button{
+      background-color: $bc-green;
+    }
+  }
+
+  .orange-section{
+    .title, .accordion-title{
+      color: $bc-orange;
+    }
+    .button{
+      background-color: $bc-orange;
     }
   }
 }

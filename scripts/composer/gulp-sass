@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Exit immediately on errors, and echo commands as they are executed.
+set -ex
+
+cd web/themes/custom/badcamp2017/
+gulp sass
