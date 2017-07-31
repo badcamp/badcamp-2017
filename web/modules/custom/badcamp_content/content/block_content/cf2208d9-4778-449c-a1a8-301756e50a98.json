@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/block\/11?_format=hal_json"
+            "href": "http:\/\/default\/block\/10?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
@@ -9,7 +9,7 @@
     },
     "id": [
         {
-            "value": 11
+            "value": 10
         }
     ],
     "uuid": [
@@ -19,7 +19,7 @@
     ],
     "revision_id": [
         {
-            "value": 11
+            "value": 10
         }
     ],
     "langcode": [
