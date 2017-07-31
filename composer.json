@@ -102,6 +102,7 @@
       ]
     },
     "extra": {
+      "enable-patching": true,
       "patches": {
         "drupal/default_content": {
           "Allow manual imports": "https://www.drupal.org/files/issues/allow_manual_imports-2640734-67.patch"
