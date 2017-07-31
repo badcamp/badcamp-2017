@@ -252,4 +252,3 @@ function badcamp2017_theme_suggestions_form_element_label_alter(&$suggestions, $
     $suggestions[] = 'form_element_label__session_track';
   }
 }
->>>>>>> master
