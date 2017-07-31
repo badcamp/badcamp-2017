@@ -1,0 +1,92 @@
+div[data-drupal-selector="edit-session-track"]{
+  .form-item{
+    padding: 0px;
+
+    input[type="radio"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-progress-appearance: none;
+      display: none;
+    }
+
+    text-align: center;
+
+    label{
+      display: block;
+      padding: 1rem;
+      color: $bc-grey;
+      margin: 0px;
+      font-weight: 700;
+
+      @include breakpoint(medium){
+        padding: 2rem 0;
+      }
+    }
+
+    input[type="radio"]:checked+label {
+      background-color: $bc-orange;
+      color: $white;
+    }
+
+    border-top: 1px solid #222;
+    border-right: 1px solid #222;
+
+
+    @include breakpoint(small only) {
+      &:nth-child(1),
+      &:nth-child(2){
+        border-top: 0 solid;
+      }
+
+      &:nth-of-type(2n) {
+        border-right: 0 solid;
+      }
+    }
+
+    @include breakpoint(medium) {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3){
+        border-top: 0 solid;
+      }
+      &:nth-of-type(3n) {
+        border-right: 0 solid;
+      }
+    }
+
+  }
+}
+
+.page-session {
+  @extend .path-frontpage;
+
+  #block-badcampsessiontext{
+    text-align: center;
+    h2{
+      font-weight: bold;
+    }
+  }
+
+  .page-title{
+    color: white;
+    padding: 1.75rem 1.5rem;
+    max-width: 500px;
+    line-height: 1;
+    margin-bottom: 1rem;
+    background-color: $bc-orange;
+    font-weight: 700;
+  }
+
+  .results > article{
+    border-bottom: 1px solid #222;
+    padding: 1rem 0;
+    > h3 a{
+      color: $bc-orange;
+    }
+
+  }
+}
+
+.label a{
+  color: white;
+}
