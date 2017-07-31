@@ -10,3 +10,14 @@ $bc-blue: #0071bd;
 $bc-green: #6cb229;
 $bc-orange: #ed592a;
 $bc-grey: #585858;
+
+// $link-color: #1779ba;
+$link-color: $bc-blue;
+$link-color--hover: lighten($link-color, 20%);
+
+$main-menu-color: black;
+$main-menu-color--hover: $link-color;
+
+$main-submenu-bgcolor: lighten($bc-blue, 55%);
+$main-submenu-color: darken($link-color, 50%);
+$main-submenu-color--hover: darken($link-color, 20%);

@@ -4,11 +4,40 @@
       padding-right: 0;
     }
   }
+
   a {
     text-transform: uppercase;
     color: black;
+    &:hover {
+      color: $link-color;
+    }
     &.is-active {
       font-weight: bold;
     }
   }
+
+  .is-dropdown-submenu {
+    border-width: 0;
+    a {
+      color: $main-submenu-color;
+      &:hover {
+        color: $main-submenu-color--hover;
+      }
+    }
+    li {
+      background-color: $main-submenu-bgcolor;
+      border-bottom: 1px solid white;
+      &:hover {
+        background-color: lighten($main-submenu-bgcolor, 3%);
+      }
+      &:last-child {
+        border-width: 0;
+      }
+    }
+  }
+
+}
+
+.is-dropdown-submenu-parent a {
+  font-weight: bold;
 }
