@@ -5,6 +5,7 @@ dependencies:
   module:
     - badcamp_stripe_payment
     - system
+    - user
   theme:
     - badcamp2017
 id: skipdonationblock
@@ -18,7 +19,7 @@ settings:
   label: 'Skip donation block'
   provider: badcamp_stripe_payment
   label_display: '0'
-  path: /
+  path: /user
   button_text: Skip
 visibility:
   request_path:
@@ -26,3 +27,10 @@ visibility:
     pages: /donate
     negate: false
     context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

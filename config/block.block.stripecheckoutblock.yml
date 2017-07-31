@@ -5,6 +5,7 @@ dependencies:
   module:
     - badcamp_stripe_payment
     - system
+    - user
   theme:
     - badcamp2017
 id: stripecheckoutblock
@@ -30,3 +31,10 @@ visibility:
     pages: /donate
     negate: false
     context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
