@@ -4,6 +4,7 @@
 @import "variables";
 @include foundation-everything();
 
+@import "components/components";
 @import "components/header";
 @import "components/footer";
 @import "components/featured";
@@ -11,3 +12,4 @@
 @import "components/menu/menu--main";
 @import "components/menu/menu--cta-menu";
 @import "components/news";
+@import "components/sessions";
