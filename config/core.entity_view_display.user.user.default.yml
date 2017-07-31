@@ -121,4 +121,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  sessions_user_profile_view:
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }
