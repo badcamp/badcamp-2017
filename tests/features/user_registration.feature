@@ -19,7 +19,7 @@ Feature: User Registration
     And I fill in "Drupal.org username" with "iheartthedrupal"
     And I select "America/Los Angeles" from "Time zone"
     And I press the "Create new account" button
-    Then I should see the text "A welcome message with further instructions has been sent to your email address."
+    Then I should see the text "Donate"
 
   Scenario: Confirm user cannot sign up more then once
     When I fill in "Email address" with "joe@joesmith.com"
