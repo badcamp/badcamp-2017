@@ -40,7 +40,8 @@
     "drupal/video_embed_field": "^1.5",
     "drupal/admin_toolbar": "^1.19",
     "drupal/default_content": "^1.0@alpha",
-    "drupal/better_exposed_filters": "^3.0@alpha"
+    "drupal/better_exposed_filters": "^3.0@alpha",
+    "drupal/honeypot": "^1.27"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",

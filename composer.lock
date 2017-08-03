@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "23289ec0ddfbb63948b1f100677856eb",
+    "content-hash": "679160befb5c92131cbb4513938142be",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -199,6 +199,43 @@
                 "drupal"
             ],
             "time": "2017-07-18 22:35:27"
+        },
+        {
+            "name": "badcamp/badcamp_stripe_payment",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/badcamp/badcamp_stripe_payment.git",
+                "reference": "5dd2ea09691a3bf169450d26d69211ad0dc930e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/5dd2ea09691a3bf169450d26d69211ad0dc930e4",
+                "reference": "5dd2ea09691a3bf169450d26d69211ad0dc930e4",
+                "shasum": ""
+            },
+            "require": {
+                "cweagans/composer-patches": "^1.0",
+                "drupal/stripe_api": "1.x-dev"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "patches": {
+                    "drupal/stripe_api": {
+                        "Allow for Stripe Exceptions to be thrown": "https://www.drupal.org/files/issues/allow_for_stripe-2834605-2.patch"
+                    }
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides integration of the Stripe payment processing service by providing a charging and refund service as well as an entity that will store the payment data for each payment made.",
+            "homepage": "https://github.com/badcamp/badcamp_stripe_payment",
+            "keywords": [
+                "drupal"
+            ],
+            "time": "2017-07-26 00:16:44"
         },
         {
             "name": "commerceguys/addressing",
@@ -1434,7 +1471,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-8.x-3.0-alpha3.zip",
-                "reference": null,
+                "reference": "8.x-3.0-alpha3",
                 "shasum": "0268a42ea5a4ab170c8f4aefecd26b6f3c7448d2"
             },
             "require": {
@@ -1477,7 +1514,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.0-beta1.zip",
-                "reference": null,
+                "reference": "8.x-1.0-beta1",
                 "shasum": "5b6c701bdab332bac61f59dcc78e05578f94d8b7"
             },
             "require": {
@@ -2435,7 +2472,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/default_content-8.x-1.0-alpha6.zip",
-                "reference": null,
+                "reference": "8.x-1.0-alpha6",
                 "shasum": "ec378158521afff8181f3536e140a31c161fc867"
             },
             "require": {
@@ -2863,6 +2900,58 @@
             "time": "2017-07-05 10:00:12"
         },
         {
+            "name": "drupal/honeypot",
+            "version": "1.27.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/honeypot",
+                "reference": "8.x-1.27"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/honeypot-8.x-1.27.zip",
+                "reference": null,
+                "shasum": "b40f86ef45a7f4325343e8aa455ecbdceab51ffe"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.27",
+                    "datestamp": "1499867343"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Geerling",
+                    "homepage": "https://www.drupal.org/user/389011",
+                    "email": "geerlingguy@mac.com"
+                }
+            ],
+            "description": "Mitigates spam form submissions using the honeypot method.",
+            "homepage": "https://www.drupal.org/project/honeypot",
+            "keywords": [
+                "deterrent",
+                "form",
+                "honeypot",
+                "honeytrap",
+                "php",
+                "spam"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/honeypot"
+            }
+        },
+        {
             "name": "drupal/key",
             "version": "1.3.0",
             "source": {
@@ -3073,7 +3162,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/recaptcha-8.x-2.2.zip",
-                "reference": null,
+                "reference": "8.x-2.2",
                 "shasum": "99a3bda62b34ad6dac1d497fcf578e25aad0a3e0"
             },
             "require": {
@@ -3177,6 +3266,58 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/social_profile_field"
             }
+        },
+        {
+            "name": "drupal/stripe_api",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/stripe_api",
+                "reference": "03dd6639e8e807e9b16d5979fd29b72c6913fbd1"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/key": "^1.3",
+                "stripe/stripe-php": "^3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev",
+                    "dev-master": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha1+4-dev",
+                    "datestamp": "1498611544"
+                },
+                "patches_applied": {
+                    "Allow for Stripe Exceptions to be thrown": "https://www.drupal.org/files/issues/allow_for_stripe-2834605-2.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "donutdan4114",
+                    "homepage": "https://www.drupal.org/user/1724652"
+                },
+                {
+                    "name": "grasmash",
+                    "homepage": "https://www.drupal.org/user/455714"
+                }
+            ],
+            "description": "Provides an integration to use the Stripe API library",
+            "homepage": "https://www.drupal.org/project/stripe_api",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/stripe_api",
+                "issues": "https://www.drupal.org/project/issues/stripe_api"
+            },
+            "time": "2017-06-28 00:55:02"
         },
         {
             "name": "drupal/token",
@@ -4483,6 +4624,61 @@
             ],
             "description": "Automatic BASH completion for Symfony Console Component based applications.",
             "time": "2016-02-24T05:08:54+00:00"
+        },
+        {
+            "name": "stripe/stripe-php",
+            "version": "v3.23.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stripe/stripe-php.git",
+                "reference": "c702a2ed92f4b39603c4a796492d87bcc16c819c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stripe/stripe-php/zipball/c702a2ed92f4b39603c4a796492d87bcc16c819c",
+                "reference": "c702a2ed92f4b39603c4a796492d87bcc16c819c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "~0.6.1",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Stripe\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stripe and contributors",
+                    "homepage": "https://github.com/stripe/stripe-php/contributors"
+                }
+            ],
+            "description": "Stripe PHP Library",
+            "homepage": "https://stripe.com/",
+            "keywords": [
+                "api",
+                "payment processing",
+                "stripe"
+            ],
+            "time": "2016-09-15T18:16:59+00:00"
         },
         {
             "name": "symfony-cmf/routing",
@@ -8561,6 +8757,7 @@
         "drupal/config_readonly": 10,
         "drupal/config_split": 10,
         "drupal/devel": 5,
+        "badcamp/badcamp_stripe_payment": 20,
         "drupal/geolocation": 20,
         "drupal/field_permissions": 10,
         "drupal/field_group": 5,
