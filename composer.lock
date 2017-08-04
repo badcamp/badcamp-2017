@@ -202,16 +202,16 @@
         },
         {
             "name": "badcamp/badcamp_stripe_payment",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_stripe_payment.git",
-                "reference": "278afcc2900dae1918f8e7318e6e60ff9994dcdf"
+                "reference": "705d134105252c83fa28c1b308b79b6fe9924dc2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/278afcc2900dae1918f8e7318e6e60ff9994dcdf",
-                "reference": "278afcc2900dae1918f8e7318e6e60ff9994dcdf",
+                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/705d134105252c83fa28c1b308b79b6fe9924dc2",
+                "reference": "705d134105252c83fa28c1b308b79b6fe9924dc2",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +235,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-08-03T22:46:56+00:00"
+            "time": "2017-08-04T22:04:33+00:00"
         },
         {
             "name": "commerceguys/addressing",
@@ -2910,7 +2910,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/honeypot-8.x-1.27.zip",
-                "reference": null,
+                "reference": "8.x-1.27",
                 "shasum": "b40f86ef45a7f4325343e8aa455ecbdceab51ffe"
             },
             "require": {
