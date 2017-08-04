@@ -32,9 +32,9 @@ Feature: User Registration
 #    Then I should see the text "The username smithyboy143 is already taken."
 
   @setNewUserPassword @cleanUp
-  Scenario: Confirm newly registered user can login
-    And I am on "/user/login"
-    When I fill in "Username" with "smithyboy143"
-    And I fill in "Password" with "mysecretpassword"
-    And I press the "Log in" button
-    Then I should see the text "Donate"
+#  Scenario: Confirm newly registered user can login
+#    And I am on "/user/login"
+#    When I fill in "Username" with "smithyboy143"
+#    And I fill in "Password" with "mysecretpassword"
+#    And I press the "Log in" button
+#    Then I should see the text "Donate"
