@@ -5,10 +5,10 @@ module:
   badcamp_blog: 0
   badcamp_content: 0
   badcamp_program_details: 0
-  better_exposed_filters: 0
   badcamp_sponsors: 0
-  badcamp_styleguide: 0
   badcamp_stripe_payment: 0
+  badcamp_styleguide: 0
+  better_exposed_filters: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -42,6 +42,7 @@ module:
   hal: 0
   help: 0
   history: 0
+  honeypot: 0
   image: 0
   key: 0
   kint: 0
