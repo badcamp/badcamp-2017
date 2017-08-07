@@ -3,7 +3,7 @@
 @import "../node_modules/foundation-sites/scss/util/color";
 @import "variables";
 @include foundation-everything();
-
+@import "base/base";
 @import "components/components";
 @import "components/header";
 @import "components/footer";

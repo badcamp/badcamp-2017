@@ -5241,6 +5241,18 @@ a.thumbnail image {
   clear: both;
 }
 
+a {
+  color: #0071bd;
+}
+
+a:hover {
+  color: #24a7ff;
+}
+
+.pagination {
+  text-align: center;
+}
+
 #block-badcamp2017-branding {
   margin: 1.875rem 0;
 }
@@ -5312,12 +5324,16 @@ a.site-slogan {
   }
 }
 
+#block-builtby p {
+  text-align: right;
+}
+
 .columns.nopadding {
   padding-left: 0;
   padding-right: 0;
 }
 
-.path-frontpage .zone-highlighted, .path-sponsors .zone-highlighted {
+.path-frontpage .zone-highlighted, .path-sponsors .zone-highlighted, .page-session .zone-highlighted {
   background-image: url("../images/homepage-bg-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -5479,17 +5495,8 @@ a.site-slogan {
  */
 .core-sponsors-block {
   margin: 1em 0;
-  padding-top: 55px;
-  border-top: 1px solid black;
-}
-
-.core-sponsors-block .rows {
-  text-align: center;
-}
-
-.core-sponsors-block .sponsor {
-  display: inline-block;
-  margin-right: 8px;
+  padding-bottom: 55px;
+  border-bottom: 1px solid black;
 }
 
 .core-sponsors-block footer {
@@ -5547,8 +5554,37 @@ a.site-slogan {
   color: black;
 }
 
+.menu--main a:hover {
+  color: #0071bd;
+}
+
 .menu--main a.is-active {
   font-weight: bold;
+}
+
+.menu--main .is-dropdown-submenu {
+  border-width: 0;
+}
+
+.menu--main .is-dropdown-submenu a {
+  color: black;
+}
+
+.menu--main .is-dropdown-submenu a:hover {
+  color: #003457;
+}
+
+.menu--main .is-dropdown-submenu li {
+  background-color: #d7efff;
+  border-bottom: 1px solid white;
+}
+
+.menu--main .is-dropdown-submenu li:hover {
+  background-color: #e6f5ff;
+}
+
+.menu--main .is-dropdown-submenu li:last-child {
+  border-width: 0;
 }
 
 .menu--cta-menu li {
@@ -5639,6 +5675,88 @@ a.site-slogan {
 
 .blog-list-page .views-row:last-child {
   border-bottom: 0px;
+}
+
+div[data-drupal-selector="edit-session-track"] .form-item {
+  padding: 0px;
+  text-align: center;
+  border-top: 1px solid #222;
+  border-right: 1px solid #222;
+}
+
+div[data-drupal-selector="edit-session-track"] .form-item input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-progress-appearance: none;
+  display: none;
+}
+
+div[data-drupal-selector="edit-session-track"] .form-item label {
+  display: block;
+  padding: 1rem;
+  color: #585858;
+  margin: 0px;
+  font-weight: 700;
+}
+
+@media print, screen and (min-width: 40em) {
+  div[data-drupal-selector="edit-session-track"] .form-item label {
+    padding: 2rem 0;
+  }
+}
+
+div[data-drupal-selector="edit-session-track"] .form-item input[type="radio"]:checked + label {
+  background-color: #ed592a;
+  color: #fefefe;
+}
+
+@media screen and (max-width: 39.9375em) {
+  div[data-drupal-selector="edit-session-track"] .form-item:nth-child(1), div[data-drupal-selector="edit-session-track"] .form-item:nth-child(2) {
+    border-top: 0 solid;
+  }
+  div[data-drupal-selector="edit-session-track"] .form-item:nth-of-type(2n) {
+    border-right: 0 solid;
+  }
+}
+
+@media print, screen and (min-width: 40em) {
+  div[data-drupal-selector="edit-session-track"] .form-item:nth-child(1), div[data-drupal-selector="edit-session-track"] .form-item:nth-child(2), div[data-drupal-selector="edit-session-track"] .form-item:nth-child(3) {
+    border-top: 0 solid;
+  }
+  div[data-drupal-selector="edit-session-track"] .form-item:nth-of-type(3n) {
+    border-right: 0 solid;
+  }
+}
+
+.page-session #block-badcampsessiontext {
+  text-align: center;
+}
+
+.page-session #block-badcampsessiontext h2 {
+  font-weight: bold;
+}
+
+.page-session .page-title {
+  color: white;
+  padding: 1.75rem 1.5rem;
+  max-width: 500px;
+  line-height: 1;
+  margin-bottom: 1rem;
+  background-color: #ed592a;
+  font-weight: 700;
+}
+
+.page-session .results > article {
+  border-bottom: 1px solid #222;
+  padding: 1rem 0;
+}
+
+.page-session .results > article > h3 a {
+  color: #ed592a;
+}
+
+.label a {
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */
