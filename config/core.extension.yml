@@ -6,6 +6,8 @@ module:
   badcamp_content: 0
   badcamp_program_details: 0
   badcamp_sponsors: 0
+  badcamp_styleguide: 0
+  better_exposed_filters: 0
   badcamp_stripe_payment: 0
   badcamp_styleguide: 0
   better_exposed_filters: 0
@@ -28,6 +30,7 @@ module:
   default_content: 0
   devel: 0
   devel_generate: 0
+  disable_messages: 0
   dynamic_page_cache: 0
   editor: 0
   eva: 0
@@ -50,6 +53,7 @@ module:
   mailchimp: 0
   mailchimp_lists: 0
   mailchimp_signup: 0
+  mailsystem: 0
   menu_ui: 0
   node: 0
   options: 0
@@ -58,10 +62,13 @@ module:
   quickedit: 0
   rdf: 0
   recaptcha: 0
+  rules: 0
   search: 0
+  sendgrid_integration: 0
   serialization: 0
   shortcut: 0
   social_profile_field: 0
+  swiftmailer: 0
   stripe_api: 0
   system: 0
   taxonomy: 0
@@ -69,6 +76,7 @@ module:
   token: 0
   toolbar: 0
   tour: 0
+  typed_data: 0
   update: 0
   user: 0
   video_embed_field: 0

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a91fb71a1ca8a4b421855578bf4440f7",
+    "content-hash": "e11ad6f4397550ba46bb07f6da0a3a13",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1899,16 +1899,16 @@
         },
         {
             "name": "drupal/console",
-            "version": "1.0.0-rc26",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hechoendrupal/drupal-console.git",
-                "reference": "17892babb5589e17ca1af06f1c4e2c7333967fad"
+                "reference": "387d3945463c3fbdb7b3a27e2efbeb363d900946"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hechoendrupal/drupal-console/zipball/17892babb5589e17ca1af06f1c4e2c7333967fad",
-                "reference": "17892babb5589e17ca1af06f1c4e2c7333967fad",
+                "url": "https://api.github.com/repos/hechoendrupal/drupal-console/zipball/387d3945463c3fbdb7b3a27e2efbeb363d900946",
+                "reference": "387d3945463c3fbdb7b3a27e2efbeb363d900946",
                 "shasum": ""
             },
             "require": {
@@ -1916,7 +1916,7 @@
                 "composer/installers": "~1.0",
                 "doctrine/annotations": "^1.2",
                 "doctrine/collections": "^1.3",
-                "drupal/console-core": "1.0.0-rc26",
+                "drupal/console-core": "1.0.0",
                 "drupal/console-dotenv": "~0",
                 "drupal/console-extend-plugin": "~0",
                 "gabordemooij/redbean": "~4.3",
@@ -1974,25 +1974,25 @@
                 "drupal",
                 "symfony"
             ],
-            "time": "2017-07-28T09:06:18+00:00"
+            "time": "2017-08-05T22:36:15+00:00"
         },
         {
             "name": "drupal/console-core",
-            "version": "1.0.0-rc26",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hechoendrupal/drupal-console-core.git",
-                "reference": "90bd569822a923347d6b5ab49d2b31ad5603bb14"
+                "reference": "f6eadee809ef0c9ba2a18f5275417c09caa623cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hechoendrupal/drupal-console-core/zipball/90bd569822a923347d6b5ab49d2b31ad5603bb14",
-                "reference": "90bd569822a923347d6b5ab49d2b31ad5603bb14",
+                "url": "https://api.github.com/repos/hechoendrupal/drupal-console-core/zipball/f6eadee809ef0c9ba2a18f5275417c09caa623cb",
+                "reference": "f6eadee809ef0c9ba2a18f5275417c09caa623cb",
                 "shasum": ""
             },
             "require": {
                 "dflydev/dot-access-configuration": "^1.0",
-                "drupal/console-en": "1.0.0-rc26",
+                "drupal/console-en": "1.0.0",
                 "php": "^5.5.9 || ^7.0",
                 "stecman/symfony-console-completion": "~0.7",
                 "symfony/config": "~2.8|~3.0",
@@ -2055,7 +2055,7 @@
                 "drupal",
                 "symfony"
             ],
-            "time": "2017-07-28T08:50:09+00:00"
+            "time": "2017-08-05T22:02:42+00:00"
         },
         {
             "name": "drupal/console-dotenv",
@@ -2098,16 +2098,16 @@
         },
         {
             "name": "drupal/console-en",
-            "version": "1.0.0-rc26",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hechoendrupal/drupal-console-en.git",
-                "reference": "1d9e6248b337e5d63deb79c3d11c7ba457f52e56"
+                "reference": "9db52478c5870d535f2e507f51142c7ed1a17098"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hechoendrupal/drupal-console-en/zipball/1d9e6248b337e5d63deb79c3d11c7ba457f52e56",
-                "reference": "1d9e6248b337e5d63deb79c3d11c7ba457f52e56",
+                "url": "https://api.github.com/repos/hechoendrupal/drupal-console-en/zipball/9db52478c5870d535f2e507f51142c7ed1a17098",
+                "reference": "9db52478c5870d535f2e507f51142c7ed1a17098",
                 "shasum": ""
             },
             "type": "drupal-console-language",
@@ -2148,7 +2148,7 @@
                 "drupal",
                 "symfony"
             ],
-            "time": "2017-07-24T07:09:16+00:00"
+            "time": "2017-08-02T13:46:40+00:00"
         },
         {
             "name": "drupal/console-extend-plugin",
@@ -2353,6 +2353,11 @@
                 "symfony/css-selector": "~2.8"
             },
             "type": "drupal-core",
+            "extra": {
+                "patches_applied": {
+                    "Issue: 2409059": "https://gist.githubusercontent.com/sean-e-dietrich/baf6d4039abbff086398c55da812f657/raw/ef1c8f700a061d9ddd8eb4bb591d409e35dc556c/core-new_textarea_typedata-2409059-37-8.0.patch"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Drupal\\Core\\": "lib/Drupal/Core",
@@ -2613,6 +2618,53 @@
                 "source": "http://cgit.drupalcode.org/devel",
                 "issues": "http://drupal.org/project/devel",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/disable_messages",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/disable_messages",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/disable_messages-8.x-1.0.zip",
+                "reference": null,
+                "shasum": "c12e4cdbad17ed27672e865a09d74d350bb8190d"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1469787839"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "mslabba_zyxware",
+                    "homepage": "https://www.drupal.org/user/3471683"
+                },
+                {
+                    "name": "zyxware",
+                    "homepage": "https://www.drupal.org/user/222163"
+                }
+            ],
+            "description": "Add options to filter messages shown to the end users",
+            "homepage": "https://www.drupal.org/project/disable_messages",
+            "support": {
+                "source": "http://cgit.drupalcode.org/disable_messages"
             }
         },
         {
@@ -2910,7 +2962,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/honeypot-8.x-1.27.zip",
-                "reference": "8.x-1.27",
+                "reference": null,
                 "shasum": "b40f86ef45a7f4325343e8aa455ecbdceab51ffe"
             },
             "require": {
@@ -2983,6 +3035,10 @@
                 "GPL-2.0+"
             ],
             "authors": [
+                {
+                    "name": "Cellar Door",
+                    "homepage": "https://www.drupal.org/user/658076"
+                },
                 {
                     "name": "CrashTest_",
                     "homepage": "https://www.drupal.org/user/261457"
@@ -3092,6 +3148,115 @@
             "homepage": "http://drupal.org/project/mailchimp",
             "support": {
                 "source": "http://cgit.drupalcode.org/mailchimp"
+            }
+        },
+        {
+            "name": "drupal/maillog",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/maillog",
+                "reference": "14fd24cd89e299ad271608cd52706c60b753c26d"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x-dev",
+                    "datestamp": "1470431939"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "DamienMcKenna",
+                    "homepage": "https://www.drupal.org/user/108450"
+                },
+                {
+                    "name": "miro_dietiker",
+                    "homepage": "https://www.drupal.org/user/227761"
+                },
+                {
+                    "name": "pluess",
+                    "homepage": "https://www.drupal.org/user/84659"
+                }
+            ],
+            "description": "Utility to log all Mails for debugging purposes. It is possible to suppress mail delivery for e.g. dev or staging systems.",
+            "homepage": "https://www.drupal.org/project/maillog",
+            "support": {
+                "source": "http://cgit.drupalcode.org/maillog"
+            },
+            "time": "2016-08-05 21:18:07"
+        },
+        {
+            "name": "drupal/mailsystem",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/mailsystem",
+                "reference": "8.x-4.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/mailsystem-8.x-4.1.zip",
+                "reference": null,
+                "shasum": "318b87f1fdf96e6db30b04a98108af02a0fc3dcc"
+            },
+            "require": {
+                "drupal/core": "^8.0.5"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-4.1",
+                    "datestamp": "1467993646"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Berdir",
+                    "homepage": "https://www.drupal.org/user/214652"
+                },
+                {
+                    "name": "Les Lim",
+                    "homepage": "https://www.drupal.org/user/84263"
+                },
+                {
+                    "name": "Nafes",
+                    "homepage": "https://www.drupal.org/user/2489926"
+                },
+                {
+                    "name": "miro_dietiker",
+                    "homepage": "https://www.drupal.org/user/227761"
+                },
+                {
+                    "name": "pillarsdotnet",
+                    "homepage": "https://www.drupal.org/user/36148"
+                }
+            ],
+            "description": "Mail System",
+            "homepage": "https://www.drupal.org/project/mailsystem",
+            "support": {
+                "source": "http://cgit.drupalcode.org/mailsystem"
             }
         },
         {
@@ -3213,6 +3378,111 @@
             }
         },
         {
+            "name": "drupal/rules",
+            "version": "3.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/rules",
+                "reference": "8.x-3.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/rules-8.x-3.0-alpha3.zip",
+                "reference": null,
+                "shasum": "e8cf4212479a6f8418b519c93b08a8bd22cf00d3"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/typed_data": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.0-alpha3",
+                    "datestamp": "1495743783"
+                },
+                "patches_applied": {
+                    "Issue: 2724129": "https://www.drupal.org/files/issues/rules_sendmail-2724129-28-8.0_2.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "klausi",
+                    "homepage": "https://www.drupal.org/user/262198"
+                }
+            ],
+            "description": "React on events and conditionally evaluate actions.",
+            "homepage": "https://www.drupal.org/project/rules",
+            "support": {
+                "source": "http://cgit.drupalcode.org/rules"
+            }
+        },
+        {
+            "name": "drupal/sendgrid_integration",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/sendgrid_integration",
+                "reference": "4319121884b2135cfe1900199945dbca826a66af"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/mailsystem": "^4",
+                "fastglass/sendgrid": ">=1.0.6"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0+11-dev",
+                    "datestamp": "1493564642"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL v2"
+            ],
+            "authors": [
+                {
+                    "name": "Brady Owens (perignon)",
+                    "homepage": "https://www.drupal.org/u/perignon",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "exlin",
+                    "homepage": "https://www.drupal.org/user/695136"
+                }
+            ],
+            "description": "Drupal module for integrating with the SendGrid API.",
+            "homepage": "https://www.drupal.org/project/sendgrid_integration",
+            "keywords": [
+                "SendGrid",
+                "email",
+                "grid",
+                "php",
+                "send",
+                "sendgrid"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/sendgrid_integration",
+                "issues": "https://drupal.org/project/issues/sendgrid_integration"
+            },
+            "time": "2017-04-30 17:54:33"
+        },
+        {
             "name": "drupal/social_profile_field",
             "version": "0.2.0",
             "source": {
@@ -3320,6 +3590,60 @@
             "time": "2017-06-28 00:55:02"
         },
         {
+            "name": "drupal/swiftmailer",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/swiftmailer",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/swiftmailer-8.x-1.0-beta1.zip",
+                "reference": null,
+                "shasum": "d49a50638a629c24d681181b82255fd50c1b2642"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "drupal/mailsystem": "*",
+                "html2text/html2text": "~4.0.1",
+                "swiftmailer/swiftmailer": "~5.4.5"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1487207830"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "B-Prod",
+                    "homepage": "https://www.drupal.org/user/407852"
+                },
+                {
+                    "name": "sbrattla",
+                    "homepage": "https://www.drupal.org/user/53422"
+                },
+                {
+                    "name": "webflo",
+                    "homepage": "https://www.drupal.org/user/254778"
+                }
+            ],
+            "description": "Swiftmailer",
+            "homepage": "https://www.drupal.org/project/swiftmailer",
+            "support": {
+                "source": "http://cgit.drupalcode.org/swiftmailer"
+            }
+        },
+        {
             "name": "drupal/token",
             "version": "1.0.0",
             "source": {
@@ -3381,6 +3705,21 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/token"
             }
+        },
+        {
+            "name": "drupal/typed_data",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fago/typed_data",
+                "reference": "7654476a8a0736903ab6255e0b869d146b717e7e"
+            },
+            "type": "drupal-module",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Extends the core Typed Data API with new APIS and features.",
+            "time": "2017-07-10 16:41:26"
         },
         {
             "name": "drupal/video_embed_field",
@@ -3659,6 +3998,60 @@
             "time": "2017-02-03T22:48:59+00:00"
         },
         {
+            "name": "fastglass/sendgrid",
+            "version": "1.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/taz77/sendgrid-php-ng.git",
+                "reference": "f73746bf488c013f47b31ec38343e8d72d5e6ae0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/taz77/sendgrid-php-ng/zipball/f73746bf488c013f47b31ec38343e8d72d5e6ae0",
+                "reference": "f73746bf488c013f47b31ec38343e8d72d5e6ae0",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": ">=6.2.1",
+                "php": ">=5.5.0",
+                "sendgrid/smtpapi": "~0.5"
+            },
+            "replace": {
+                "sendgrid/sendgrid-php": "*"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.4",
+                "vlucas/phpdotenv": "~1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SendGrid\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brady Owens",
+                    "email": "brady@fastglass.net",
+                    "homepage": "https://github.com/taz77"
+                }
+            ],
+            "description": "This library allows you to send emails through SendGrid using PHP and Guzzle 6.x.",
+            "homepage": "https://github.com/taz77/sendgrid-php",
+            "keywords": [
+                "email",
+                "grid",
+                "send",
+                "sendgrid"
+            ],
+            "time": "2016-07-20T05:53:01+00:00"
+        },
+        {
             "name": "gabordemooij/redbean",
             "version": "v4.3.4",
             "source": {
@@ -3879,6 +4272,43 @@
                 "url"
             ],
             "time": "2017-03-20T17:10:46+00:00"
+        },
+        {
+            "name": "html2text/html2text",
+            "version": "4.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mtibben/html2text.git",
+                "reference": "f55104b7c9f99b0937f0e20fe051b19f9c0ecad1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mtibben/html2text/zipball/f55104b7c9f99b0937f0e20fe051b19f9c0ecad1",
+                "reference": "f55104b7c9f99b0937f0e20fe051b19f9c0ecad1",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4"
+            },
+            "suggest": {
+                "ext-mbstring": "For best performance",
+                "symfony/polyfill-mbstring": "If you can't install ext-mbstring"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Html2Text\\": [
+                        "src/",
+                        "test/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv2"
+            ],
+            "description": "Converts HTML to formatted plain text",
+            "time": "2016-03-16T23:24:34+00:00"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -4532,6 +4962,57 @@
             "time": "2017-01-27T20:40:31+00:00"
         },
         {
+            "name": "sendgrid/smtpapi",
+            "version": "0.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sendgrid/smtpapi-php.git",
+                "reference": "1c835388c11dc5e792260ae3e9662d6a661ace30"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sendgrid/smtpapi-php/zipball/1c835388c11dc5e792260ae3e9662d6a661ace30",
+                "reference": "1c835388c11dc5e792260ae3e9662d6a661ace30",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "replace": {
+                "sendgrid/smtpapi-php": "*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "swiftmailer/swiftmailer": "^5.4 - Needed to run the example scripts"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Smtpapi": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Build SendGrid X-SMTPAPI headers in PHP.",
+            "homepage": "http://github.com/sendgrid/smtpapi-php",
+            "keywords": [
+                "X-SMTP",
+                "api",
+                "email",
+                "grid",
+                "send",
+                "sendgrid",
+                "smtp",
+                "smtpapi",
+                "xsmtp"
+            ],
+            "time": "2017-07-06T22:11:41+00:00"
+        },
+        {
             "name": "stack/builder",
             "version": "v1.0.4",
             "source": {
@@ -4679,6 +5160,60 @@
                 "stripe"
             ],
             "time": "2016-09-15T18:16:59+00:00"
+        },
+        {
+            "name": "swiftmailer/swiftmailer",
+            "version": "v5.4.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swiftmailer/swiftmailer.git",
+                "reference": "9a06dc570a0367850280eefd3f1dc2da45aef517"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/9a06dc570a0367850280eefd3f1dc2da45aef517",
+                "reference": "9a06dc570a0367850280eefd3f1dc2da45aef517",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.1",
+                "symfony/phpunit-bridge": "~3.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.4-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "lib/swift_required.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Corbyn"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Swiftmailer, free feature-rich PHP mailer",
+            "homepage": "http://swiftmailer.org",
+            "keywords": [
+                "email",
+                "mail",
+                "mailer"
+            ],
+            "time": "2017-05-01T15:54:03+00:00"
         },
         {
             "name": "symfony-cmf/routing",
@@ -8761,7 +9296,12 @@
         "drupal/field_permissions": 10,
         "drupal/field_group": 5,
         "drupal/default_content": 15,
-        "drupal/better_exposed_filters": 15
+        "drupal/better_exposed_filters": 15,
+        "drupal/swiftmailer": 10,
+        "drupal/rules": 15,
+        "drupal/sendgrid_integration": 20,
+        "drupal/maillog": 20,
+        "drupal/typed_data": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

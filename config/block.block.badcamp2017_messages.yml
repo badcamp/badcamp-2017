@@ -11,7 +11,7 @@ _core:
 id: badcamp2017_messages
 theme: badcamp2017
 region: info
-weight: -6
+weight: -7
 provider: null
 plugin: system_messages_block
 settings:
