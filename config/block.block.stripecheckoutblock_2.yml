@@ -22,7 +22,7 @@ settings:
   turn_on_avs: 1
   amount: '5000'
   description:
-    value: "<p><strong>Benefits</strong></p>\r\n\r\n<ul>\r\n\t<li>Much love and respect</li>\r\n\t<li>BADCamp T-shirt</li>\r\n\t<li>Surprise Swag!</li>\r\n</ul>\r\n"
+    value: "<p><strong>Benefits</strong></p>\r\n\r\n<ul>\r\n\t<li>Much love and respect</li>\r\n\t<li>BADCamp T-shirt</li>\r\n\t<li>Portable Solar Charger</li>\r\n</ul>\r\n"
     format: basic_html
   payment_type: donation
 visibility:
