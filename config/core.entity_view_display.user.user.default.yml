@@ -6,17 +6,19 @@ dependencies:
     - field.field.user.user.field_bio
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_first_name
+    - field.field.user.user.field_hearing_sponsors
+    - field.field.user.user.field_interested_drupal_jobs
     - field.field.user.user.field_interests
     - field.field.user.user.field_last_name
     - field.field.user.user.field_newsletter
     - field.field.user.user.field_organization
     - field.field.user.user.field_profile_photo
     - field.field.user.user.field_social_profile
+    - field.field.user.user.field_t_shirt_size
     - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
   module:
     - image
-    - mailchimp_lists
     - social_profile_field
     - user
 _core:
@@ -65,14 +67,6 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_newsletter:
-    weight: 10
-    label: inline
-    settings:
-      show_interest_groups: false
-    third_party_settings: {  }
-    type: mailchimp_lists_subscribe_default
-    region: content
   field_organization:
     weight: 4
     label: inline
@@ -106,24 +100,19 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_volunteer:
-    weight: 11
-    label: inline
-    settings:
-      format: yes-no
-      format_custom_true: ''
-      format_custom_false: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   member_for:
     weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
   sessions_user_profile_view:
-    weight: 12
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_hearing_sponsors: true
+  field_interested_drupal_jobs: true
+  field_newsletter: true
+  field_t_shirt_size: true
+  field_volunteer: true

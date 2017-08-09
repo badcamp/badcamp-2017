@@ -6,12 +6,15 @@ dependencies:
     - field.field.user.user.field_bio
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_first_name
+    - field.field.user.user.field_hearing_sponsors
+    - field.field.user.user.field_interested_drupal_jobs
     - field.field.user.user.field_interests
     - field.field.user.user.field_last_name
     - field.field.user.user.field_newsletter
     - field.field.user.user.field_organization
     - field.field.user.user.field_profile_photo
     - field.field.user.user.field_social_profile
+    - field.field.user.user.field_t_shirt_size
     - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
     - image.style.thumbnail
@@ -56,6 +59,20 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_hearing_sponsors:
+    weight: 13
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_interested_drupal_jobs:
+    weight: 12
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_interests:
     weight: 9
@@ -104,6 +121,12 @@ content:
     third_party_settings: {  }
     type: social_profile_field_default
     region: content
+  field_t_shirt_size:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_title:
     weight: 5
     settings:
@@ -121,12 +144,12 @@ content:
     region: content
   path:
     type: path
-    weight: 13
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     region: content
   timezone:
-    weight: 12
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }

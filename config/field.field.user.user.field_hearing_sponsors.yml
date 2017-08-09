@@ -1,0 +1,24 @@
+uuid: 0442896d-0bfb-43da-bca4-f993dd1699f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_hearing_sponsors
+  module:
+    - user
+id: user.user.field_hearing_sponsors
+field_name: field_hearing_sponsors
+entity_type: user
+bundle: user
+label: 'I am interested in hearing from sponsors'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean
