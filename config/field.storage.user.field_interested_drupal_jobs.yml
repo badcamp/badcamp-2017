@@ -1,0 +1,22 @@
+uuid: db17968f-b622-421e-b07b-3f747d7fe316
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - user
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: user.field_interested_drupal_jobs
+field_name: field_interested_drupal_jobs
+entity_type: user
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

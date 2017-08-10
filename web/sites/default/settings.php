@@ -46,12 +46,14 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'li
   $json_text = file_get_contents('sites/default/files/private/badcamp_keys.json');
   $key_data = json_decode($json_text, TRUE);
   $config['mailchimp.settings']['api_key'] = $key_data['mailchimp_key'];
+  $config['sendgrid_integration.settings']['apikey'] = $key_data['sendgrid_api'];
 }
 else {
   // We aren't in prod, load a fallback or null key.
   $json_text = file_get_contents('sites/default/files/private/badcamp_keys.json');
   $key_data = json_decode($json_text, TRUE);
   $config['mailchimp.settings']['api_key'] = $key_data['mailchimp_key'];
+  $config['sendgrid_integration.settings']['apikey'] = $key_data['sendgrid_api'];
 }
 
 // Require HTTPS
