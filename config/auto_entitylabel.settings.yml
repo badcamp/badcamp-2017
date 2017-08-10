@@ -1,0 +1,8 @@
+node_type_venue_status: '1'
+node_type_venue_pattern: '[node:field_venue_name] [node:field_room_number_name]'
+node_type_venue_php: 0
+submit: 'Save configuration'
+form_build_id: form-fiSU0rCKaLLi4eXw_zwwia5_iUFFvbOxaPwSeyH5KaM
+form_token: TCHEJM6OvsRdBkYLHoUXzV-YjcOyKBGI2gOYX-N7BGQ
+form_id: auto_entitylabel_settings_form
+op: 'Save configuration'

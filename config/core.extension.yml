@@ -1,13 +1,12 @@
 module:
   address: 0
   admin_toolbar: 0
+  auto_entitylabel: 0
   automated_cron: 0
   badcamp_blog: 0
   badcamp_content: 0
   badcamp_program_details: 0
   badcamp_sponsors: 0
-  badcamp_styleguide: 0
-  better_exposed_filters: 0
   badcamp_stripe_payment: 0
   badcamp_styleguide: 0
   better_exposed_filters: 0
@@ -68,8 +67,8 @@ module:
   serialization: 0
   shortcut: 0
   social_profile_field: 0
-  swiftmailer: 0
   stripe_api: 0
+  swiftmailer: 0
   system: 0
   taxonomy: 0
   text: 0

@@ -51,7 +51,8 @@
     "drupal/sendgrid_integration": "1.x-dev",
     "drupal/maillog": "1.x-dev",
     "drupal/typed_data": "dev-8.x-1.x",
-    "drupal/honeypot": "^1.27"
+    "drupal/honeypot": "^1.27",
+    "drupal/auto_entitylabel": "^2.0@beta"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
