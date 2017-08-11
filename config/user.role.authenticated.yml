@@ -15,6 +15,7 @@ permissions:
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'add stripe payment entities'
+  - 'create field_t_shirt_size'
   - 'create session content'
   - 'delete own session content'
   - 'edit own field_hearing_sponsors'
