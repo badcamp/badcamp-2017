@@ -202,16 +202,16 @@
         },
         {
             "name": "badcamp/badcamp_stripe_payment",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_stripe_payment.git",
-                "reference": "705d134105252c83fa28c1b308b79b6fe9924dc2"
+                "reference": "d517275f869d93f6732d84d8baa79db339d78ff2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/705d134105252c83fa28c1b308b79b6fe9924dc2",
-                "reference": "705d134105252c83fa28c1b308b79b6fe9924dc2",
+                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/d517275f869d93f6732d84d8baa79db339d78ff2",
+                "reference": "d517275f869d93f6732d84d8baa79db339d78ff2",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +235,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-08-04T22:04:33+00:00"
+            "time": "2017-08-11T00:32:47+00:00"
         },
         {
             "name": "commerceguys/addressing",
@@ -2631,7 +2631,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/disable_messages-8.x-1.0.zip",
-                "reference": null,
+                "reference": "8.x-1.0",
                 "shasum": "c12e4cdbad17ed27672e865a09d74d350bb8190d"
             },
             "require": {
@@ -2962,7 +2962,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/honeypot-8.x-1.27.zip",
-                "reference": null,
+                "reference": "8.x-1.27",
                 "shasum": "b40f86ef45a7f4325343e8aa455ecbdceab51ffe"
             },
             "require": {
@@ -3035,10 +3035,6 @@
                 "GPL-2.0+"
             ],
             "authors": [
-                {
-                    "name": "Cellar Door",
-                    "homepage": "https://www.drupal.org/user/658076"
-                },
                 {
                     "name": "CrashTest_",
                     "homepage": "https://www.drupal.org/user/261457"
@@ -3211,7 +3207,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/mailsystem-8.x-4.1.zip",
-                "reference": null,
+                "reference": "8.x-4.1",
                 "shasum": "318b87f1fdf96e6db30b04a98108af02a0fc3dcc"
             },
             "require": {
@@ -3388,7 +3384,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/rules-8.x-3.0-alpha3.zip",
-                "reference": null,
+                "reference": "8.x-3.0-alpha3",
                 "shasum": "e8cf4212479a6f8418b519c93b08a8bd22cf00d3"
             },
             "require": {
@@ -3600,7 +3596,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/swiftmailer-8.x-1.0-beta1.zip",
-                "reference": null,
+                "reference": "8.x-1.0-beta1",
                 "shasum": "d49a50638a629c24d681181b82255fd50c1b2642"
             },
             "require": {
