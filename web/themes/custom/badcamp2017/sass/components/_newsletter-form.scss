@@ -1,0 +1,75 @@
+.mailchimp-signup-subscribe-form {
+
+  @extend .columns;
+
+  /*
+  @include breakpoint(small) {
+    &:after {
+      content: 'small';
+    }
+  }
+  @include breakpoint(medium) {
+    &:after {
+      content: 'medium';
+    }
+  }
+  @include breakpoint(large) {
+    &:after {
+      content: 'large';
+    }
+  }
+  @include breakpoint(xlarge) {
+    &:after {
+      content: 'xlarge';
+    }
+  }
+  */
+
+  > h2 {
+    font-size: 1.5em;
+  }
+  @extend .row;
+}
+
+// top (sometimes left)
+.mailchimp-newsletter-mergefields label {
+
+  @extend h2;
+  font-size: .9em;
+  margin-bottom: 0.25em;
+  &:after {
+    content: ":";
+  }
+
+  @include breakpoint(medium) {
+    font-size: 1.0em;
+  }
+
+  @include breakpoint(large) {
+    font-size: 1.2em;
+  }
+
+  @extend .columns;
+  @extend .small-12;
+
+}
+
+// left (sometimes center)
+#edit-mergevars-email {
+  @extend .columns;
+  @extend .small-8;
+  @extend .small-pull-4;
+  @extend .medium-10;
+  @extend .medium-pull-2;
+}
+
+// right
+.form-submit {
+  @extend .columns;
+  @extend .small-4;
+  @extend .small-push-8;
+  @extend .medium-2;
+  @extend .medium-push-10;
+  font-weight: bold;
+  text-transform: uppercase;
+}
