@@ -1,6 +1,6 @@
 .mailchimp-signup-subscribe-form {
 
-  @extend .columns;
+  @include grid-column(12);
 
   /*
   @include breakpoint(small) {
@@ -28,15 +28,15 @@
   > h2 {
     font-size: 1.5em;
   }
-  @extend .row;
+
 }
 
 // top (sometimes left)
 .mailchimp-newsletter-mergefields label {
-
   @extend h2;
   font-size: .9em;
   margin-bottom: 0.25em;
+
   &:after {
     content: ":";
   }
@@ -48,28 +48,40 @@
   @include breakpoint(large) {
     font-size: 1.2em;
   }
-
-  @extend .columns;
-  @extend .small-12;
-
 }
 
-// left (sometimes center)
 #edit-mergevars-email {
-  @extend .columns;
-  @extend .small-8;
-  @extend .small-pull-4;
-  @extend .medium-10;
-  @extend .medium-pull-2;
+  display: block;
+
+  @include breakpoint(small) {
+    float: left;
+    width: 55%;
+  }
+
+  @include breakpoint(medium) {
+    width: 75%;
+  }
+
+  @include breakpoint(large) {
+    width: 80%;
+  }
 }
 
-// right
 .form-submit {
-  @extend .columns;
-  @extend .small-4;
-  @extend .small-push-8;
-  @extend .medium-2;
-  @extend .medium-push-10;
   font-weight: bold;
   text-transform: uppercase;
+  display: block;
+
+  @include breakpoint(small) {
+    float: right;
+    width: 45%;
+  }
+
+  @include breakpoint(medium) {
+    width: 25%;
+  }
+
+  @include breakpoint(large) {
+    width: 20%;
+  }
 }
