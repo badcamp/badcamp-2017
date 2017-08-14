@@ -6,8 +6,6 @@ module:
   badcamp_content: 0
   badcamp_program_details: 0
   badcamp_sponsors: 0
-  badcamp_styleguide: 0
-  better_exposed_filters: 0
   badcamp_stripe_payment: 0
   badcamp_styleguide: 0
   better_exposed_filters: 0
@@ -68,8 +66,8 @@ module:
   serialization: 0
   shortcut: 0
   social_profile_field: 0
-  swiftmailer: 0
   stripe_api: 0
+  swiftmailer: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -82,6 +80,8 @@ module:
   video_embed_field: 0
   views_bulk_operations: 0
   views_ui: 0
+  webform: 0
+  webform_ui: 0
   menu_link_content: 1
   pathauto: 1
   views: 10
