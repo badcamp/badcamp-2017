@@ -14,7 +14,6 @@ dependencies:
     - field.field.user.user.field_organization
     - field.field.user.user.field_profile_photo
     - field.field.user.user.field_social_profile
-    - field.field.user.user.field_t_shirt_size
     - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
     - image.style.thumbnail
@@ -120,12 +119,6 @@ content:
       size: 60
     third_party_settings: {  }
     type: social_profile_field_default
-    region: content
-  field_t_shirt_size:
-    weight: 14
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_title:
     weight: 5

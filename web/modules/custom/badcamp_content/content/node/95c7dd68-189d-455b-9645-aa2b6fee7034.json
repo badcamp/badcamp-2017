@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/session?_format=hal_json"
+            "href": "http:\/\/default\/sessions?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/node\/page"
@@ -52,7 +52,7 @@
     ],
     "title": [
         {
-            "value": "Session",
+            "value": "Sessions",
             "lang": "en"
         }
     ],
