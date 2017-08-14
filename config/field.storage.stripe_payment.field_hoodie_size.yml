@@ -1,17 +1,13 @@
-uuid: e4b4d16b-722a-4f1c-a924-7877898d0f03
+uuid: 14d3bf1a-d39a-45c7-98b1-e2a51426adfd
 langcode: en
 status: true
 dependencies:
   module:
-    - field_permissions
+    - badcamp_stripe_payment
     - options
-    - user
-third_party_settings:
-  field_permissions:
-    permission_type: custom
-id: user.field_t_shirt_size
-field_name: field_t_shirt_size
-entity_type: user
+id: stripe_payment.field_hoodie_size
+field_name: field_hoodie_size
+entity_type: stripe_payment
 type: list_string
 settings:
   allowed_values:
@@ -30,6 +26,9 @@ settings:
     -
       value: XX-Large
       label: XX-Large
+    -
+      value: XXX-Large
+      label: XXX-Large
   allowed_values_function: ''
 module: options
 locked: false

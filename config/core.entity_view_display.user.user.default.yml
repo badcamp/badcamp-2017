@@ -14,7 +14,6 @@ dependencies:
     - field.field.user.user.field_organization
     - field.field.user.user.field_profile_photo
     - field.field.user.user.field_social_profile
-    - field.field.user.user.field_t_shirt_size
     - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
   module:
@@ -114,5 +113,4 @@ hidden:
   field_hearing_sponsors: true
   field_interested_drupal_jobs: true
   field_newsletter: true
-  field_t_shirt_size: true
   field_volunteer: true

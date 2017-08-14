@@ -15,6 +15,5 @@ permissions:
   - 'access site-wide contact form'
   - 'create field_hearing_sponsors'
   - 'create field_interested_drupal_jobs'
-  - 'create field_t_shirt_size'
   - 'search content'
   - 'use text format restricted_html'

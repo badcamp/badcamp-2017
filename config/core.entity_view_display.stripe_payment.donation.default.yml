@@ -1,0 +1,95 @@
+uuid: 3c5036ba-c6c9-496f-9c9d-873873aa67fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - badcamp_stripe_payment.stripe_payment_type.donation
+    - field.field.stripe_payment.donation.field_hoodie_size
+    - field.field.stripe_payment.donation.field_t_shirt_size
+    - field.field.stripe_payment.donation.field_t_shirt_type
+  module:
+    - options
+    - user
+id: stripe_payment.donation.default
+targetEntityType: stripe_payment
+bundle: donation
+mode: default
+content:
+  amount:
+    label: inline
+    type: number_integer
+    weight: 3
+    region: content
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  entity_id:
+    type: entity_reference_label
+    weight: 6
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_hoodie_size:
+    type: list_default
+    weight: 9
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_t_shirt_size:
+    type: list_default
+    weight: 8
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_t_shirt_type:
+    type: list_default
+    weight: 7
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  stripe_customer_id:
+    label: inline
+    type: string
+    weight: 5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  stripe_outcome_type:
+    label: inline
+    type: string
+    weight: 2
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  stripe_status:
+    label: inline
+    type: string
+    weight: 4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  stripe_transaction_id:
+    label: inline
+    type: string
+    weight: 1
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: inline
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
