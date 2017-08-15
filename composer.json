@@ -30,7 +30,6 @@
     "badcamp/badcamp_sponsors": "dev-master",
     "drupal/key": "^1.3",
     "badcamp/badcamp_blog": "dev-master",
-    "drupal/social_profile_field": "^0.2.0",
     "drupal/config_readonly": "^1.0@beta",
     "drupal/config_split": "^1.0@beta",
     "drupal/devel": "^1.0@RC",
