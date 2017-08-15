@@ -68,6 +68,7 @@ module:
   shortcut: 0
   social_media_links: 0
   social_media_links_field: 0
+  social_profile_field: 0
   stripe_api: 0
   swiftmailer: 0
   system: 0

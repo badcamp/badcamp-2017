@@ -17,7 +17,7 @@ dependencies:
     - field.field.user.user.field_social_media_links
     - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
-    - image.style.large
+    - image.style.medium
   module:
     - image
     - social_media_links_field
@@ -30,7 +30,7 @@ bundle: user
 mode: default
 content:
   field_bio:
-    weight: 4
+    weight: 5
     label: inline
     settings: {  }
     third_party_settings: {  }
@@ -46,9 +46,9 @@ content:
     region: content
   field_first_name:
     type: string
-    weight: 2
+    weight: 1
     region: content
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -62,14 +62,14 @@ content:
     region: content
   field_last_name:
     type: string
-    weight: 3
+    weight: 2
     region: content
-    label: inline
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
   field_organization:
-    weight: 5
+    weight: 4
     label: inline
     settings:
       link_to_entity: false
@@ -90,7 +90,7 @@ content:
     region: content
     label: hidden
     settings:
-      image_style: large
+      image_style: medium
       image_link: ''
     third_party_settings: {  }
   field_social_media_links:
@@ -107,8 +107,8 @@ content:
     type: social_media_links_field_default
     region: content
   field_title:
-    weight: 1
-    label: inline
+    weight: 3
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

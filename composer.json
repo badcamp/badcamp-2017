@@ -54,7 +54,8 @@
     "drupal/views_bulk_operations": "1.x-dev",
     "drupal/auto_entitylabel": "^2.0@beta",
     "drupal/webform": "^5.0@beta",
-    "drupal/social_media_links": "^2.5"
+    "drupal/social_media_links": "^2.5",
+    "drupal/social_profile_field": "^0.2.0"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
