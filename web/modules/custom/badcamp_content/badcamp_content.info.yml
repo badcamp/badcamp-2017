@@ -6,6 +6,7 @@ package: BADCamp
 
 dependencies:
   - default_content
+  - drupal:views_bulk_operations
 
 default_content:
   block_content:

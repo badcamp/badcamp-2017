@@ -66,6 +66,8 @@ module:
   sendgrid_integration: 0
   serialization: 0
   shortcut: 0
+  social_media_links: 0
+  social_media_links_field: 0
   social_profile_field: 0
   stripe_api: 0
   swiftmailer: 0
@@ -79,6 +81,7 @@ module:
   update: 0
   user: 0
   video_embed_field: 0
+  views_bulk_operations: 0
   views_ui: 0
   webform: 0
   webform_ui: 0

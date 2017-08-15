@@ -38,4 +38,5 @@ hidden:
   body: true
   field_address: true
   field_location: true
+  field_venue_name: true
   links: true
