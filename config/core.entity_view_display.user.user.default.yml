@@ -30,8 +30,8 @@ bundle: user
 mode: default
 content:
   field_bio:
-    weight: 5
-    label: inline
+    weight: 6
+    label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
@@ -54,7 +54,7 @@ content:
     third_party_settings: {  }
   field_interests:
     weight: 9
-    label: inline
+    label: above
     settings:
       link: true
     third_party_settings: {  }
@@ -70,15 +70,15 @@ content:
     third_party_settings: {  }
   field_organization:
     weight: 4
-    label: inline
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_organization_website:
-    weight: 6
-    label: inline
+    weight: 5
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -95,7 +95,7 @@ content:
     third_party_settings: {  }
   field_social_media_links:
     weight: 8
-    label: inline
+    label: visually_hidden
     settings:
       appearance:
         orientation: h
@@ -108,7 +108,7 @@ content:
     region: content
   field_title:
     weight: 3
-    label: hidden
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
