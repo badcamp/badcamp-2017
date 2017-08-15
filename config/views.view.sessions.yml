@@ -43,7 +43,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'edit field_session_status'
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -171,17 +171,19 @@ display:
           operator: '='
           value: '1'
           group: 1
-          exposed: true
+          exposed: false
           expose:
+            operator_id: ''
+            label: 'Published status'
+            description: null
             use_operator: false
             operator: status_op
             identifier: status
-            label: 'Published status'
-            description: null
+            required: true
             remember: false
             multiple: false
-            required: true
-            operator_id: ''
+            remember_roles:
+              authenticated: authenticated
           is_grouped: false
           group_info:
             label: ''
@@ -409,6 +411,7 @@ display:
         fields: false
         exposed_form: false
         title: false
+        access: false
       row:
         type: 'entity:node'
         options:
@@ -1414,6 +1417,10 @@ display:
         context: '0'
         menu_name: admin
       title: Sessions
+      access:
+        type: perm
+        options:
+          perm: 'edit field_session_status'
     cache_metadata:
       max-age: 0
       contexts:
