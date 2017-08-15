@@ -34,6 +34,9 @@ content:
       image_style: thumbnail
       image_link: content
     third_party_settings: {  }
+  venue_events_entity_view_1:
+    weight: 10
+    region: content
 hidden:
   body: true
   field_address: true
