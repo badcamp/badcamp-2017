@@ -12,6 +12,7 @@ dependencies:
     - field.field.user.user.field_last_name
     - field.field.user.user.field_newsletter
     - field.field.user.user.field_organization
+    - field.field.user.user.field_organization_website
     - field.field.user.user.field_profile_photo
     - field.field.user.user.field_social_profile
     - field.field.user.user.field_title
@@ -28,14 +29,14 @@ bundle: user
 mode: default
 content:
   field_bio:
-    weight: 8
+    weight: 9
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_drupal_org_username:
-    weight: 6
+    weight: 7
     label: inline
     settings:
       link_to_entity: false
@@ -51,7 +52,7 @@ content:
     type: string
     region: content
   field_interests:
-    weight: 9
+    weight: 10
     label: inline
     settings:
       link: true
@@ -74,6 +75,14 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_organization_website:
+    weight: 5
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   field_profile_photo:
     type: image
     weight: 1
@@ -84,7 +93,7 @@ content:
       image_link: ''
     third_party_settings: {  }
   field_social_profile:
-    weight: 7
+    weight: 8
     label: inline
     settings:
       icons_show: '1'
@@ -92,7 +101,7 @@ content:
     type: social_profile_field_default
     region: content
   field_title:
-    weight: 5
+    weight: 6
     label: inline
     settings:
       link_to_entity: false
@@ -105,7 +114,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   sessions_user_profile_view:
-    weight: 10
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
