@@ -53,7 +53,8 @@
     "drupal/honeypot": "^1.27",
     "drupal/views_bulk_operations": "1.x-dev",
     "drupal/auto_entitylabel": "^2.0@beta",
-    "drupal/webform": "^5.0@beta"
+    "drupal/webform": "^5.0@beta",
+    "drupal/social_media_links": "^2.5"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
