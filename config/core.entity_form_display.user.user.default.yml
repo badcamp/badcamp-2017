@@ -137,15 +137,11 @@ content:
     region: content
   path:
     type: path
-    weight: 16
+    weight: 14
     settings: {  }
     third_party_settings: {  }
     region: content
-  timezone:
-    weight: 15
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   contact: true
   language: true
+  timezone: true
