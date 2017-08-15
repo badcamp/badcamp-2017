@@ -124,7 +124,7 @@ content:
     weight: 9
     settings: {  }
     third_party_settings: {  }
-    type: social_media_links_field_select
+    type: social_media_links_field_default
     region: content
   field_title:
     weight: 7
