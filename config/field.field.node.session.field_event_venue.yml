@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_event_venue
     - node.type.session
-    - node.type.venue
 id: node.session.field_event_venue
 field_name: field_event_venue
 entity_type: node
@@ -20,7 +19,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      venue: venue
+      session: session
     sort:
       field: title
       direction: ASC

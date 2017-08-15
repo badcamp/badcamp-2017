@@ -24,60 +24,79 @@ dependencies:
     - video_embed_field
 third_party_settings:
   field_group:
+    group_session_info:
+      children:
+        - group_session_information
+        - group_session_description
+        - group_session_files_video
+        - group_session_administration
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: ''
+        classes: ''
+        direction: horizontal
+      label: 'Session Info'
     group_session_information:
       children:
         - title
         - field_session_speakers
         - field_session_track
         - field_session_skill_level
-      parent_name: ''
-      weight: 5
-      format_type: fieldset
+      parent_name: group_session_info
+      weight: 20
+      format_type: tab
       format_settings:
         id: ''
         classes: ''
+        formatter: closed
         description: ''
         required_fields: true
       label: 'Session Information'
     group_session_description:
       children:
         - field_session_description
-      parent_name: ''
-      weight: 6
-      format_type: fieldset
+      parent_name: group_session_info
+      weight: 21
+      format_type: tab
       format_settings:
         id: ''
         classes: ''
+        formatter: closed
         description: ''
         required_fields: true
-      label: 'Session Description'
+      label: 'Session description'
     group_session_files_video:
       children:
         - field_session_files
         - field_video
-      parent_name: ''
-      weight: 7
-      format_type: fieldset
+      parent_name: group_session_info
+      weight: 22
+      format_type: tab
       format_settings:
         id: ''
         classes: ''
+        formatter: closed
         description: ''
         required_fields: true
-      label: 'Session Files/Video'
+      label: 'Session files/video'
     group_session_administration:
       children:
         - field_event_venue
         - field_session_status
+        - field_session_time_slot
         - field_event_date_and_time
-      parent_name: ''
-      weight: 8
-      format_type: fieldset
+      parent_name: group_session_info
+      weight: 23
+      format_type: tab
       format_settings:
         id: ''
         classes: ''
+        formatter: closed
         description: ''
         required_fields: true
-      label: 'Session Administration'
+      label: 'Session administration'
 id: node.session.default
 targetEntityType: node
 bundle: session
@@ -85,30 +104,30 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 11
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_comments:
-    weight: 15
+    weight: 38
     settings: {  }
     third_party_settings: {  }
     type: comment_default
     region: content
   field_event_date_and_time:
-    weight: 4
+    weight: 0
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
     region: content
   field_event_venue:
-    weight: 2
+    weight: -3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_session_description:
-    weight: 0
+    weight: 34
     settings:
       rows: 9
       summary_rows: 3
@@ -117,20 +136,20 @@ content:
     type: text_textarea_with_summary
     region: content
   field_session_files:
-    weight: 0
+    weight: 36
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
   field_session_skill_level:
-    weight: 4
+    weight: -1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_session_speakers:
-    weight: 2
+    weight: -4
     settings:
       match_operator: CONTAINS
       size: 60
@@ -139,26 +158,26 @@ content:
     type: entity_reference_autocomplete_tags
     region: content
   field_session_status:
-    weight: 3
+    weight: -2
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_session_track:
-    weight: 3
+    weight: -2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_video:
-    weight: 1
+    weight: 37
     settings: {  }
     third_party_settings: {  }
     type: video_embed_field_textfield
     region: content
   path:
     type: path
-    weight: 14
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -166,19 +185,19 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 12
+    weight: 3
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 4
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: 1
+    weight: -5
     region: content
     settings:
       size: 60
@@ -186,7 +205,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 10
+    weight: 1
     settings:
       match_operator: CONTAINS
       size: 60
