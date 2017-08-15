@@ -79,7 +79,6 @@ module:
   update: 0
   user: 0
   video_embed_field: 0
-  views_bulk_operations: 0
   views_ui: 0
   webform: 0
   webform_ui: 0

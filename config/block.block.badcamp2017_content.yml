@@ -11,7 +11,7 @@ _core:
 id: badcamp2017_content
 theme: badcamp2017
 region: content
-weight: -8
+weight: -11
 provider: null
 plugin: system_main_block
 settings:

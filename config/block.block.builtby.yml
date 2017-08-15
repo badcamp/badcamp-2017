@@ -11,7 +11,7 @@ dependencies:
 id: builtby
 theme: badcamp2017
 region: footer
-weight: -7
+weight: -8
 provider: null
 plugin: 'block_content:65c261a8-8f48-41d9-8941-46cf9b8bba35'
 settings:

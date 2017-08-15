@@ -21,7 +21,7 @@ settings:
   id: 'views_block:badcamp_sponsors_view-core_sponsors_block'
   label: ''
   provider: views
-  label_display: '0'
+  label_display: visible
   views_label: ''
   items_per_page: none
 visibility:

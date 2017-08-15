@@ -4,13 +4,12 @@ status: true
 dependencies:
   module:
     - mailchimp_signup
-    - system
   theme:
     - badcamp2017
 id: badcamp2017_mailchimpsubscriptionformbadcampnewsletter
 theme: badcamp2017
-region: content
-weight: -5
+region: footer
+weight: -10
 provider: null
 plugin: 'mailchimp_signup_subscribe_block:badcamp_newsletter'
 settings:
@@ -18,9 +17,4 @@ settings:
   label: 'BADCamp Newsletter'
   provider: mailchimp_signup
   label_display: visible
-visibility:
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
-    context_mapping: {  }
+visibility: {  }
