@@ -3616,11 +3616,7 @@
                 },
                 "drupal": {
                     "version": "8.x-0.2",
-                    "datestamp": "1458060823",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
+                    "datestamp": "1458060823"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
