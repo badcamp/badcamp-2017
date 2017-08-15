@@ -12,13 +12,15 @@ dependencies:
     - field.field.user.user.field_last_name
     - field.field.user.user.field_newsletter
     - field.field.user.user.field_organization
+    - field.field.user.user.field_organization_website
     - field.field.user.user.field_profile_photo
-    - field.field.user.user.field_social_profile
+    - field.field.user.user.field_social_media_links
     - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
+    - image.style.medium
   module:
     - image
-    - social_profile_field
+    - social_media_links_field
     - user
 _core:
   default_config_hash: L2mtwGWH_7wDRCMIR4r_Iu_jmvQ10DV1L8ht8iNZ5qY
@@ -28,14 +30,14 @@ bundle: user
 mode: default
 content:
   field_bio:
-    weight: 8
-    label: above
+    weight: 5
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_drupal_org_username:
-    weight: 6
+    weight: 7
     label: inline
     settings:
       link_to_entity: false
@@ -43,13 +45,13 @@ content:
     type: string
     region: content
   field_first_name:
-    weight: 2
-    label: inline
+    type: string
+    weight: 1
+    region: content
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
-    region: content
   field_interests:
     weight: 9
     label: inline
@@ -59,13 +61,13 @@ content:
     type: entity_reference_label
     region: content
   field_last_name:
-    weight: 3
-    label: inline
+    type: string
+    weight: 2
+    region: content
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
-    region: content
   field_organization:
     weight: 4
     label: inline
@@ -74,36 +76,44 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_profile_photo:
-    type: image
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-  field_social_profile:
-    weight: 7
-    label: inline
-    settings:
-      icons_show: '1'
-    third_party_settings: {  }
-    type: social_profile_field_default
-    region: content
-  field_title:
-    weight: 5
+  field_organization_website:
+    weight: 6
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  member_for:
+  field_profile_photo:
+    type: image
     weight: 0
     region: content
-    settings: {  }
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
     third_party_settings: {  }
+  field_social_media_links:
+    weight: 8
+    label: inline
+    settings:
+      appearance:
+        orientation: h
+        show_name: '1'
+      link_attributes:
+        target: '<none>'
+        rel: '<none>'
+    third_party_settings: {  }
+    type: social_media_links_field_default
+    region: content
+  field_title:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
   sessions_user_profile_view:
     weight: 10
     region: content
@@ -114,3 +124,4 @@ hidden:
   field_interested_drupal_jobs: true
   field_newsletter: true
   field_volunteer: true
+  member_for: true
