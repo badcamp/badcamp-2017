@@ -14,12 +14,10 @@ dependencies:
     - field.field.user.user.field_organization
     - field.field.user.user.field_organization_website
     - field.field.user.user.field_profile_photo
-    - field.field.user.user.field_social_profile
     - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
   module:
     - image
-    - social_profile_field
     - user
 _core:
   default_config_hash: L2mtwGWH_7wDRCMIR4r_Iu_jmvQ10DV1L8ht8iNZ5qY
@@ -92,14 +90,6 @@ content:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
-  field_social_profile:
-    weight: 8
-    label: inline
-    settings:
-      icons_show: '1'
-    third_party_settings: {  }
-    type: social_profile_field_default
-    region: content
   field_title:
     weight: 6
     label: inline
