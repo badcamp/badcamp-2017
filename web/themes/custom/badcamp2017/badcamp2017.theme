@@ -85,6 +85,13 @@ function badcamp2017_preprocess_node__session__teaser(&$vars){
 }
 
 /**
+ * Implements hook_preprocess_node__type__view_mode().
+ */
+function badcamp2017_preprocess_node__blog__teaser(&$vars){
+  unset($vars['content']['links']);
+}
+
+/**
  * Implements template_preprocess_node__node_type__node_display().
  */
 function badcamp2017_preprocess_node__badcamp_sponsor__full(&$vars){
