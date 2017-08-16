@@ -18,13 +18,15 @@
 #}
 <article{{ attributes }}>
   {% if content %}
-    <div class="media-object stack-for-small">
-      <div class="media-object-section">
+    <div class="row align-center">
+      <div class="columns">
         <div class="thumbnail">
           {{ content.field_profile_photo }}
         </div>
       </div>
-      <div class="media-object-section">
+    </div>
+    <div class="row">
+      <div class="columns">
         {{ content|without('field_profile_photo') }}
       </div>
     </div>
