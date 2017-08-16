@@ -30,3 +30,5 @@ permissions:
   - 'view own field_hearing_sponsors'
   - 'view own field_interested_drupal_jobs'
   - 'view own field_t_shirt_size'
+  - 'view status messages'
+  - 'view warning messages'

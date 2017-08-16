@@ -1,0 +1,20 @@
+uuid: c3f5b280-9d4a-4048-89d3-98895a61706d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - badcamp2017
+id: messages
+theme: badcamp2017
+region: help
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  provider: system
+  label_display: '0'
+visibility: {  }
