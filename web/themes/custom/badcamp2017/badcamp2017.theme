@@ -247,3 +247,10 @@ function badcamp2017_theme_suggestions_form_element_label_alter(&$suggestions, $
     $suggestions[] = 'form_element_label__session_track';
   }
 }
+
+/**
+ * Implements hook_preprocess_node__type__view_mode().
+ */
+function badcamp2017_preprocess_node__blog__teaser(&$vars){
+  unset($vars['content']['links']);
+}
