@@ -1,0 +1,21 @@
+uuid: 266c2886-4698-44d9-914d-e9136ff5d4fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - badcamp_stripe_payment.stripe_payment_type.donation
+    - field.storage.stripe_payment.field_hoodie_size
+  module:
+    - options
+id: stripe_payment.donation.field_hoodie_size
+field_name: field_hoodie_size
+entity_type: stripe_payment
+bundle: donation
+label: 'Hoodie Size'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

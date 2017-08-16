@@ -1,4 +1,4 @@
-uuid: 462554ce-8a9c-4190-afcb-4379714c4fe1
+uuid: 5d8a8b07-9d51-4376-88b4-ba07f0017acb
 langcode: en
 status: true
 dependencies:
@@ -8,8 +8,8 @@ dependencies:
 third_party_settings:
   field_permissions:
     permission_type: public
-id: user.field_first_name
-field_name: field_first_name
+id: user.field_organization_website
+field_name: field_organization_website
 entity_type: user
 type: string
 settings:

@@ -1,22 +1,20 @@
-uuid: 462554ce-8a9c-4190-afcb-4379714c4fe1
+uuid: 46cddc9d-8252-4e89-8935-b5b70f51d44c
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
+    - social_media_links_field
     - user
 third_party_settings:
   field_permissions:
     permission_type: public
-id: user.field_first_name
-field_name: field_first_name
+id: user.field_social_media_links
+field_name: field_social_media_links
 entity_type: user
-type: string
-settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+type: social_media_links_field
+settings: {  }
+module: social_media_links_field
 locked: false
 cardinality: 1
 translatable: true
