@@ -17,3 +17,5 @@ permissions:
   - 'create field_interested_drupal_jobs'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view status messages'
+  - 'view warning messages'
