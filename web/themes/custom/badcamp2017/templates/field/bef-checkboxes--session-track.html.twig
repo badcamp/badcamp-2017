@@ -16,7 +16,7 @@ set classes = [
 ]
 %}
 <div{{ attributes.addClass(classes) }} data-equalizer>
-    {% for child in children | slice(1) %}
+    {% for child in children %}
         {% if (loop.first) %}
             <!--<div class="row">-->
         {% endif %}

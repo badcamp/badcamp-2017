@@ -2,7 +2,7 @@ div[data-drupal-selector="edit-session-track"]{
   .form-item{
     padding: 0px;
 
-    input[type="radio"] {
+    input[type="checkbox"] {
       -webkit-appearance: none;
       -moz-appearance: none;
       -ms-progress-appearance: none;
@@ -23,7 +23,7 @@ div[data-drupal-selector="edit-session-track"]{
       }
     }
 
-    input[type="radio"]:checked+label {
+    input[type="checkbox"]:checked+label {
       background-color: $bc-orange;
       color: $white;
     }

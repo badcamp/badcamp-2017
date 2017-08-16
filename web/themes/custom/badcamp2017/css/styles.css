@@ -5684,7 +5684,7 @@ div[data-drupal-selector="edit-session-track"] .form-item {
   border-right: 1px solid #222;
 }
 
-div[data-drupal-selector="edit-session-track"] .form-item input[type="radio"] {
+div[data-drupal-selector="edit-session-track"] .form-item input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-progress-appearance: none;
@@ -5705,7 +5705,7 @@ div[data-drupal-selector="edit-session-track"] .form-item label {
   }
 }
 
-div[data-drupal-selector="edit-session-track"] .form-item input[type="radio"]:checked + label {
+div[data-drupal-selector="edit-session-track"] .form-item input[type="checkbox"]:checked + label {
   background-color: #ed592a;
   color: #fefefe;
 }
