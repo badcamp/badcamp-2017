@@ -9,7 +9,6 @@ label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
   - 'access mailchimp signup pages'
   - 'access site-wide contact form'
@@ -17,3 +16,5 @@ permissions:
   - 'create field_interested_drupal_jobs'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view status messages'
+  - 'view warning messages'

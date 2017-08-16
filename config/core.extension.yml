@@ -46,6 +46,7 @@ module:
   history: 0
   honeypot: 0
   image: 0
+  inline_form_errors: 0
   key: 0
   kint: 0
   link: 0
@@ -59,6 +60,7 @@ module:
   page_cache: 0
   path: 0
   quickedit: 0
+  r4032login: 0
   rdf: 0
   recaptcha: 0
   rules: 0
@@ -66,6 +68,8 @@ module:
   sendgrid_integration: 0
   serialization: 0
   shortcut: 0
+  social_media_links: 0
+  social_media_links_field: 0
   social_profile_field: 0
   stripe_api: 0
   swiftmailer: 0

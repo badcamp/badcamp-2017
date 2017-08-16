@@ -234,7 +234,7 @@ function badcamp2017_theme_suggestions_bef_radios_alter(&$suggestions, $vars){
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function badcamp2017_theme_suggestions_form_element_alter(&$suggestions, $vars){
-  if($vars['element']['#name'] == 'session-track'){
+  if(isset($vars['element']['#name']) && $vars['element']['#name'] == 'session-track'){
     $suggestions[] = 'form_element__session_track';
   }
 }

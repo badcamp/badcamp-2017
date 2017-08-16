@@ -23,7 +23,9 @@ default_value:
     interest_groups: null
 default_value_callback: ''
 settings:
+  subscribe_checkbox_label: 'I want to receive all 2017 BADCamp event communications'
   show_interest_groups: 0
+  interest_groups_hidden: 0
   interest_groups_label: 'Interest Groups'
   merge_fields:
     EMAIL: mail
