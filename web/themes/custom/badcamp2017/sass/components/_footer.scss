@@ -1,3 +1,15 @@
+footer {
+  > div.columns {
+    > div {
+      margin-top: 2em;
+      padding-top: 2em;
+      border-top: 1px solid;
+      border-color: lighten(desaturate($bc-blue, 50%), 30%);
+      border-color: #000;
+    }
+  }
+}
+
 #block-builtby{
   p{
     text-align: right;

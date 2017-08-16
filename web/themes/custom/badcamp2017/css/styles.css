@@ -1662,6 +1662,7 @@ ol,
 li,
 h1,
 h2,
+.mailchimp-newsletter-mergefields label,
 h3,
 h4,
 h5,
@@ -1702,6 +1703,7 @@ small {
 
 h1,
 h2,
+.mailchimp-newsletter-mergefields label,
 h3,
 h4,
 h5,
@@ -1714,7 +1716,7 @@ h6 {
 }
 
 h1 small,
-h2 small,
+h2 small, .mailchimp-newsletter-mergefields label small,
 h3 small,
 h4 small,
 h5 small,
@@ -1730,7 +1732,7 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-h2 {
+h2, .mailchimp-newsletter-mergefields label {
   font-size: 1.25rem;
   line-height: 1.4;
   margin-top: 0;
@@ -1769,7 +1771,7 @@ h6 {
   h1 {
     font-size: 3rem;
   }
-  h2 {
+  h2, .mailchimp-newsletter-mergefields label {
     font-size: 2.5rem;
   }
   h3 {
@@ -2038,11 +2040,12 @@ p + .stat {
   }
   p,
   h2,
+  .mailchimp-newsletter-mergefields label,
   h3 {
     orphans: 3;
     widows: 3;
   }
-  h2,
+  h2, .mailchimp-newsletter-mergefields label,
   h3 {
     page-break-after: avoid;
   }
@@ -5249,6 +5252,10 @@ a:hover {
   color: #24a7ff;
 }
 
+main {
+  padding-top: 3em;
+}
+
 .pagination {
   text-align: center;
 }
@@ -5324,6 +5331,14 @@ a.site-slogan {
   }
 }
 
+footer > div.columns > div {
+  margin-top: 2em;
+  padding-top: 2em;
+  border-top: 1px solid;
+  border-color: #81b3d5;
+  border-color: #000;
+}
+
 #block-builtby p {
   text-align: right;
 }
@@ -5341,7 +5356,7 @@ a.site-slogan {
   padding: 90px 0;
 }
 
-.zone-highlighted p, .zone-highlighted h1, .zone-highlighted h2, .zone-highlighted div {
+.zone-highlighted p, .zone-highlighted h1, .zone-highlighted h2, .zone-highlighted .mailchimp-newsletter-mergefields label, .mailchimp-newsletter-mergefields .zone-highlighted label, .zone-highlighted div {
   color: white;
 }
 
@@ -5513,7 +5528,7 @@ a.site-slogan {
   text-align: center;
 }
 
-.path-sponsors #block-badcampsponsorstext h2 {
+.path-sponsors #block-badcampsponsorstext h2, .path-sponsors #block-badcampsponsorstext .mailchimp-newsletter-mergefields label, .mailchimp-newsletter-mergefields .path-sponsors #block-badcampsponsorstext label {
   font-weight: bold;
 }
 
@@ -5732,7 +5747,7 @@ div[data-drupal-selector="edit-session-track"] .form-item input[type="radio"]:ch
   text-align: center;
 }
 
-.page-session #block-badcampsessiontext h2 {
+.page-session #block-badcampsessiontext h2, .page-session #block-badcampsessiontext .mailchimp-newsletter-mergefields label, .mailchimp-newsletter-mergefields .page-session #block-badcampsessiontext label {
   font-weight: bold;
 }
 
@@ -5757,6 +5772,109 @@ div[data-drupal-selector="edit-session-track"] .form-item input[type="radio"]:ch
 
 .label a {
   color: white;
+}
+
+.mailchimp-signup-subscribe-form {
+  width: 100%;
+  float: left;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  /*
+  @include breakpoint(small) {
+    &:after {
+      content: 'small';
+    }
+  }
+  @include breakpoint(medium) {
+    &:after {
+      content: 'medium';
+    }
+  }
+  @include breakpoint(large) {
+    &:after {
+      content: 'large';
+    }
+  }
+  @include breakpoint(xlarge) {
+    &:after {
+      content: 'xlarge';
+    }
+  }
+  */
+}
+
+@media print, screen and (min-width: 40em) {
+  .mailchimp-signup-subscribe-form {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+
+.mailchimp-signup-subscribe-form:last-child:not(:first-child) {
+  float: right;
+}
+
+.mailchimp-signup-subscribe-form > h2, .mailchimp-newsletter-mergefields .mailchimp-signup-subscribe-form > label {
+  font-size: 1.5em;
+}
+
+.mailchimp-newsletter-mergefields label {
+  font-size: .9em;
+  margin-bottom: 0.25em;
+}
+
+.mailchimp-newsletter-mergefields label:after {
+  content: ":";
+}
+
+@media print, screen and (min-width: 40em) {
+  .mailchimp-newsletter-mergefields label {
+    font-size: 1.0em;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .mailchimp-newsletter-mergefields label {
+    font-size: 1.2em;
+  }
+}
+
+#edit-mergevars-email {
+  display: block;
+  float: left;
+  width: 55%;
+}
+
+@media print, screen and (min-width: 40em) {
+  #edit-mergevars-email {
+    width: 75%;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  #edit-mergevars-email {
+    width: 80%;
+  }
+}
+
+.form-submit {
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  float: right;
+  width: 45%;
+}
+
+@media print, screen and (min-width: 40em) {
+  .form-submit {
+    width: 25%;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .form-submit {
+    width: 20%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -3,7 +3,9 @@
 @import "../node_modules/foundation-sites/scss/util/color";
 @import "variables";
 @include foundation-everything();
+
 @import "base/base";
+@import "layout/layout";
 @import "components/components";
 @import "components/header";
 @import "components/footer";
@@ -13,3 +15,4 @@
 @import "components/menu/menu--cta-menu";
 @import "components/news";
 @import "components/sessions";
+@import "components/newsletter-form";
