@@ -202,16 +202,16 @@
         },
         {
             "name": "badcamp/badcamp_stripe_payment",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_stripe_payment.git",
-                "reference": "e6cb414ff62ac5c2a5df4b6cfbdf3b09264ff245"
+                "reference": "44cb338c8c5a28e58c32e3e3be799988d480396e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/e6cb414ff62ac5c2a5df4b6cfbdf3b09264ff245",
-                "reference": "e6cb414ff62ac5c2a5df4b6cfbdf3b09264ff245",
+                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/44cb338c8c5a28e58c32e3e3be799988d480396e",
+                "reference": "44cb338c8c5a28e58c32e3e3be799988d480396e",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +235,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-08-15T21:30:48+00:00"
+            "time": "2017-08-16T04:35:06+00:00"
         },
         {
             "name": "commerceguys/addressing",
@@ -3616,7 +3616,11 @@
                 },
                 "drupal": {
                     "version": "8.x-0.2",
-                    "datestamp": "1458060823"
+                    "datestamp": "1458060823",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
