@@ -9,7 +9,6 @@ label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
   - 'access mailchimp signup pages'
   - 'access shortcuts'
@@ -23,9 +22,7 @@ permissions:
   - 'edit own field_interested_drupal_jobs'
   - 'edit own field_t_shirt_size'
   - 'edit own session content'
-  - 'post comments'
   - 'search content'
-  - 'skip comment approval'
   - 'use text format basic_html'
   - 'view own field_hearing_sponsors'
   - 'view own field_interested_drupal_jobs'
