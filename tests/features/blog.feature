@@ -63,4 +63,4 @@ Feature: Blog Testing
     Given I am an anonymous user
     And I am on "/node/add/blog"
     Then I should see the text "Log in"
-    and I should see the text "Username"
+    And I should see the text "Username"
