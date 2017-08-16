@@ -47,6 +47,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'li
   $key_data = json_decode($json_text, TRUE);
   $config['mailchimp.settings']['api_key'] = $key_data['mailchimp_key'];
   $config['sendgrid_integration.settings']['apikey'] = $key_data['sendgrid_api'];
+  $config['stripe_api.settings']['mode'] = 'live';
 }
 else {
   // We aren't in prod, load a fallback or null key.
