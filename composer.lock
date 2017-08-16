@@ -146,7 +146,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-07-11 22:14:03"
+            "time": "2017-07-11T22:14:03+00:00"
         },
         {
             "name": "badcamp/badcamp_program_details",
@@ -172,7 +172,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-06-24 21:02:43"
+            "time": "2017-06-24T21:02:43+00:00"
         },
         {
             "name": "badcamp/badcamp_sponsors",
@@ -198,7 +198,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-07-18 22:35:27"
+            "time": "2017-07-18T22:35:27+00:00"
         },
         {
             "name": "badcamp/badcamp_stripe_payment",
@@ -3082,8 +3082,7 @@
             "homepage": "https://www.drupal.org/project/geolocation",
             "support": {
                 "source": "http://cgit.drupalcode.org/geolocation"
-            },
-            "time": "2017-07-05 10:00:12"
+            }
         },
         {
             "name": "drupal/honeypot",
@@ -3886,8 +3885,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/stripe_api",
                 "issues": "https://www.drupal.org/project/issues/stripe_api"
-            },
-            "time": "2017-06-28 00:55:02"
+            }
         },
         {
             "name": "drupal/swiftmailer",
