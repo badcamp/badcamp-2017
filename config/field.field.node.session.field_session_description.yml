@@ -11,7 +11,7 @@ id: node.session.field_session_description
 field_name: field_session_description
 entity_type: node
 bundle: session
-label: 'Session Description'
+label: Description
 description: ''
 required: true
 translatable: false
