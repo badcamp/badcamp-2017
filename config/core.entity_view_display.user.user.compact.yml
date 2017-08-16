@@ -4,19 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
-    - field.field.user.user.field_bio
     - field.field.user.user.field_drupal_org_username
-    - field.field.user.user.field_first_name
-    - field.field.user.user.field_hearing_sponsors
-    - field.field.user.user.field_interested_drupal_jobs
-    - field.field.user.user.field_interests
-    - field.field.user.user.field_last_name
-    - field.field.user.user.field_newsletter
-    - field.field.user.user.field_organization
-    - field.field.user.user.field_organization_website
-    - field.field.user.user.field_profile_photo
-    - field.field.user.user.field_social_media_links
-    - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
   module:
     - user
@@ -26,33 +14,16 @@ id: user.user.compact
 targetEntityType: user
 bundle: user
 mode: compact
-content:
-  field_title:
-    type: string
-    weight: 0
-    region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  sessions_user_profile_view:
-    weight: 1
-    region: content
-    settings: {  }
-    third_party_settings: {  }
+content: {  }
 hidden:
   field_bio: true
   field_drupal_org_username: true
   field_first_name: true
-  field_hearing_sponsors: true
-  field_interested_drupal_jobs: true
   field_interests: true
   field_last_name: true
   field_newsletter: true
   field_organization: true
-  field_organization_website: true
-  field_profile_photo: true
-  field_social_media_links: true
   field_social_profile: true
+  field_title: true
   field_volunteer: true
   member_for: true
