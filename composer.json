@@ -51,6 +51,7 @@
     "drupal/maillog": "1.x-dev",
     "drupal/typed_data": "dev-8.x-1.x",
     "drupal/honeypot": "^1.27",
+    "drupal/r4032login": "1.x-dev",
     "drupal/views_bulk_operations": "1.x-dev",
     "drupal/auto_entitylabel": "^2.0@beta",
     "drupal/webform": "^5.0@beta",
