@@ -82,16 +82,6 @@
     {% endif %}
     {{ title_suffix }}
 
-    {% if display_submitted %}
-        <footer>
-            {{ author_picture }}
-            <div{{ author_attributes }}>
-                {{ node.createdtime | format_date('date_only_with_day') }}
-                {{ metadata }}
-            </div>
-        </footer>
-    {% endif %}
-
     <div{{ content_attributes }}>
         {{ content }}
     </div>
