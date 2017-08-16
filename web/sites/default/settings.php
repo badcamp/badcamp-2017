@@ -47,7 +47,6 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'li
   $key_data = json_decode($json_text, TRUE);
   $config['mailchimp.settings']['api_key'] = $key_data['mailchimp_key'];
   $config['sendgrid_integration.settings']['apikey'] = $key_data['sendgrid_api'];
-  $config['stripe_api.settings']['mode'] = 'live';
 }
 else {
   // We aren't in prod, load a fallback or null key.
@@ -55,6 +54,7 @@ else {
   $key_data = json_decode($json_text, TRUE);
   $config['mailchimp.settings']['api_key'] = $key_data['mailchimp_key'];
   $config['sendgrid_integration.settings']['apikey'] = $key_data['sendgrid_api'];
+  $config['stripe_api.settings']['mode'] = 'test';
 }
 
 // Require HTTPS
@@ -77,5 +77,5 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['PANTHEON_ENVIRONMENT']
 
 // Prevent Config Changes in Production
 if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && ($_SERVER['PANTHEON_ENVIRONMENT'] === 'live')) {
-  $settings['config_readonly'] = TRUE;
+  $settings['config_readonly'] = FALSE;
 }
