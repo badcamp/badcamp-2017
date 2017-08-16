@@ -1,8 +1,18 @@
 div[data-drupal-selector="edit-session-track"]{
+  display: flex;
+  flex-flow: row wrap;
+
   .form-item{
     padding: 0px;
 
-    input[type="radio"] {
+    flex-basis: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(large){
+      flex-basis: 33%;
+    }
+
+    input[type="checkbox"] {
       -webkit-appearance: none;
       -moz-appearance: none;
       -ms-progress-appearance: none;
@@ -23,7 +33,7 @@ div[data-drupal-selector="edit-session-track"]{
       }
     }
 
-    input[type="radio"]:checked+label {
+    input[type="checkbox"]:checked+label {
       background-color: $bc-orange;
       color: $white;
     }
@@ -32,24 +42,26 @@ div[data-drupal-selector="edit-session-track"]{
     border-right: 1px solid #222;
 
 
-    @include breakpoint(small only) {
+    @include breakpoint(medium down) {
       &:nth-child(1),
       &:nth-child(2){
         border-top: 0 solid;
       }
 
-      &:nth-of-type(2n) {
+      &:nth-of-type(2n),
+      &:last-child{
         border-right: 0 solid;
       }
     }
 
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       &:nth-child(1),
       &:nth-child(2),
       &:nth-child(3){
         border-top: 0 solid;
       }
-      &:nth-of-type(3n) {
+      &:nth-of-type(3n),
+      &:last-child{
         border-right: 0 solid;
       }
     }

@@ -226,15 +226,15 @@ function badcamp2017_status_messages($variables) {
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function badcamp2017_theme_suggestions_bef_radios_alter(&$suggestions, $vars){
-  $suggestions[] = 'bef_radios__' . str_ireplace('-', '_', $vars['element']['#name']);
+function badcamp2017_theme_suggestions_bef_checkboxes_alter(&$suggestions, $vars){
+  $suggestions[] = 'bef_checkboxes__' . str_ireplace('-', '_', $vars['element']['#name']);
 }
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function badcamp2017_theme_suggestions_form_element_alter(&$suggestions, $vars){
-  if(isset($vars['element']['#name']) && $vars['element']['#name'] == 'session-track'){
+  if(isset($vars['element']['#name']) && stripos($vars['element']['#name'], 'session-track') !== FALSE){
     $suggestions[] = 'form_element__session_track';
   }
 }
