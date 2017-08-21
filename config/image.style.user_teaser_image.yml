@@ -1,0 +1,14 @@
+uuid: efa57841-6953-4810-81fd-5fbaedce24c1
+langcode: en
+status: true
+dependencies: {  }
+name: user_teaser_image
+label: 'User Teaser Image'
+effects:
+  fda37516-ff9b-44ba-8bef-a2f04cfb8d10:
+    uuid: fda37516-ff9b-44ba-8bef-a2f04cfb8d10
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 239
+      height: 239

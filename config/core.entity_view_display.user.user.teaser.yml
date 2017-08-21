@@ -1,0 +1,84 @@
+uuid: 49eabdca-15f2-4e05-95b6-891c76e4c199
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.teaser
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_drupal_org_username
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_hearing_sponsors
+    - field.field.user.user.field_interested_drupal_jobs
+    - field.field.user.user.field_interests
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_newsletter
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_organization_website
+    - field.field.user.user.field_profile_photo
+    - field.field.user.user.field_social_media_links
+    - field.field.user.user.field_title
+    - field.field.user.user.field_volunteer
+    - image.style.user_teaser_image
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: L2mtwGWH_7wDRCMIR4r_Iu_jmvQ10DV1L8ht8iNZ5qY
+id: user.user.teaser
+targetEntityType: user
+bundle: user
+mode: teaser
+content:
+  field_first_name:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_last_name:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_organization:
+    weight: 4
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_profile_photo:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: user_teaser_image
+      image_link: content
+    third_party_settings: {  }
+  field_title:
+    weight: 3
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_bio: true
+  field_drupal_org_username: true
+  field_hearing_sponsors: true
+  field_interested_drupal_jobs: true
+  field_interests: true
+  field_newsletter: true
+  field_organization_website: true
+  field_social_media_links: true
+  field_volunteer: true
+  member_for: true
+  sessions_user_profile_view: true
