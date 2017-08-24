@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto");
 /**
  * Foundation for Sites by ZURB
- * Version 6.4.2
+ * Version 6.4.3
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
@@ -5901,6 +5901,18 @@ a {
 
 a:hover {
   color: #24a7ff;
+}
+
+.field + .field {
+  margin-top: 0.5rem;
+}
+
+.field div.field-label {
+  margin-bottom: 0.5rem;
+}
+
+.field strong.field-label {
+  margin-right: 0.5rem;
 }
 
 .pagination {

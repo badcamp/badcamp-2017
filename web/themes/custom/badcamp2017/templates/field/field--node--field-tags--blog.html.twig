@@ -38,7 +38,7 @@
  * @ingroup themeable
  */
 #}
-
+{% set attributes = attributes.addClass('field', label_display == 'inline' ? 'inline-label') %}
 {% if label_hidden %}
     {% if multiple %}
         <div{{ attributes }}>
@@ -55,7 +55,7 @@
     {% endif %}
 {% else %}
     <div{{ attributes }}>
-        <strong{{ title_attributes }}>{{ label }}:</strong>
+        <strong{{ title_attributes.addClass('field-label') }}>{{ label }}:</strong>
         {% if multiple %}
         <span>
             {% endif %}
