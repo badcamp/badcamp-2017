@@ -4,8 +4,6 @@
  */
 .core-sponsors-block {
   margin: 1em 0;
-  padding-bottom: 55px;
-  border-bottom: 1px solid black;
 
   footer {
     margin-top:75px;
@@ -43,6 +41,10 @@
     h3 {
       background-color: $bc-blue;
     }
+  }
+
+  .sponsor{
+    margin-bottom: 3em;
   }
 
   .contrib-level h3{

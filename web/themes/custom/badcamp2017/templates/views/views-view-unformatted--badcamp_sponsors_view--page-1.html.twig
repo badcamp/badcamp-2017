@@ -21,7 +21,7 @@
   {% if title %}
     <h3>{{ title }}</h3>
   {% endif %}
-  <div class="sponsor-logos row">
+  <div class="sponsor-logos row {{ sizing_class }}">
   {% for row in rows %}
     {%
       set row_classes = [

@@ -28,12 +28,18 @@
     </div>
   </main>
 
-  {% if page.footer %}
-    <footer role="contentinfo" class="row">
-      <div class="columns small-12">
-        {{ page.footer }}
+  <footer role="contentinfo" class="row">
+    <div class="columns small-12">
+      {{ page.footer }}
+    </div>
+    <div class="columns small-12 footer-columns">
+      <div class="column small-12 medium-6">
+        {{ page.footer_left }}
       </div>
-    </footer>
-  {% endif %}
+      <div class="column small-12 medium-6">
+        {{ page.footer_right }}
+      </div>
+    </div>
+  </footer>
 
 </div>{# /.layout--layoutPage #}
