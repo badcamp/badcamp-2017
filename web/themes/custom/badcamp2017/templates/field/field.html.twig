@@ -52,10 +52,10 @@
 {% else %}
     <div{{ attributes }}>
         {% if label_display == 'inline' %}
-            <span{{ title_attributes }}>{{ label }}</span>
+            <strong{{ title_attributes }}>{{ label }}:</strong>
             <span>
         {% elseif label_display == 'above' %}
-            <div{{ title_attributes }}>{{ label }}</div>
+            <div{{ title_attributes }}><strong>{{ label }}:</strong></div>
             {% if multiple %}
             <div>
             {% endif %}
