@@ -21,14 +21,14 @@
   {% if title %}
     <h3>{{ title }}</h3>
   {% endif %}
-  <div class="sponsor-logos row" data-equalizer>
+  <div class="sponsor-logos row {{ sizing_class }}">
   {% for row in rows %}
     {%
       set row_classes = [
         default_row_class ? 'views-row',
       ]
     %}
-    <div{{ row.attributes.addClass(row_classes) }} data-equalizer-watch>
+    <div{{ row.attributes.addClass(row_classes) }}>
       {{ row.content }}
     </div>
   {% endfor %}
