@@ -5982,6 +5982,12 @@ a.site-slogan {
   text-align: right;
 }
 
+footer .footer-columns {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: 1px solid black;
+}
+
 .columns.nopadding {
   padding-left: 0;
   padding-right: 0;
@@ -6149,8 +6155,6 @@ a.site-slogan {
  */
 .core-sponsors-block {
   margin: 1em 0;
-  padding-bottom: 55px;
-  border-bottom: 1px solid black;
 }
 
 .core-sponsors-block footer {
@@ -6185,6 +6189,10 @@ a.site-slogan {
 
 .path-sponsors .core-level h3 {
   background-color: #0071bd;
+}
+
+.path-sponsors .sponsor {
+  margin-bottom: 3em;
 }
 
 .path-sponsors .contrib-level h3 {
