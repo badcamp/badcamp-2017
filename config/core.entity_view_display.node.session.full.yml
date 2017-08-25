@@ -15,7 +15,7 @@ dependencies:
     - field.field.node.session.field_video
     - node.type.session
   module:
-    - datetime_range
+    - badcamp_content
     - file
     - options
     - text
@@ -27,14 +27,16 @@ bundle: session
 mode: full
 content:
   field_event_date_and_time:
-    type: daterange_default
+    type: daterange_modified
     weight: 5
     region: content
     label: inline
     settings:
-      separator: '-'
-      format_type: medium
       timezone_override: ''
+      format_type: medium
+      separator: '-'
+      same_date_date_format: date_only
+      same_date_time_format: time_only
     third_party_settings: {  }
   field_event_venue:
     type: entity_reference_label
