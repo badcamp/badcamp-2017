@@ -202,16 +202,16 @@
         },
         {
             "name": "badcamp/badcamp_stripe_payment",
-            "version": "1.0.10",
+            "version": "1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_stripe_payment.git",
-                "reference": "9c7d99fec5b3c7d2e5a6c7cedb3ccd666551757b"
+                "reference": "99e3178f1cd764945b0b30d651bb42e410e77611"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/9c7d99fec5b3c7d2e5a6c7cedb3ccd666551757b",
-                "reference": "9c7d99fec5b3c7d2e5a6c7cedb3ccd666551757b",
+                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/99e3178f1cd764945b0b30d651bb42e410e77611",
+                "reference": "99e3178f1cd764945b0b30d651bb42e410e77611",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +235,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-08-30T06:03:54+00:00"
+            "time": "2017-08-30T17:41:27+00:00"
         },
         {
             "name": "commerceguys/addressing",
