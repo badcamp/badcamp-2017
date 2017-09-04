@@ -249,3 +249,30 @@ function badcamp2017_theme_suggestions_form_element_label_alter(&$suggestions, $
     $suggestions[] = 'form_element_label__session_track';
   }
 }
+
+function badcamp2017_form_alter(&$form, &$form_state){
+  if($form['#id'] == 'mailchimp-signup-subscribe-block-badcamp-newsletter-form') {
+    $form['container'] = array(
+      '#prefix' => '<div class="row"><div class="large-12 column"><div class="row collapse">',
+      '#suffix' => '</div></div></div>'
+    );
+
+    $form['mergevars']['#prefix'] = '<div class="small-9 columns">';
+    $form['mergevars']['#suffix'] = '</div>';
+    $form['mergevars']['EMAIL']['#title_display'] = 'invisible';
+    $form['mergevars']['EMAIL']['#attributes']['placeholder'] = 'E-mail Address';
+
+    $form['container']['mergevars'] = $form['mergevars'];
+    unset($form['mergevars']);
+
+    $form['actions']['submit']['#prefix'] = '<div class="small-3 columns">';
+    $form['actions']['submit']['#suffix'] = '</div>';
+    $form['actions']['submit']['#attributes']['class'][] = 'postfix';
+    $form['actions']['submit']['#attributes']['class'][] = 'expanded';
+
+    $form['container']['actions'] = $form['actions']['submit'];
+    unset($form['actions']);
+
+    $form['captcha']['#weight'] = 1000;
+  }
+}

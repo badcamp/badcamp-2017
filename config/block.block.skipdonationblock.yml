@@ -11,7 +11,7 @@ dependencies:
 id: skipdonationblock
 theme: badcamp2017
 region: content
-weight: -1
+weight: -6
 provider: null
 plugin: skip_donation_block
 settings:
