@@ -1,3 +1,9 @@
 .pagination{
   text-align: center;
 }
+
+body:not(.path-frontpage) {
+.callout {
+  margin-top: 20px;
+}
+}
