@@ -6452,14 +6452,30 @@ div[data-drupal-selector="edit-session-track"] .form-item input[type="checkbox"]
 }
 
 .page-sessions-accepted .results > article,
-.page-sessions .results > article {
+.page-sessions-accepted .results > .views-row > article,
+.page-sessions .results > article,
+.page-sessions .results > .views-row > article {
   border-bottom: 1px solid #222;
   padding: 1rem 0;
 }
 
 .page-sessions-accepted .results > article > h3 a,
-.page-sessions .results > article > h3 a {
+.page-sessions-accepted .results > .views-row > article > h3 a,
+.page-sessions .results > article > h3 a,
+.page-sessions .results > .views-row > article > h3 a {
   color: #ed592a;
+}
+
+.page-sessions-accepted form#views-exposed-form-sessions-accepted-sessions,
+.page-sessions form#views-exposed-form-sessions-accepted-sessions {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid;
+  padding-bottom: 2rem;
+}
+
+.page-sessions-accepted form#views-exposed-form-sessions-accepted-sessions .form-actions,
+.page-sessions form#views-exposed-form-sessions-accepted-sessions .form-actions {
+  margin-top: 1rem;
 }
 
 .label a {

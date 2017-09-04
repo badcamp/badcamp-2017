@@ -226,11 +226,27 @@ function badcamp2017_status_messages($variables) {
 }
 
 /**
- * Implements hook_theme_suggestions_HOOK_alter().
+ * Implements hook_form_FORM_ID_alter().
  */
-function badcamp2017_theme_suggestions_fieldset_alter(&$suggestions, $vars){
-  $suggestions[] = 'fieldset__' . str_ireplace('-', '_', $vars['element']['#name']);
+function badcamp2017_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if($form['#id'] == 'views-exposed-form-sessions-accepted-sessions'){
+    $form['skill']['#chosen'] = true;
+    $form['skill']['#attributes']['data-placeholder'] = t('Choose the skill level...');
+    $form['skill']['#prefix'] = '<div class="row"><div class="columns small-12 medium-4">';
+    $form['skill']['#suffix'] = '</div>';
+
+    $form['session-track']['#chosen'] = true;
+    $form['session-track']['#attributes']['data-placeholder'] = t('Choose the tracks...');
+    $form['session-track']['#prefix'] = '<div class="columns small-12 medium-4">';
+    $form['session-track']['#suffix'] = '</div>';
+
+    $form['venue_id']['#chosen'] = true;
+    $form['venue_id']['#attributes']['data-placeholder'] = t('Choose the venues...');
+    $form['venue_id']['#prefix'] = '<div class="columns small-12 medium-4">';
+    $form['venue_id']['#suffix'] = '</div></div>';
+  }
 }
+
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
@@ -261,4 +277,14 @@ function badcamp2017_theme_suggestions_form_element_label_alter(&$suggestions, $
   if(stripos($vars['element']['#id'], 'skill') !== FALSE){
     $suggestions[] = 'form_element_label__skill';
   }
+  if(stripos($vars['element']['#id'], 'venue') !== FALSE){
+    $suggestions[] = 'form_element_label__venue';
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view__VIEW_ID__DISPLAY_ID().
+ */
+function badcamp2017_preprocess_views_view__sessions__accepted_sessions(&$vars) {
+
 }
