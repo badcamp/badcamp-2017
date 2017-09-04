@@ -1637,6 +1637,8 @@ display:
         exposed_form: false
         fields: false
         sorts: false
+        title: false
+        use_ajax: false
       filter_groups:
         operator: AND
         groups:
@@ -1832,6 +1834,8 @@ display:
           expose:
             label: ''
           plugin_id: standard
+      title: 'Accepted Sessions'
+      use_ajax: true
     cache_metadata:
       max-age: -1
       contexts:

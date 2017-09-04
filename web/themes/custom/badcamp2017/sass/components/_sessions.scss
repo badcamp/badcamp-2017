@@ -1,3 +1,4 @@
+div[data-drupal-selector="edit-skill"],
 div[data-drupal-selector="edit-session-track"]{
   display: flex;
   flex-flow: row wrap;
@@ -69,7 +70,8 @@ div[data-drupal-selector="edit-session-track"]{
   }
 }
 
-.page-session {
+.page-sessions-accepted,
+.page-sessions {
   @extend .path-frontpage;
 
   #block-badcampsessiontext{

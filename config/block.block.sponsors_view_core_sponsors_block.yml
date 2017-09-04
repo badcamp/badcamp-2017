@@ -14,7 +14,7 @@ _core:
 id: sponsors_view_core_sponsors_block
 theme: badcamp2017
 region: footer
-weight: -9
+weight: -12
 provider: null
 plugin: 'views_block:badcamp_sponsors_view-core_sponsors_block'
 settings:

@@ -228,6 +228,13 @@ function badcamp2017_status_messages($variables) {
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
+function badcamp2017_theme_suggestions_fieldset_alter(&$suggestions, $vars){
+  $suggestions[] = 'fieldset__' . str_ireplace('-', '_', $vars['element']['#name']);
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
 function badcamp2017_theme_suggestions_bef_checkboxes_alter(&$suggestions, $vars){
   $suggestions[] = 'bef_checkboxes__' . str_ireplace('-', '_', $vars['element']['#name']);
 }
@@ -239,6 +246,9 @@ function badcamp2017_theme_suggestions_form_element_alter(&$suggestions, $vars){
   if(isset($vars['element']['#name']) && stripos($vars['element']['#name'], 'session-track') !== FALSE){
     $suggestions[] = 'form_element__session_track';
   }
+  if(isset($vars['element']['#name']) && stripos($vars['element']['#name'], 'skill') !== FALSE){
+    $suggestions[] = 'form_element__skill';
+  }
 }
 
 /**
@@ -247,5 +257,8 @@ function badcamp2017_theme_suggestions_form_element_alter(&$suggestions, $vars){
 function badcamp2017_theme_suggestions_form_element_label_alter(&$suggestions, $vars){
   if(stripos($vars['element']['#id'], 'session-track') !== FALSE){
     $suggestions[] = 'form_element_label__session_track';
+  }
+  if(stripos($vars['element']['#id'], 'skill') !== FALSE){
+    $suggestions[] = 'form_element_label__skill';
   }
 }

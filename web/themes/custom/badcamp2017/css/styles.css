@@ -5907,6 +5907,11 @@ a:hover {
   text-align: center;
 }
 
+body:not(.path-frontpage):not(.path-sponsors):not(.page-sessions-accepted):not(
+.page-sessions) .callout {
+  margin-top: 20px;
+}
+
 #block-badcamp2017-branding {
   margin: 1.875rem 0;
 }
@@ -5993,7 +5998,8 @@ footer .footer-columns {
   padding-right: 0;
 }
 
-.path-frontpage .zone-highlighted, .path-sponsors .zone-highlighted, .page-session .zone-highlighted {
+.path-frontpage .zone-highlighted, .path-sponsors .zone-highlighted, .page-sessions-accepted .zone-highlighted,
+.page-sessions .zone-highlighted {
   background-image: url("../images/homepage-bg-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -6339,6 +6345,7 @@ footer .footer-columns {
   border-bottom: 0px;
 }
 
+div[data-drupal-selector="edit-skill"],
 div[data-drupal-selector="edit-session-track"] {
   display: -ms-flexbox;
   display: flex;
@@ -6346,6 +6353,7 @@ div[data-drupal-selector="edit-session-track"] {
       flex-flow: row wrap;
 }
 
+div[data-drupal-selector="edit-skill"] .form-item,
 div[data-drupal-selector="edit-session-track"] .form-item {
   padding: 0px;
   -ms-flex-preferred-size: 50%;
@@ -6358,12 +6366,14 @@ div[data-drupal-selector="edit-session-track"] .form-item {
 }
 
 @media print, screen and (min-width: 64em) {
+  div[data-drupal-selector="edit-skill"] .form-item,
   div[data-drupal-selector="edit-session-track"] .form-item {
     -ms-flex-preferred-size: 33%;
         flex-basis: 33%;
   }
 }
 
+div[data-drupal-selector="edit-skill"] .form-item input[type="checkbox"],
 div[data-drupal-selector="edit-session-track"] .form-item input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -6371,6 +6381,7 @@ div[data-drupal-selector="edit-session-track"] .form-item input[type="checkbox"]
   display: none;
 }
 
+div[data-drupal-selector="edit-skill"] .form-item label,
 div[data-drupal-selector="edit-session-track"] .form-item label {
   display: block;
   padding: 1rem;
@@ -6380,43 +6391,57 @@ div[data-drupal-selector="edit-session-track"] .form-item label {
 }
 
 @media print, screen and (min-width: 40em) {
+  div[data-drupal-selector="edit-skill"] .form-item label,
   div[data-drupal-selector="edit-session-track"] .form-item label {
     padding: 2rem 0;
   }
 }
 
+div[data-drupal-selector="edit-skill"] .form-item input[type="checkbox"]:checked + label,
 div[data-drupal-selector="edit-session-track"] .form-item input[type="checkbox"]:checked + label {
   background-color: #ed592a;
   color: #fefefe;
 }
 
 @media screen and (max-width: 63.9375em) {
-  div[data-drupal-selector="edit-session-track"] .form-item:nth-child(1), div[data-drupal-selector="edit-session-track"] .form-item:nth-child(2) {
+  div[data-drupal-selector="edit-skill"] .form-item:nth-child(1), div[data-drupal-selector="edit-skill"] .form-item:nth-child(2),
+  div[data-drupal-selector="edit-session-track"] .form-item:nth-child(1),
+  div[data-drupal-selector="edit-session-track"] .form-item:nth-child(2) {
     border-top: 0 solid;
   }
-  div[data-drupal-selector="edit-session-track"] .form-item:nth-of-type(2n), div[data-drupal-selector="edit-session-track"] .form-item:last-child {
+  div[data-drupal-selector="edit-skill"] .form-item:nth-of-type(2n), div[data-drupal-selector="edit-skill"] .form-item:last-child,
+  div[data-drupal-selector="edit-session-track"] .form-item:nth-of-type(2n),
+  div[data-drupal-selector="edit-session-track"] .form-item:last-child {
     border-right: 0 solid;
   }
 }
 
 @media print, screen and (min-width: 64em) {
-  div[data-drupal-selector="edit-session-track"] .form-item:nth-child(1), div[data-drupal-selector="edit-session-track"] .form-item:nth-child(2), div[data-drupal-selector="edit-session-track"] .form-item:nth-child(3) {
+  div[data-drupal-selector="edit-skill"] .form-item:nth-child(1), div[data-drupal-selector="edit-skill"] .form-item:nth-child(2), div[data-drupal-selector="edit-skill"] .form-item:nth-child(3),
+  div[data-drupal-selector="edit-session-track"] .form-item:nth-child(1),
+  div[data-drupal-selector="edit-session-track"] .form-item:nth-child(2),
+  div[data-drupal-selector="edit-session-track"] .form-item:nth-child(3) {
     border-top: 0 solid;
   }
-  div[data-drupal-selector="edit-session-track"] .form-item:nth-of-type(3n), div[data-drupal-selector="edit-session-track"] .form-item:last-child {
+  div[data-drupal-selector="edit-skill"] .form-item:nth-of-type(3n), div[data-drupal-selector="edit-skill"] .form-item:last-child,
+  div[data-drupal-selector="edit-session-track"] .form-item:nth-of-type(3n),
+  div[data-drupal-selector="edit-session-track"] .form-item:last-child {
     border-right: 0 solid;
   }
 }
 
-.page-session #block-badcampsessiontext {
+.page-sessions-accepted #block-badcampsessiontext,
+.page-sessions #block-badcampsessiontext {
   text-align: center;
 }
 
-.page-session #block-badcampsessiontext h2 {
+.page-sessions-accepted #block-badcampsessiontext h2,
+.page-sessions #block-badcampsessiontext h2 {
   font-weight: bold;
 }
 
-.page-session .page-title {
+.page-sessions-accepted .page-title,
+.page-sessions .page-title {
   color: white;
   padding: 1.75rem 1.5rem;
   max-width: 500px;
@@ -6426,12 +6451,14 @@ div[data-drupal-selector="edit-session-track"] .form-item input[type="checkbox"]
   font-weight: 700;
 }
 
-.page-session .results > article {
+.page-sessions-accepted .results > article,
+.page-sessions .results > article {
   border-bottom: 1px solid #222;
   padding: 1rem 0;
 }
 
-.page-session .results > article > h3 a {
+.page-sessions-accepted .results > article > h3 a,
+.page-sessions .results > article > h3 a {
   color: #ed592a;
 }
 
