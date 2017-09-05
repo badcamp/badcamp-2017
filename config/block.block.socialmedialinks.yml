@@ -8,7 +8,7 @@ dependencies:
     - badcamp2017
 id: socialmedialinks
 theme: badcamp2017
-region: footer
+region: footer_left
 weight: 0
 provider: null
 plugin: social_media_links_block
@@ -16,7 +16,7 @@ settings:
   id: social_media_links_block
   label: 'Follow BADCamp'
   provider: social_media_links
-  label_display: visible
+  label_display: '0'
   platforms:
     behance:
       value: ''
