@@ -56,7 +56,9 @@
     "drupal/auto_entitylabel": "^2.0@beta",
     "drupal/webform": "^5.0@beta",
     "drupal/social_media_links": "^2.5",
-    "drupal/social_profile_field": "^0.2.0"
+    "drupal/social_profile_field": "^0.2.0",
+    "drupal/entity_reference_exposed_filters": "^1.0@alpha",
+    "drupal/chosen": "^2.4"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
