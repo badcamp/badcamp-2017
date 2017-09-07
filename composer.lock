@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "289d69e605d476dcfc99f609ff2566f6",
+    "content-hash": "3e3962df31fb8372315a57cb7276d2dc",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -146,7 +146,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-07-11 22:14:03"
+            "time": "2017-07-11T22:14:03+00:00"
         },
         {
             "name": "badcamp/badcamp_program_details",
@@ -172,7 +172,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-06-24 21:02:43"
+            "time": "2017-06-24T21:02:43+00:00"
         },
         {
             "name": "badcamp/badcamp_sponsors",
@@ -198,20 +198,20 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-07-18 22:35:27"
+            "time": "2017-07-18T22:35:27+00:00"
         },
         {
             "name": "badcamp/badcamp_stripe_payment",
-            "version": "1.0.11",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_stripe_payment.git",
-                "reference": "99e3178f1cd764945b0b30d651bb42e410e77611"
+                "reference": "3c8b7417f637be36e2076ac159b72b891a1eab71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/99e3178f1cd764945b0b30d651bb42e410e77611",
-                "reference": "99e3178f1cd764945b0b30d651bb42e410e77611",
+                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/3c8b7417f637be36e2076ac159b72b891a1eab71",
+                "reference": "3c8b7417f637be36e2076ac159b72b891a1eab71",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +235,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-08-30T17:41:27+00:00"
+            "time": "2017-08-16T18:39:47+00:00"
         },
         {
             "name": "commerceguys/addressing",
@@ -563,22 +563,22 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "2.4.11",
+            "version": "2.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "7fbf68dc6abf2f1f0746ceab0701dee1ee97516e"
+                "reference": "911c50026c4f80f967dbb21293118ef4a663bc87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/7fbf68dc6abf2f1f0746ceab0701dee1ee97516e",
-                "reference": "7fbf68dc6abf2f1f0746ceab0701dee1ee97516e",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/911c50026c4f80f967dbb21293118ef4a663bc87",
+                "reference": "911c50026c4f80f967dbb21293118ef4a663bc87",
                 "shasum": ""
             },
             "require": {
                 "consolidation/output-formatters": "^3.1.10",
                 "php": ">=5.4.0",
-                "phpdocumentor/reflection-docblock": "^2.0|^3.0.2",
+                "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0",
                 "psr/log": "^1",
                 "symfony/console": "^2.8|~3",
                 "symfony/event-dispatcher": "^2.5|^3",
@@ -611,7 +611,7 @@
                 }
             ],
             "description": "Initialize Symfony Console commands from annotated command class methods.",
-            "time": "2017-07-27T20:29:17+00:00"
+            "time": "2017-08-24T19:55:37+00:00"
         },
         {
             "name": "consolidation/output-formatters",
@@ -1629,6 +1629,160 @@
             }
         },
         {
+            "name": "drupal/chosen",
+            "version": "2.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/chosen",
+                "reference": "8.x-2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/chosen-8.x-2.4.zip",
+                "reference": "8.x-2.4",
+                "shasum": "5102b39f4707874a76f04e98e55b36bccffc5739"
+            },
+            "require": {
+                "drupal/chosen_lib": "*",
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.4",
+                    "datestamp": "1501858744",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Cyclodex",
+                    "homepage": "https://www.drupal.org/user/1305230"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "Hydra",
+                    "homepage": "https://www.drupal.org/user/647364"
+                },
+                {
+                    "name": "Pol",
+                    "homepage": "https://www.drupal.org/user/47194"
+                },
+                {
+                    "name": "aidanlis",
+                    "homepage": "https://www.drupal.org/user/502018"
+                },
+                {
+                    "name": "arshadcn",
+                    "homepage": "https://www.drupal.org/user/571032"
+                },
+                {
+                    "name": "kalman.hosszu",
+                    "homepage": "https://www.drupal.org/user/267481"
+                },
+                {
+                    "name": "nagy.balint",
+                    "homepage": "https://www.drupal.org/user/1763952"
+                },
+                {
+                    "name": "supercabbageuk",
+                    "homepage": "https://www.drupal.org/user/235438"
+                }
+            ],
+            "description": "Makes select elements more friendly using the Chosen jQuery plugin",
+            "homepage": "https://www.drupal.org/project/chosen",
+            "keywords": [
+                "Chosen",
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://drupal.org/project/chosen",
+                "issues": "https://drupal.org/project/issues/chosen"
+            }
+        },
+        {
+            "name": "drupal/chosen_lib",
+            "version": "2.4.0",
+            "require": {
+                "drupal/chosen": "self.version",
+                "drupal/core": "~8.0"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-2.4",
+                    "datestamp": "1501858744",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Cyclodex",
+                    "homepage": "https://www.drupal.org/user/1305230"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "Hydra",
+                    "homepage": "https://www.drupal.org/user/647364"
+                },
+                {
+                    "name": "Pol",
+                    "homepage": "https://www.drupal.org/user/47194"
+                },
+                {
+                    "name": "aidanlis",
+                    "homepage": "https://www.drupal.org/user/502018"
+                },
+                {
+                    "name": "arshadcn",
+                    "homepage": "https://www.drupal.org/user/571032"
+                },
+                {
+                    "name": "kalman.hosszu",
+                    "homepage": "https://www.drupal.org/user/267481"
+                },
+                {
+                    "name": "nagy.balint",
+                    "homepage": "https://www.drupal.org/user/1763952"
+                },
+                {
+                    "name": "supercabbageuk",
+                    "homepage": "https://www.drupal.org/user/235438"
+                }
+            ],
+            "description": "Add <a href=\"http://harvesthq.github.com/chosen/\">chosen</a> library definition.",
+            "homepage": "https://www.drupal.org/project/chosen",
+            "support": {
+                "source": "http://cgit.drupalcode.org/chosen"
+            }
+        },
+        {
             "name": "drupal/config_direct_save",
             "version": "1.0.0",
             "source": {
@@ -1847,17 +2001,17 @@
         },
         {
             "name": "drupal/config_split",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/config_split",
-                "reference": "8.x-1.0"
+                "reference": "8.x-1.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_split-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "3a082f927807d87c62241158584a5cd68f559252"
+                "url": "https://ftp.drupal.org/files/projects/config_split-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "85e6f607b1f9c91183c2fa66ebbe66f7d59972b6"
             },
             "require": {
                 "drupal/config_filter": "*",
@@ -1869,7 +2023,7 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0",
+                    "version": "8.x-1.1",
                     "datestamp": "1503561844",
                     "security-coverage": {
                         "status": "covered",
@@ -2734,6 +2888,53 @@
             }
         },
         {
+            "name": "drupal/entity_reference_exposed_filters",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/entity_reference_exposed_filters",
+                "reference": "8.x-1.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/entity_reference_exposed_filters-8.x-1.0-alpha1.zip",
+                "reference": "8.x-1.0-alpha1",
+                "shasum": "43bd830347bd1b551fd5c6fb6660ceae566a3565"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha1",
+                    "datestamp": "1502216945",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "el1_1el",
+                    "homepage": "https://www.drupal.org/user/1795292"
+                }
+            ],
+            "description": "Entity Reference Nodes displayed as exposed filters with titles in Views",
+            "homepage": "https://www.drupal.org/project/entity_reference_exposed_filters",
+            "support": {
+                "source": "http://cgit.drupalcode.org/entity_reference_exposed_filters"
+            }
+        },
+        {
             "name": "drupal/eva",
             "version": "1.1.0",
             "source": {
@@ -3014,8 +3215,7 @@
             "homepage": "https://www.drupal.org/project/geolocation",
             "support": {
                 "source": "http://cgit.drupalcode.org/geolocation"
-            },
-            "time": "2017-07-05 10:00:12"
+            }
         },
         {
             "name": "drupal/honeypot",
@@ -3690,11 +3890,7 @@
                 },
                 "drupal": {
                     "version": "8.x-0.2",
-                    "datestamp": "1458060823",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
+                    "datestamp": "1458060823"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3774,8 +3970,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/stripe_api",
                 "issues": "https://www.drupal.org/project/issues/stripe_api"
-            },
-            "time": "2017-06-28 00:55:02"
+            }
         },
         {
             "name": "drupal/swiftmailer",
@@ -9632,7 +9827,8 @@
         "drupal/r4032login": 20,
         "drupal/views_bulk_operations": 20,
         "drupal/auto_entitylabel": 10,
-        "drupal/webform": 10
+        "drupal/webform": 10,
+        "drupal/entity_reference_exposed_filters": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,

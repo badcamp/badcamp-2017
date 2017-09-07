@@ -15,7 +15,7 @@ id: contact
 title: Contact
 description: 'Basic email contact webform.'
 category: ''
-elements: "status:\n  '#type': select\n  '#title': Status\n  '#options':\n    'In Process': 'In Process'\n    Closed: Closed\n  '#empty_option': Pending\n  '#empty_value': Pending\n  '#access_create_roles':\n    - administrator\n  '#access_update_roles':\n    - administrator\n  '#access_view_roles':\n    - administrator\n  '#private': true\nname:\n  '#title': 'Your Name'\n  '#type': textfield\n  '#required': true\n  '#default_value': '[webform-authenticated-user:display-name]'\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#required': true\n  '#default_value': '[webform-authenticated-user:mail]'\nsubject:\n  '#title': Subject\n  '#type': textfield\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#required': true\n  '#test': 'Please ignore this email.'\ncaptcha:\n  '#type': captcha\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'\n"
+elements: "name:\n  '#title': 'Your Name'\n  '#type': textfield\n  '#required': true\n  '#default_value': '[webform-authenticated-user:display-name]'\nemail:\n  '#title': 'Your Email'\n  '#type': email\n  '#required': true\n  '#default_value': '[webform-authenticated-user:mail]'\nsubject:\n  '#title': Subject\n  '#type': textfield\n  '#required': true\n  '#test': 'Testing contact webform from [site:name]'\nmessage:\n  '#title': Message\n  '#type': textarea\n  '#required': true\n  '#test': 'Please ignore this email.'\ncaptcha:\n  '#type': captcha\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'\n"
 css: ''
 javascript: ''
 settings:

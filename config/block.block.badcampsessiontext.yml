@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /sessions
+    pages: "/sessions\r\n/sessions-accepted"
     negate: false
     context_mapping: {  }
