@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.training.field_event_date_and_time
     - field.field.node.training.field_event_venue
     - field.field.node.training.field_maximum_registration
-    - field.field.node.training.field_session_room
     - field.field.node.training.field_session_skill_level
     - node.type.training
   module:
@@ -52,12 +51,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
-    region: content
-  field_session_room:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_session_skill_level:
     weight: 2

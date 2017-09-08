@@ -1,0 +1,33 @@
+uuid: e5107c20-c163-4947-9ab2-abba427b99a5
+langcode: en
+status: true
+dependencies: {  }
+id: add_to_schedule
+label: 'Add to Schedule'
+bundles:
+  - event
+  - session
+  - training
+entity_type: node
+global: false
+weight: 0
+flag_short: 'Add to My Schedule'
+flag_long: ''
+flag_message: ''
+unflag_short: 'Remove from My Schedule'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links:
+    full: full
+    schedule: schedule
+    teaser: teaser
+  show_as_field: true
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

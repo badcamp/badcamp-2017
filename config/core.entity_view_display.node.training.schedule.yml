@@ -1,8 +1,9 @@
-uuid: 2568f9d7-9cd0-40b1-8917-a83f2f7dcfcc
+uuid: fbbb89e5-5755-481a-9485-4e30ef5cc396
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.schedule
     - field.field.node.training.field_description
     - field.field.node.training.field_event_date_and_time
     - field.field.node.training.field_event_venue
@@ -13,10 +14,10 @@ dependencies:
     - datetime_range
     - text
     - user
-id: node.training.default
+id: node.training.schedule
 targetEntityType: node
 bundle: training
-mode: default
+mode: schedule
 content:
   field_description:
     weight: 1
@@ -63,8 +64,6 @@ content:
   flag_add_to_schedule:
     weight: 10
     region: content
-    settings: {  }
-    third_party_settings: {  }
   links:
     weight: 6
     region: content
