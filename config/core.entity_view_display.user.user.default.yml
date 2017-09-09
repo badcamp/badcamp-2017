@@ -10,6 +10,7 @@ dependencies:
     - field.field.user.user.field_interested_drupal_jobs
     - field.field.user.user.field_interests
     - field.field.user.user.field_last_name
+    - field.field.user.user.field_make_my_schedule_public
     - field.field.user.user.field_newsletter
     - field.field.user.user.field_organization
     - field.field.user.user.field_organization_website
@@ -31,19 +32,19 @@ mode: default
 content:
   field_bio:
     weight: 6
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_drupal_org_username:
-    weight: 7
+    type: string
+    weight: 8
+    region: content
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
-    region: content
   field_first_name:
     type: string
     weight: 1
@@ -54,7 +55,7 @@ content:
     third_party_settings: {  }
   field_interests:
     weight: 9
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -94,7 +95,7 @@ content:
       image_link: ''
     third_party_settings: {  }
   field_social_media_links:
-    weight: 8
+    weight: 7
     label: visually_hidden
     settings:
       appearance:
@@ -114,7 +115,7 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  sessions_user_profile_view:
+  my_schedule_entity_view_1:
     weight: 10
     region: content
     settings: {  }
@@ -122,6 +123,8 @@ content:
 hidden:
   field_hearing_sponsors: true
   field_interested_drupal_jobs: true
+  field_make_my_schedule_public: true
   field_newsletter: true
   field_volunteer: true
   member_for: true
+  sessions_user_profile_view: true

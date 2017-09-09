@@ -101,6 +101,11 @@ content:
     third_party_settings: {  }
     type: video_embed_field_video
     region: content
+  flag_add_to_schedule:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   links:
     weight: 0
     region: content
