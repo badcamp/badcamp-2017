@@ -10,6 +10,7 @@ dependencies:
     - field.field.user.user.field_interested_drupal_jobs
     - field.field.user.user.field_interests
     - field.field.user.user.field_last_name
+    - field.field.user.user.field_make_my_schedule_public
     - field.field.user.user.field_newsletter
     - field.field.user.user.field_organization
     - field.field.user.user.field_organization_website
@@ -89,6 +90,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_make_my_schedule_public:
+    weight: 15
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_newsletter:
     weight: 11

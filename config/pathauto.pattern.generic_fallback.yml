@@ -1,0 +1,14 @@
+uuid: 097edf57-a5c4-4076-8e5b-5938a5a35226
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: generic_fallback
+label: 'Generic Fallback'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: -1
+relationships: {  }

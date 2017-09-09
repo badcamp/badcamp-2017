@@ -78,12 +78,10 @@ function badcamp2017_preprocess_node__venue__full(&$vars){
  * Implements hook_node__node_type__view_mode().
  */
 function badcamp2017_preprocess_node__session__teaser(&$vars){
-  $vars['track'] = [
-    'field_session_skill_level' => $vars['content']['field_session_skill_level'],
-    'field_session_track' => $vars['content']['field_session_track']
-  ];
-  unset($vars['content']['field_session_skill_level']);
-  unset($vars['content']['field_session_track']);
+  if($vars['node']->get('field_session_status')->getString() == 'Proposed'){
+    $vars['content']['flag_add_to_schedule']['#access'] = FALSE;
+  }
+
 }
 
 /**
@@ -226,6 +224,29 @@ function badcamp2017_status_messages($variables) {
 }
 
 /**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function badcamp2017_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if($form['#id'] == 'views-exposed-form-sessions-accepted-sessions'){
+    $form['skill']['#chosen'] = true;
+    $form['skill']['#attributes']['data-placeholder'] = t('Choose the skill level...');
+    $form['skill']['#prefix'] = '<div class="row"><div class="columns small-12 medium-4">';
+    $form['skill']['#suffix'] = '</div>';
+
+    $form['session-track']['#chosen'] = true;
+    $form['session-track']['#attributes']['data-placeholder'] = t('Choose the tracks...');
+    $form['session-track']['#prefix'] = '<div class="columns small-12 medium-4">';
+    $form['session-track']['#suffix'] = '</div>';
+
+    $form['venue_id']['#chosen'] = true;
+    $form['venue_id']['#attributes']['data-placeholder'] = t('Choose the venues...');
+    $form['venue_id']['#prefix'] = '<div class="columns small-12 medium-4">';
+    $form['venue_id']['#suffix'] = '</div></div>';
+  }
+}
+
+
+/**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function badcamp2017_theme_suggestions_bef_checkboxes_alter(&$suggestions, $vars){
@@ -239,6 +260,9 @@ function badcamp2017_theme_suggestions_form_element_alter(&$suggestions, $vars){
   if(isset($vars['element']['#name']) && stripos($vars['element']['#name'], 'session-track') !== FALSE){
     $suggestions[] = 'form_element__session_track';
   }
+  if(isset($vars['element']['#name']) && stripos($vars['element']['#name'], 'skill') !== FALSE){
+    $suggestions[] = 'form_element__skill';
+  }
 }
 
 /**
@@ -247,5 +271,62 @@ function badcamp2017_theme_suggestions_form_element_alter(&$suggestions, $vars){
 function badcamp2017_theme_suggestions_form_element_label_alter(&$suggestions, $vars){
   if(stripos($vars['element']['#id'], 'session-track') !== FALSE){
     $suggestions[] = 'form_element_label__session_track';
+  }
+  if(stripos($vars['element']['#id'], 'skill') !== FALSE){
+    $suggestions[] = 'form_element_label__skill';
+  }
+  if(stripos($vars['element']['#id'], 'venue') !== FALSE){
+    $suggestions[] = 'form_element_label__venue';
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view__VIEW_ID__DISPLAY_ID().
+ */
+function badcamp2017_preprocess_views_view__sessions__accepted_sessions(&$vars) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function badcamp2017_theme_suggestions_field_alter(&$suggestions, $vars){
+  $element = $vars['element'];
+  $field_name = $element['#field_name'];
+  $entity_type = $element['#entity_type'];
+  $bundle = $element['#bundle'];
+  $view_mode = $element['#view_mode'];
+  $suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' . $bundle . '__' . $view_mode;
+}
+
+/**
+ * Implements template_preprocess_user().
+ */
+function badcamp2017_preprocess_user(&$vars) {
+  if($vars['user']->get('field_make_my_schedule_public')->getString() != 1){
+    $vars['content']['my_schedule_entity_view_1']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function badcamp2017_theme_suggestions_eva_display_entity_view_alter(&$suggestions, $vars){
+  $view = $vars['view'];
+  $display = isset($view->display_handler) ? $view->display_handler->display : NULL;
+  $id = $view->storage->id();
+  $suggestions[] = 'eva_display_entity_view__' . $id;
+  $suggestions[] = 'eva_display_entity_view__' . $id . '__' . $display['id'];
+}
+
+/**
+ * Implements theme_preprocess_flag__FLAG_ID().
+ */
+function badcamp2017_preprocess_flag__add_to_schedule(&$vars) {
+  $vars['attributes']['class'][] = 'fa';
+  if($vars['action'] == 'unflag') {
+    $vars['attributes']['class'][] = 'fa-times';
+  }else{
+    $vars['attributes']['class'][] = 'fa-plus';
   }
 }

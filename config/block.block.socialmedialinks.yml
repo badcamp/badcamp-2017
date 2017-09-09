@@ -1,6 +1,6 @@
 uuid: bda359cf-6eaf-461f-b93e-239ccf37fbf8
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - social_media_links
@@ -9,7 +9,7 @@ dependencies:
 id: socialmedialinks
 theme: badcamp2017
 region: footer_left
-weight: 0
+weight: -11
 provider: null
 plugin: social_media_links_block
 settings:

@@ -1,6 +1,6 @@
 uuid: 72a95733-6e31-4463-bc32-402879e87a95
 langcode: en
-status: true
+status: false
 dependencies:
   content:
     - 'block_content:basic:65c261a8-8f48-41d9-8941-46cf9b8bba35'
@@ -11,7 +11,7 @@ dependencies:
 id: builtby
 theme: badcamp2017
 region: footer_right
-weight: -7
+weight: -11
 provider: null
 plugin: 'block_content:65c261a8-8f48-41d9-8941-46cf9b8bba35'
 settings:

@@ -7,9 +7,9 @@ label: 'Session Submission'
 events:
   -
     event_name: 'rules_entity_insert:node'
-description: ''
+description: 'Action that happens after submitting a new submissions.'
 tags:
-  - ''
+  - sessions
 config_version: '3'
 expression:
   id: rules_rule
@@ -43,7 +43,7 @@ expression:
           to:
             - '{{node.uid.entity.mail.value}}'
           subject: 'Submission Successfully Submitted: {{node.title}}'
-          message: "Your submission has been submitted for review.\r\n\r\nName: {{node.title}}\r\n\r\n{{node.field_session_description}}\r\n\r\nTo change your session or update it. You can do so by logging into your account. \r\n\r\nThis session can be edited here as well: {{node.url}}\r\n\r\nThanks,\r\nBADCamp"
+          message: "Your submission has been submitted for review.\r\n\r\nName: {{node.title}}\r\n\r\n{{node.field_session_description}}\r\n\r\nTo change your session or update it. You can do so by logging into your account. \r\n\r\nThis session can be edited here as well: https://2017.badcamp.net/node/{{node.nid}}/edit\r\n\r\nThanks,\r\nBADCamp"
           reply: info@badcamp.net
           language: ''
         context_mapping: {  }
