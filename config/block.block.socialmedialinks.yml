@@ -1,6 +1,6 @@
 uuid: bda359cf-6eaf-461f-b93e-239ccf37fbf8
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - social_media_links
@@ -16,7 +16,7 @@ settings:
   id: social_media_links_block
   label: 'Follow BADCamp'
   provider: social_media_links
-  label_display: '0'
+  label_display: visible
   platforms:
     behance:
       value: ''
