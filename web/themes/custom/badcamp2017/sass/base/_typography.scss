@@ -4,3 +4,15 @@ a {
     color: $link-color--hover;
   }
 }
+
+.field {
+  + .field {
+    margin-top: rem-calc(8);
+  }
+  div.field-label {
+    margin-bottom: rem-calc(8);
+  }
+  strong.field-label {
+    margin-right: rem-calc(8);
+  }
+}

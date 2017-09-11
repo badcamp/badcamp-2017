@@ -36,7 +36,7 @@
  * @see template_preprocess_field()
  */
 #}
-
+{% set attributes = attributes.addClass('field', label_display == 'inline' ? 'inline-label') %}
 {% if label_hidden %}
     {% if multiple %}
         <div{{ attributes }}>
@@ -52,10 +52,10 @@
 {% else %}
     <div{{ attributes }}>
         {% if label_display == 'inline' %}
-            <span{{ title_attributes }}>{{ label }}</span>
+            <strong{{ title_attributes.addClass('field-label') }}>{{ label }}:</strong>
             <span>
         {% elseif label_display == 'above' %}
-            <div{{ title_attributes }}>{{ label }}</div>
+            <div{{ title_attributes.addClass('field-label') }}><strong>{{ label }}:</strong></div>
             {% if multiple %}
             <div>
             {% endif %}
@@ -67,7 +67,7 @@
 
         {% if label_display == 'inline' %}
             </span>
-        {% elseif label_display == 'above' %}
+        {% elseif label_display == 'above' and multiple %}
             </div>
         {% endif %}
     </div>
