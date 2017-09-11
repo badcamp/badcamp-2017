@@ -1,3 +1,4 @@
+div[data-drupal-selector="edit-skill"],
 div[data-drupal-selector="edit-session-track"]{
   display: flex;
   flex-flow: row wrap;
@@ -69,7 +70,8 @@ div[data-drupal-selector="edit-session-track"]{
   }
 }
 
-.page-session {
+.page-sessions-accepted,
+.page-sessions {
   @extend .path-frontpage;
 
   #block-badcampsessiontext{
@@ -89,13 +91,23 @@ div[data-drupal-selector="edit-session-track"]{
     font-weight: 700;
   }
 
-  .results > article{
+  .results > article,
+  .results > .views-row > article{
     border-bottom: 1px solid #222;
     padding: 1rem 0;
     > h3 a{
       color: $bc-orange;
     }
+  }
 
+  form#views-exposed-form-sessions-accepted-sessions{
+    margin-bottom: 2rem;
+    border-bottom: 1px solid;
+    padding-bottom: 2rem;
+
+    .form-actions{
+      margin-top: 1rem;
+    }
   }
 }
 

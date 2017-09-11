@@ -19,16 +19,17 @@
 <article{{ attributes }}>
   {% if content %}
     <div class="row align-center">
-      <div class="columns">
+      <div class="columns small-12 medium-4 large-3">
         <div class="thumbnail">
-          {{ content.field_profile_photo }}
+            {{ content.field_profile_photo }}
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="columns">
-        {{ content|without('field_profile_photo') }}
+      <div class="columns small-12 medium-8 large-9">
+          {{ content|without('field_profile_photo','my_schedule_entity_view_1') }}
       </div>
+    </div>
+    <div>
+      {{ content.my_schedule_entity_view_1 }}
     </div>
   {% endif %}
 </article>

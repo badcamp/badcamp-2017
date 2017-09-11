@@ -24,14 +24,14 @@ bundle: event
 mode: default
 content:
   field_event_agenda:
-    weight: 106
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_event_date_and_time:
-    weight: 103
+    weight: 0
     label: above
     settings:
       separator: '-'
@@ -41,14 +41,14 @@ content:
     type: daterange_default
     region: content
   field_event_description:
-    weight: 104
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_event_sponsors:
-    weight: 102
+    weight: 8
     label: above
     settings:
       link: true
@@ -56,24 +56,24 @@ content:
     type: entity_reference_label
     region: content
   field_event_type:
-    weight: 109
-    label: above
+    weight: 6
+    label: inline
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_event_venue:
-    weight: 110
-    label: above
+    weight: 2
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_maximum_registration:
-    weight: 107
-    label: above
+    weight: 9
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -81,14 +81,14 @@ content:
     type: number_integer
     region: content
   field_more_info_rsvp:
-    weight: 105
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_sold_out:
-    weight: 101
+    weight: 7
     label: above
     settings:
       format: default
@@ -98,14 +98,21 @@ content:
     type: boolean
     region: content
   field_summit_leaders:
-    weight: 108
-    label: above
+    weight: 1
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  links:
-    weight: 100
+  flag_add_to_schedule:
+    weight: 11
     region: content
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

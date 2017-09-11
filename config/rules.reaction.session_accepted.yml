@@ -1,0 +1,112 @@
+uuid: 7a629c99-5c64-478b-8acc-313edaa74788
+langcode: en
+status: true
+dependencies: {  }
+id: session_accepted
+label: 'Session Accepted'
+events:
+  -
+    event_name: 'rules_entity_update:node'
+description: 'Rule that is applied once a session has been accepted'
+tags:
+  - sessions
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 63293916-88e5-48bc-81e4-b837beb1db57
+  conditions:
+    id: rules_and
+    uuid: 23fe0424-afa3-4a45-b458-37da632c6520
+    conditions:
+      -
+        id: rules_condition
+        uuid: 943709a5-b20f-4811-9fba-7c8b9b6f1c65
+        context_values:
+          types:
+            - session
+        context_mapping:
+          node: node
+        context_processors:
+          types:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_node_is_of_type
+        negate: false
+      -
+        id: rules_condition
+        uuid: 6505035f-da9c-4add-8ce1-d1d957467a5c
+        context_values:
+          data: '{{node.field_session_status.value}}'
+          operation: '=='
+          value: Accepted
+        context_mapping: {  }
+        context_processors:
+          data:
+            rules_tokens: {  }
+          operation:
+            rules_tokens: {  }
+          value:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_data_comparison
+        negate: false
+      -
+        id: rules_condition
+        uuid: 3248586a-66eb-426c-81c9-d81192bbc23b
+        context_values:
+          types:
+            - session
+        context_mapping:
+          node: node_unchanged
+        context_processors:
+          types:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_node_is_of_type
+        negate: false
+      -
+        id: rules_condition
+        uuid: 3795e53a-5c8e-404e-9cf6-67d6ddbf4b71
+        context_values:
+          data: '{{node_unchanged.field_session_status.value}}'
+          operation: '=='
+          value: Proposed
+        context_mapping: {  }
+        context_processors:
+          data:
+            rules_tokens: {  }
+          operation:
+            rules_tokens: {  }
+          value:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_data_comparison
+        negate: false
+  actions:
+    id: rules_action_set
+    uuid: ae55d382-1397-4bb4-a012-e439b1efc2b3
+    actions:
+      -
+        id: rules_action
+        uuid: 5cad7399-2c35-4ab9-a553-15ca14e373ef
+        context_values:
+          to:
+            - '{{node.uid.entity.mail.value}}'
+          subject: 'Session Accepted: {{node.title}}'
+          message: "Your submission has been accepted!\r\n\r\nName: {{node.title}}\r\n\r\nMore info about your session can be found here as well: https://2017.badcamp.net/node/{{node.nid}}\r\n"
+          reply: info@badcamp.net
+          language: ''
+        context_mapping: {  }
+        context_processors:
+          to:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+          language:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_send_email

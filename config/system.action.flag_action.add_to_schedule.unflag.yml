@@ -1,0 +1,13 @@
+uuid: 98da34a1-5c26-4477-8ce0-5c168a5e9c1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag
+id: flag_action.add_to_schedule.unflag
+label: 'Remove from My Schedule'
+type: node
+plugin: 'flag_action:add_to_schedule.unflag'
+configuration:
+  flag_id: add_to_schedule
+  flag_action: unflag
