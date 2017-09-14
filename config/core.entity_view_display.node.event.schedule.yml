@@ -52,6 +52,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  comment: true
   field_event_agenda: true
   field_event_date_and_time: true
   field_event_sponsors: true

@@ -1,0 +1,31 @@
+uuid: b2b40de7-d005-4534-9f02-996f33fc6fe7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:180bcaac-7bd3-4733-bf70-c6a2a0725442'
+  module:
+    - block_content
+    - system
+  theme:
+    - badcamp2017
+id: summitsinfoblock
+theme: badcamp2017
+region: highlighted
+weight: 0
+provider: null
+plugin: 'block_content:180bcaac-7bd3-4733-bf70-c6a2a0725442'
+settings:
+  id: 'block_content:180bcaac-7bd3-4733-bf70-c6a2a0725442'
+  label: 'BADCamp 2017 Summits'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /summits
+    negate: false
+    context_mapping: {  }

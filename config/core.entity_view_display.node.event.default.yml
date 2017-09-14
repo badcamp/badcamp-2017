@@ -27,7 +27,7 @@ bundle: event
 mode: default
 content:
   comment:
-    weight: 10
+    weight: 9
     label: above
     settings:
       view_mode: default
@@ -43,8 +43,8 @@ content:
     type: text_default
     region: content
   field_event_date_and_time:
-    weight: 0
-    label: hidden
+    weight: 1
+    label: inline
     settings:
       timezone_override: ''
       format_type: medium
@@ -70,7 +70,7 @@ content:
     type: entity_reference_label
     region: content
   field_event_type:
-    weight: 1
+    weight: 0
     label: inline
     settings:
       link: false
@@ -101,11 +101,6 @@ content:
     type: entity_reference_label
     region: content
   flag_add_to_schedule:
-    weight: 9
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  links:
     weight: 8
     region: content
     settings: {  }
@@ -113,3 +108,4 @@ content:
 hidden:
   field_maximum_registration: true
   field_sold_out: true
+  links: true
