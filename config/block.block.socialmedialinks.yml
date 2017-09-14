@@ -1,6 +1,6 @@
 uuid: bda359cf-6eaf-461f-b93e-239ccf37fbf8
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - social_media_links

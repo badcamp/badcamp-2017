@@ -15,7 +15,7 @@ dependencies:
     - field.field.node.event.field_summit_leaders
     - node.type.event
   module:
-    - datetime_range
+    - badcamp_content
     - text
     - user
 id: node.event.default
@@ -24,7 +24,7 @@ bundle: event
 mode: default
 content:
   field_event_agenda:
-    weight: 3
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -32,23 +32,25 @@ content:
     region: content
   field_event_date_and_time:
     weight: 0
-    label: above
+    label: hidden
     settings:
-      separator: '-'
-      format_type: medium
       timezone_override: ''
+      format_type: medium
+      separator: '-'
+      same_date_date_format: date_only
+      same_date_time_format: time_only
     third_party_settings: {  }
-    type: daterange_default
+    type: daterange_modified
     region: content
   field_event_description:
-    weight: 5
-    label: above
+    weight: 6
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_event_sponsors:
-    weight: 8
+    weight: 7
     label: above
     settings:
       link: true
@@ -56,7 +58,7 @@ content:
     type: entity_reference_label
     region: content
   field_event_type:
-    weight: 6
+    weight: 1
     label: inline
     settings:
       link: false
@@ -64,6 +66,21 @@ content:
     type: entity_reference_label
     region: content
   field_event_venue:
+    weight: 3
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_more_info_rsvp:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_summit_leaders:
     weight: 2
     label: inline
     settings:
@@ -71,48 +88,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_maximum_registration:
-    weight: 9
-    label: inline
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_more_info_rsvp:
-    weight: 4
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_sold_out:
-    weight: 7
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
-  field_summit_leaders:
-    weight: 1
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   flag_add_to_schedule:
-    weight: 11
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   links:
-    weight: 10
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_maximum_registration: true
+  field_sold_out: true
