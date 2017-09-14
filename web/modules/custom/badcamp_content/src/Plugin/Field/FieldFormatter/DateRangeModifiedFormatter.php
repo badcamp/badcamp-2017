@@ -54,7 +54,7 @@ class DateRangeModifiedFormatter extends DateRangeDefaultFormatter {
 
         if ($start_date->format('Y-m-d') === $end_date->format('Y-m-d')) {
           $elements[$delta] = [
-            'day' => ['#plain_text' => $this->formatSpecificDate($start_date, 'same_date_date_format')],
+            'day' => $this->buildModifiedDateWithIsoAttribute($start_date, 'same_date_date_format'),
             'start_date' => $this->buildModifiedDateWithIsoAttribute($start_date),
             'separator' => ['#plain_text' => ' ' . $separator . ' '],
             'end_date' => $this->buildModifiedDateWithIsoAttribute($end_date),
@@ -139,7 +139,7 @@ class DateRangeModifiedFormatter extends DateRangeDefaultFormatter {
    * @return array
    *   A render array.
    */
-  protected function buildModifiedDateWithIsoAttribute(DrupalDateTime $date) {
+  protected function buildModifiedDateWithIsoAttribute(DrupalDateTime $date, $format = 'same_date_time_format') {
     if ($this->getFieldSetting('datetime_type') == DateTimeItem::DATETIME_TYPE_DATE) {
       // A date without time will pick up the current time, use the default.
       datetime_date_default_time($date);
@@ -152,7 +152,7 @@ class DateRangeModifiedFormatter extends DateRangeDefaultFormatter {
 
     $build = [
       '#theme' => 'time',
-      '#text' => $this->formatSpecificDate($date, 'same_date_time_format'),
+      '#text' => $this->formatSpecificDate($date, $format),
       '#html' => FALSE,
       '#attributes' => [
         'datetime' => $iso_date,
