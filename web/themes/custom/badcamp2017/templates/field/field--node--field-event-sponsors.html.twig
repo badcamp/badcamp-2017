@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override for a field.
+ * Default theme implementation for a field.
  *
  * To override output, copy the "field.html.twig" from the templates directory
  * to your theme's directory and customize it, just like customizing other
@@ -34,6 +34,8 @@
  * - label_display: The display settings for the label.
  *
  * @see template_preprocess_field()
+ *
+ * @ingroup themeable
  */
 #}
 
@@ -46,29 +48,20 @@
         </div>
     {% else %}
         {% for item in items %}
-            <span{{ attributes }}>{{ item.content }}</span>
+            <span{ attributes }}>{{ item.content }}</div>
         {% endfor %}
     {% endif %}
 {% else %}
     <div{{ attributes }}>
-        {% if label_display == 'inline' %}
-            <span{{ title_attributes }}>{{ label }}:</span>
-            <span>
-        {% elseif label_display == 'above' %}
-            <div{{ title_attributes }}>{{ label }}:</div>
-            {% if multiple %}
-            <div>
+        <span{{ title_attributes }}>{{ label }}</span>
+        {% if multiple %}
+        <span>
             {% endif %}
-        {% endif %}
-
-        {% for item in items %}
-            <span{{ item.attributes }}>{{ item.content }}</span>
-        {% endfor %}
-
-        {% if label_display == 'inline' %}
-            </span>
-        {% elseif label_display == 'above' %}
-            </div>
+            {% for item in items %}
+                <span{{ item.attributes }}>{{ item.content }}</span>
+            {% endfor %}
+            {% if multiple %}
+        </span>
         {% endif %}
     </div>
 {% endif %}

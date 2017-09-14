@@ -11,7 +11,7 @@ id: node.event.field_event_date_and_time
 field_name: field_event_date_and_time
 entity_type: node
 bundle: event
-label: 'Event date and time'
+label: Date
 description: ''
 required: true
 translatable: true

@@ -19,7 +19,7 @@ bundle: training
 mode: default
 content:
   field_description:
-    weight: 1
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -27,7 +27,7 @@ content:
     region: content
   field_event_date_and_time:
     weight: 0
-    label: above
+    label: inline
     settings:
       separator: '-'
       format_type: medium
@@ -36,23 +36,6 @@ content:
     type: daterange_default
     region: content
   field_event_venue:
-    weight: 3
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_maximum_registration:
-    weight: 5
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_session_skill_level:
     weight: 2
     label: inline
     settings:
@@ -60,14 +43,27 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  flag_add_to_schedule:
-    weight: 10
-    region: content
-    settings: {  }
+  field_maximum_registration:
+    weight: 3
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_session_skill_level:
+    weight: 1
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   links:
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  flag_add_to_schedule: true

@@ -4,6 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.training.field_description
+    - field.field.node.training.field_event_date_and_time
+    - field.field.node.training.field_event_venue
+    - field.field.node.training.field_maximum_registration
+    - field.field.node.training.field_session_skill_level
     - node.type.training
   module:
     - user
@@ -13,8 +18,10 @@ bundle: training
 mode: teaser
 content:
   links:
-    weight: 100
+    weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_description: true
   field_event_date_and_time: true
@@ -22,3 +29,4 @@ hidden:
   field_maximum_registration: true
   field_session_room: true
   field_session_skill_level: true
+  flag_add_to_schedule: true

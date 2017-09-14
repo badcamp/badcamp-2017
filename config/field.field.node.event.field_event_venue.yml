@@ -10,7 +10,7 @@ id: node.event.field_event_venue
 field_name: field_event_venue
 entity_type: node
 bundle: event
-label: 'Event venue'
+label: Location
 description: ''
 required: false
 translatable: true

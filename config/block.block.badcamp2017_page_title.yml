@@ -22,6 +22,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "<front>\r\n/sessions\r\n/sessions-accepted"
+    pages: "<front>\r\n/sessions\r\n/sessions-accepted\r\n/summits"
     negate: true
     context_mapping: {  }
