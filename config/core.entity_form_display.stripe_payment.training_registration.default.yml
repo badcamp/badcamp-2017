@@ -1,0 +1,93 @@
+uuid: 7e6b2b5d-53d7-4771-bc15-21cd662328f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - badcamp_stripe_payment.stripe_payment_type.training_registration
+    - field.field.stripe_payment.training_registration.field_train_reg_rel_training
+    - field.field.stripe_payment.training_registration.field_training_reg_cancelled_dt
+  module:
+    - datetime
+id: stripe_payment.training_registration.default
+targetEntityType: stripe_payment
+bundle: training_registration
+mode: default
+content:
+  amount:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_train_reg_rel_training:
+    type: entity_reference_autocomplete
+    weight: 9
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_training_reg_cancelled_dt:
+    type: datetime_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  paid:
+    type: boolean_checkbox
+    weight: 7
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  refunded:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  stripe_customer_id:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  stripe_outcome_type:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  stripe_status:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  stripe_transaction_id:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 6
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,6 @@
+uuid: 99389489-7ebb-417d-b27f-6d19b8d104b4
+langcode: en
+status: true
+dependencies: {  }
+id: training_registration
+label: 'Training Registration'
