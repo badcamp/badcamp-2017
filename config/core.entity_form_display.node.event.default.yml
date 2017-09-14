@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.event.comment
     - field.field.node.event.field_event_agenda
     - field.field.node.event.field_event_date_and_time
     - field.field.node.event.field_event_description
@@ -15,6 +16,7 @@ dependencies:
     - field.field.node.event.field_summit_leaders
     - node.type.event
   module:
+    - comment
     - datetime_range
     - field_group
     - path
@@ -86,9 +88,15 @@ targetEntityType: node
 bundle: event
 mode: default
 content:
+  comment:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+    region: content
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -166,7 +174,7 @@ content:
     region: content
   path:
     type: path
-    weight: 9
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -174,14 +182,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 3
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 4
     region: content
     third_party_settings: {  }
   title:
@@ -194,7 +202,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 1
     settings:
       match_operator: CONTAINS
       size: 60

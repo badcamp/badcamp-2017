@@ -1,0 +1,6 @@
+services:
+  badcamp_content.event_subscriber:
+    class: Drupal\badcamp_content\EventSubscriber\EventSubscriber
+    arguments: ['@current_user']
+    tags:
+      - { name: event_subscriber }

@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.event.comment
     - field.field.node.event.field_event_agenda
     - field.field.node.event.field_event_date_and_time
     - field.field.node.event.field_event_description
@@ -16,6 +18,7 @@ dependencies:
     - node.type.event
   module:
     - badcamp_content
+    - comment
     - text
     - user
 id: node.event.default
@@ -23,6 +26,15 @@ targetEntityType: node
 bundle: event
 mode: default
 content:
+  comment:
+    weight: 10
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
   field_event_agenda:
     weight: 4
     label: above
