@@ -63,6 +63,29 @@ function badcamp2017_preprocess_field__node__field_event_sponsors(&$vars){
 }
 
 /**
+ * Implements theme_preprocess_node().
+ */
+function badcamp2017_preprocess_node(&$vars){
+  $account = \Drupal::currentUser();
+  if($account->isAnonymous() && in_array($vars['node']->getType(), ['event','session','training',])){
+
+    $url = Url::fromRoute('user.login', [], [
+      'query' => [
+        'destination' => Url::fromRoute('entity.node.canonical', ['node' => $vars['node']->id()])->getInternalPath()
+      ]
+    ]);
+    $link = Link::fromTextAndUrl(t('Login to Register'), $url)->toRenderable();
+    $link['#attributes']['class'][] = 'button';
+    $link['#attributes']['class'][] = 'large';
+
+    $vars['content']['register_button'] = [
+      '#markup' => render($link),
+      '#weight' => 1000
+    ];
+  }
+}
+
+/**
  * Implements hook_node__node_type__view_mode().
  */
 function badcamp2017_preprocess_node__venue__full(&$vars){
