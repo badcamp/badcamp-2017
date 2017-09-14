@@ -146,7 +146,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-07-11T22:14:03+00:00"
+            "time": "2017-07-11 22:14:03"
         },
         {
             "name": "badcamp/badcamp_program_details",
@@ -172,7 +172,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-06-24T21:02:43+00:00"
+            "time": "2017-06-24 21:02:43"
         },
         {
             "name": "badcamp/badcamp_sponsors",
@@ -198,20 +198,20 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-07-18T22:35:27+00:00"
+            "time": "2017-07-18 22:35:27"
         },
         {
             "name": "badcamp/badcamp_stripe_payment",
-            "version": "1.0.11",
+            "version": "1.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_stripe_payment.git",
-                "reference": "99e3178f1cd764945b0b30d651bb42e410e77611"
+                "reference": "d742feddcca04b08af1ae1353e3374e6ebc7980a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/99e3178f1cd764945b0b30d651bb42e410e77611",
-                "reference": "99e3178f1cd764945b0b30d651bb42e410e77611",
+                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/d742feddcca04b08af1ae1353e3374e6ebc7980a",
+                "reference": "d742feddcca04b08af1ae1353e3374e6ebc7980a",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +235,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-08-30T17:41:27+00:00"
+            "time": "2017-09-14T01:59:31+00:00"
         },
         {
             "name": "commerceguys/addressing",
@@ -3294,7 +3294,8 @@
             "homepage": "https://www.drupal.org/project/geolocation",
             "support": {
                 "source": "http://cgit.drupalcode.org/geolocation"
-            }
+            },
+            "time": "2017-07-05 10:00:12"
         },
         {
             "name": "drupal/honeypot",
@@ -3974,7 +3975,11 @@
                 },
                 "drupal": {
                     "version": "8.x-0.2",
-                    "datestamp": "1458060823"
+                    "datestamp": "1458060823",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4054,7 +4059,8 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/stripe_api",
                 "issues": "https://www.drupal.org/project/issues/stripe_api"
-            }
+            },
+            "time": "2017-06-28 00:55:02"
         },
         {
             "name": "drupal/swiftmailer",
