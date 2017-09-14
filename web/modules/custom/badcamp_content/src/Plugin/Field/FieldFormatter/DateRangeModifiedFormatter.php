@@ -55,6 +55,7 @@ class DateRangeModifiedFormatter extends DateRangeDefaultFormatter {
         if ($start_date->format('Y-m-d') === $end_date->format('Y-m-d')) {
           $elements[$delta] = [
             'day' => $this->buildModifiedDateWithIsoAttribute($start_date, 'same_date_date_format'),
+            'day_time_separator' => ['#plain_text' => ' '],
             'start_date' => $this->buildModifiedDateWithIsoAttribute($start_date),
             'separator' => ['#plain_text' => ' ' . $separator . ' '],
             'end_date' => $this->buildModifiedDateWithIsoAttribute($end_date),
