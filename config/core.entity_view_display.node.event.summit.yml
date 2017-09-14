@@ -52,6 +52,11 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  flag_add_to_schedule:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   comment: true
   field_event_agenda: true
@@ -61,5 +66,4 @@ hidden:
   field_more_info_rsvp: true
   field_sold_out: true
   field_summit_leaders: true
-  flag_add_to_schedule: true
   links: true
