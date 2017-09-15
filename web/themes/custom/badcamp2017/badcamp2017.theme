@@ -55,10 +55,11 @@ function badcamp2017_preprocess_field__node__field_tags__blog(&$vars){
  * Implements hook_preprocess_field();
  */
 function badcamp2017_preprocess_field__node__field_event_sponsors(&$vars){
-  $vars['attributes']['class'][] = 'button-group';
+  $vars['attributes']['class'][] = 'row';
 
   foreach($vars['items'] AS &$item){
-    $item['content']['#attributes']['class'][] = 'button';
+    $item['content']['#attributes']['class'][] = 'small-3';
+    $item['content']['#attributes']['class'][] = 'columns';
   }
 }
 
