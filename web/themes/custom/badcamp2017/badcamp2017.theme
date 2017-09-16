@@ -52,6 +52,41 @@ function badcamp2017_preprocess_field__node__field_tags__blog(&$vars){
 }
 
 /**
+ * Implements hook_preprocess_field();
+ */
+function badcamp2017_preprocess_field__node__field_event_sponsors(&$vars){
+  $vars['attributes']['class'][] = 'row';
+
+  foreach($vars['items'] AS &$item){
+    $item['content']['#attributes']['class'][] = 'small-3';
+    $item['content']['#attributes']['class'][] = 'columns';
+  }
+}
+
+/**
+ * Implements theme_preprocess_node().
+ */
+function badcamp2017_preprocess_node(&$vars){
+  $account = \Drupal::currentUser();
+  if($account->isAnonymous() && in_array($vars['node']->getType(), ['event','session','training',])){
+
+    $url = Url::fromRoute('user.login', [], [
+      'query' => [
+        'destination' => Url::fromRoute('entity.node.canonical', ['node' => $vars['node']->id()])->getInternalPath()
+      ]
+    ]);
+    $link = Link::fromTextAndUrl(t('Login to Register'), $url)->toRenderable();
+    $link['#attributes']['class'][] = 'button';
+    $link['#attributes']['class'][] = 'large';
+
+    $vars['content']['register_button'] = [
+      '#markup' => render($link),
+      '#weight' => 1000
+    ];
+  }
+}
+
+/**
  * Implements hook_node__node_type__view_mode().
  */
 function badcamp2017_preprocess_node__venue__full(&$vars){
@@ -77,11 +112,10 @@ function badcamp2017_preprocess_node__venue__full(&$vars){
 /**
  * Implements hook_node__node_type__view_mode().
  */
-function badcamp2017_preprocess_node__session__teaser(&$vars){
-  if($vars['node']->get('field_session_status')->getString() == 'Proposed'){
+function badcamp2017_preprocess_node__session(&$vars){
+  if($vars['node']->get('field_session_status')->getString() != 'Accepted'){
     $vars['content']['flag_add_to_schedule']['#access'] = FALSE;
   }
-
 }
 
 /**
@@ -303,8 +337,9 @@ function badcamp2017_theme_suggestions_field_alter(&$suggestions, $vars){
  * Implements template_preprocess_user().
  */
 function badcamp2017_preprocess_user(&$vars) {
-  if($vars['user']->get('field_make_my_schedule_public')->getString() != 1){
-    $vars['content']['my_schedule_entity_view_1']['#access'] = FALSE;
+  $account = \Drupal::currentUser();
+  if($vars['user']->get('field_make_my_schedule_public')->getString() != 1 && $vars['user']->id() != $account->id()){
+    $vars['content']['my_schedule_my_schedule']['#access'] = FALSE;
   }
 }
 
@@ -324,9 +359,7 @@ function badcamp2017_theme_suggestions_eva_display_entity_view_alter(&$suggestio
  */
 function badcamp2017_preprocess_flag__add_to_schedule(&$vars) {
   $vars['attributes']['class'][] = 'fa';
-  if($vars['action'] == 'unflag') {
-    $vars['attributes']['class'][] = 'fa-times';
-  }else{
-    $vars['attributes']['class'][] = 'fa-plus';
-  }
+  $vars['attributes']['class'][] = 'button';
+  $vars['attributes']['class'][] = 'medium';
+
 }

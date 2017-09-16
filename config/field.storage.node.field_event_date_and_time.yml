@@ -8,7 +8,7 @@ dependencies:
     - node
 third_party_settings:
   field_permissions:
-    permission_type: custom
+    permission_type: public
 id: node.field_event_date_and_time
 field_name: field_event_date_and_time
 entity_type: node
