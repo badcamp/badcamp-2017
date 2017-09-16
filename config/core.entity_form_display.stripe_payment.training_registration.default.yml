@@ -20,6 +20,15 @@ content:
     settings:
       placeholder: ''
     third_party_settings: {  }
+  entity_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
   field_train_reg_rel_training:
     type: entity_reference_autocomplete
     weight: 9
