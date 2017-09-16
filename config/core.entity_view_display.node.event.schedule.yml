@@ -16,7 +16,6 @@ dependencies:
     - field.field.node.event.field_summit_leaders
     - node.type.event
   module:
-    - datetime_range
     - text
     - user
 id: node.event.schedule
@@ -24,92 +23,41 @@ targetEntityType: node
 bundle: event
 mode: schedule
 content:
-  field_event_agenda:
-    weight: 106
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_event_date_and_time:
-    weight: 103
-    label: above
-    settings:
-      separator: '-'
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: daterange_default
-    region: content
   field_event_description:
-    weight: 104
-    label: above
+    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_event_sponsors:
-    weight: 102
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_event_type:
-    weight: 109
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
     region: content
   field_event_venue:
-    weight: 110
-    label: above
+    weight: 1
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
-  field_maximum_registration:
-    weight: 107
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
-  field_more_info_rsvp:
-    weight: 105
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
-    region: content
-  field_sold_out:
-    weight: 101
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
     region: content
   field_summit_leaders:
-    weight: 108
-    label: above
+    type: entity_reference_label
+    weight: 0
+    region: content
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   flag_add_to_schedule:
-    weight: 10
+    weight: 3
     region: content
-  links:
-    weight: 100
-    region: content
-hidden: {  }
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  comment: true
+  field_event_agenda: true
+  field_event_date_and_time: true
+  field_event_sponsors: true
+  field_event_type: true
+  field_maximum_registration: true
+  field_more_info_rsvp: true
+  field_sold_out: true
+  links: true

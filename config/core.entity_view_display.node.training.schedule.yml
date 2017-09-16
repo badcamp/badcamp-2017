@@ -4,14 +4,15 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.schedule
+    - field.field.node.training.comment
     - field.field.node.training.field_description
     - field.field.node.training.field_event_date_and_time
+    - field.field.node.training.field_event_sponsors
     - field.field.node.training.field_event_venue
     - field.field.node.training.field_maximum_registration
     - field.field.node.training.field_session_skill_level
     - node.type.training
   module:
-    - datetime_range
     - text
     - user
 id: node.training.schedule
@@ -20,53 +21,32 @@ bundle: training
 mode: schedule
 content:
   field_description:
-    weight: 1
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
-  field_event_date_and_time:
-    weight: 0
-    label: above
-    settings:
-      separator: '-'
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: daterange_default
-    region: content
   field_event_venue:
-    weight: 3
+    weight: 1
     label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
-  field_maximum_registration:
-    weight: 5
-    label: above
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
     region: content
   field_session_skill_level:
-    weight: 2
+    weight: 0
     label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  flag_add_to_schedule:
-    weight: 10
-    region: content
-  links:
-    weight: 6
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  comment: true
+  field_event_date_and_time: true
+  field_event_sponsors: true
+  field_maximum_registration: true
+  flag_add_to_schedule: true
+  links: true

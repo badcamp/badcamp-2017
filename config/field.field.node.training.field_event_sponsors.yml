@@ -1,16 +1,16 @@
-uuid: 9953e5cf-f57a-41cf-b101-09247fc1a9e8
+uuid: aa4d7f60-6f5c-4f03-b275-d0daa8eab868
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_event_venue
-    - node.type.event
-    - node.type.venue
-id: node.event.field_event_venue
-field_name: field_event_venue
+    - field.storage.node.field_event_sponsors
+    - node.type.badcamp_sponsor
+    - node.type.training
+id: node.training.field_event_sponsors
+field_name: field_event_sponsors
 entity_type: node
-bundle: event
-label: Location
+bundle: training
+label: 'Event Sponsor(s)'
 description: ''
 required: false
 translatable: true
@@ -20,7 +20,7 @@ settings:
   handler: 'default:node'
   handler_settings:
     target_bundles:
-      venue: venue
+      badcamp_sponsor: badcamp_sponsor
     sort:
       field: title
       direction: ASC

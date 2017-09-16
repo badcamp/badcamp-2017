@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_display.comment.comment.default
     - field.field.node.training.comment
     - field.field.node.training.field_description
     - field.field.node.training.field_event_date_and_time
@@ -14,6 +15,7 @@ dependencies:
     - node.type.training
   module:
     - badcamp_stripe_payment
+    - comment
     - datetime_range
     - text
     - user
@@ -22,8 +24,17 @@ targetEntityType: node
 bundle: training
 mode: default
 content:
+  comment:
+    weight: 7
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
   field_description:
-    weight: 1
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -31,7 +42,7 @@ content:
     region: content
   field_event_date_and_time:
     weight: 0
-    label: above
+    label: inline
     settings:
       separator: '-'
       format_type: medium
@@ -39,8 +50,17 @@ content:
     third_party_settings: {  }
     type: daterange_default
     region: content
+  field_event_sponsors:
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: image_only
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
   field_event_venue:
-    weight: 3
+    weight: 2
     label: inline
     settings:
       link: true
@@ -48,8 +68,8 @@ content:
     type: entity_reference_label
     region: content
   field_maximum_registration:
-    weight: 5
-    label: above
+    weight: 3
+    label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -64,18 +84,13 @@ content:
     type: stripe_payment
     region: content
   field_session_skill_level:
-    weight: 2
+    weight: 1
     label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  flag_add_to_schedule:
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   links:
     weight: 6
     region: content
@@ -84,3 +99,4 @@ content:
 hidden:
   comment: true
   field_event_sponsors: true
+  flag_add_to_schedule: true

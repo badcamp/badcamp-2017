@@ -14,6 +14,7 @@ dependencies:
     - node.type.training
   module:
     - badcamp_stripe_payment
+    - comment
     - datetime_range
     - path
     - text
@@ -22,6 +23,12 @@ targetEntityType: node
 bundle: training
 mode: default
 content:
+  comment:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+    region: content
   created:
     type: datetime_timestamp
     weight: 8
@@ -42,6 +49,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
+    region: content
+  field_event_sponsors:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_event_venue:
     weight: 5
