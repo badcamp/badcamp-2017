@@ -3,13 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.training.comment
     - field.field.node.training.field_description
     - field.field.node.training.field_event_date_and_time
+    - field.field.node.training.field_event_sponsors
     - field.field.node.training.field_event_venue
     - field.field.node.training.field_maximum_registration
+    - field.field.node.training.field_payment_info
     - field.field.node.training.field_session_skill_level
     - node.type.training
   module:
+    - badcamp_stripe_payment
     - datetime_range
     - text
     - user
@@ -52,6 +56,13 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
+  field_payment_info:
+    weight: 11
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: stripe_payment
+    region: content
   field_session_skill_level:
     weight: 2
     label: inline
@@ -70,4 +81,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  comment: true
+  field_event_sponsors: true
