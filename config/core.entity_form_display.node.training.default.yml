@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.training.field_event_date_and_time
     - field.field.node.training.field_event_sponsors
     - field.field.node.training.field_event_venue
-    - field.field.node.training.field_maximum_registration
     - field.field.node.training.field_payment_info
     - field.field.node.training.field_session_skill_level
     - node.type.training
@@ -61,13 +60,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-    region: content
-  field_maximum_registration:
-    weight: 4
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
-    type: number
     region: content
   field_payment_info:
     weight: 27

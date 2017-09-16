@@ -1,4 +1,4 @@
-uuid: 5acf3276-db88-4dda-a312-afb816ae3850
+uuid: 59420468-d5e5-46fa-8bac-16735ba8989d
 langcode: en
 status: true
 dependencies:
@@ -21,13 +21,14 @@ default_value:
       value: ''
       format: basic_html
     enable: 1
-    amount: '0'
+    amount: '2000'
     avs: 1
     payment_type: training_registration
     description_value: ''
-    button_label: ''
+    button_label: 'Register for Training'
     description_format: basic_html
-    max_payments: '0'
+    max_payments: '1'
+    max_purchases: '0'
 default_value_callback: ''
 settings: {  }
 field_type: stripe_payment

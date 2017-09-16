@@ -1,4 +1,4 @@
-uuid: ada93292-a006-4f7e-ba2e-dbfd491bdb2d
+uuid: 98ac5e4c-f4df-41a9-ad39-9d90721e41f2
 langcode: en
 status: true
 dependencies:
@@ -8,7 +8,7 @@ dependencies:
     - node
 third_party_settings:
   field_permissions:
-    permission_type: public
+    permission_type: custom
 id: node.field_payment_info
 field_name: field_payment_info
 entity_type: node
@@ -21,6 +21,7 @@ settings:
   description_format: basic_html
   button_text: ''
   max_payments: 0
+  max_purchases: 0
 module: badcamp_stripe_payment
 locked: false
 cardinality: 1

@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.training.field_event_date_and_time
     - field.field.node.training.field_event_sponsors
     - field.field.node.training.field_event_venue
-    - field.field.node.training.field_maximum_registration
     - field.field.node.training.field_payment_info
     - field.field.node.training.field_session_skill_level
     - node.type.training
@@ -25,7 +24,7 @@ bundle: training
 mode: default
 content:
   comment:
-    weight: 8
+    weight: 6
     label: above
     settings:
       view_mode: default
@@ -34,7 +33,7 @@ content:
     type: comment_default
     region: content
   field_description:
-    weight: 4
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -51,7 +50,7 @@ content:
     type: daterange_default
     region: content
   field_event_sponsors:
-    weight: 5
+    weight: 4
     label: hidden
     settings:
       view_mode: image_only
@@ -67,17 +66,8 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_maximum_registration:
-    weight: 3
-    label: inline
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
-    region: content
   field_payment_info:
-    weight: 6
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -91,10 +81,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  links:
-    weight: 7
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   flag_add_to_schedule: true
+  links: true
