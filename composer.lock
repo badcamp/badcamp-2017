@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3da8c919ae143b46fafe87d17131d3d4",
+    "content-hash": "0a13729cd508705ea18612ef99f9b9f6",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -146,7 +146,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-07-11 22:14:03"
+            "time": "2017-07-11T22:14:03+00:00"
         },
         {
             "name": "badcamp/badcamp_program_details",
@@ -172,7 +172,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-06-24 21:02:43"
+            "time": "2017-06-24T21:02:43+00:00"
         },
         {
             "name": "badcamp/badcamp_sponsors",
@@ -198,20 +198,20 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-07-18 22:35:27"
+            "time": "2017-07-18T22:35:27+00:00"
         },
         {
             "name": "badcamp/badcamp_stripe_payment",
-            "version": "1.0.12",
+            "version": "dev-payment_field",
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_stripe_payment.git",
-                "reference": "d742feddcca04b08af1ae1353e3374e6ebc7980a"
+                "reference": "81d0b3140869146bf5c9ea335bf33c23949ce5e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/d742feddcca04b08af1ae1353e3374e6ebc7980a",
-                "reference": "d742feddcca04b08af1ae1353e3374e6ebc7980a",
+                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/81d0b3140869146bf5c9ea335bf33c23949ce5e5",
+                "reference": "81d0b3140869146bf5c9ea335bf33c23949ce5e5",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +235,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-09-14T01:59:31+00:00"
+            "time": "2017-09-16 08:07:11"
         },
         {
             "name": "commerceguys/addressing",
@@ -3294,8 +3294,7 @@
             "homepage": "https://www.drupal.org/project/geolocation",
             "support": {
                 "source": "http://cgit.drupalcode.org/geolocation"
-            },
-            "time": "2017-07-05 10:00:12"
+            }
         },
         {
             "name": "drupal/honeypot",
@@ -3975,11 +3974,7 @@
                 },
                 "drupal": {
                     "version": "8.x-0.2",
-                    "datestamp": "1458060823",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
+                    "datestamp": "1458060823"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4059,8 +4054,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/stripe_api",
                 "issues": "https://www.drupal.org/project/issues/stripe_api"
-            },
-            "time": "2017-06-28 00:55:02"
+            }
         },
         {
             "name": "drupal/swiftmailer",
@@ -9904,6 +9898,7 @@
         "drupal/config_readonly": 10,
         "drupal/config_split": 10,
         "drupal/devel": 5,
+        "badcamp/badcamp_stripe_payment": 20,
         "drupal/geolocation": 20,
         "drupal/field_permissions": 10,
         "drupal/field_group": 5,
