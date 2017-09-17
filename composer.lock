@@ -206,12 +206,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_stripe_payment.git",
-                "reference": "ca804a5b78166375043eb5f2125ab4b71e3533ab"
+                "reference": "c006d6feaaee346112a7c5c284bf4562a3e372ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/ca804a5b78166375043eb5f2125ab4b71e3533ab",
-                "reference": "ca804a5b78166375043eb5f2125ab4b71e3533ab",
+                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/c006d6feaaee346112a7c5c284bf4562a3e372ec",
+                "reference": "c006d6feaaee346112a7c5c284bf4562a3e372ec",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +235,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-09-16 23:16:57"
+            "time": "2017-09-17 22:48:30"
         },
         {
             "name": "commerceguys/addressing",
@@ -3269,7 +3269,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/geolocation",
-                "reference": "7bd91ed45e7539bcdea6343510780f13b7576a00"
+                "reference": "39eee0100306062a18b6ff69a6be4554f96f59bf"
             },
             "require": {
                 "drupal/core": "*"
@@ -3280,8 +3280,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.10+46-dev",
-                    "datestamp": "1505054644",
+                    "version": "8.x-1.10+50-dev",
+                    "datestamp": "1505644743",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -3307,7 +3307,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/geolocation"
             },
-            "time": "2017-09-10 22:30:29"
+            "time": "2017-09-17 10:45:24"
         },
         {
             "name": "drupal/honeypot",
