@@ -34,6 +34,7 @@ module:
   disable_messages: 0
   dynamic_page_cache: 0
   editor: 0
+  empty_fields: 0
   entity_reference_exposed_filters: 0
   eva: 0
   features: 0
