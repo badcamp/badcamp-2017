@@ -23,8 +23,10 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  comment: true
   field_description: true
   field_event_date_and_time: true
+  field_event_sponsors: true
   field_event_venue: true
   field_maximum_registration: true
   field_session_room: true

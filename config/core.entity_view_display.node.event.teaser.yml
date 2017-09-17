@@ -4,6 +4,18 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.event.comment
+    - field.field.node.event.field_event_agenda
+    - field.field.node.event.field_event_date_and_time
+    - field.field.node.event.field_event_description
+    - field.field.node.event.field_event_image
+    - field.field.node.event.field_event_sponsors
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_event_venue
+    - field.field.node.event.field_maximum_registration
+    - field.field.node.event.field_more_info_rsvp
+    - field.field.node.event.field_sold_out
+    - field.field.node.event.field_summit_leaders
     - node.type.event
   module:
     - user
@@ -12,13 +24,17 @@ targetEntityType: node
 bundle: event
 mode: teaser
 content:
-  links:
-    weight: 100
+  flag_add_to_schedule:
+    weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  comment: true
   field_event_agenda: true
   field_event_date_and_time: true
   field_event_description: true
+  field_event_image: true
   field_event_sponsors: true
   field_event_type: true
   field_event_venue: true
@@ -26,3 +42,4 @@ hidden:
   field_more_info_rsvp: true
   field_sold_out: true
   field_summit_leaders: true
+  links: true
