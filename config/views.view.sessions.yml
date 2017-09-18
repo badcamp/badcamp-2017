@@ -616,7 +616,7 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: standard
-      title: 'Accepted Sessions'
+      title: 'BADCamp 2017 Sessions'
       use_ajax: true
       relationships: {  }
       css_class: session-view
@@ -1794,6 +1794,7 @@ display:
         css_class: false
       use_ajax: true
       css_class: session-list
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:

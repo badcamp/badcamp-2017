@@ -371,6 +371,7 @@ display:
         empty: false
         fields: false
         css_class: false
+        title: false
       arguments: {  }
       filters:
         status:
@@ -594,6 +595,7 @@ display:
           field_api_classes: false
           plugin_id: field
       css_class: schedule
+      title: 'BADCamp 2017 Schedule'
     cache_metadata:
       max-age: -1
       contexts:

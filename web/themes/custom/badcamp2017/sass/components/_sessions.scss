@@ -87,28 +87,6 @@
   }
 }
 
-.page-sessions-accepted,
-.page-sessions {
-  @extend .path-frontpage;
-
-  #block-badcampsessiontext{
-    text-align: center;
-    h2{
-      font-weight: bold;
-    }
-  }
-
-  .page-title{
-    color: white;
-    padding: 1.75rem 1.5rem;
-    max-width: 500px;
-    line-height: 1;
-    margin-bottom: 1rem;
-    background-color: $bc-orange;
-    font-weight: 700;
-  }
-}
-
 .label a{
   color: white;
 }
