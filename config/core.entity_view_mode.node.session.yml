@@ -1,0 +1,10 @@
+uuid: bb896c16-4285-4f2a-984a-d256f48fc176
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.session
+label: Session
+targetEntityType: node
+cache: true

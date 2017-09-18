@@ -1,0 +1,30 @@
+uuid: ab9f77de-6d66-49a4-a466-11c7ad5ddeb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.session_track.field_icon
+    - taxonomy.vocabulary.session_track
+  module:
+    - text
+id: taxonomy_term.session_track.default
+targetEntityType: taxonomy_term
+bundle: session_track
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_icon:
+    weight: 1
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

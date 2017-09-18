@@ -1,10 +1,9 @@
-uuid: 9f07d8f9-210c-48ba-a20b-208c8fbab5d3
+uuid: 72b86dba-4d4a-4a69-8bd5-a2a7b0164b30
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment.default
-    - field.field.node.session.comment
+    - core.entity_view_mode.node.session
     - field.field.node.session.field_event_date_and_time
     - field.field.node.session.field_event_venue
     - field.field.node.session.field_session_description
@@ -16,49 +15,29 @@ dependencies:
     - field.field.node.session.field_video
     - node.type.session
   module:
-    - badcamp_content
-    - comment
+    - datetime_range
     - text
     - user
-id: node.session.default
+id: node.session.session
 targetEntityType: node
 bundle: session
-mode: default
+mode: session
 content:
-  comment:
-    weight: 7
-    label: above
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    type: comment_default
-    region: content
   field_event_date_and_time:
     weight: 4
     label: hidden
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: time_only
       separator: '-'
-      same_date_date_format: date_only
-      same_date_time_format: time_only
     third_party_settings: {  }
-    type: daterange_modified
-    region: content
-  field_event_venue:
-    weight: 5
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
+    type: daterange_default
     region: content
   field_session_description:
     weight: 3
     label: hidden
     settings:
-      trim_length: 600
+      trim_length: 400
     third_party_settings: {  }
     type: text_summary_or_trimmed
     region: content
@@ -87,11 +66,12 @@ content:
     type: entity_reference_label
     region: content
   flag_add_to_schedule:
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_event_venue: true
   field_session_files: true
   field_session_status: true
   field_video: true

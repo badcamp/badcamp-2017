@@ -15,23 +15,21 @@ set classes = [
 'row'
 ]
 %}
-<div{{ attributes.addClass(classes) }} data-equalizer>
+<div{{ attributes.addClass(classes) }}>
     {% for child in children %}
-        {% if (loop.first) %}
-            <!--<div class="row">-->
+        {% if loop.first %}
+            <div class="columns small-6">
+        {% endif %}
+        {% set checkbox = attribute(element, child) %}
+        {{ checkbox }}
+
+        {% if loop.last %}
+            </div>
         {% endif %}
 
-        {% if (not loop.first) and (loop.index % 3 == 1) %}
-            <!--</div>
-            <div class="row">-->
+        {% if not loop.last and not loop.first and loop.index % 3 == 0 %}
+            </div>
+            <div class="columns small-6">
         {% endif %}
-
-        {% set item = attribute(element, child) %}
-        {{ item }}
-
-        {% if (loop.last)  %}
-            <!--</div>-->
-        {% endif %}
-
     {% endfor %}
 </div>
