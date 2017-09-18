@@ -1,72 +1,78 @@
-div[data-drupal-selector="edit-skill"],
-div[data-drupal-selector="edit-session-track"]{
-  display: flex;
-  flex-flow: row wrap;
+.category-icon {
+  > i {
+    @include border-radius(50%);
+    padding: .5rem;
+    background-color: $bc-blue;
+    color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 1;
+    vertical-align: middle;
+    font-size: 1.5em;
+  }
+  > .label-title {
+    font-size: 1.25em;
+  }
+}
 
-  .form-item{
-    padding: 0px;
+div[data-drupal-selector="edit-session-track"] {
+  margin: 1rem 0;
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-progress-appearance: none;
+    display: none;
+  }
 
-    flex-basis: 50%;
-    flex-grow: 1;
-
-    @include breakpoint(large){
-      flex-basis: 33%;
+  label {
+    @extend .category-icon;
+    > i {
+      background-color: lightgrey;
     }
+  }
 
-    input[type="checkbox"] {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      -ms-progress-appearance: none;
-      display: none;
+  input[type="checkbox"]:checked+label{
+    > i {
+      background-color: $bc-orange;
     }
+  }
 
+  .form-item {
+    margin-bottom: .5rem;
+  }
+}
+
+fieldset[data-drupal-selector="edit-date"] {
+  margin: 1rem;
+  > .fieldset-wrapper{
+    text-align: center;
+  }
+  input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-progress-appearance: none;
+    display: none;
+  }
+
+  .js-webform-radios > div {
+    display: inline-block;
     text-align: center;
 
     label{
-      display: block;
-      padding: 1rem;
-      color: $bc-grey;
-      margin: 0px;
+      background-color: lightgrey;
+      color: white;
       font-weight: 700;
-
-      @include breakpoint(medium){
-        padding: 2rem 0;
-      }
+      font-size: 1.25rem;
+      text-align: center;
+      margin: 0px;
+      padding: .5rem 1rem;
+      min-width: 100px;
     }
 
-    input[type="checkbox"]:checked+label {
-      background-color: $bc-orange;
-      color: $white;
+    input[type="radio"]:checked+label{
+      background-color: $bc-blue;
     }
-
-    border-top: 1px solid #222;
-    border-right: 1px solid #222;
-
-
-    @include breakpoint(medium down) {
-      &:nth-child(1),
-      &:nth-child(2){
-        border-top: 0 solid;
-      }
-
-      &:nth-of-type(2n),
-      &:last-child{
-        border-right: 0 solid;
-      }
-    }
-
-    @include breakpoint(large) {
-      &:nth-child(1),
-      &:nth-child(2),
-      &:nth-child(3){
-        border-top: 0 solid;
-      }
-      &:nth-of-type(3n),
-      &:last-child{
-        border-right: 0 solid;
-      }
-    }
-
   }
 }
 
@@ -90,23 +96,30 @@ div[data-drupal-selector="edit-session-track"]{
     background-color: $bc-orange;
     font-weight: 700;
   }
+}
 
-  .results > article,
-  .results > .views-row > article{
-    border-bottom: 1px solid #222;
-    padding: 1rem 0;
-    > h3 a{
-      color: $bc-orange;
-    }
-  }
-
-  form#views-exposed-form-sessions-accepted-sessions{
-    margin-bottom: 2rem;
-    border-bottom: 1px solid;
-    padding-bottom: 2rem;
-
-    .form-actions{
-      margin-top: 1rem;
+.accepted-sessions{
+  .results {
+    .session-title {
+      color: white;
+      padding: 1.75rem 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      > span{
+        font-size: .75em;
+      }
+      &.session-wed {
+        background-color: $bc-green;
+      }
+      &.session-thurs {
+        background-color: $bc-orange;
+      }
+      &.session-fri {
+        background-color: $bc-blue;
+      }
+      &.session-sat {
+        background-color: black;
+      }
     }
   }
 }

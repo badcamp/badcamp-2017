@@ -64,6 +64,19 @@ function badcamp2017_preprocess_field__node__field_event_sponsors(&$vars){
 }
 
 /**
+ * Implements template_preprocess_field__HOOK().
+ */
+function badcamp2017_preprocess_field__node__field_session_track__session__session(&$vars){
+  $node = $vars['element']['#object'];
+
+  foreach($node->get('field_session_track') AS $id => $term) {
+    $full_term = $term->get('entity')->getTarget()->getValue();
+    $class = $full_term->get('field_icon')->first()->getValue()['value'];
+    $vars['items'][$id]['icon_class'] = $class;
+  }
+}
+
+/**
  * Implements theme_preprocess_node().
  */
 function badcamp2017_preprocess_node(&$vars){
@@ -127,6 +140,13 @@ function badcamp2017_preprocess_node__badcamp_sponsor__full(&$vars){
   $vars['logo'] = $vars['content']['field_sponsor_logo'];
   unset($vars['content']['field_sponsor_logo']);
   $vars['content'] = drupal_render_children($vars['content']);
+}
+
+/**
+ * Implements template_preprocess_node__node_type__node_display().
+ */
+function badcamp2017_preprocess_node__session__session(&$vars) {
+  $vars['attributes']['class'][] = 'row';
 }
 
 /**
@@ -261,6 +281,7 @@ function badcamp2017_status_messages($variables) {
  * Implements hook_form_FORM_ID_alter().
  */
 function badcamp2017_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  /*
   if($form['#id'] == 'views-exposed-form-sessions-accepted-sessions'){
     $form['skill']['#chosen'] = true;
     $form['skill']['#attributes']['data-placeholder'] = t('Choose the skill level...');
@@ -277,6 +298,7 @@ function badcamp2017_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\For
     $form['venue_id']['#prefix'] = '<div class="columns small-12 medium-4">';
     $form['venue_id']['#suffix'] = '</div></div>';
   }
+  */
 }
 
 
@@ -321,6 +343,15 @@ function badcamp2017_preprocess_views_view__sessions__accepted_sessions(&$vars) 
 
 }
 
+function badcamp2017_preprocess_form_element__session_track(&$vars) {
+  $term_id = $vars['element']['#return_value'];
+  $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($term_id);
+  $icon = $term->get('field_icon');
+  if (!empty($icon_class = $icon->getValue())){
+    $vars['label']['#attributes']['data_icon'] = $icon_class[0]['value'];
+  }
+}
+
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
@@ -361,5 +392,35 @@ function badcamp2017_preprocess_flag__add_to_schedule(&$vars) {
   $vars['attributes']['class'][] = 'fa';
   $vars['attributes']['class'][] = 'button';
   $vars['attributes']['class'][] = 'medium';
+}
 
+/**
+ * Implements theme_views_view__HOOK().
+ */
+function badcamp2017_preprocess_views_view_unformatted__sessions__accepted_sessions(&$vars) {
+  $title = trim(strip_tags($vars['title']->__toString()));
+
+  $class = '';
+  $add_title = '';
+  switch($title){
+    case 'Wednesday, October 18':
+      $add_title = t('Drupal Training & Summits');
+      $class = 'session-wed';
+      break;
+    case 'Thursday, October 19':
+      $add_title = t('Drupal Training & Summits');
+      $class = 'session-thurs';
+      break;
+    case 'Friday, October 20':
+      $add_title = t('Sessions');
+      $class = 'session-fri';
+      break;
+    case 'Saturday, October 21':
+      $add_title = t('Sessions');
+      $class = 'session-sat';
+      break;
+  }
+
+  $vars['add_title'] = $add_title;
+  $vars['title_class'] = $class;
 }

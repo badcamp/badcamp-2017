@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.session
     - core.entity_view_mode.node.teaser
     - field.storage.node.field_event_date_and_time
     - field.storage.node.field_event_venue
@@ -12,16 +13,16 @@ dependencies:
     - field.storage.node.field_session_track
     - node.type.session
     - system.menu.admin
+    - system.menu.main
     - taxonomy.vocabulary.session_track
     - taxonomy.vocabulary.skill_level
     - user.role.administrator
     - user.role.anonymous
     - user.role.authenticated
   module:
-    - badcamp_content
     - better_exposed_filters
     - comment
-    - entity_reference_exposed_filters
+    - datetime_range
     - eva
     - node
     - options
@@ -301,7 +302,6 @@ display:
     position: 4
     display_options:
       display_extenders: {  }
-      path: sessions-accepted
       display_description: ''
       filters:
         status:
@@ -352,51 +352,62 @@ display:
           entity_field: type
           plugin_id: bundle
           group: 1
-        field_session_skill_level_target_id:
-          id: field_session_skill_level_target_id
-          table: node__field_session_skill_level
-          field: field_session_skill_level_target_id
+        field_event_date_and_time_value_1:
+          id: field_event_date_and_time_value_1
+          table: node__field_event_date_and_time
+          field: field_event_date_and_time_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
-          value: {  }
+          operator: '='
+          value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: field_session_skill_level_target_id_op
-            label: Skill
-            description: ''
+            operator_id: field_event_date_and_time_value_1_op
+            label: 'Date (field_event_date_and_time)'
+            description: null
             use_operator: false
-            operator: field_session_skill_level_target_id_op
-            identifier: skill
+            operator: field_event_date_and_time_value_1_op
+            identifier: field_event_date_and_time_value_1
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: false
-          is_grouped: false
+          is_grouped: true
           group_info:
             label: ''
             description: ''
-            identifier: ''
-            optional: true
-            widget: select
+            identifier: date
+            optional: false
+            widget: radios
             multiple: false
             remember: false
-            default_group: All
+            default_group: '1'
             default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: skill_level
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
+            group_items:
+              1:
+                title: All
+                operator: starts
+                value: 2017-10-
+              2:
+                title: Wed
+                operator: starts
+                value: '2017-10-18'
+              3:
+                title: Thurs
+                operator: starts
+                value: '2017-10-19'
+              4:
+                title: Fri
+                operator: starts
+                value: '2017-10-20'
+              5:
+                title: Sat
+                operator: starts
+                value: '2017-10-21'
+          plugin_id: string
         field_session_track_target_id:
           id: field_session_track_target_id
           table: node__field_session_track
@@ -410,7 +421,7 @@ display:
           exposed: true
           expose:
             operator_id: field_session_track_target_id_op
-            label: Track
+            label: ''
             description: ''
             use_operator: false
             operator: field_session_track_target_id_op
@@ -435,7 +446,7 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: true
+          reduce_duplicates: false
           type: select
           limit: true
           vid: session_track
@@ -481,51 +492,6 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
-        eref_node_titles:
-          id: eref_node_titles
-          table: node_field_data
-          field: eref_node_titles
-          relationship: field_event_venue
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: ''
-            label: Venue
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: venue_id
-            required: false
-            remember: false
-            multiple: true
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-            reduce: 0
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          entity_type: node
-          plugin_id: eref_node_titles
-          sort_order: '0'
-          sort_by: '1'
-          get_unpublished: '1'
-          get_filter_no_results: '1'
       defaults:
         filters: false
         filter_groups: false
@@ -537,6 +503,8 @@ display:
         title: false
         use_ajax: false
         relationships: false
+        css_class: false
+        arguments: false
       filter_groups:
         operator: AND
         groups:
@@ -556,12 +524,12 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: session
       exposed_form:
         type: bef
         options:
           submit_button: Apply
-          reset_button: true
+          reset_button: false
           reset_button_label: 'Show All'
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -575,24 +543,8 @@ display:
               secondary_label: 'Advanced options'
               autosubmit: true
               autosubmit_hide: true
-            field_session_skill_level_target_id:
-              bef_format: default
-              more_options:
-                bef_select_all_none: false
-                bef_collapsible: false
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
             field_session_track_target_id:
-              bef_format: default
-              more_options:
-                bef_select_all_none: false
-                bef_collapsible: false
-                is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
-            eref_node_titles:
-              bef_format: default
+              bef_format: bef
               more_options:
                 bef_select_all_none: false
                 bef_collapsible: false
@@ -601,53 +553,6 @@ display:
                   filter_rewrite_values: ''
           text_input_required_format: basic_html
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          entity_type: node
-          entity_field: title
-          label: ''
-          alter:
-            alter_text: false
-            make_link: false
-            absolute: false
-            trim: false
-            word_boundary: false
-            ellipsis: false
-            strip_tags: false
-            html: false
-          hide_empty: false
-          empty_zero: false
-          settings:
-            link_to_entity: true
-          plugin_id: field
-          relationship: none
-          group_type: group
-          admin_label: ''
-          exclude: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_event_date_and_time:
           id: field_event_date_and_time
           table: node__field_event_date_and_time
@@ -658,8 +563,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{field_event_date_and_time__value|date(''U'') |format_date(''full_day_with_month_and_date'')}}'
             make_link: false
             path: ''
             absolute: false
@@ -697,13 +602,11 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: daterange_modified
+          type: daterange_default
           settings:
             timezone_override: ''
-            format_type: medium
+            format_type: full_day_with_month_and_date
             separator: '-'
-            same_date_date_format: date_only
-            same_date_time_format: time_only
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -740,18 +643,33 @@ display:
           expose:
             label: ''
           plugin_id: standard
-      title: 'Accepted Sessions'
-      use_ajax: true
-      relationships:
-        field_event_venue:
-          id: field_event_venue
-          table: node__field_event_venue
-          field: field_event_venue
+        field_session_skill_level_target_id:
+          id: field_session_skill_level_target_id
+          table: node__field_session_skill_level
+          field: field_session_skill_level_target_id
           relationship: none
           group_type: group
-          admin_label: 'field_event_venue: Content'
-          required: false
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
           plugin_id: standard
+      title: 'Accepted Sessions'
+      use_ajax: true
+      relationships: {  }
+      css_class: accepted-sessions
+      path: sessions
+      menu:
+        type: normal
+        title: Sessions
+        description: ''
+        expanded: false
+        parent: 'menu_link_content:e087f9e8-e70b-4c98-a06b-ab34b30a0974'
+        weight: 0
+        context: '0'
+        menu_name: main
+      arguments: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -1924,6 +1842,7 @@ display:
         exposed_form: false
         use_ajax: false
       use_ajax: true
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
