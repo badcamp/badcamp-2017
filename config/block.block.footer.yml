@@ -1,0 +1,24 @@
+uuid: f39cac53-cdad-48ca-a72a-8b4b5d94e58e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - badcamp2017
+id: footer
+theme: badcamp2017
+region: footer_right
+weight: -12
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Contact
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

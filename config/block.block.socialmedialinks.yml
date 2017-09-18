@@ -16,7 +16,7 @@ settings:
   id: social_media_links_block
   label: 'Follow BADCamp'
   provider: social_media_links
-  label_display: '0'
+  label_display: visible
   platforms:
     behance:
       value: ''
