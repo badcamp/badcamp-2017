@@ -39,19 +39,6 @@
  */
 #}
 
-{%
-set classes = [
-'category-icon'
-]
-%}
-{% if multiple %}
-    <span{{ attributes }}>
-        {% for item in items %}
-            <span{{ item.attributes.addClass(classes) }}><i class="fa {{ item.icon_class }} fa-2x"></i></span>
-        {% endfor %}
-    </span>
-{% else %}
-    {% for item in items %}
-        <span{{ attributes }}><i class="fa {{ item.icon_class }} fa-2x"></i></span>
-    {% endfor %}
-{% endif %}
+{% for item in items %}
+    <span{{ attributes }}>{{ item.content }}</span>
+{% endfor %}

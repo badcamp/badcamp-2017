@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.training.field_session_skill_level
     - node.type.training
   module:
+    - datetime_range
     - text
     - user
 id: node.training.schedule
@@ -21,14 +22,24 @@ bundle: training
 mode: schedule
 content:
   field_description:
-    weight: 2
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
+  field_event_date_and_time:
+    type: daterange_default
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: time_only
+      separator: '-'
+    third_party_settings: {  }
   field_event_venue:
-    weight: 1
+    weight: 2
     label: inline
     settings:
       link: true
@@ -36,16 +47,15 @@ content:
     type: entity_reference_label
     region: content
   field_session_skill_level:
-    weight: 0
-    label: inline
+    weight: 1
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
 hidden:
   comment: true
-  field_event_date_and_time: true
   field_event_sponsors: true
   field_maximum_registration: true
   flag_add_to_schedule: true

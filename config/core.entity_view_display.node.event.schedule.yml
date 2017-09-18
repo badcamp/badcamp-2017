@@ -4,9 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.schedule
+    - field.field.node.event.comment
     - field.field.node.event.field_event_agenda
     - field.field.node.event.field_event_date_and_time
     - field.field.node.event.field_event_description
+    - field.field.node.event.field_event_image
     - field.field.node.event.field_event_sponsors
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_venue
@@ -16,6 +18,7 @@ dependencies:
     - field.field.node.event.field_summit_leaders
     - node.type.event
   module:
+    - datetime_range
     - text
     - user
 id: node.event.schedule
@@ -23,15 +26,25 @@ targetEntityType: node
 bundle: event
 mode: schedule
 content:
+  field_event_date_and_time:
+    type: daterange_default
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: time_only
+      separator: '-'
+    third_party_settings: {  }
   field_event_description:
-    weight: 2
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_event_venue:
-    weight: 1
+    weight: 2
     label: inline
     settings:
       link: true
@@ -40,21 +53,21 @@ content:
     region: content
   field_summit_leaders:
     type: entity_reference_label
-    weight: 0
+    weight: 1
     region: content
     label: inline
     settings:
       link: true
     third_party_settings: {  }
   flag_add_to_schedule:
-    weight: 3
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   comment: true
   field_event_agenda: true
-  field_event_date_and_time: true
+  field_event_image: true
   field_event_sponsors: true
   field_event_type: true
   field_maximum_registration: true

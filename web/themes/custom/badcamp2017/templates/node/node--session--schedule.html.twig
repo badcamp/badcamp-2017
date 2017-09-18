@@ -74,19 +74,27 @@
 #}
 <article{{ attributes }}>
 
-    {{ title_prefix }}
-    <h3{{ title_attributes }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h3>
-    {{ title_suffix }}
+    <div class="columns small-12 medium-3">
+        <h4>{{ content.field_event_date_and_time }}</4>
+        {{ content.flag_add_to_schedule }}
+        {{ content.register_button }}
+    </div>
 
-    <div{{ content_attributes }}>
-        {{ content|without('flag_add_to_schedule','field_session_skill_level','field_session_track') }}
+    <div class="columns small-12 medium-9">
+        {{ title_prefix }}
+        <h3{{ title_attributes }}>
+            <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h3>
+        {{ title_suffix }}
 
-        <div class="row">
-            <div class="columns small-12 medium-6">{{ content.field_session_skill_level }} {{ content.field_session_track }}</div>
+        <div class="info">
+            {{ content.field_session_track }}
+            {{ content.field_session_skill_level }}
+            {{ content.field_session_speakers }}
+        </div>
 
-            <div class="columns small-12 medium-6 text-right">{{ content.flag_add_to_schedule }}</div>
+        <div class="content">
+            {{ content|without('field_event_date_and_time','field_session_track','field_session_skill_level','field_session_speakers', 'flag_add_to_schedule', 'register_button')}}
         </div>
     </div>
 
