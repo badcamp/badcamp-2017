@@ -328,6 +328,7 @@ function badcamp2017_theme_suggestions_field_alter(&$suggestions, $vars){
   $entity_type = $element['#entity_type'];
   $bundle = $element['#bundle'];
   $view_mode = $element['#view_mode'];
+  $suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' . $view_mode;
   $suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' . $bundle . '__' . $view_mode;
 }
 
@@ -402,7 +403,7 @@ function badcamp2017_preprocess_views_view_unformatted__my_schedule__full_schedu
 /**
  * Implements template_preprocess_field__HOOK().
  */
-function badcamp2017_preprocess_field__node__field_session_track__session__schedule(&$vars){
+function badcamp2017_preprocess_field__node__field_session_track(&$vars){
   $node = $vars['element']['#object'];
 
   foreach($node->get('field_session_track') AS $id => $term) {

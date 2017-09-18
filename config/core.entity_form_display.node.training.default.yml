@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.training.field_event_venue
     - field.field.node.training.field_maximum_registration
     - field.field.node.training.field_session_skill_level
+    - field.field.node.training.field_trainer
     - node.type.training
   module:
     - comment
@@ -22,19 +23,19 @@ bundle: training
 mode: default
 content:
   comment:
-    weight: 26
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     type: comment_default
     region: content
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   field_description:
-    weight: 1
+    weight: 2
     settings:
       rows: 9
       summary_rows: 3
@@ -43,39 +44,47 @@ content:
     type: text_textarea_with_summary
     region: content
   field_event_date_and_time:
-    weight: 3
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
     region: content
   field_event_sponsors:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_event_venue:
-    weight: 5
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_maximum_registration:
-    weight: 4
+    weight: 5
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
     region: content
   field_session_skill_level:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
+  field_trainer:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   path:
     type: path
-    weight: 11
+    weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -83,14 +92,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 10
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 11
     region: content
     third_party_settings: {  }
   title:
@@ -103,7 +112,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 8
     settings:
       match_operator: CONTAINS
       size: 60

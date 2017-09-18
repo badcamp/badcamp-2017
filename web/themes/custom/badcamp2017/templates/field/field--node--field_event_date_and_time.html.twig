@@ -39,29 +39,9 @@
  */
 #}
 
-{% if label_hidden %}
-    {% if multiple %}
-        <div{{ attributes }}>
-            {% for item in items %}
-                <span{{ item.attributes.addClass('label') }}>{{ item.content }}</span>
-            {% endfor %}
-        </div>
-    {% else %}
-        {% for item in items %}
-            <span{{ attributes.addClass('label') }}>{{ item.content }}</span>
-        {% endfor %}
-    {% endif %}
-{% else %}
-    <div{{ attributes }}>
-        <span{{ title_attributes }}>{{ label }}:</span>
-        {% if multiple %}
-        <span>
-            {% endif %}
-            {% for item in items %}
-                <span{{ item.attributes.addClass('label') }}>{{ item.content }}</span>
-            {% endfor %}
-            {% if multiple %}
-        </span>
-        {% endif %}
-    </div>
-{% endif %}
+<span{{ attributes.addClass('category-icon') }}>
+    <i class="fa fa-clock-o"></i>
+    {% for item in items %}
+        {{ item.content }} {% if not loop.last %} / {% endif %}
+    {% endfor %}
+</span>

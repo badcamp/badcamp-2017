@@ -93,8 +93,12 @@
             {{ content.field_session_speakers }}
         </div>
 
+        <div class="info">
+            {{ content.field_event_venue }}
+        </div>
+
         <div class="content">
-            {{ content|without('field_event_date_and_time','field_session_track','field_session_skill_level','field_session_speakers', 'flag_add_to_schedule', 'register_button')}}
+            {{ content|without('field_event_date_and_time','field_session_track','field_session_skill_level','field_session_speakers', 'flag_add_to_schedule', 'register_button','field_event_venue')}}
         </div>
     </div>
 

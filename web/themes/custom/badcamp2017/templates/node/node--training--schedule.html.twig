@@ -86,8 +86,17 @@
         </h3>
         {{ title_suffix }}
 
+        <div class="info">
+            {{ content.field_trainer }}
+            {{ content.field_session_skill_level }}
+        </div>
+
+        <div class="info">
+            {{ content.field_event_venue }}
+        </div>
+
         <div class="content">
-            {{ content|without('field_event_date_and_time')}}
+            {{ content|without('field_event_date_and_time','flag_add_to_schedule','field_trainer','field_event_venue','field_session_skill_level')}}
         </div>
     </div>
 

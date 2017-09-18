@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.training.field_event_venue
     - field.field.node.training.field_maximum_registration
     - field.field.node.training.field_session_skill_level
+    - field.field.node.training.field_trainer
     - node.type.training
   module:
     - datetime_range
@@ -24,9 +25,10 @@ content:
   field_description:
     weight: 3
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 400
     third_party_settings: {  }
-    type: text_default
+    type: text_summary_or_trimmed
     region: content
   field_event_date_and_time:
     type: daterange_default
@@ -54,6 +56,14 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_trainer:
+    type: string
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   comment: true
   field_event_sponsors: true
