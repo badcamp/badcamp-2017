@@ -17,6 +17,7 @@
  * @ingroup themeable
  */
 #}
+<div class="schedule-results">
 {% if title %}
     <h3 class="session-title {{ title_class }}">{{ title }} {% if add_title != '' %}<span>- {{ add_title }}</span>{% endif %}</h3>
 {% endif %}
@@ -30,3 +31,4 @@
         {{ row.content }}
     </div>
 {% endfor %}
+</div>

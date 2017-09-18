@@ -76,6 +76,15 @@
       }
     }
   }
+
+  .schedule-results .views-row{
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid lightgrey;
+    &:last-child{
+      border-bottom: 0px solid;
+    }
+  }
 }
 
 .page-sessions-accepted,
@@ -97,16 +106,6 @@
     margin-bottom: 1rem;
     background-color: $bc-orange;
     font-weight: 700;
-  }
-
-  form#views-exposed-form-sessions-accepted-sessions{
-    margin-bottom: 2rem;
-    border-bottom: 1px solid;
-    padding-bottom: 2rem;
-
-    .form-actions{
-      margin-top: 1rem;
-    }
   }
 }
 
