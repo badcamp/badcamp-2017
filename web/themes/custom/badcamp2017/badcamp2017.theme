@@ -408,7 +408,9 @@ function badcamp2017_preprocess_field__node__field_session_track(&$vars){
 
   foreach($node->get('field_session_track') AS $id => $term) {
     $full_term = $term->get('entity')->getTarget()->getValue();
-    $class = $full_term->get('field_icon')->first()->getValue()['value'];
-    $vars['items'][$id]['icon_class'] = $class;
+    if(!empty($full_term->get('field_icon')->getValue())){
+      $class = $full_term->get('field_icon')->first()->getValue()['value'];
+      $vars['items'][$id]['icon_class'] = $class;
+    }
   }
 }
