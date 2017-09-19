@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.event.field_event_agenda
     - field.field.node.event.field_event_date_and_time
     - field.field.node.event.field_event_description
+    - field.field.node.event.field_event_image
     - field.field.node.event.field_event_sponsors
     - field.field.node.event.field_event_type
     - field.field.node.event.field_event_venue
@@ -107,6 +108,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_event_image: true
   field_maximum_registration: true
   field_sold_out: true
   links: true
