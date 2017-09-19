@@ -9,6 +9,7 @@ dependencies:
     - field.storage.user.field_profile_photo
     - image.style.attendees_profile_photo
   module:
+    - file
     - image
     - user
 id: attendees
@@ -539,6 +540,18 @@ display:
             group_items: {  }
           plugin_id: string
       sorts:
+        count:
+          id: count
+          table: file_usage
+          field: count
+          relationship: field_profile_photo_target_id
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
         field_last_name_value:
           id: field_last_name_value
           table: user__field_last_name
@@ -567,7 +580,16 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        field_profile_photo_target_id:
+          id: field_profile_photo_target_id
+          table: user__field_profile_photo
+          field: field_profile_photo_target_id
+          relationship: none
+          group_type: group
+          admin_label: 'image from field_profile_photo'
+          required: false
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
       css_class: ''
