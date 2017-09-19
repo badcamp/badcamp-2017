@@ -45,9 +45,11 @@
             {% endfor %}
         </div>
     {% else %}
+        <div>
         {% for item in items %}
             <span{{ attributes }}>{{ item.content }}</span>
         {% endfor %}
+        </div>
     {% endif %}
 {% else %}
     <div{{ attributes }}>
