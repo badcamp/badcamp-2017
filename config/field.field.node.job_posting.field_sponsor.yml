@@ -1,0 +1,25 @@
+uuid: 97652361-fa3b-4e54-a64c-44a4b8b92399
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sponsor
+    - node.type.job_posting
+id: node.job_posting.field_sponsor
+field_name: field_sponsor
+entity_type: node
+bundle: job_posting
+label: Company
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: user_sponsors
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

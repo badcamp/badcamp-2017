@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3da8c919ae143b46fafe87d17131d3d4",
+    "content-hash": "41e07ef769ffed5807fa40d30320d3b9",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2928,6 +2928,68 @@
             }
         },
         {
+            "name": "drupal/empty_fields",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/empty_fields",
+                "reference": "8.x-1.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/empty_fields-8.x-1.0-alpha1.zip",
+                "reference": "8.x-1.0-alpha1",
+                "shasum": "c7d0d152a503525ae14f8134b9a8168e6d97a1d9"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha1",
+                    "datestamp": "1469609939",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                },
+                "patches_applied": {
+                    "Issue: 2880408": "https://www.drupal.org/files/issues/empty_fields_custom_text-2880408-3.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Alan D.",
+                    "homepage": "https://www.drupal.org/user/198838"
+                },
+                {
+                    "name": "andypost",
+                    "homepage": "https://www.drupal.org/user/118908"
+                },
+                {
+                    "name": "mstrelan",
+                    "homepage": "https://www.drupal.org/user/314289"
+                },
+                {
+                    "name": "rypit",
+                    "homepage": "https://www.drupal.org/user/868380"
+                }
+            ],
+            "description": "Provides options for displaying empty fields.",
+            "homepage": "https://www.drupal.org/project/empty_fields",
+            "support": {
+                "source": "http://cgit.drupalcode.org/empty_fields"
+            }
+        },
+        {
             "name": "drupal/entity_reference_exposed_filters",
             "version": "1.0.0-alpha1",
             "source": {
@@ -4365,7 +4427,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/views_bulk_operations",
-                "reference": "39c6cae768f784446e417cdb92d436faea749a11"
+                "reference": "943301a3204f473c86cd7494a22b206a5f46f289"
             },
             "require": {
                 "drupal/core": "*"
@@ -4376,8 +4438,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha+4-dev",
-                    "datestamp": "1505212443",
+                    "version": "8.x-1.0-alpha2+1-dev",
+                    "datestamp": "1505743744",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -4415,7 +4477,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/views_bulk_operations"
             },
-            "time": "2017-09-18 14:06:22"
+            "time": "2017-09-20 06:15:54"
         },
         {
             "name": "drupal/webform",
@@ -10028,7 +10090,8 @@
         "drupal/auto_entitylabel": 10,
         "drupal/webform": 10,
         "drupal/entity_reference_exposed_filters": 15,
-        "drupal/flag": 15
+        "drupal/flag": 15,
+        "drupal/empty_fields": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,
