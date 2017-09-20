@@ -192,18 +192,7 @@ display:
           plugin_id: standard
       header: {  }
       footer: {  }
-      empty:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          tokenize: false
-          content: 'No jobs currently. Check back later.'
-          plugin_id: text_custom
+      empty: {  }
       relationships:
         reverse__user__field_sponsor:
           id: reverse__user__field_sponsor
@@ -476,6 +465,8 @@ display:
         sorts: false
         relationships: false
         title: false
+        empty: false
+        footer: false
       filter_groups:
         operator: AND
         groups:
@@ -508,6 +499,19 @@ display:
       relationships: {  }
       path: job-board
       title: 'Job Board'
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'No jobs currently. Check back later.'
+          plugin_id: text_custom
+      footer: {  }
     cache_metadata:
       max-age: 0
       contexts:
