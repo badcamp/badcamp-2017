@@ -76,11 +76,14 @@
   <div{{ content_attributes }}>
     <div class="media-object stack-for-small">
       <div class="media-object-section main-section">
-        {{ content }}
+        {{ content | without('user_sponsors_entity_view_1','field_sponsor_logo','field_link') }}
       </div>
       <div class="media-object-section middle">
         <a href="{{ sponsor_url }}" title="{{ title }}">{{ logo }}</a>
       </div>
+    </div>
+    <div class="small-12">
+      {{ content.user_sponsors_entity_view_1 }}
     </div>
   </div>
 </article>

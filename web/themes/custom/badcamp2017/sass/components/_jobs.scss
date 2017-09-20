@@ -1,0 +1,10 @@
+.job-listing{
+  .views-row {
+    padding-bottom: 1em;
+    border-bottom: 1px solid lightgrey;
+    margin-bottom: 1em;
+    &:last-child{
+      border-bottom: 0px solid;
+    }
+  }
+}
