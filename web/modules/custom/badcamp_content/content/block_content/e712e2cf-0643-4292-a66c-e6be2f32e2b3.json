@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/block\/7?_format=hal_json"
+            "href": "http:\/\/default\/block\/15?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
@@ -9,17 +9,17 @@
     },
     "id": [
         {
-            "value": 7
+            "value": 15
         }
     ],
     "uuid": [
         {
-            "value": "e2ea07ce-2b8a-4dc5-b523-4be6348e0a4f"
+            "value": "e712e2cf-0643-4292-a66c-e6be2f32e2b3"
         }
     ],
     "revision_id": [
         {
-            "value": 7
+            "value": 16
         }
     ],
     "langcode": [
@@ -35,19 +35,19 @@
     ],
     "info": [
         {
-            "value": "Summits",
+            "value": "Add a Job",
             "lang": "en"
         }
     ],
     "changed": [
         {
-            "value": 1502903880,
+            "value": 1505933977,
             "lang": "en"
         }
     ],
     "revision_created": [
         {
-            "value": 1500754411
+            "value": 1505933234
         }
     ],
     "revision_translation_affected": [
@@ -64,7 +64,7 @@
     ],
     "body": [
         {
-            "value": "<p>Summits allow people in specific industries or with specific skill sets to dive deep into the issues that matter and collaborate freely. Join us Oct 18&nbsp;&amp; 19. &nbsp;&nbsp;<\/p>\r\n\r\n<p><a class=\"button\" href=\"\/summits\">View the 2017 Summits<\/a><\/p>\r\n",
+            "value": "<a class=\"button large\" href=\"\/node\/add\/job-posting\">Add a Job<\/a>\r\n",
             "format": "full_html",
             "summary": "",
             "lang": "en"

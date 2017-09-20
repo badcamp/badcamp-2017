@@ -1,20 +1,20 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/taxonomy\/term\/17?_format=hal_json"
+            "href": "http:\/\/default\/u\/admin?_format=hal_json"
         },
         "type": {
-            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/session_track"
+            "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
         }
     },
-    "tid": [
+    "uid": [
         {
-            "value": 17
+            "value": 1
         }
     ],
     "uuid": [
         {
-            "value": "982b6965-9249-430b-b623-101e7588ac0b"
+            "value": "69c1b145-fe31-487a-b987-9fe77613b875"
         }
     ],
     "langcode": [
@@ -23,25 +23,19 @@
             "lang": "en"
         }
     ],
-    "vid": [
-        {
-            "target_id": "session_track"
-        }
-    ],
     "name": [
         {
-            "value": "Project Management",
-            "lang": "en"
+            "value": "admin"
         }
     ],
-    "weight": [
+    "created": [
         {
-            "value": 5
+            "value": 1491503994
         }
     ],
     "changed": [
         {
-            "value": 1500958814,
+            "value": 1505930848,
             "lang": "en"
         }
     ],
