@@ -76,7 +76,6 @@
 
     <div class="columns small-12 medium-3">
         <h4>{{ content.field_event_date_and_time }}</h4>
-        {{ content.flag_add_to_schedule }}
         {{ content.register_button }}
     </div>
 
@@ -88,12 +87,16 @@
         {{ title_suffix }}
 
         <div class="info">
-            {{ content.field_summit_leaders }}
+            {{ content.field_trainer }}
+            {{ content.field_session_skill_level }}
+        </div>
+
+        <div class="info">
             {{ content.field_event_venue }}
         </div>
 
         <div class="content">
-            {{ content|without('field_event_date_and_time','flag_add_to_schedule','field_event_venue','field_summit_leaders','register_button')}}
+            {{ content|without('field_event_date_and_time','flag_add_to_schedule','field_trainer','field_event_venue','field_session_skill_level','register_button')}}
         </div>
     </div>
 

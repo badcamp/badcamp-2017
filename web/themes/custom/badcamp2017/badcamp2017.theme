@@ -130,6 +130,27 @@ function badcamp2017_preprocess_node__badcamp_sponsor__full(&$vars){
 }
 
 /**
+ * Implements template_preprocess_node__node_type__node_display().
+ */
+function badcamp2017_preprocess_node__event__schedule(&$vars) {
+  $vars['attributes']['class'][] = 'row';
+}
+
+/**
+ * Implements template_preprocess_node__node_type__node_display().
+ */
+function badcamp2017_preprocess_node__training__schedule(&$vars) {
+  $vars['attributes']['class'][] = 'row';
+}
+
+/**
+ * Implements template_preprocess_node__node_type__node_display().
+ */
+function badcamp2017_preprocess_node__session__schedule(&$vars) {
+  $vars['attributes']['class'][] = 'row';
+}
+
+/**
  * Implements template_preprocess_block__block_type().
  */
 function badcamp2017_preprocess_block__homepageeventsataglancespecial(&$vars){
@@ -258,29 +279,6 @@ function badcamp2017_status_messages($variables) {
 }
 
 /**
- * Implements hook_form_FORM_ID_alter().
- */
-function badcamp2017_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  if($form['#id'] == 'views-exposed-form-sessions-accepted-sessions'){
-    $form['skill']['#chosen'] = true;
-    $form['skill']['#attributes']['data-placeholder'] = t('Choose the skill level...');
-    $form['skill']['#prefix'] = '<div class="row"><div class="columns small-12 medium-4">';
-    $form['skill']['#suffix'] = '</div>';
-
-    $form['session-track']['#chosen'] = true;
-    $form['session-track']['#attributes']['data-placeholder'] = t('Choose the tracks...');
-    $form['session-track']['#prefix'] = '<div class="columns small-12 medium-4">';
-    $form['session-track']['#suffix'] = '</div>';
-
-    $form['venue_id']['#chosen'] = true;
-    $form['venue_id']['#attributes']['data-placeholder'] = t('Choose the venues...');
-    $form['venue_id']['#prefix'] = '<div class="columns small-12 medium-4">';
-    $form['venue_id']['#suffix'] = '</div></div>';
-  }
-}
-
-
-/**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function badcamp2017_theme_suggestions_bef_checkboxes_alter(&$suggestions, $vars){
@@ -330,6 +328,7 @@ function badcamp2017_theme_suggestions_field_alter(&$suggestions, $vars){
   $entity_type = $element['#entity_type'];
   $bundle = $element['#bundle'];
   $view_mode = $element['#view_mode'];
+  $suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' . $view_mode;
   $suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' . $bundle . '__' . $view_mode;
 }
 
@@ -362,3 +361,57 @@ function badcamp2017_preprocess_flag__add_to_schedule(&$vars) {
   $vars['attributes']['class'][] = 'button';
   $vars['attributes']['class'][] = 'medium';
 }
+
+function badcamp2017_preprocess_form_element__session_track(&$vars) {
+  $term_id = $vars['element']['#return_value'];
+  $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($term_id);
+  $icon = $term->get('field_icon');
+  if (!empty($icon_class = $icon->getValue())){
+    $vars['label']['#attributes']['data_icon'] = $icon_class[0]['value'];
+  }
+}
+
+/**
+ * Implements theme_views_view__HOOK().
+ */
+function badcamp2017_preprocess_views_view_unformatted__my_schedule__full_schedule(&$vars) {
+  $title = trim(strip_tags($vars['title']->__toString()));
+  $class = '';
+  $add_title = '';
+  switch($title){
+    case 'Wednesday, October 18':
+      $add_title = t('Drupal Training & Summits');
+      $class = 'item-wed';
+      break;
+    case 'Thursday, October 19':
+      $add_title = t('Drupal Training & Summits');
+      $class = 'item-thurs';
+      break;
+    case 'Friday, October 20':
+      $add_title = t('Sessions');
+      $class = 'item-fri';
+      break;
+    case 'Saturday, October 21':
+      $add_title = t('Sessions');
+      $class = 'item-sat';
+      break;
+  }
+  $vars['add_title'] = $add_title;
+  $vars['title_class'] = $class;
+}
+
+/**
+ * Implements template_preprocess_field__HOOK().
+ */
+function badcamp2017_preprocess_field__node__field_session_track(&$vars){
+  $node = $vars['element']['#object'];
+
+  foreach($node->get('field_session_track') AS $id => $term) {
+    $full_term = $term->get('entity')->getTarget()->getValue();
+    if(!empty($full_term->get('field_icon')->getValue())){
+      $class = $full_term->get('field_icon')->first()->getValue()['value'];
+      $vars['items'][$id]['icon_class'] = $class;
+    }
+  }
+}
+

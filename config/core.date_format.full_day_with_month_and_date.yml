@@ -1,0 +1,8 @@
+uuid: cf7e696b-790c-4bc4-84b2-8405d6b33220
+langcode: en
+status: true
+dependencies: {  }
+id: full_day_with_month_and_date
+label: 'Full Day with Month and Date'
+locked: false
+pattern: 'l, F d'

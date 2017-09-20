@@ -2,8 +2,6 @@ uuid: 86f574e1-e370-4fe4-a9c9-d159accfb9f0
 langcode: en
 status: true
 dependencies:
-  module:
-    - system
   theme:
     - badcamp2017
 id: pagetitle
@@ -14,12 +12,7 @@ provider: null
 plugin: page_title_block
 settings:
   id: page_title_block
-  label: 'Page title (home page only)'
+  label: 'Page title'
   provider: core
   label_display: '0'
-visibility:
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
-    context_mapping: {  }
+visibility: {  }
