@@ -414,3 +414,4 @@ function badcamp2017_preprocess_field__node__field_session_track(&$vars){
     }
   }
 }
+

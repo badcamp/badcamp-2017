@@ -59,7 +59,8 @@
     "drupal/social_profile_field": "^0.2.0",
     "drupal/entity_reference_exposed_filters": "^1.0@alpha",
     "drupal/chosen": "^2.4",
-    "drupal/flag": "^4.0@alpha"
+    "drupal/flag": "^4.0@alpha",
+    "drupal/empty_fields": "^1.0@alpha"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
@@ -142,6 +143,9 @@
       },
       "drupal/rules": {
         "Issue: 2724129": "https://www.drupal.org/files/issues/rules_sendmail-2724129-28-8.0_2.patch"
+      },
+      "drupal/empty_fields": {
+        "Issue: 2880408": "https://www.drupal.org/files/issues/empty_fields_custom_text-2880408-3.patch"
       }
     }
   }
