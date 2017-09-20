@@ -21,6 +21,7 @@ set -ex
 PATH=$PATH:~/.composer/vendor/bin
 
 # Create a drush alias file so that Behat tests can be executed against Pantheon.
+# Need to specifiy --location currently because terminus is having an issue
 terminus aliases --location=~/.drush/pantheon.aliases.drushrc.php
 # Drush Behat driver fails without this option.
 echo "\$options['strict'] = 0;" >> ~/.drush/pantheon.aliases.drushrc.php

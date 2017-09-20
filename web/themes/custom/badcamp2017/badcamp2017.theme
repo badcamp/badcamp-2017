@@ -361,5 +361,4 @@ function badcamp2017_preprocess_flag__add_to_schedule(&$vars) {
   $vars['attributes']['class'][] = 'fa';
   $vars['attributes']['class'][] = 'button';
   $vars['attributes']['class'][] = 'medium';
-
 }
