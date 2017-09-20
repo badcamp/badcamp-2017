@@ -1,0 +1,40 @@
+uuid: 99a7530a-9c25-4ee4-9a1c-40965c7e45a1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:e712e2cf-0643-4292-a66c-e6be2f32e2b3'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - badcamp2017
+id: addajob
+theme: badcamp2017
+region: content
+weight: -12
+provider: null
+plugin: 'block_content:e712e2cf-0643-4292-a66c-e6be2f32e2b3'
+settings:
+  id: 'block_content:e712e2cf-0643-4292-a66c-e6be2f32e2b3'
+  label: 'Add a Job'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /job-board
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      sponsor: sponsor
+      administrator: administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
