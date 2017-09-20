@@ -1,0 +1,14 @@
+uuid: 984a67b2-c7a3-40b2-8971-3e386664eadc
+langcode: en
+status: true
+dependencies: {  }
+name: attendees_profile_photo
+label: 'Attendees Profile Photo'
+effects:
+  ada7a513-3d2d-4bf1-9d42-b014eb1dd844:
+    uuid: ada7a513-3d2d-4bf1-9d42-b014eb1dd844
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 220
+      height: 249
