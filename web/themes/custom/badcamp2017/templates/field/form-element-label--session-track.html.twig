@@ -23,5 +23,5 @@ required ? 'form-required',
 ]
 %}
 {% if title is not empty or required -%}
-    <label{{ attributes.addClass(classes) }} data-equalizer-watch><h4>{{ title }}</h4></label>
+    <label{{ attributes.addClass(classes) }}>{% if attributes.data_icon != '' %} <i class="fa {{ attributes.data_icon }}"></i> {% endif %} <span class="label-title">{{ title }}</span></label>
 {%- endif %}
