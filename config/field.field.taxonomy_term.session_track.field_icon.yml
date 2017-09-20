@@ -1,0 +1,19 @@
+uuid: 90ceaed8-778b-4b8a-933d-9b98549a3c89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_icon
+    - taxonomy.vocabulary.session_track
+id: taxonomy_term.session_track.field_icon
+field_name: field_icon
+entity_type: taxonomy_term
+bundle: session_track
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

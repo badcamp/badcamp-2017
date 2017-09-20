@@ -1,31 +1,31 @@
-uuid: 6db678bd-18b5-4e90-b93c-901035075cc1
+uuid: b25fa09f-aa56-4f07-b8f7-7741ecc5fc52
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:d7696fb2-6abe-4b3b-9788-b1700eab792f'
+    - 'block_content:basic:0b1c45e1-3fcb-4c33-90fd-98227129ca75'
   module:
     - block_content
     - system
   theme:
     - badcamp2017
-id: badcampsponsorstext
+id: addajobdescription
 theme: badcamp2017
 region: highlighted
-weight: -11
+weight: -9
 provider: null
-plugin: 'block_content:d7696fb2-6abe-4b3b-9788-b1700eab792f'
+plugin: 'block_content:0b1c45e1-3fcb-4c33-90fd-98227129ca75'
 settings:
-  id: 'block_content:d7696fb2-6abe-4b3b-9788-b1700eab792f'
-  label: 'BADCamp Sponsors'
+  id: 'block_content:0b1c45e1-3fcb-4c33-90fd-98227129ca75'
+  label: 'Add a  Job Description'
   provider: block_content
-  label_display: visible
+  label_display: '0'
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /sponsors
+    pages: /job-board
     negate: false
     context_mapping: {  }

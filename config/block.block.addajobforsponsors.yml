@@ -1,0 +1,31 @@
+uuid: 472f7df7-86a6-49c2-8211-20ec603dcf9c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0e2ff868-b6f5-4aaa-907e-ffe819acdfd1'
+  module:
+    - block_content
+    - system
+  theme:
+    - badcamp2017
+id: addajobforsponsors
+theme: badcamp2017
+region: content
+weight: -12
+provider: null
+plugin: 'block_content:0e2ff868-b6f5-4aaa-907e-ffe819acdfd1'
+settings:
+  id: 'block_content:0e2ff868-b6f5-4aaa-907e-ffe819acdfd1'
+  label: 'Add a Job - For Sponsors'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /job-board
+    negate: false
+    context_mapping: {  }
