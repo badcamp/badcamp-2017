@@ -74,20 +74,18 @@
 #}
 <article{{ attributes }}>
   <div{{ content_attributes }}>
-  {{ title_prefix }}
-    {% if not page %}
+    {{ title_prefix }}
       <h2{{ title_attributes }}>
         <a href="{{ url }}" rel="bookmark">{{ label }}</a>
       </h2>
-    {% endif %}
     {{ title_suffix }}
 
     <div class="media-object stack-for-small">
-      <div class="media-object-section main-section">
-        {{ content | without('field_sponsor') }}
-      </div>
-      <div class="media-object-section middle">
+      <div class="media-object-section middle medium-3 text-center">
         {{ content.field_sponsor }}
+      </div>
+      <div class="media-object-section main-section medium-9">
+        {{ content | without('field_sponsor') }}
       </div>
     </div>
   </div>

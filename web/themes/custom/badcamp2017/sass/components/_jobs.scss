@@ -6,5 +6,9 @@
     &:last-child{
       border-bottom: 0px solid;
     }
+
+    .media-object img{
+      max-width: 100%;
+    }
   }
 }

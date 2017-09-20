@@ -192,7 +192,18 @@ display:
           plugin_id: standard
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'No jobs currently. Check back later.'
+          plugin_id: text_custom
       relationships:
         reverse__user__field_sponsor:
           id: reverse__user__field_sponsor

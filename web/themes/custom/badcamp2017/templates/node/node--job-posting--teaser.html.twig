@@ -80,13 +80,6 @@
       </h4>
     {{ title_suffix }}
 
-    <div class="media-object stack-for-small">
-      <div class="media-object-section main-section">
-        {{ content | without('field_sponsor') }}
-      </div>
-      <div class="media-object-section middle">
-        {{ content.field_sponsor }}
-      </div>
-    </div>
+    {{ content }}
   </div>
 </article>
