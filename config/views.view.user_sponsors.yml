@@ -219,7 +219,7 @@ display:
   entity_reference_1:
     display_plugin: entity_reference
     id: entity_reference_1
-    display_title: 'Entity Reference'
+    display_title: 'Sponsor Job Board'
     position: 1
     display_options:
       display_extenders: {  }
@@ -232,6 +232,7 @@ display:
         type: none
         options:
           offset: 0
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -386,6 +387,7 @@ display:
           entity_field: created
           plugin_id: date
       title: 'Job Postings'
+      show_title: true
     cache_metadata:
       max-age: -1
       contexts:

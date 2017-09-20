@@ -74,12 +74,10 @@
 #}
 <article{{ attributes }}>
   <div{{ content_attributes }}>
-  {{ title_prefix }}
-    {% if not page %}
-      <h2{{ title_attributes }}>
+    {{ title_prefix }}
+      <h4{{ title_attributes }}>
         <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
-    {% endif %}
+      </h4>
     {{ title_suffix }}
 
     <div class="media-object stack-for-small">

@@ -74,19 +74,16 @@
 #}
 <article{{ attributes }}>
   <div{{ content_attributes }}>
+    {{ title_prefix }}
+    {{ title_suffix }}
+
     <div class="media-object stack-for-small">
       <div class="media-object-section main-section">
-        {{ content | without('user_sponsors_entity_view_1','field_sponsor_logo','field_link','attendees_sponsor_team') }}
+        {{ content |without('field_sponsor')}}
       </div>
       <div class="media-object-section middle">
-        <a href="{{ sponsor_url }}" title="{{ title }}">{{ logo }}</a>
+        {{ content.field_sponsor }}
       </div>
-    </div>
-    <div class="small-12">
-     {{ content.attendees_sponsor_team}}
-    </div>
-    <div class="small-12">
-      {{ content.user_sponsors_entity_view_1 }}
     </div>
   </div>
 </article>

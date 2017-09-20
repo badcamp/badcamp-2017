@@ -23,7 +23,6 @@ dependencies:
   module:
     - empty_fields
     - image
-    - social_media_links_field
     - user
 _core:
   default_config_hash: L2mtwGWH_7wDRCMIR4r_Iu_jmvQ10DV1L8ht8iNZ5qY
@@ -41,7 +40,7 @@ content:
     region: content
   field_drupal_org_username:
     type: string
-    weight: 9
+    weight: 8
     region: content
     label: inline
     settings:
@@ -49,14 +48,14 @@ content:
     third_party_settings: {  }
   field_first_name:
     type: string
-    weight: 2
+    weight: 1
     region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
   field_interests:
-    weight: 10
+    weight: 9
     label: inline
     settings:
       link: true
@@ -65,14 +64,14 @@ content:
     region: content
   field_last_name:
     type: string
-    weight: 3
+    weight: 2
     region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
   field_organization:
-    weight: 5
+    weight: 4
     label: visually_hidden
     settings:
       link_to_entity: false
@@ -99,21 +98,9 @@ content:
       empty_fields:
         handler: text
         empty_text: '<img src="/themes/custom/badcamp2017/images/badcamp-2017-default-user.png" />'
-    eld_social_media_links:
-    weight: 8
-    label: visually_hidden
-    settings:
-      appearance:
-        orientation: h
-        show_name: '1'
-      link_attributes:
-        target: '<none>'
-        rel: '<none>'
-    third_party_settings: {  }
-    type: social_media_links_field_default
-    region: content
+    eld_social_media_links: null
   field_sponsor:
-    weight: 1
+    weight: 5
     label: hidden
     settings:
       view_mode: image_only
@@ -122,7 +109,7 @@ content:
     type: entity_reference_entity_view
     region: content
   field_title:
-    weight: 4
+    weight: 3
     label: visually_hidden
     settings:
       link_to_entity: false
@@ -139,6 +126,7 @@ hidden:
   field_interested_drupal_jobs: true
   field_make_my_schedule_public: true
   field_newsletter: true
+  field_social_media_links: true
   field_volunteer: true
   member_for: true
   sessions_user_profile_view: true
