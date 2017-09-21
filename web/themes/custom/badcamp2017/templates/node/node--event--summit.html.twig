@@ -75,9 +75,9 @@
 <article{{ attributes }}>
     <div class="summit-image">
         {{ content.field_event_image }}
-        <span class="date">
-            <span class="day-only">{{ content.field_event_date_and_time.0.value | date('U') | format_date('day_only') }}</span>
-            <span class="date-day-only">{{ content.field_event_date_and_time.0.value | date('U') | format_date('date_day_only') }}</span>
+        <span class="date {{ day_of_week }}">
+            <span class="day-only">{{ date | date('U') | format_date('day_only') }}</span>
+            <span class="date-day-only">{{ date | date('U') | format_date('date_day_only') }}</span>
         </span>
     </div>
 
@@ -88,7 +88,7 @@
     {{ title_suffix }}
 
     <div{{ content_attributes }}>
-        {{ content | without('field_event_image') }}
+        {{ content | without('field_event_image','field_event_date_and_time') }}
     </div>
 
 </article>

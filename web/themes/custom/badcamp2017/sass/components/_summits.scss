@@ -18,6 +18,19 @@
       padding: .75em 1em;
       line-height: 1;
 
+      &.wed {
+        background-color: $bc-green;
+      }
+      &.thurs {
+        background-color: $bc-orange;
+      }
+      &.fri {
+        background-color: $bc-blue;
+      }
+      &.sat {
+        background-color: black;
+      }
+
       > span {
         display: block;
 
