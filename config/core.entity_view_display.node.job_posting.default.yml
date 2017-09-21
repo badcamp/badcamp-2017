@@ -1,0 +1,38 @@
+uuid: 605b9bf1-901f-4abd-a72b-9c4e8eae3c81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.job_posting.body
+    - field.field.node.job_posting.field_sponsor
+    - node.type.job_posting
+  module:
+    - text
+    - user
+id: node.job_posting.default
+targetEntityType: node
+bundle: job_posting
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_sponsor:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: image_only
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

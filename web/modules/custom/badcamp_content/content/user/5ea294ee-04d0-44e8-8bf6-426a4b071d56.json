@@ -1,0 +1,164 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/u\/anne?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/user\/user\/field_profile_photo": [
+            {
+                "href": "http:\/\/default\/sites\/default\/files\/profile\/2017-08\/Anne_Stefanyk___Drupal_Development__Web_Design___Support_Agency___Kanopi_Studios.png"
+            }
+        ]
+    },
+    "uid": [
+        {
+            "value": 6
+        }
+    ],
+    "uuid": [
+        {
+            "value": "5ea294ee-04d0-44e8-8bf6-426a4b071d56"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "name": [
+        {
+            "value": "Anne"
+        }
+    ],
+    "created": [
+        {
+            "value": 1494637271
+        }
+    ],
+    "changed": [
+        {
+            "value": 1503241154,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_bio": [
+        {
+            "value": "Anne's background is in business development, marketing, and technology. She is experienced in managing all facets of a business and has a technical understanding allowing her to interface with engineers. She has years of professional Drupal hands-on experience from basic websites to large Drupal applications with high-performance demands, multiple integrations, complicated migrations, and e-commerce including subscription and multi-tenancy. Anne's contribution to projects is managing everything on the client side. One of Anne's key strengths is her ability to understand client needs and translate them into functional web applications. She has been working in Drupal since 2007 and has held Director level positions at large Drupal agencies. Anne is an advocate for open source and co-organizes the Bay Area Drupal Camp."
+        }
+    ],
+    "field_drupal_org_username": [
+        {
+            "value": "Annabella"
+        }
+    ],
+    "field_first_name": [
+        {
+            "value": "Anne"
+        }
+    ],
+    "field_last_name": [
+        {
+            "value": "Stefanyk"
+        }
+    ],
+    "field_newsletter": [
+        {
+            "subscribe": false,
+            "interest_groups": ""
+        }
+    ],
+    "field_organization": [
+        {
+            "value": "Kanopi Studios"
+        }
+    ],
+    "field_organization_website": [
+        {
+            "value": "https:\/\/www.kanopistudios.com"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/user\/user\/field_profile_photo": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/sites\/default\/files\/profile\/2017-08\/Anne_Stefanyk___Drupal_Development__Web_Design___Support_Agency___Kanopi_Studios.png"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "acf43c0d-b1c1-44c6-9de6-80875ce25b73"
+                    }
+                ],
+                "uri": [
+                    {
+                        "value": "http:\/\/default\/sites\/default\/files\/profile\/2017-08\/Anne_Stefanyk___Drupal_Development__Web_Design___Support_Agency___Kanopi_Studios.png"
+                    }
+                ]
+            }
+        ]
+    },
+    "field_social_media_links": [
+        {
+            "platform": null,
+            "value": null,
+            "platform_values": {
+                "drupal": {
+                    "value": "\/835788\/"
+                },
+                "facebook": {
+                    "value": "\/KanopiStudios"
+                },
+                "github": {
+                    "value": "\/eskimoYogi"
+                },
+                "googleplus": {
+                    "value": ""
+                },
+                "instagram": {
+                    "value": ""
+                },
+                "linkedin": {
+                    "value": "\/in\/annestefanyk\/"
+                },
+                "slideshare": {
+                    "value": ""
+                },
+                "twitter": {
+                    "value": "eskimoYogi"
+                },
+                "vimeo": {
+                    "value": ""
+                },
+                "youtube": {
+                    "value": ""
+                },
+                "youtube_channel": {
+                    "value": ""
+                }
+            }
+        }
+    ],
+    "field_title": [
+        {
+            "value": "CEO"
+        }
+    ],
+    "field_volunteer": [
+        {
+            "value": true
+        }
+    ]
+}

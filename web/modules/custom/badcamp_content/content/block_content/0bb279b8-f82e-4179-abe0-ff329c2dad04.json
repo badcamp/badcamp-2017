@@ -1,0 +1,73 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/16?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+            "value": 16
+        }
+    ],
+    "uuid": [
+        {
+            "value": "0bb279b8-f82e-4179-abe0-ff329c2dad04"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 17
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "info": [
+        {
+            "value": "Add a  Job Description",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1505933306,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1505933306
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>To add a job posting. Please contact Anne by email at anne@badcamp.net.<\/p>\r\n",
+            "format": "basic_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

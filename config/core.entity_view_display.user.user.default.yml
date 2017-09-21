@@ -16,13 +16,13 @@ dependencies:
     - field.field.user.user.field_organization_website
     - field.field.user.user.field_profile_photo
     - field.field.user.user.field_social_media_links
+    - field.field.user.user.field_sponsor
     - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
     - image.style.medium
   module:
     - empty_fields
     - image
-    - social_media_links_field
     - user
 _core:
   default_config_hash: L2mtwGWH_7wDRCMIR4r_Iu_jmvQ10DV1L8ht8iNZ5qY
@@ -32,7 +32,7 @@ bundle: user
 mode: default
 content:
   field_bio:
-    weight: 6
+    weight: 7
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -79,7 +79,7 @@ content:
     type: string
     region: content
   field_organization_website:
-    weight: 5
+    weight: 6
     label: hidden
     settings:
       link_to_entity: false
@@ -98,18 +98,15 @@ content:
       empty_fields:
         handler: text
         empty_text: '<img src="/themes/custom/badcamp2017/images/badcamp-2017-default-user.png" />'
-  field_social_media_links:
-    weight: 7
-    label: visually_hidden
+    eld_social_media_links: null
+  field_sponsor:
+    weight: 5
+    label: hidden
     settings:
-      appearance:
-        orientation: h
-        show_name: '1'
-      link_attributes:
-        target: '<none>'
-        rel: '<none>'
+      view_mode: image_only
+      link: false
     third_party_settings: {  }
-    type: social_media_links_field_default
+    type: entity_reference_entity_view
     region: content
   field_title:
     weight: 3
@@ -129,6 +126,7 @@ hidden:
   field_interested_drupal_jobs: true
   field_make_my_schedule_public: true
   field_newsletter: true
+  field_social_media_links: true
   field_volunteer: true
   member_for: true
   sessions_user_profile_view: true

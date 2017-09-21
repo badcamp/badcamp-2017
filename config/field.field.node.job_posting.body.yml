@@ -1,0 +1,22 @@
+uuid: 87957632-3a1b-4c3e-ad39-4e5c22860881
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.job_posting
+  module:
+    - text
+id: node.job_posting.body
+field_name: body
+entity_type: node
+bundle: job_posting
+label: 'Job Description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

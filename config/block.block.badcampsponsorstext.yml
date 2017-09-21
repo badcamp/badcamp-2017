@@ -12,7 +12,7 @@ dependencies:
 id: badcampsponsorstext
 theme: badcamp2017
 region: highlighted
-weight: -6
+weight: -11
 provider: null
 plugin: 'block_content:d7696fb2-6abe-4b3b-9788-b1700eab792f'
 settings:
