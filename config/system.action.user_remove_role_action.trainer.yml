@@ -1,0 +1,14 @@
+uuid: 148362e7-dfb0-4c6f-9e8b-40a467a1ee5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.trainer
+  module:
+    - user
+id: user_remove_role_action.trainer
+label: 'Remove the Trainer role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: trainer
