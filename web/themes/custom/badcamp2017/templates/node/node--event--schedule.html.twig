@@ -74,21 +74,26 @@
 #}
 <article{{ attributes }}>
 
-    {{ title_prefix }}
-    {% if not page %}
+    <div class="columns small-12 medium-3">
+        <h4>{{ content.field_event_date_and_time }}</h4>
+        {{ content.flag_add_to_schedule }}
+        {{ content.register_button }}
+    </div>
+
+    <div class="columns small-12 medium-9">
+        {{ title_prefix }}
         <h3{{ title_attributes }}>
             <a href="{{ url }}" rel="bookmark">{{ label }}</a>
         </h3>
-    {% endif %}
-    {{ title_suffix }}
+        {{ title_suffix }}
 
-    <div{{ content_attributes }}>
-        {{ content|without('flag_add_to_schedule') }}
+        <div class="info">
+            {{ content.field_summit_leaders }}
+            {{ content.field_event_venue }}
+        </div>
 
-        <div class="row">
-            <div class="columns small-12 medium-6">&nbsp;</div>
-
-            <div class="columns small-12 medium-6 text-right">{{ content.flag_add_to_schedule }}</div>
+        <div class="content">
+            {{ content|without('field_event_date_and_time','flag_add_to_schedule','field_event_venue','field_summit_leaders','register_button')}}
         </div>
     </div>
 

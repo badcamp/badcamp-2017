@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/block\/13?_format=hal_json"
+            "href": "http:\/\/default\/block\/5?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
@@ -9,7 +9,7 @@
     },
     "id": [
         {
-            "value": 13
+            "value": 5
         }
     ],
     "uuid": [
@@ -19,7 +19,7 @@
     ],
     "revision_id": [
         {
-            "value": 13
+            "value": 5
         }
     ],
     "langcode": [
@@ -41,7 +41,7 @@
     ],
     "changed": [
         {
-            "value": 1501452782,
+            "value": 1505515003,
             "lang": "en"
         }
     ],
@@ -64,7 +64,7 @@
     ],
     "body": [
         {
-            "value": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ultricies ex vitae nunc luctus, nec sodales urna ornare. Phasellus iaculis, arcu vitae placerat blandit, lectus nisl pellentesque metus, sit amet sagittis nisi quam ac augue. Nulla dignissim arcu nulla, eu viverra sem auctor vel. Vivamus elementum lacinia tempus. Nam vel accumsan dolor. Vestibulum euismod vulputate eleifend. Integer vestibulum quam eget ligula elementum blandit a non odio. Nam tempus augue lacinia nulla tempus bibendum. Praesent luctus libero orci, et placerat lorem dignissim sit amet.<\/p>\r\n",
+            "value": "<p>A sincere thank you for all the session submissions, we've reviewed every single one of them and carefully curated the results into the following list of accepted sessions.&nbsp;<\/p>\r\n\r\n<p>Submissions schedule will be posted on Sept 20 with venues and dates<\/p>\r\n",
             "format": "basic_html",
             "summary": "",
             "lang": "en"

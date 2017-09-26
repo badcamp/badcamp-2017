@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/block\/10?_format=hal_json"
+            "href": "http:\/\/default\/block\/9?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
@@ -9,7 +9,7 @@
     },
     "id": [
         {
-            "value": 10
+            "value": 9
         }
     ],
     "uuid": [
@@ -19,7 +19,7 @@
     ],
     "revision_id": [
         {
-            "value": 10
+            "value": 9
         }
     ],
     "langcode": [
@@ -41,7 +41,7 @@
     ],
     "changed": [
         {
-            "value": 1500791768,
+            "value": 1502904180,
             "lang": "en"
         }
     ],
@@ -64,7 +64,7 @@
     ],
     "body": [
         {
-            "value": "<p>Looking for a job? Looking to find great Drupal talent? BADCamp is a great place to find either.<\/p>\r\n\r\n<p><a href=\"#\" class=\"button\">View the Jobs Listing<\/a><\/p>\r\n",
+            "value": "<p>Looking for a job? Looking to find great Drupal talent? BADCamp is a great place to find either. Expo Hall at MLK: Wed Oct 18 through&nbsp;Sat Oct 21&nbsp;<\/p>\r\n\r\n<p><a class=\"button\" href=\"\/sponsors\">Connect with our Sponsors<\/a><\/p>\r\n",
             "format": "full_html",
             "summary": "",
             "lang": "en"

@@ -1,15 +1,20 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/block\/7?_format=hal_json"
+            "href": "http:\/\/default\/block\/8?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
-        }
+        },
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/basic\/revision_user": [
+            {
+                "href": "http:\/\/default\/u\/anne?_format=hal_json"
+            }
+        ]
     },
     "id": [
         {
-            "value": 7
+            "value": 8
         }
     ],
     "uuid": [
@@ -19,7 +24,7 @@
     ],
     "revision_id": [
         {
-            "value": 7
+            "value": 14
         }
     ],
     "langcode": [
@@ -39,17 +44,41 @@
             "lang": "en"
         }
     ],
+    "revision_log": [
+        {
+            "value": "updating now that sessions are closed"
+        }
+    ],
     "changed": [
         {
-            "value": 1500791549,
+            "value": 1505776423,
             "lang": "en"
         }
     ],
     "revision_created": [
         {
-            "value": 1500754402
+            "value": 1504892730
         }
     ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/block_content\/basic\/revision_user": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/u\/anne?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "5ea294ee-04d0-44e8-8bf6-426a4b071d56"
+                    }
+                ]
+            }
+        ]
+    },
     "revision_translation_affected": [
         {
             "value": true,
@@ -64,7 +93,7 @@
     ],
     "body": [
         {
-            "value": "<p>You'll learn something whether you're new to Drupal or already a pro. October 20th and 21st will be full of great sessions for all levels of interest.<\/p>\r\n\r\n<p><a class=\"button\" href=\"#\">View the Sessions Schedule<\/a><\/p>\r\n",
+            "value": "<p>You'll learn something whether you're new to Drupal or already a pro. October 20 &amp; 21 will be full of great sessions for all levels of interest. Sessions schedule will be posted Sept 20.<\/p>\r\n\r\n<p><a class=\"button\" href=\"\/sessions-accepted\">Check out the Accepted Sessions<\/a><\/p>\r\n",
             "format": "full_html",
             "summary": "",
             "lang": "en"

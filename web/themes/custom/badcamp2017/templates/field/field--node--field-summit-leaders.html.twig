@@ -39,29 +39,9 @@
  */
 #}
 
-{% if label_hidden %}
-    {% if multiple %}
-        <span{{ attributes }}>
-            {% for item in items %}
-                <span{{ item.attributes.addClass('label') }}>{{ item.content }}</span>
-            {% endfor %}
-        </span>
-    {% else %}
-        {% for item in items %}
-            <span{{ attributes.addClass('label') }}>{{ item.content }}</span>
-        {% endfor %}
-    {% endif %}
-{% else %}
-    <span{{ attributes }}>
-        <span{{ title_attributes }}>{{ label }}:</span>
-        {% if multiple %}
-        <span>
-            {% endif %}
-            {% for item in items %}
-                <span{{ item.attributes.addClass('label') }}>{{ item.content }}</span>
-            {% endfor %}
-            {% if multiple %}
-        </span>
-        {% endif %}
-    </span>
-{% endif %}
+<span{{ attributes.addClass('category-icon') }}>
+    <i class="fa fa-bullhorn"></i>
+    {% for item in items %}
+        {{ item.content }} {% if not loop.last %} / {% endif %}
+    {% endfor %}
+</span>

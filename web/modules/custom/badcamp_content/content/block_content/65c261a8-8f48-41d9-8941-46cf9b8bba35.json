@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/block\/5?_format=hal_json"
+            "href": "http:\/\/default\/block\/6?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
@@ -9,7 +9,7 @@
     },
     "id": [
         {
-            "value": 5
+            "value": 6
         }
     ],
     "uuid": [
@@ -19,7 +19,7 @@
     ],
     "revision_id": [
         {
-            "value": 5
+            "value": 6
         }
     ],
     "langcode": [
@@ -41,7 +41,7 @@
     ],
     "changed": [
         {
-            "value": 1501104996,
+            "value": 1505830846,
             "lang": "en"
         }
     ],
@@ -64,7 +64,7 @@
     ],
     "body": [
         {
-            "value": "<p>Built by the community with <a href=\"http:\/\/www.drupal.org\">Drupal<\/a> and hosted on&nbsp;<a href=\"http:\/\/www.pantheon.io\">Pantheon<\/a>.<\/p>\r\n",
+            "value": "<p><a href=\"\/form\/contact\">Contact Us<\/a>&nbsp;-&nbsp;Built by the <a href=\"\/credits\">community<\/a> with <a href=\"http:\/\/www.drupal.org\">Drupal<\/a> and hosted on&nbsp;<a href=\"http:\/\/www.pantheon.io\">Pantheon<\/a>.<\/p>\r\n",
             "format": "full_html",
             "summary": "",
             "lang": "en"

@@ -50,9 +50,13 @@ export:
   header_prefix_label_delimiter: ': '
   header_prefix_key_delimiter: __
   composite_element_item_format: label
-  options_format: compact
+  options_single_format: compact
+  options_multiple_format: compact
   options_item_format: label
-  entity_reference_format: link
+  entity_reference_items:
+    - id
+    - title
+    - url
   likert_answers_format: label
   signature_format: status
   excluded_exporters: {  }
@@ -108,6 +112,7 @@ ui:
   offcanvas_disabled: false
   help_menu_disabled: false
   promotions_disabled: false
+  description_help: true
 libraries:
   excluded_libraries:
     - jquery.chosen

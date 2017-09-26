@@ -1,0 +1,73 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/15?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+            "value": 15
+        }
+    ],
+    "uuid": [
+        {
+            "value": "e712e2cf-0643-4292-a66c-e6be2f32e2b3"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 16
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "info": [
+        {
+            "value": "Add a Job",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1505933977,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1505933234
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<a class=\"button large\" href=\"\/node\/add\/job-posting\">Add a Job<\/a>\r\n",
+            "format": "full_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

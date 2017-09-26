@@ -1,0 +1,30 @@
+uuid: 997201ca-5d28-4927-adcf-047f94381645
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_sponsor
+    - node.type.badcamp_sponsor
+  module:
+    - user
+id: user.user.field_sponsor
+field_name: field_sponsor
+entity_type: user
+bundle: user
+label: Sponsor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      badcamp_sponsor: badcamp_sponsor
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

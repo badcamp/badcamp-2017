@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.training.field_event_venue
     - field.field.node.training.field_payment_info
     - field.field.node.training.field_session_skill_level
+    - field.field.node.training.field_trainer
     - node.type.training
   module:
     - badcamp_stripe_payment
@@ -24,7 +25,7 @@ bundle: training
 mode: default
 content:
   comment:
-    weight: 6
+    weight: 8
     label: above
     settings:
       view_mode: default
@@ -33,7 +34,7 @@ content:
     type: comment_default
     region: content
   field_description:
-    weight: 3
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -50,7 +51,7 @@ content:
     type: daterange_default
     region: content
   field_event_sponsors:
-    weight: 4
+    weight: 6
     label: hidden
     settings:
       view_mode: image_only
@@ -81,6 +82,19 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_trainer:
+    weight: 4
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   flag_add_to_schedule: true
   links: true

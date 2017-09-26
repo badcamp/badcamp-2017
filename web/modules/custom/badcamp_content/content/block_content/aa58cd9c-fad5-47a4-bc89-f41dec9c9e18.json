@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/block\/6?_format=hal_json"
+            "href": "http:\/\/default\/block\/11?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
@@ -9,7 +9,7 @@
     },
     "id": [
         {
-            "value": 6
+            "value": 11
         }
     ],
     "uuid": [
@@ -19,7 +19,7 @@
     ],
     "revision_id": [
         {
-            "value": 6
+            "value": 11
         }
     ],
     "langcode": [
@@ -41,7 +41,7 @@
     ],
     "changed": [
         {
-            "value": 1500919758,
+            "value": 1502903437,
             "lang": "en"
         }
     ],
@@ -64,7 +64,7 @@
     ],
     "body": [
         {
-            "value": "<p>FREE Expert Drupal Training is back! On October 18th and 19th, we're proud to offer lessons from top Drupal Experts.<\/p>\r\n\r\n<p><a class=\"button\" href=\"#\">View The Training Schedule<\/a><\/p>\r\n",
+            "value": "<p>FREE Drupal Training is back! On October 18 &amp; 19, we're proud to offer lessons from top Drupal Experts. Registration opens in September.<\/p>\r\n\r\n<p><a class=\"button\" href=\"\/free-drupal-training\">See a Preview of What's to Come<\/a><\/p>\r\n",
             "format": "full_html",
             "summary": "",
             "lang": "en"

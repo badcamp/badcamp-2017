@@ -16,6 +16,7 @@ dependencies:
     - field.field.user.user.field_organization_website
     - field.field.user.user.field_profile_photo
     - field.field.user.user.field_social_media_links
+    - field.field.user.user.field_sponsor
     - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
     - image.style.thumbnail
@@ -133,6 +134,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: social_media_links_field_default
+    region: content
+  field_sponsor:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_title:
     weight: 7
