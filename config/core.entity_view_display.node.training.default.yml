@@ -9,11 +9,12 @@ dependencies:
     - field.field.node.training.field_event_date_and_time
     - field.field.node.training.field_event_sponsors
     - field.field.node.training.field_event_venue
-    - field.field.node.training.field_maximum_registration
+    - field.field.node.training.field_payment_info
     - field.field.node.training.field_session_skill_level
     - field.field.node.training.field_trainer
     - node.type.training
   module:
+    - badcamp_stripe_payment
     - comment
     - datetime_range
     - text
@@ -33,7 +34,7 @@ content:
     type: comment_default
     region: content
   field_description:
-    weight: 5
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -50,7 +51,7 @@ content:
     type: daterange_default
     region: content
   field_event_sponsors:
-    weight: 6
+    weight: 5
     label: hidden
     settings:
       view_mode: image_only
@@ -66,14 +67,12 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_maximum_registration:
-    weight: 3
-    label: inline
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
+  field_payment_info:
+    weight: 6
+    label: hidden
+    settings: {  }
     third_party_settings: {  }
-    type: number_integer
+    type: stripe_payment
     region: content
   field_session_skill_level:
     weight: 1
@@ -84,7 +83,7 @@ content:
     type: entity_reference_label
     region: content
   field_trainer:
-    weight: 4
+    weight: 3
     label: inline
     settings:
       link_to_entity: false

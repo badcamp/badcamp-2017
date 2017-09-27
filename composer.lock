@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "41e07ef769ffed5807fa40d30320d3b9",
+    "content-hash": "e1311671c1d32cef0d9ff714469dd207",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -202,16 +202,16 @@
         },
         {
             "name": "badcamp/badcamp_stripe_payment",
-            "version": "1.0.12",
+            "version": "dev-payment_field",
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_stripe_payment.git",
-                "reference": "d742feddcca04b08af1ae1353e3374e6ebc7980a"
+                "reference": "b2a07c0659c35f27152972bcef6b36b9dc9b20f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/d742feddcca04b08af1ae1353e3374e6ebc7980a",
-                "reference": "d742feddcca04b08af1ae1353e3374e6ebc7980a",
+                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/b2a07c0659c35f27152972bcef6b36b9dc9b20f4",
+                "reference": "b2a07c0659c35f27152972bcef6b36b9dc9b20f4",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +235,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-09-14T01:59:31+00:00"
+            "time": "2017-09-27 07:17:02"
         },
         {
             "name": "commerceguys/addressing",
@@ -563,16 +563,16 @@
         },
         {
             "name": "consolidation/annotated-command",
-            "version": "2.6.1",
+            "version": "2.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/consolidation/annotated-command.git",
-                "reference": "7a634471471b913e63888b64b626b544799db282"
+                "reference": "5e22a86f53ab1417a6002234fe205e69645326b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/7a634471471b913e63888b64b626b544799db282",
-                "reference": "7a634471471b913e63888b64b626b544799db282",
+                "url": "https://api.github.com/repos/consolidation/annotated-command/zipball/5e22a86f53ab1417a6002234fe205e69645326b8",
+                "reference": "5e22a86f53ab1417a6002234fe205e69645326b8",
                 "shasum": ""
             },
             "require": {
@@ -611,7 +611,7 @@
                 }
             ],
             "description": "Initialize Symfony Console commands from annotated command class methods.",
-            "time": "2017-09-18T21:45:28+00:00"
+            "time": "2017-09-18T22:52:16+00:00"
         },
         {
             "name": "consolidation/output-formatters",
@@ -1916,17 +1916,17 @@
         },
         {
             "name": "drupal/config_installer",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/config_installer",
-                "reference": "8.x-1.4"
+                "reference": "8.x-1.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_installer-8.x-1.4.zip",
-                "reference": null,
-                "shasum": "5371ced3d688f6c932992066fa0d5f44f7d6e7dd"
+                "url": "https://ftp.drupal.org/files/projects/config_installer-8.x-1.5.zip",
+                "reference": "8.x-1.5",
+                "shasum": "ef2ea56469481c482c1ee716438a24b4ad12c6e2"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1937,8 +1937,12 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1488072484"
+                    "version": "8.x-1.5",
+                    "datestamp": "1506257944",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4427,7 +4431,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/views_bulk_operations",
-                "reference": "943301a3204f473c86cd7494a22b206a5f46f289"
+                "reference": "b50d72115e868101d9099ef6550f48f63a3e65fe"
             },
             "require": {
                 "drupal/core": "*"
@@ -4438,8 +4442,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha2+1-dev",
-                    "datestamp": "1505743744",
+                    "version": "8.x-1.0-alpha2+4-dev",
+                    "datestamp": "1506446344",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -4477,7 +4481,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/views_bulk_operations"
             },
-            "time": "2017-09-20 06:15:54"
+            "time": "2017-09-26 17:24:47"
         },
         {
             "name": "drupal/webform",
@@ -10075,6 +10079,7 @@
         "drupal/config_readonly": 10,
         "drupal/config_split": 10,
         "drupal/devel": 5,
+        "badcamp/badcamp_stripe_payment": 20,
         "drupal/geolocation": 20,
         "drupal/field_permissions": 10,
         "drupal/field_group": 5,
