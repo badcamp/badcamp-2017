@@ -19,7 +19,7 @@ settings:
   id: 'block_content:d7696fb2-6abe-4b3b-9788-b1700eab792f'
   label: 'BADCamp Sponsors'
   provider: block_content
-  label_display: visible
+  label_display: '0'
   status: true
   info: ''
   view_mode: full
