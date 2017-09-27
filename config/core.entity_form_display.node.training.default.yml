@@ -24,14 +24,14 @@ bundle: training
 mode: default
 content:
   comment:
-    weight: 13
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: comment_default
     region: content
   created:
     type: datetime_timestamp
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -51,24 +51,27 @@ content:
     type: daterange_default
     region: content
   field_event_sponsors:
-    weight: 7
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_event_venue:
-    weight: 6
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_payment_info:
-    weight: 27
-    settings: {  }
   field_maximum_registration:
     weight: 5
     settings:
       placeholder: ''
+    third_party_settings: {  }
+    type: stripe_payment
+    region: content
+  field_payment_info:
+    weight: 26
+    settings: {  }
     third_party_settings: {  }
     type: stripe_payment
     region: content
@@ -88,7 +91,7 @@ content:
     region: content
   path:
     type: path
-    weight: 12
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -96,14 +99,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 9
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -116,7 +119,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 8
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60

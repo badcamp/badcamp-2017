@@ -34,7 +34,7 @@ content:
     type: comment_default
     region: content
   field_description:
-    weight: 5
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -51,7 +51,7 @@ content:
     type: daterange_default
     region: content
   field_event_sponsors:
-    weight: 6
+    weight: 5
     label: hidden
     settings:
       view_mode: image_only
@@ -68,7 +68,7 @@ content:
     type: entity_reference_label
     region: content
   field_payment_info:
-    weight: 5
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -83,7 +83,7 @@ content:
     type: entity_reference_label
     region: content
   field_trainer:
-    weight: 4
+    weight: 3
     label: inline
     settings:
       link_to_entity: false
@@ -97,4 +97,3 @@ content:
     third_party_settings: {  }
 hidden:
   flag_add_to_schedule: true
-  links: true

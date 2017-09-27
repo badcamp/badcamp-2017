@@ -29,6 +29,8 @@ hidden:
   field_event_date_and_time: true
   field_event_sponsors: true
   field_event_venue: true
+  field_payment_info: true
   field_session_room: true
   field_session_skill_level: true
+  field_trainer: true
   flag_add_to_schedule: true

@@ -66,5 +66,6 @@ content:
 hidden:
   comment: true
   field_event_sponsors: true
+  field_payment_info: true
   flag_add_to_schedule: true
   links: true

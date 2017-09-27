@@ -206,12 +206,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_stripe_payment.git",
-                "reference": "c006d6feaaee346112a7c5c284bf4562a3e372ec"
+                "reference": "b2a07c0659c35f27152972bcef6b36b9dc9b20f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/c006d6feaaee346112a7c5c284bf4562a3e372ec",
-                "reference": "c006d6feaaee346112a7c5c284bf4562a3e372ec",
+                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/b2a07c0659c35f27152972bcef6b36b9dc9b20f4",
+                "reference": "b2a07c0659c35f27152972bcef6b36b9dc9b20f4",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +235,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-09-17 22:48:30"
+            "time": "2017-09-27 07:17:02"
         },
         {
             "name": "commerceguys/addressing",
@@ -1446,10 +1446,6 @@
                 {
                     "name": "Mohamed Anis Taktak",
                     "homepage": "https://www.drupal.org/u/matio89"
-                },
-                {
-                    "name": "bolbol",
-                    "homepage": "https://www.drupal.org/user/3400070"
                 },
                 {
                     "name": "eme",
@@ -4435,7 +4431,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/views_bulk_operations",
-                "reference": "4c09a69db502e3643f13c2784e3e4ea64e1e9d30"
+                "reference": "b50d72115e868101d9099ef6550f48f63a3e65fe"
             },
             "require": {
                 "drupal/core": "*"
@@ -4446,8 +4442,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-alpha2+2-dev",
-                    "datestamp": "1505888345",
+                    "version": "8.x-1.0-alpha2+4-dev",
+                    "datestamp": "1506446344",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -4485,7 +4481,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/views_bulk_operations"
             },
-            "time": "2017-09-25 12:21:06"
+            "time": "2017-09-26 17:24:47"
         },
         {
             "name": "drupal/webform",
