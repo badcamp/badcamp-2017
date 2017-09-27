@@ -19,7 +19,7 @@ settings:
   id: 'block_content:180bcaac-7bd3-4733-bf70-c6a2a0725442'
   label: 'BADCamp 2017 Summits'
   provider: block_content
-  label_display: visible
+  label_display: '0'
   status: true
   info: ''
   view_mode: full

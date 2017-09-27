@@ -19,7 +19,7 @@ settings:
   id: 'block_content:92db5055-a598-4525-a4b8-a15f9b46d67a'
   label: 'BADCamp 2017 Sessions'
   provider: block_content
-  label_display: visible
+  label_display: '0'
   status: true
   info: ''
   view_mode: full
