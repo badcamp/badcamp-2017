@@ -1,0 +1,73 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/5?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+            "value": 5
+        }
+    ],
+    "uuid": [
+        {
+            "value": "92db5055-a598-4525-a4b8-a15f9b46d67a"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 5
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "info": [
+        {
+            "value": "BADCamp Session Text",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1505515003,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1501452782
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>A sincere thank you for all the session submissions, we've reviewed every single one of them and carefully curated the results into the following list of accepted sessions.&nbsp;<\/p>\r\n\r\n<p>Submissions schedule will be posted on Sept 20 with venues and dates<\/p>\r\n",
+            "format": "basic_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

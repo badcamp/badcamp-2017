@@ -2,25 +2,38 @@
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Render\Element;
+use Drupal\Core\Link;
+use Drupal\Core\Url;
 
+/**
+ * Implements hook_preprocess_page().
+ */
+function badcamp2017_preprocess_page(&$vars){
+  $current_path = \Drupal::service('path.current')->getPath();
+  $current_uri = \Drupal::service('path.alias_manager')->getAliasByPath($current_path);
+  $class_path = 'page-' . HTML::cleanCssIdentifier(trim($current_path , '/'));
+  $class_url = 'page-' . HTML::cleanCssIdentifier(trim($current_uri, '/'));
+  $vars['attributes']['class'] = array('layout--layoutPage', $class_url, $class_path);
+}
 
 /**
  * Implements template_preprocess_views_view_unformatted().
  */
 function badcamp2017_preprocess_views_view_unformatted__badcamp_sponsors_view__page_1(&$vars){
-  //kint($vars['rows']);
   $vars['level_class'] = HTML::cleanCssIdentifier(strtolower(strip_tags($vars['title'])));
 
   switch($vars['level_class']){
     case 'core-level':
+      $vars['sizing_class'] = 'medium-up-2';
       foreach($vars['rows'] AS &$row){
-        $row['attributes']->addClass('medium-6','columns','text-center');
+        $row['attributes']->addClass('columns','text-center');
       }
       break;
     case 'contrib-level':
     case 'supporting-level':
+      $vars['sizing_class'] = 'small-up-2 medium-up-4';
       foreach($vars['rows'] AS &$row){
-        $row['attributes']->addClass('medium-3','columns','text-center');
+        $row['attributes']->addClass('columns','text-center');
       }
       break;
 
@@ -35,6 +48,41 @@ function badcamp2017_preprocess_field__node__field_tags__blog(&$vars){
 
   foreach($vars['items'] AS &$item){
     $item['content']['#attributes']['class'][] = 'button';
+  }
+}
+
+/**
+ * Implements hook_preprocess_field();
+ */
+function badcamp2017_preprocess_field__node__field_event_sponsors(&$vars){
+  $vars['attributes']['class'][] = 'row';
+
+  foreach($vars['items'] AS &$item){
+    $item['content']['#attributes']['class'][] = 'small-3';
+    $item['content']['#attributes']['class'][] = 'columns';
+  }
+}
+
+/**
+ * Implements theme_preprocess_node().
+ */
+function badcamp2017_preprocess_node(&$vars){
+  $account = \Drupal::currentUser();
+  if($account->isAnonymous() && in_array($vars['node']->getType(), ['event','session','training',])){
+
+    $url = Url::fromRoute('user.login', [], [
+      'query' => [
+        'destination' => Url::fromRoute('entity.node.canonical', ['node' => $vars['node']->id()])->getInternalPath()
+      ]
+    ]);
+    $link = Link::fromTextAndUrl(t('Login to Register'), $url)->toRenderable();
+    $link['#attributes']['class'][] = 'button';
+    $link['#attributes']['class'][] = 'large';
+
+    $vars['content']['register_button'] = [
+      '#markup' => render($link),
+      '#weight' => 1000
+    ];
   }
 }
 
@@ -59,7 +107,23 @@ function badcamp2017_preprocess_node__venue__full(&$vars){
     'class' => 'success button'
   ];
   $vars['directionsLink'] = $link;
+}
 
+/**
+ * Implements hook_node__node_type__view_mode().
+ */
+function badcamp2017_preprocess_node__session(&$vars){
+  if($vars['node']->get('field_session_status')->getString() != 'Accepted'){
+    $vars['content']['flag_add_to_schedule']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_node__node_type__view_mode().
+ */
+function badcamp2017_preprocess_node__event__summit(&$vars) {
+  $vars['date'] = $vars['content']['field_event_date_and_time']['#items'][0]->getValue()['value'];
+  $vars['day_of_week'] = strtolower(date('D', strtotime($vars['date'])));
 }
 
 /**
@@ -67,10 +131,28 @@ function badcamp2017_preprocess_node__venue__full(&$vars){
  */
 function badcamp2017_preprocess_node__badcamp_sponsor__full(&$vars){
   $vars['sponsor_url'] = $vars['content']['field_link'][0]['#url']->getUri();
-  unset($vars['content']['field_link']);
   $vars['logo'] = $vars['content']['field_sponsor_logo'];
-  unset($vars['content']['field_sponsor_logo']);
-  $vars['content'] = drupal_render_children($vars['content']);
+}
+
+/**
+ * Implements template_preprocess_node__node_type__node_display().
+ */
+function badcamp2017_preprocess_node__event__schedule(&$vars) {
+  $vars['attributes']['class'][] = 'row';
+}
+
+/**
+ * Implements template_preprocess_node__node_type__node_display().
+ */
+function badcamp2017_preprocess_node__training__schedule(&$vars) {
+  $vars['attributes']['class'][] = 'row';
+}
+
+/**
+ * Implements template_preprocess_node__node_type__node_display().
+ */
+function badcamp2017_preprocess_node__session__schedule(&$vars) {
+  $vars['attributes']['class'][] = 'row';
 }
 
 /**
@@ -104,3 +186,237 @@ function badcamp2017_preprocess_block__homepageeventsataglancespecial(&$vars){
     ];
   }
 }
+
+/**
+ * Implements theme_menu_local_tasks().
+ */
+function badcamp2017_menu_local_tasks(&$variables) {
+  $output = '';
+
+  if (!empty($variables['primary'])) {
+    $variables['primary']['#prefix'] = '<h2 class="visually-hidden">' . t('Primary tabs') . '</h2>';
+    $variables['primary']['#prefix'] .= '<div class="button-group">';
+    $variables['primary']['#suffix'] = '</div>';
+    $output .= drupal_render($variables['primary']);
+  }
+  if (!empty($variables['secondary'])) {
+    $variables['secondary']['#prefix'] = '<h2 class="visually-hidden">' . t('Secondary tabs') . '</h2>';
+    $variables['secondary']['#prefix'] .= '<div class="button-group">';
+    $variables['secondary']['#suffix'] = '</div>';
+    $output .= drupal_render($variables['secondary']);
+  }
+
+  return $output;
+}
+
+/**
+ * Implements theme_menu_local_task().
+ */
+function badcamp2017_menu_local_task(&$variables) {
+  $link = $variables['element']['#link'];
+  $link_text = array(
+    '#markup' => $link['title'],
+  );
+
+  if (!empty($variables['element']['#active'])) {
+    // Add text to indicate active tab for non-visual users.
+    $link_text['#suffix'] = '<span class="visually-hidden">' . t('(active tab)') . '</span>';
+  }
+
+  $state = !empty($variables['element']['#active']) ? 'active' : 'secondary';
+  $link['url']->setOption('attributes', array('class' => array('button', $state)));
+
+  $a_tag = Link::fromTextAndUrl($link_text, $link['url'])->toString();
+
+  return $a_tag;
+}
+
+/**
+ * Implements theme_status_messages().
+ */
+function badcamp2017_status_messages($variables) {
+  $display = $variables['message_list'];
+  $output = '';
+
+  $status_heading = array(
+    'error' => t('Error message'),
+    'status' => t('Status message'),
+    'warning' => t('Warning message'),
+  );
+
+  $status_mapping = array(
+    'error' => 'alert',
+    'status' => 'success',
+    'warning' => 'secondary'
+  );
+
+  foreach ($display as $type => $messages) {
+    if (isset($status_mapping[$type])) {
+      $output .= "<div class=\"zurb-foundation-callout callout $status_mapping[$type]\" data-closable=\"fade-out\">\n";
+    }
+    else {
+      $output .= "<div class=\"zurb-foundation-callout callout\" data-closable=\"fade-out\">\n";
+    }
+
+    if (!empty($status_heading[$type])) {
+      $output .= '<h2 class="visually-hidden">' . $status_heading[$type] . "</h2>\n";
+    }
+
+    if (count($messages) > 1) {
+      foreach ($messages as $message) {
+        $output .= '<p>' . $message . '</p>';
+      }
+    }
+    else {
+      $output .= $messages[0];
+    }
+
+    $output .= "</div>\n";
+  }
+
+  $output = array(
+    '#markup' => $output,
+    '#allowed_tags' => ['div', 'button', 'a', 'span', 'h2', 'p'],
+  );
+  $output = render($output);
+
+  return $output;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function badcamp2017_theme_suggestions_bef_checkboxes_alter(&$suggestions, $vars){
+  $suggestions[] = 'bef_checkboxes__' . str_ireplace('-', '_', $vars['element']['#name']);
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function badcamp2017_theme_suggestions_form_element_alter(&$suggestions, $vars){
+  if(isset($vars['element']['#name']) && stripos($vars['element']['#name'], 'session-track') !== FALSE){
+    $suggestions[] = 'form_element__session_track';
+  }
+  if(isset($vars['element']['#name']) && stripos($vars['element']['#name'], 'skill') !== FALSE){
+    $suggestions[] = 'form_element__skill';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function badcamp2017_theme_suggestions_form_element_label_alter(&$suggestions, $vars){
+  if(stripos($vars['element']['#id'], 'session-track') !== FALSE){
+    $suggestions[] = 'form_element_label__session_track';
+  }
+  if(stripos($vars['element']['#id'], 'skill') !== FALSE){
+    $suggestions[] = 'form_element_label__skill';
+  }
+  if(stripos($vars['element']['#id'], 'venue') !== FALSE){
+    $suggestions[] = 'form_element_label__venue';
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view__VIEW_ID__DISPLAY_ID().
+ */
+function badcamp2017_preprocess_views_view__sessions__accepted_sessions(&$vars) {
+
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function badcamp2017_theme_suggestions_field_alter(&$suggestions, $vars){
+  $element = $vars['element'];
+  $field_name = $element['#field_name'];
+  $entity_type = $element['#entity_type'];
+  $bundle = $element['#bundle'];
+  $view_mode = $element['#view_mode'];
+  $suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' . $view_mode;
+  $suggestions[] = 'field__' . $entity_type . '__' . $field_name . '__' . $bundle . '__' . $view_mode;
+}
+
+/**
+ * Implements template_preprocess_user().
+ */
+function badcamp2017_preprocess_user(&$vars) {
+  $account = \Drupal::currentUser();
+  if($vars['user']->get('field_make_my_schedule_public')->getString() != 1 && $vars['user']->id() != $account->id()){
+    $vars['content']['my_schedule_my_schedule']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function badcamp2017_theme_suggestions_eva_display_entity_view_alter(&$suggestions, $vars){
+  $view = $vars['view'];
+  $display = isset($view->display_handler) ? $view->display_handler->display : NULL;
+  $id = $view->storage->id();
+  $suggestions[] = 'eva_display_entity_view__' . $id;
+  $suggestions[] = 'eva_display_entity_view__' . $id . '__' . $display['id'];
+}
+
+/**
+ * Implements theme_preprocess_flag__FLAG_ID().
+ */
+function badcamp2017_preprocess_flag__add_to_schedule(&$vars) {
+  $vars['attributes']['class'][] = 'fa';
+  $vars['attributes']['class'][] = 'button';
+  $vars['attributes']['class'][] = 'medium';
+}
+
+function badcamp2017_preprocess_form_element__session_track(&$vars) {
+  $term_id = $vars['element']['#return_value'];
+  $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($term_id);
+  $icon = $term->get('field_icon');
+  if (!empty($icon_class = $icon->getValue())){
+    $vars['label']['#attributes']['data_icon'] = $icon_class[0]['value'];
+  }
+}
+
+/**
+ * Implements theme_views_view__HOOK().
+ */
+function badcamp2017_preprocess_views_view_unformatted__my_schedule__full_schedule(&$vars) {
+  $title = trim(strip_tags($vars['title']->__toString()));
+  $class = '';
+  $add_title = '';
+  switch($title){
+    case 'Wednesday, October 18':
+      $add_title = t('Drupal Training & Summits');
+      $class = 'item-wed';
+      break;
+    case 'Thursday, October 19':
+      $add_title = t('Drupal Training & Summits');
+      $class = 'item-thurs';
+      break;
+    case 'Friday, October 20':
+      $add_title = t('Sessions');
+      $class = 'item-fri';
+      break;
+    case 'Saturday, October 21':
+      $add_title = t('Sessions');
+      $class = 'item-sat';
+      break;
+  }
+  $vars['add_title'] = $add_title;
+  $vars['title_class'] = $class;
+}
+
+/**
+ * Implements template_preprocess_field__HOOK().
+ */
+function badcamp2017_preprocess_field__node__field_session_track(&$vars){
+  $node = $vars['element']['#object'];
+
+  foreach($node->get('field_session_track') AS $id => $term) {
+    $full_term = $term->get('entity')->getTarget()->getValue();
+    if(!empty($full_term->get('field_icon')->getValue())){
+      $class = $full_term->get('field_icon')->first()->getValue()['value'];
+      $vars['items'][$id]['icon_class'] = $class;
+    }
+  }
+}
+

@@ -1,0 +1,29 @@
+uuid: b3605670-297e-4b17-ac99-f8c88f7662d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - badcamp_stripe_payment.stripe_payment_type.training_registration
+    - field.storage.stripe_payment.field_train_reg_rel_training
+    - node.type.training
+id: stripe_payment.training_registration.field_train_reg_rel_training
+field_name: field_train_reg_rel_training
+entity_type: stripe_payment
+bundle: training_registration
+label: 'Related Training'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      training: training
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

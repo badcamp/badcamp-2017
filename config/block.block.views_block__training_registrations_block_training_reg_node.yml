@@ -1,0 +1,34 @@
+uuid: 49cbc9f9-90af-45a4-abf9-ab83bc916e54
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.training_registrations
+  module:
+    - ctools
+    - views
+  theme:
+    - badcamp2017
+id: views_block__training_registrations_block_training_reg_node
+theme: badcamp2017
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:training_registrations-block_training_reg_node'
+settings:
+  id: 'views_block:training_registrations-block_training_reg_node'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping:
+    nid: '@node.node_route_context:node'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      training: training
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

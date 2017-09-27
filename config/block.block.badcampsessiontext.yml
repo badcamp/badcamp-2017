@@ -1,0 +1,31 @@
+uuid: cd999589-c6c2-4214-a05d-27af68ab4975
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:92db5055-a598-4525-a4b8-a15f9b46d67a'
+  module:
+    - block_content
+    - system
+  theme:
+    - badcamp2017
+id: badcampsessiontext
+theme: badcamp2017
+region: highlighted
+weight: -10
+provider: null
+plugin: 'block_content:92db5055-a598-4525-a4b8-a15f9b46d67a'
+settings:
+  id: 'block_content:92db5055-a598-4525-a4b8-a15f9b46d67a'
+  label: 'BADCamp 2017 Sessions'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/sessions\r\n/sessions-accepted"
+    negate: false
+    context_mapping: {  }

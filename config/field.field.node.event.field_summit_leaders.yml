@@ -9,7 +9,7 @@ id: node.event.field_summit_leaders
 field_name: field_summit_leaders
 entity_type: node
 bundle: event
-label: 'Summit leaders'
+label: 'Summit Leaders'
 description: ''
 required: false
 translatable: true

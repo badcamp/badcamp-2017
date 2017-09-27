@@ -1,0 +1,10 @@
+uuid: 246c462d-d438-4629-9f3a-e398402fd8c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.summit
+label: Summit
+targetEntityType: node
+cache: true

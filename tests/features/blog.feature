@@ -62,4 +62,5 @@ Feature: Blog Testing
   Scenario: Confirm an anonymous user cannot create Blog posts
     Given I am an anonymous user
     And I am on "/node/add/blog"
-    Then I should see the text "Access Denied"
+    Then I should see the text "Log in"
+    And I should see the text "Username"

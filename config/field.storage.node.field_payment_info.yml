@@ -1,0 +1,31 @@
+uuid: 1860531c-707f-4004-8e4a-491c0579d4dd
+langcode: en
+status: true
+dependencies:
+  module:
+    - badcamp_stripe_payment
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: node.field_payment_info
+field_name: field_payment_info
+entity_type: node
+type: stripe_payment
+settings:
+  enable: 0
+  avs: 0
+  amount: 0
+  description_value: ''
+  description_format: basic_html
+  button_text: ''
+  max_payments: 0
+  max_purchases: 0
+module: badcamp_stripe_payment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

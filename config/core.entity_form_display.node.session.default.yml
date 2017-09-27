@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.session.field_comments
     - field.field.node.session.field_event_date_and_time
     - field.field.node.session.field_event_venue
     - field.field.node.session.field_session_description
@@ -15,7 +14,6 @@ dependencies:
     - field.field.node.session.field_video
     - node.type.session
   module:
-    - comment
     - datetime_range
     - field_group
     - file
@@ -24,79 +22,60 @@ dependencies:
     - video_embed_field
 third_party_settings:
   field_group:
-    group_session_info:
-      children:
-        - group_session_information
-        - group_session_description
-        - group_session_files_video
-        - group_session_administration
-      parent_name: ''
-      weight: 0
-      format_type: tabs
-      format_settings:
-        id: ''
-        classes: ''
-        direction: horizontal
-      label: 'Session Info'
     group_session_information:
       children:
         - title
         - field_session_speakers
         - field_session_track
         - field_session_skill_level
-      parent_name: group_session_info
-      weight: 20
-      format_type: tab
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
       format_settings:
         id: ''
         classes: ''
-        formatter: closed
         description: ''
         required_fields: true
       label: 'Session Information'
     group_session_description:
       children:
         - field_session_description
-      parent_name: group_session_info
-      weight: 21
-      format_type: tab
+      parent_name: ''
+      weight: 6
+      format_type: fieldset
       format_settings:
         id: ''
         classes: ''
-        formatter: closed
         description: ''
         required_fields: true
-      label: 'Session description'
+      label: 'Session Description'
     group_session_files_video:
       children:
         - field_session_files
         - field_video
-      parent_name: group_session_info
-      weight: 22
-      format_type: tab
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
       format_settings:
         id: ''
         classes: ''
-        formatter: closed
         description: ''
         required_fields: true
-      label: 'Session files/video'
+      label: 'Session Files/Video'
     group_session_administration:
       children:
         - field_event_venue
         - field_session_status
-        - field_session_time_slot
         - field_event_date_and_time
-      parent_name: group_session_info
-      weight: 23
-      format_type: tab
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
       format_settings:
         id: ''
         classes: ''
-        formatter: closed
         description: ''
         required_fields: true
-      label: 'Session administration'
+      label: 'Session Administration'
 id: node.session.default
 targetEntityType: node
 bundle: session
@@ -104,30 +83,24 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_comments:
-    weight: 38
-    settings: {  }
-    third_party_settings: {  }
-    type: comment_default
-    region: content
   field_event_date_and_time:
-    weight: 0
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: daterange_default
     region: content
   field_event_venue:
-    weight: -3
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_session_description:
-    weight: 34
+    weight: 0
     settings:
       rows: 9
       summary_rows: 3
@@ -136,20 +109,20 @@ content:
     type: text_textarea_with_summary
     region: content
   field_session_files:
-    weight: 36
+    weight: 0
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
   field_session_skill_level:
-    weight: -1
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_session_speakers:
-    weight: -4
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
@@ -158,26 +131,26 @@ content:
     type: entity_reference_autocomplete_tags
     region: content
   field_session_status:
-    weight: -2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
     region: content
   field_session_track:
-    weight: -2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: options_buttons
     region: content
   field_video:
-    weight: 37
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: video_embed_field_textfield
     region: content
   path:
     type: path
-    weight: 5
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -185,19 +158,19 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 3
+    weight: 12
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 13
     region: content
     third_party_settings: {  }
   title:
     type: string_textfield
-    weight: -5
+    weight: 1
     region: content
     settings:
       size: 60
@@ -205,7 +178,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 10
     settings:
       match_operator: CONTAINS
       size: 60

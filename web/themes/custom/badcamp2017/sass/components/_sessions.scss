@@ -1,0 +1,92 @@
+.category-icon {
+  > i {
+    @include border-radius(50%);
+    padding: .5rem;
+    background-color: $bc-blue;
+    color: white;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 1;
+    vertical-align: middle;
+    font-size: 1.5em;
+  }
+  > .label-title {
+    font-size: 1.25em;
+  }
+}
+
+.session-view {
+  div[data-drupal-selector="edit-session-track"] {
+    margin: 1rem 0;
+    input[type="checkbox"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-progress-appearance: none;
+      display: none;
+    }
+
+    label {
+      @extend .category-icon;
+      > i {
+        background-color: lightgrey;
+      }
+    }
+
+    input[type="checkbox"]:checked + label {
+      > i {
+        background-color: $bc-orange;
+      }
+    }
+
+    .form-item {
+      margin-bottom: .5rem;
+    }
+  }
+
+  fieldset[data-drupal-selector="edit-date"] {
+    margin: 1rem;
+    > .fieldset-wrapper {
+      text-align: center;
+    }
+    input[type="radio"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-progress-appearance: none;
+      display: none;
+    }
+
+    .js-webform-radios > div {
+      display: inline-block;
+      text-align: center;
+
+      label {
+        background-color: lightgrey;
+        color: white;
+        font-weight: 700;
+        font-size: 1.25rem;
+        text-align: center;
+        margin: 0px;
+        padding: .5rem 1rem;
+        min-width: 100px;
+      }
+
+      input[type="radio"]:checked + label {
+        background-color: $bc-blue;
+      }
+    }
+  }
+
+  .schedule-results .views-row{
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid lightgrey;
+    &:last-child{
+      border-bottom: 0px solid;
+    }
+  }
+}
+
+.label a{
+  color: white;
+}

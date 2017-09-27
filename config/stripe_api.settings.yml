@@ -1,0 +1,8 @@
+test_secret_key: stripe_api
+test_public_key: stripe_api_test_public_key
+live_secret_key: stripe_api_live_secret_key
+live_public_key: stripe_api_live_public_key
+log_webhooks: 1
+mode: live
+_core:
+  default_config_hash: bDytzWYwg0WvFxdrSzHMrWCCi82WboNTCqPbNA5oN_Q

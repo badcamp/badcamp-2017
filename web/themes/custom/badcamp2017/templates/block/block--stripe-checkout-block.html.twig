@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-divider">
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  </div>
+  {% block content %}
+  <div class="card-section">
+    {{ content }}
+  </div>
+  {% endblock %}
+</div>

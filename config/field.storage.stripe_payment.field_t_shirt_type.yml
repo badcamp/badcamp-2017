@@ -1,0 +1,27 @@
+uuid: a742105e-f1c7-4451-9608-5a0f4d7af010
+langcode: en
+status: true
+dependencies:
+  module:
+    - badcamp_stripe_payment
+    - options
+id: stripe_payment.field_t_shirt_type
+field_name: field_t_shirt_type
+entity_type: stripe_payment
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Women''s'
+      label: 'Women''s'
+    -
+      value: 'Men''s'
+      label: 'Men''s'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

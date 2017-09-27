@@ -1,26 +1,26 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/session?_format=hal_json"
+            "href": "http:\/\/default\/sessions?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/node\/page"
         },
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
             {
-                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "href": "http:\/\/default\/u\/admin?_format=hal_json",
                 "lang": "en"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
             {
-                "href": "http:\/\/default\/user\/1?_format=hal_json"
+                "href": "http:\/\/default\/u\/admin?_format=hal_json"
             }
         ]
     },
     "nid": [
         {
-            "value": 30
+            "value": 37
         }
     ],
     "uuid": [
@@ -30,7 +30,7 @@
     ],
     "vid": [
         {
-            "value": 54
+            "value": 98
         }
     ],
     "langcode": [
@@ -52,7 +52,7 @@
     ],
     "title": [
         {
-            "value": "Session",
+            "value": "Proposed Sessions",
             "lang": "en"
         }
     ],
@@ -61,7 +61,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                        "href": "http:\/\/default\/u\/admin?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
@@ -79,7 +79,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                        "href": "http:\/\/default\/u\/admin?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
@@ -101,7 +101,7 @@
     ],
     "changed": [
         {
-            "value": 1500961755,
+            "value": 1502905737,
             "lang": "en"
         }
     ],
@@ -118,13 +118,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": 1500961755
-        }
-    ],
-    "revision_translation_affected": [
-        {
-            "value": true,
-            "lang": "en"
+            "value": 1502905737
         }
     ],
     "default_langcode": [

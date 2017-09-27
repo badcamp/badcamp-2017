@@ -41,7 +41,7 @@ dom_id ? 'js-view-dom-id-' ~ dom_id,
 
     {{ exposed }}
 
-    <h2>Proposed Sessions</h2>
+    <h2 class="page-title">Proposed Sessions</h2>
 
     {% if header %}
         <header>
@@ -51,8 +51,10 @@ dom_id ? 'js-view-dom-id-' ~ dom_id,
 
     {{ attachment_before }}
 
-    {{ rows }}
-    {{ empty }}
+    <div class="results">
+        {{ rows }}
+        {{ empty }}
+    </div>
     {{ pager }}
 
     {{ attachment_after }}

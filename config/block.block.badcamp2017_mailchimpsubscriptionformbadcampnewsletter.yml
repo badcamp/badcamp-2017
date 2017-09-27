@@ -10,7 +10,7 @@ dependencies:
 id: badcamp2017_mailchimpsubscriptionformbadcampnewsletter
 theme: badcamp2017
 region: content
-weight: -4
+weight: -10
 provider: null
 plugin: 'mailchimp_signup_subscribe_block:badcamp_newsletter'
 settings:

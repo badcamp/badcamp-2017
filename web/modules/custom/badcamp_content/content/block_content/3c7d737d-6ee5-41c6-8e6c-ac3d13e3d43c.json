@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/block\/9?_format=hal_json"
+            "href": "http:\/\/default\/block\/10?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
@@ -9,7 +9,7 @@
     },
     "id": [
         {
-            "value": 9
+            "value": 10
         }
     ],
     "uuid": [
@@ -19,7 +19,7 @@
     ],
     "revision_id": [
         {
-            "value": 9
+            "value": 10
         }
     ],
     "langcode": [
@@ -41,7 +41,7 @@
     ],
     "changed": [
         {
-            "value": 1500791684,
+            "value": 1502904118,
             "lang": "en"
         }
     ],
@@ -64,7 +64,7 @@
     ],
     "body": [
         {
-            "value": "<p>It's amazing what can happen when we bring everyone together. Get ready to give back to Drupal, and let's get some serious work accomplished.<\/p>\r\n\r\n<p><a href=\"#\" class=\"button\">View the Sprints Schedule<\/a><\/p>\r\n",
+            "value": "<p>It's amazing what can happen when we bring everyone together. Get ready to give back to Drupal, and let's get some serious work accomplished.<\/p>\r\n\r\n<p><a class=\"button\" href=\"\/community\">View the Sprints Schedule<\/a><\/p>\r\n",
             "format": "full_html",
             "summary": "",
             "lang": "en"

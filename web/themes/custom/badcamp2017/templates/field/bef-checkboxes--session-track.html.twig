@@ -1,0 +1,34 @@
+{#
+  Themes a single-select exposed form element as radio buttons.
+  Available variables:
+    - element: The collection of checkboxes.
+    - children: An array of keys for the children of element.
+    - is_nested: TRUE if this is to be rendered as a nested list.
+    - depth: If is_nested is TRUE, this holds an array in the form of
+      child_id => nesting_level which defines the depth a given element should
+      appear in the nested list.
+#}
+{%
+set classes = [
+'form-radios',
+'row'
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+    {% for child in children %}
+        {% if loop.first %}
+            <div class="columns small-6">
+        {% endif %}
+        {% set checkbox = attribute(element, child) %}
+        {{ checkbox }}
+
+        {% if loop.last %}
+            </div>
+        {% endif %}
+
+        {% if not loop.last and not loop.first and loop.index % 3 == 0 %}
+            </div>
+            <div class="columns small-6">
+        {% endif %}
+    {% endfor %}
+</div>

@@ -1,0 +1,79 @@
+uuid: 030abbad-c56d-4402-a19d-accb74af8e10
+langcode: en
+status: true
+dependencies: {  }
+id: session_submission
+label: 'Session Submission'
+events:
+  -
+    event_name: 'rules_entity_insert:node'
+description: 'Action that happens after submitting a new submissions.'
+tags:
+  - sessions
+config_version: '3'
+expression:
+  id: rules_rule
+  uuid: 3566604d-3e09-42ae-85a6-701a1741f408
+  conditions:
+    id: rules_and
+    uuid: 5bfcd7dc-f00b-4f5b-937e-6e8659cde320
+    conditions:
+      -
+        id: rules_condition
+        uuid: c91c389c-9e02-4060-8d0f-09fbe13f89c5
+        context_values:
+          types:
+            - session
+        context_mapping:
+          node: node
+        context_processors:
+          types:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        condition_id: rules_node_is_of_type
+        negate: false
+  actions:
+    id: rules_action_set
+    uuid: 5b913c4a-a848-4f8b-9d61-de40585287cc
+    actions:
+      -
+        id: rules_action
+        uuid: 27879273-6a73-4e00-a725-a95081f46442
+        context_values:
+          to:
+            - '{{node.uid.entity.mail.value}}'
+          subject: 'Submission Successfully Submitted: {{node.title}}'
+          message: "Your submission has been submitted for review.\r\n\r\nName: {{node.title}}\r\n\r\n{{node.field_session_description}}\r\n\r\nTo change your session or update it. You can do so by logging into your account. \r\n\r\nThis session can be edited here as well: https://2017.badcamp.net/node/{{node.nid}}/edit\r\n\r\nThanks,\r\nBADCamp"
+          reply: info@badcamp.net
+          language: ''
+        context_mapping: {  }
+        context_processors:
+          to:
+            rules_tokens: {  }
+          subject:
+            rules_tokens: {  }
+          message:
+            rules_tokens: {  }
+          reply:
+            rules_tokens: {  }
+          language:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_send_email
+      -
+        id: rules_action
+        uuid: 4613d917-63a9-4ba9-868d-660c4ddd5748
+        context_values:
+          message: 'Session {{node.title}} has been submitted for review'
+          type: status
+          repeat: false
+        context_mapping: {  }
+        context_processors:
+          message:
+            rules_tokens: {  }
+          type:
+            rules_tokens: {  }
+          repeat:
+            rules_tokens: {  }
+        provides_mapping: {  }
+        action_id: rules_system_message

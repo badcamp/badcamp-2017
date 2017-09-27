@@ -1,0 +1,35 @@
+uuid: 209ebdcc-e03c-47c4-9cd9-5bf334fe5e5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_payment_info
+    - node.type.training
+  module:
+    - badcamp_stripe_payment
+id: node.training.field_payment_info
+field_name: field_payment_info
+entity_type: node
+bundle: training
+label: 'Payment Info'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    description:
+      value: ''
+      format: basic_html
+    enable: 1
+    amount: 2500
+    avs: 1
+    payment_type: training_registration
+    description_value: ''
+    button_label: ''
+    description_format: basic_html
+    max_payments: 1
+    max_purchases: 0
+    last_refund_date: ''
+default_value_callback: ''
+settings: {  }
+field_type: stripe_payment

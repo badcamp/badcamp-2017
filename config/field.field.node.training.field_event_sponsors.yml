@@ -1,0 +1,29 @@
+uuid: aa4d7f60-6f5c-4f03-b275-d0daa8eab868
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_sponsors
+    - node.type.badcamp_sponsor
+    - node.type.training
+id: node.training.field_event_sponsors
+field_name: field_event_sponsors
+entity_type: node
+bundle: training
+label: 'Event Sponsor(s)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      badcamp_sponsor: badcamp_sponsor
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

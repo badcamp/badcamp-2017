@@ -1,4 +1,4 @@
-<div class="layout--layoutPage">
+<div{{ attributes }}>
   <header class="row">
     <div class="column small-12 large-5">{{ page.header_left }}</div>
     <div class="column hide-for-medium small-12 responsive-menu-button-wrap text-center" id="responsive-menu-button-wrap">
@@ -22,18 +22,24 @@
   </div>
 
   <main role="main" class="row">
-    <div class="columns small-push-1 small-10">
-      {{ page.content }}
+    <div class="columns small-12">
       {{ page.info }}
+      {{ page.content }}
     </div>
   </main>
 
-  {% if page.footer %}
-    <footer role="contentinfo" class="row">
-      <div class="columns small-12">
-        {{ page.footer }}
+  <footer role="contentinfo" class="row">
+    <div class="columns small-12">
+      {{ page.footer }}
+    </div>
+    <div class="columns small-12 footer-columns">
+      <div class="column small-12 medium-6">
+        {{ page.footer_left }}
       </div>
-    </footer>
-  {% endif %}
+      <div class="column small-12 medium-6">
+        {{ page.footer_right }}
+      </div>
+    </div>
+  </footer>
 
 </div>{# /.layout--layoutPage #}

@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/block\/8?_format=hal_json"
+            "href": "http:\/\/default\/block\/7?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
@@ -9,7 +9,7 @@
     },
     "id": [
         {
-            "value": 8
+            "value": 7
         }
     ],
     "uuid": [
@@ -19,7 +19,7 @@
     ],
     "revision_id": [
         {
-            "value": 8
+            "value": 7
         }
     ],
     "langcode": [
@@ -41,7 +41,7 @@
     ],
     "changed": [
         {
-            "value": 1500791624,
+            "value": 1502903880,
             "lang": "en"
         }
     ],
@@ -64,7 +64,7 @@
     ],
     "body": [
         {
-            "value": "<p>Summits allow people in specific industries or with specific skill sets to dive deep into the issues that matter and collaborate freely<\/p>\r\n\r\n<p><a class=\"button\" href=\"#\">View the Summits Schedule<\/a><\/p>\r\n",
+            "value": "<p>Summits allow people in specific industries or with specific skill sets to dive deep into the issues that matter and collaborate freely. Join us Oct 18&nbsp;&amp; 19. &nbsp;&nbsp;<\/p>\r\n\r\n<p><a class=\"button\" href=\"\/summits\">View the 2017 Summits<\/a><\/p>\r\n",
             "format": "full_html",
             "summary": "",
             "lang": "en"

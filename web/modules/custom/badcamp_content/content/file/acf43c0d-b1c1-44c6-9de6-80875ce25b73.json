@@ -1,0 +1,84 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/sites\/default\/files\/profile\/2017-08\/Anne_Stefanyk___Drupal_Development__Web_Design___Support_Agency___Kanopi_Studios.png"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "href": "http:\/\/default\/u\/anne?_format=hal_json"
+            }
+        ]
+    },
+    "fid": [
+        {
+            "value": 30
+        }
+    ],
+    "uuid": [
+        {
+            "value": "acf43c0d-b1c1-44c6-9de6-80875ce25b73"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/u\/anne?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "5ea294ee-04d0-44e8-8bf6-426a4b071d56"
+                    }
+                ]
+            }
+        ]
+    },
+    "filename": [
+        {
+            "value": "Anne_Stefanyk___Drupal_Development__Web_Design___Support_Agency___Kanopi_Studios.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "http:\/\/default\/sites\/default\/files\/profile\/2017-08\/Anne_Stefanyk___Drupal_Development__Web_Design___Support_Agency___Kanopi_Studios.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 158562
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": 1502907548
+        }
+    ],
+    "changed": [
+        {
+            "value": 1502907726
+        }
+    ]
+}

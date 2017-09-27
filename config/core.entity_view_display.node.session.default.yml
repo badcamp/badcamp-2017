@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.session.field_comments
     - field.field.node.session.field_event_date_and_time
     - field.field.node.session.field_event_venue
     - field.field.node.session.field_session_description
@@ -15,8 +14,7 @@ dependencies:
     - field.field.node.session.field_video
     - node.type.session
   module:
-    - comment
-    - datetime_range
+    - badcamp_content
     - file
     - options
     - text
@@ -27,24 +25,17 @@ targetEntityType: node
 bundle: session
 mode: default
 content:
-  field_comments:
-    weight: 10
-    label: above
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    type: comment_default
-    region: content
   field_event_date_and_time:
     weight: 7
     label: above
     settings:
-      separator: '-'
-      format_type: medium
       timezone_override: ''
+      format_type: medium
+      separator: '-'
+      same_date_date_format: date_only
+      same_date_time_format: time_only
     third_party_settings: {  }
-    type: daterange_default
+    type: daterange_modified
     region: content
   field_event_venue:
     weight: 8
@@ -110,6 +101,11 @@ content:
     third_party_settings: {  }
     type: video_embed_field_video
     region: content
+  flag_add_to_schedule:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   links:
     weight: 0
     region: content

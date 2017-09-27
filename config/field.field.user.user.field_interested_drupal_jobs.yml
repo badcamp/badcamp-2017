@@ -1,0 +1,24 @@
+uuid: 52bc5297-4ce1-4046-88e0-2b3246d69354
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_interested_drupal_jobs
+  module:
+    - user
+id: user.user.field_interested_drupal_jobs
+field_name: field_interested_drupal_jobs
+entity_type: user
+bundle: user
+label: 'I am interested in Drupal Jobs'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

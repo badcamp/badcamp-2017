@@ -1,0 +1,21 @@
+uuid: 26015189-3587-4971-a366-c1ad082062cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - badcamp_stripe_payment.stripe_payment_type.donation
+    - field.storage.stripe_payment.field_t_shirt_type
+  module:
+    - options
+id: stripe_payment.donation.field_t_shirt_type
+field_name: field_t_shirt_type
+entity_type: stripe_payment
+bundle: donation
+label: 'T-Shirt Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

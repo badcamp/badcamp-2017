@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.session.field_comments
     - field.field.node.session.field_event_date_and_time
     - field.field.node.session.field_event_venue
     - field.field.node.session.field_session_description
@@ -24,7 +23,7 @@ bundle: session
 mode: teaser
 content:
   field_session_description:
-    type: text_summary_or_trimmed
+    type: text_trimmed
     weight: 1
     region: content
     label: hidden
@@ -35,15 +34,15 @@ content:
     type: entity_reference_label
     weight: 3
     region: content
-    label: inline
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   field_session_speakers:
     type: entity_reference_label
     weight: 0
     region: content
-    label: hidden
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -51,12 +50,11 @@ content:
     type: entity_reference_label
     weight: 2
     region: content
-    label: inline
+    label: hidden
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
 hidden:
-  field_comments: true
   field_event_date_and_time: true
   field_event_venue: true
   field_session_files: true

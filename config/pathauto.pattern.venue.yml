@@ -1,0 +1,22 @@
+uuid: 92f5881d-bfc5-44f4-b82a-7161a0f625d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: venue
+label: Venue
+type: 'canonical_entities:node'
+pattern: 'venue/[node:title]'
+selection_criteria:
+  23950b05-a192-48b9-a736-3a82b891e8e7:
+    id: node_type
+    bundles:
+      venue: venue
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 23950b05-a192-48b9-a736-3a82b891e8e7
+selection_logic: and
+weight: -3
+relationships: {  }

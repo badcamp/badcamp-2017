@@ -22,6 +22,11 @@ targetEntityType: node
 bundle: badcamp_sponsor
 mode: full
 content:
+  attendees_sponsor_team:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   body:
     label: hidden
     type: text_default
@@ -50,10 +55,11 @@ content:
     third_party_settings: {  }
     type: image
     region: content
-  links:
-    weight: 3
+  user_sponsors_entity_view_1:
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_sponsor_level: true
+  links: true

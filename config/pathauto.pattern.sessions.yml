@@ -7,16 +7,16 @@ dependencies:
 id: sessions
 label: Sessions
 type: 'canonical_entities:node'
-pattern: 'session/[node:field_session_track:entity:name]/[node:title]'
+pattern: 'session/[node:field_session_track:entity:name]/[node:field_session_skill_level:entity:name]/[node:title]'
 selection_criteria:
-  5be1e2dd-a6bc-4dd2-927b-58f560bc93fc:
+  1dc8cc1d-9582-4e5b-a433-69a6f5d9c430:
     id: node_type
     bundles:
       session: session
     negate: false
     context_mapping:
       node: node
-    uuid: 5be1e2dd-a6bc-4dd2-927b-58f560bc93fc
+    uuid: 1dc8cc1d-9582-4e5b-a433-69a6f5d9c430
 selection_logic: and
-weight: -5
+weight: -7
 relationships: {  }

@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/block\/11?_format=hal_json"
+            "href": "http:\/\/default\/block\/12?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
@@ -9,7 +9,7 @@
     },
     "id": [
         {
-            "value": 11
+            "value": 12
         }
     ],
     "uuid": [
@@ -19,7 +19,7 @@
     ],
     "revision_id": [
         {
-            "value": 11
+            "value": 12
         }
     ],
     "langcode": [
@@ -35,13 +35,13 @@
     ],
     "info": [
         {
-            "value": "Parties",
+            "value": "Hotels",
             "lang": "en"
         }
     ],
     "changed": [
         {
-            "value": 1500791821,
+            "value": 1502904238,
             "lang": "en"
         }
     ],
@@ -64,7 +64,7 @@
     ],
     "body": [
         {
-            "value": "<p>After a long day of learning you'll need to wind down at the great after-hours events we've got planned. Come on out and make some new friends!<\/p>\r\n\r\n<p><a class=\"button\" href=\"#\">View the Party Schedule<\/a><\/p>\r\n",
+            "value": "<p>Berkeley hotels are filling up early for BADCamp week, due to other events in the area. Please book early! We have rooms reserved in two host hotels.<\/p>\r\n\r\n<p><a class=\"button\" href=\"\/hotels\">Book Your Hotel Early<\/a><\/p>\r\n",
             "format": "full_html",
             "summary": "",
             "lang": "en"

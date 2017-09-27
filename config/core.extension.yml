@@ -1,17 +1,21 @@
 module:
   address: 0
   admin_toolbar: 0
+  auto_entitylabel: 0
   automated_cron: 0
   badcamp_blog: 0
   badcamp_content: 0
   badcamp_program_details: 0
-  better_exposed_filters: 0
   badcamp_sponsors: 0
+  badcamp_stripe_payment: 0
   badcamp_styleguide: 0
+  better_exposed_filters: 0
   block: 0
   block_content: 0
   breakpoint: 0
   captcha: 0
+  chosen: 0
+  chosen_lib: 0
   ckeditor: 0
   color: 0
   comment: 0
@@ -27,8 +31,11 @@ module:
   default_content: 0
   devel: 0
   devel_generate: 0
+  disable_messages: 0
   dynamic_page_cache: 0
   editor: 0
+  empty_fields: 0
+  entity_reference_exposed_filters: 0
   eva: 0
   features: 0
   field: 0
@@ -37,39 +44,54 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  flag: 0
   geolocation: 0
   hal: 0
   help: 0
   history: 0
+  honeypot: 0
   image: 0
+  inline_form_errors: 0
   key: 0
   kint: 0
   link: 0
   mailchimp: 0
   mailchimp_lists: 0
   mailchimp_signup: 0
+  mailsystem: 0
   menu_ui: 0
   node: 0
   options: 0
   page_cache: 0
   path: 0
   quickedit: 0
+  r4032login: 0
   rdf: 0
   recaptcha: 0
+  rules: 0
   search: 0
+  sendgrid_integration: 0
   serialization: 0
   shortcut: 0
+  social_media_links: 0
+  social_media_links_field: 0
   social_profile_field: 0
+  stripe_api: 0
+  swiftmailer: 0
   system: 0
   taxonomy: 0
   text: 0
   token: 0
   toolbar: 0
   tour: 0
+  typed_data: 0
   update: 0
   user: 0
   video_embed_field: 0
+  views_bulk_operations: 0
   views_ui: 0
+  webform: 0
+  webform_ui: 0
   menu_link_content: 1
   pathauto: 1
   views: 10

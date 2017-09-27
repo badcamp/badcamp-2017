@@ -1,0 +1,17 @@
+uuid: 3b57fc3b-419e-4b5b-be38-4a090a6ddb41
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Job Posting'
+type: job_posting
+description: 'Sponsors may post <em>Job postings</em>.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

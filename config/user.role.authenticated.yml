@@ -6,18 +6,25 @@ _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
 label: 'Authenticated user'
-weight: 1
+weight: -9
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
   - 'access mailchimp signup pages'
   - 'access shortcuts'
   - 'access site-wide contact form'
-  - 'create session content'
-  - 'delete own session content'
-  - 'edit own session content'
-  - 'post comments'
+  - 'access swag page'
+  - 'add stripe payment entities'
+  - 'create field_t_shirt_size'
+  - 'edit own field_hearing_sponsors'
+  - 'edit own field_interested_drupal_jobs'
+  - 'edit own field_t_shirt_size'
+  - 'flag add_to_schedule'
   - 'search content'
-  - 'skip comment approval'
+  - 'unflag add_to_schedule'
   - 'use text format basic_html'
+  - 'view own field_hearing_sponsors'
+  - 'view own field_interested_drupal_jobs'
+  - 'view own field_t_shirt_size'
+  - 'view status messages'
+  - 'view warning messages'

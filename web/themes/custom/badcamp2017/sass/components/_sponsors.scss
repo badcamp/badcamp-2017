@@ -4,15 +4,7 @@
  */
 .core-sponsors-block {
   margin: 1em 0;
-  padding-top: 55px;
-  border-top: 1px solid black;
-  .rows {
-    text-align:center;
-  }
-  .sponsor {
-    display:inline-block;
-    margin-right: 8px;
-  }
+
   footer {
     margin-top:75px;
     padding-top:35px;
@@ -51,6 +43,10 @@
     }
   }
 
+  .sponsor{
+    margin-bottom: 3em;
+  }
+
   .contrib-level h3{
     background-color: $bc-green;
   }
@@ -62,4 +58,10 @@
   .individual-sponsors h3{
     background-color: $bc-grey;
   }
+}
+
+.meet-the-team{
+  margin-bottom: 1em;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 1em;
 }

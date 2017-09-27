@@ -1,0 +1,43 @@
+.summit-list {
+  article {
+    .summit-image {
+      position: relative;
+      min-height: 125px;
+    }
+
+    .date {
+      display: inline-block;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      background: $bc-orange;
+      font-weight: 700;
+      padding: .75em 1em;
+      line-height: 1;
+
+      &.wed {
+        background-color: $bc-green;
+      }
+      &.thurs {
+        background-color: $bc-orange;
+      }
+      &.fri {
+        background-color: $bc-blue;
+      }
+      &.sat {
+        background-color: black;
+      }
+
+      > span {
+        display: block;
+
+        &.date-day-only{
+          font-size: 3em;
+        }
+      }
+    }
+  }
+}

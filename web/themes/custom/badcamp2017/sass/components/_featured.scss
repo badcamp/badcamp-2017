@@ -4,16 +4,22 @@
 }
 
 
-.path-frontpage{
-  .zone-highlighted{
-    background-image: url($bg_image);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    // @todo: Add back padding once the featured block is placed.
+.zone-highlighted{
+  background-image: url($bg_image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  // @todo: Add back padding once the featured block is placed.
 
-    padding: 90px 0;
+  padding: 90px 0;
+
+  #block-pagetitle h1,
+  #block-pagetitle h2{
+    text-align: center;
+    font-weight: 700;
   }
+
+  text-align: center;
 }
 .zone-highlighted {
   p, h1, h2, div {

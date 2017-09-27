@@ -1,0 +1,31 @@
+uuid: b25fa09f-aa56-4f07-b8f7-7741ecc5fc52
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0b1c45e1-3fcb-4c33-90fd-98227129ca75'
+  module:
+    - block_content
+    - system
+  theme:
+    - badcamp2017
+id: addajobdescription
+theme: badcamp2017
+region: highlighted
+weight: -9
+provider: null
+plugin: 'block_content:0b1c45e1-3fcb-4c33-90fd-98227129ca75'
+settings:
+  id: 'block_content:0b1c45e1-3fcb-4c33-90fd-98227129ca75'
+  label: 'Add a  Job Description'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /job-board
+    negate: false
+    context_mapping: {  }

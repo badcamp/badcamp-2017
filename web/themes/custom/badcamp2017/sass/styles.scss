@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto');
 @import "../node_modules/foundation-sites/scss/foundation";
 @import "../node_modules/foundation-sites/scss/util/color";
+@import "../node_modules/font-awesome/scss/font-awesome";
 @import "variables";
-@include foundation-everything();
-
+@include foundation-everything(false);
+@import "base/base";
+@import "components/components";
 @import "components/header";
+@import "components/footer";
 @import "components/featured";
 @import "components/sponsors";
 @import "components/menu/menu--main";
 @import "components/menu/menu--cta-menu";
 @import "components/news";
+@import "components/sessions";
+@import "components/summits";
+@import "components/jobs";
+@import "components/schedule";
