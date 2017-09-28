@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.training.comment
     - field.field.node.training.field_description
     - field.field.node.training.field_event_date_and_time
     - field.field.node.training.field_event_sponsors
@@ -107,6 +106,5 @@ content:
         handler: ''
         empty_text: ''
 hidden:
-  comment: true
   flag_add_to_schedule: true
   links: true

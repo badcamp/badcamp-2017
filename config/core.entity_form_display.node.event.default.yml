@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.event.comment
     - field.field.node.event.field_event_agenda
     - field.field.node.event.field_event_date_and_time
     - field.field.node.event.field_event_description
@@ -18,7 +17,6 @@ dependencies:
     - image.style.thumbnail
     - node.type.event
   module:
-    - comment
     - datetime_range
     - field_group
     - image
@@ -92,12 +90,6 @@ targetEntityType: node
 bundle: event
 mode: default
 content:
-  comment:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-    type: comment_default
-    region: content
   created:
     type: datetime_timestamp
     weight: 2

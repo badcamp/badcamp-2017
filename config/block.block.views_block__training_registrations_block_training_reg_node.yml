@@ -12,7 +12,7 @@ dependencies:
 id: views_block__training_registrations_block_training_reg_node
 theme: badcamp2017
 region: content
-weight: 0
+weight: -5
 provider: null
 plugin: 'views_block:training_registrations-block_training_reg_node'
 settings:

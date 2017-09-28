@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.training.comment
     - field.field.node.training.field_description
     - field.field.node.training.field_event_date_and_time
     - field.field.node.training.field_event_sponsors
@@ -16,7 +15,6 @@ dependencies:
     - node.type.training
   module:
     - badcamp_stripe_payment
-    - comment
     - datetime_range
     - file
     - link
@@ -27,12 +25,6 @@ targetEntityType: node
 bundle: training
 mode: default
 content:
-  comment:
-    weight: 14
-    settings: {  }
-    third_party_settings: {  }
-    type: comment_default
-    region: content
   created:
     type: datetime_timestamp
     weight: 10

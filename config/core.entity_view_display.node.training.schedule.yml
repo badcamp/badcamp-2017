@@ -4,13 +4,15 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.schedule
-    - field.field.node.training.comment
     - field.field.node.training.field_description
     - field.field.node.training.field_event_date_and_time
     - field.field.node.training.field_event_sponsors
     - field.field.node.training.field_event_venue
+    - field.field.node.training.field_payment_info
     - field.field.node.training.field_session_skill_level
     - field.field.node.training.field_trainer
+    - field.field.node.training.field_training_files
+    - field.field.node.training.field_training_links
     - node.type.training
   module:
     - datetime_range
@@ -64,8 +66,9 @@ content:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
-  comment: true
   field_event_sponsors: true
   field_payment_info: true
+  field_training_files: true
+  field_training_links: true
   flag_add_to_schedule: true
   links: true
