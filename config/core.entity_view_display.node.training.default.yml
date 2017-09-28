@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment.default
     - field.field.node.training.comment
     - field.field.node.training.field_description
     - field.field.node.training.field_event_date_and_time
@@ -12,11 +11,15 @@ dependencies:
     - field.field.node.training.field_payment_info
     - field.field.node.training.field_session_skill_level
     - field.field.node.training.field_trainer
+    - field.field.node.training.field_training_files
+    - field.field.node.training.field_training_links
     - node.type.training
   module:
     - badcamp_stripe_payment
-    - comment
     - datetime_range
+    - empty_fields
+    - file
+    - link
     - text
     - user
 id: node.training.default
@@ -24,15 +27,6 @@ targetEntityType: node
 bundle: training
 mode: default
 content:
-  comment:
-    weight: 8
-    label: above
-    settings:
-      view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    type: comment_default
-    region: content
   field_description:
     weight: 4
     label: hidden
@@ -51,7 +45,7 @@ content:
     type: daterange_default
     region: content
   field_event_sponsors:
-    weight: 5
+    weight: 7
     label: hidden
     settings:
       view_mode: image_only
@@ -68,7 +62,7 @@ content:
     type: entity_reference_label
     region: content
   field_payment_info:
-    weight: 6
+    weight: 8
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -90,10 +84,29 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  links:
-    weight: 7
+  field_training_files:
+    type: file_default
+    weight: 6
     region: content
+    label: above
     settings: {  }
     third_party_settings: {  }
+  field_training_links:
+    type: link
+    weight: 5
+    region: content
+    label: above
+    settings:
+      trim_length: 80
+      rel: nofollow
+      url_only: false
+      url_plain: false
+      target: '0'
+    third_party_settings:
+      empty_fields:
+        handler: ''
+        empty_text: ''
 hidden:
+  comment: true
   flag_add_to_schedule: true
+  links: true

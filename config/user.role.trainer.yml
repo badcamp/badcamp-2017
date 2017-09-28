@@ -6,4 +6,18 @@ id: trainer
 label: Trainer
 weight: 3
 is_admin: null
-permissions: {  }
+permissions:
+  - 'access in-place editing'
+  - 'create field_training_files'
+  - 'create field_training_links'
+  - 'edit field_training_files'
+  - 'edit field_training_links'
+  - 'edit own field_training_files'
+  - 'edit own field_training_links'
+  - 'edit own training content'
+  - 'revert training revisions'
+  - 'skip CAPTCHA'
+  - 'view own field_training_files'
+  - 'view own field_training_links'
+  - 'view the administration theme'
+  - 'view training revisions'

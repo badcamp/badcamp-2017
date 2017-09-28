@@ -13,4 +13,5 @@ permissions:
   - 'edit own badcamp_sponsor content'
   - 'edit own job_posting content'
   - 'revert job_posting revisions'
+  - 'skip CAPTCHA'
   - 'view job_posting revisions'

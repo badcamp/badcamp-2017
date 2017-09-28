@@ -1,23 +1,26 @@
-uuid: 47fe7fd9-2dd8-4797-aa46-3477eee11854
+uuid: 1dce01bb-d53f-439c-8bac-298b1d6d0b8d
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime_range
     - field_permissions
+    - file
     - node
 third_party_settings:
   field_permissions:
     permission_type: custom
-id: node.field_event_date_and_time
-field_name: field_event_date_and_time
+id: node.field_training_files
+field_name: field_training_files
 entity_type: node
-type: daterange
+type: file
 settings:
-  datetime_type: datetime
-module: datetime_range
+  display_field: false
+  display_default: false
+  uri_scheme: private
+  target_type: file
+module: file
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

@@ -1,23 +1,22 @@
-uuid: 47fe7fd9-2dd8-4797-aa46-3477eee11854
+uuid: 1bdc4dcc-1ad8-464e-8123-12e43fe594e4
 langcode: en
 status: true
 dependencies:
   module:
-    - datetime_range
     - field_permissions
+    - link
     - node
 third_party_settings:
   field_permissions:
     permission_type: custom
-id: node.field_event_date_and_time
-field_name: field_event_date_and_time
+id: node.field_training_links
+field_name: field_training_links
 entity_type: node
-type: daterange
-settings:
-  datetime_type: datetime
-module: datetime_range
+type: link
+settings: {  }
+module: link
 locked: false
-cardinality: 1
+cardinality: -1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false
