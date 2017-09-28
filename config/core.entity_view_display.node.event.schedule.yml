@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.schedule
-    - field.field.node.event.comment
     - field.field.node.event.field_event_agenda
     - field.field.node.event.field_event_date_and_time
     - field.field.node.event.field_event_description
@@ -66,7 +65,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  comment: true
   field_event_agenda: true
   field_event_image: true
   field_event_sponsors: true

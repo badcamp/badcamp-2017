@@ -16,6 +16,12 @@ function badcamp2017_preprocess_page(&$vars){
   $vars['attributes']['class'] = array('layout--layoutPage', $class_url, $class_path);
 }
 
+function badcamp2017_preprocess_block(&$vars){
+  if ($vars['elements']['#id'] == "lowcostdrupaltrainingdescription") {
+    $vars['attributes']['class'][] = 'callout';
+  }
+}
+
 /**
  * Implements template_preprocess_views_view_unformatted().
  */
