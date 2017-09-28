@@ -24,6 +24,8 @@ permissions:
   - 'unflag add_to_schedule'
   - 'use text format basic_html'
   - 'view field_payment_info'
+  - 'view field_training_files'
+  - 'view field_training_links'
   - 'view own field_hearing_sponsors'
   - 'view own field_interested_drupal_jobs'
   - 'view own field_t_shirt_size'

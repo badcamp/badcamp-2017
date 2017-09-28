@@ -1,0 +1,27 @@
+uuid: 1e44c2c1-09c3-4e16-acc3-d8a514785015
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_training_files
+    - node.type.training
+  module:
+    - file
+id: node.training.field_training_files
+field_name: field_training_files
+entity_type: node
+bundle: training
+label: Files
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: training_files
+  file_extensions: 'txt pdf doc xls docx xlsx csv jpg gif png'
+  max_filesize: '32 MB'
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file
