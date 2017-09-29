@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.user.user.field_bio
     - field.field.user.user.field_drupal_org_username
+    - field.field.user.user.field_featured
     - field.field.user.user.field_first_name
     - field.field.user.user.field_hearing_sponsors
     - field.field.user.user.field_interested_drupal_jobs
@@ -116,12 +117,18 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  masquerade:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   my_schedule_entity_view_1:
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_featured: true
   field_hearing_sponsors: true
   field_interested_drupal_jobs: true
   field_make_my_schedule_public: true
