@@ -39,9 +39,10 @@ content:
   field_event_description:
     weight: 3
     label: hidden
-    settings: {  }
+    settings:
+      trim_length: 600
     third_party_settings: {  }
-    type: text_default
+    type: text_summary_or_trimmed
     region: content
   field_event_image:
     type: image
@@ -67,7 +68,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_event_agenda: true
-  field_event_image: true
   field_event_sponsors: true
   field_event_type: true
   field_maximum_registration: true
