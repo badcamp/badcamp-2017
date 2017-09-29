@@ -84,7 +84,7 @@ display:
           exclude: true
           alter:
             alter_text: true
-            text: '{{ field_event_date_and_time__end_value|date("l, F d") }}'
+            text: '<h2>{{ field_event_date_and_time__value|date("l, F j") }}</h2>'
             make_link: false
             path: ''
             absolute: false
@@ -116,7 +116,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -124,7 +124,7 @@ display:
           click_sort_column: value
           type: daterange_default
           settings:
-            timezone_override: ''
+            timezone_override: America/Los_Angeles
             format_type: full_day_with_month_and_date
             separator: '-'
           group_column: value
