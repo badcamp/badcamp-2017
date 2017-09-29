@@ -25,8 +25,8 @@ bundle: event
 mode: default
 content:
   field_event_agenda:
-    weight: 3
-    label: above
+    weight: 4
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
@@ -44,7 +44,7 @@ content:
     type: daterange_modified
     region: content
   field_event_description:
-    weight: 5
+    weight: 3
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -68,8 +68,8 @@ content:
     type: entity_reference_label
     region: content
   field_more_info_rsvp:
-    weight: 4
-    label: above
+    weight: 5
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
