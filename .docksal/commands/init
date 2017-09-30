@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+## Install all of the necessary tools needed
+##
+## Usage: fin init
+
+# Abort if anything fails
+set -e
+
+## Install Terminus
+echo "Installing Terminus..."
+fin exec "composer global require -n hirak/prestissimo"
+fin exec "composer global require -n consolidation/cgr"
+fin exec "if [ ! -d /opt/terminus ]; then sudo mkdir /opt/terminus && sudo chown -R docker:dialout /opt/terminus/; fi"
+fin exec "if [ ! -d /opt/terminus/vendor/bin/terminus ]; then cd /opt/terminus && curl -O https://raw.githubusercontent.com/pantheon-systems/terminus-installer/master/builds/installer.phar && php installer.phar install; fi"
+fin exec 'if [[ $(cat ~/.bash_aliases | grep "alias terminus" | wc -l) -eq 0 ]]; then echo "alias terminus=/opt/terminus/vendor/bin/terminus" >> ~/.bash_aliases; fi'
+
+## Install Terminus Rsync Plugin
+echo "Installing Terminus Rsync Plugin..."
+fin exec "if [ ! -d ~/.terminus/plugins ]; then mkdir -p ~/.terminus/plugins; fi"
+fin exec "if [ ! -d ~/.terminus/plugins/terminus-rsync-plugin ]; then composer create-project --no-dev -d ~/.terminus/plugins pantheon-systems/terminus-rsync-plugin:~1; fi"
+fin exec "cd ~/.terminus/plugins/terminus-rsync-plugin && composer update"
+
+## Install Gulp
+echo "Installing gulp..."
+fin exec "npm install gulp-cli -g"

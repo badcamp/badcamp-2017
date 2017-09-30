@@ -1,0 +1,103 @@
+#!/usr/bin/env bash
+
+## Refresh database, files, and import configuration
+##
+## Usage: fin refresh
+
+# Abort if anything fails
+set -e
+
+SKIPCOMPOSER=false
+DATABASE=true
+FILES=true
+
+while getopts 'dfcs:e:' flag; do
+  case $flag in
+    c)
+      SKIPCOMPOSER=true
+      ;;
+    s)
+      PANTHEON_SITE=${OPTARG}
+      ;;
+    e)
+      PANTHEON_ENV=${OPTARG}
+      ;;
+    d)
+      FILES=false
+      ;;
+    f)
+      DATABASE=false
+      ;;
+  esac
+done
+
+TMP_USER=$(fin terminus whoami)
+
+if [ "$TMP_USER" != "$TERMINUS_EMAIL" ]; then
+  fin terminus login
+fi;
+
+SITE_DIRECTORY=${SITE_DIRECTORY:-default}
+
+DOCROOT_PATH="${PROJECT_ROOT}/${DOCROOT}"
+SITEDIR_PATH="${DOCROOT_PATH}/sites/${SITE_DIRECTORY}"
+
+cd $PROJECT_ROOT
+if $SKIPCOMPOSER ; then
+  echo "Running composer update..."
+  fin exec "composer update"
+fi
+
+cd $SITEDIR_PATH
+
+# Rsync all files
+if $FILES; then
+  echo "Downloading latest set of files from ${PANTHEON_SITE}..."
+  fin terminus rsync ${PANTHEON_SITE}.${PANTHEON_ENV}:files .
+
+  echo "Fixing files directory permissions..."
+  fin exec "chmod -R 755 files"
+fi
+
+if $DATABASE; then
+  fin exec '
+  source /var/www/.docksal/docksal.env
+  DBFILE="/tmp/${PANTHEON_SITE}.sql"
+  if [ ! -f $DBFILE ] || [ ! -z $(find ${DBFILE} -mmin +3600) ]; then
+     echo "${DBFILE} need updating"
+
+      echo "Exporting latest database..."
+      if [ -f $DBFILE ] && [ ! -z $(find ${DBFILE} -mmin +3600) ]; then
+        rm -rf $DBFILE
+      fi
+      terminus env:wake ${PANTHEON_SITE}.${PANTHEON_ENV}
+      DBCONN=$(terminus connection:info ${PANTHEON_SITE}.${PANTHEON_ENV} --field="MySQL Command")
+      DBDUMP=${DBCONN/mysql /mysqldump }
+      eval $DBDUMP " --result-file=$DBFILE"
+      drush sql-cli < ${DBFILE}
+  else
+      drush sql-cli < $DBFILE
+  fi'
+fi
+
+fin drush cr
+
+cd ${DOCROOT_PATH}
+
+echo "Importing Configuration..."
+fin drush config-import --yes
+
+echo "Running Update.php..."
+fin drush updatedb -y
+
+echo "Reseting user 1 password to admin..."
+fin drush user-password admin --password=admin
+
+echo "Running Drush Cache-Rebuild"
+fin drush cr
+
+echo "Running Gulp Tasks on theme"
+cd ${PROJECT_ROOT}/web/themes/custom/badcamp2017
+fin exec "npm install"
+fin exec "gulp sass"
+fin drush cr
