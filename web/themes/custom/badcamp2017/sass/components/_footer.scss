@@ -9,3 +9,16 @@ footer .footer-columns{
   padding-bottom: 1em;
   border-top: 1px solid black;
 }
+
+footer{
+  .mailchimp-signup-subscribe-form{
+    background-color: $bc_orange;
+
+    color: white;
+    padding: 1rem 0;
+
+    #mailchimp-signup-subscribe-block-badcamp-newsletter-form{
+      margin-top: .8rem;
+    }
+  }
+}

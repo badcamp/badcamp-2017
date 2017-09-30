@@ -9,13 +9,13 @@ dependencies:
     - badcamp2017
 id: badcamp2017_mailchimpsubscriptionformbadcampnewsletter
 theme: badcamp2017
-region: content
-weight: -10
+region: footer
+weight: -13
 provider: null
 plugin: 'mailchimp_signup_subscribe_block:badcamp_newsletter'
 settings:
   id: 'mailchimp_signup_subscribe_block:badcamp_newsletter'
-  label: 'BADCamp Newsletter'
+  label: 'Stay Connected'
   provider: mailchimp_signup
   label_display: visible
 visibility:

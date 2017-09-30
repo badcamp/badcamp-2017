@@ -2,6 +2,8 @@ uuid: 7f81d07f-b781-4d2c-86c9-a0eda5622696
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - badcamp2017
 _core:
@@ -19,4 +21,9 @@ settings:
   label_display: '0'
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

@@ -11,7 +11,7 @@ dependencies:
 id: stripecheckoutblock_3
 theme: badcamp2017
 region: content
-weight: -7
+weight: -9
 provider: null
 plugin: stripe_checkout_block
 settings:
