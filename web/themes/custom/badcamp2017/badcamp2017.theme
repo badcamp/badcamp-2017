@@ -30,7 +30,7 @@ function badcamp2017_preprocess_views_view_unformatted__badcamp_sponsors_view__p
 
   switch($vars['level_class']){
     case 'core-level':
-      $vars['sizing_class'] = 'medium-up-2';
+      $vars['sizing_class'] = 'small-up-1 medium-up-3';
       foreach($vars['rows'] AS &$row){
         $row['attributes']->addClass('columns','text-center');
       }
@@ -121,6 +121,32 @@ function badcamp2017_preprocess_node__venue__full(&$vars){
 function badcamp2017_preprocess_node__session(&$vars){
   if($vars['node']->get('field_session_status')->getString() != 'Accepted'){
     $vars['content']['flag_add_to_schedule']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_node__node_type__view_mode().
+ */
+function badcamp2017_preprocess_node__event(&$vars) {
+  $node = $vars['node'];
+  $flags = \Drupal::service('flag.count')->getEntityFlagCounts($node);
+  $sold_out = $vars['node']->get('field_sold_out')->first()->getValue()['value'];
+
+  $max_reg = $vars['node']->get('field_maximum_registration')->first()->getValue()['value'];
+  if ($max_reg > 0) {
+    $vars['content']['flag_count'] = [
+      '#type' => 'markup',
+      '#markup' => ($max_reg - $flags['add_to_schedule']) . ' / ' . $max_reg . ' spaces available',
+      '#weight' => $vars['content']['flag_add_to_schedule']['#weight'] + 1
+    ];
+  }
+
+  if (($sold_out == 1) || ($max_reg > 0 && $flags['add_to_schedule'] >= $max_reg)) {
+    $vars['content']['flag_add_to_schedule'] = [
+      '#type' => 'markup',
+      '#markup' => 'Sold Out!',
+      '#weight' => 1000
+    ];
   }
 }
 
