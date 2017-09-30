@@ -1,0 +1,35 @@
+uuid: a334edb6-5a83-4ba0-83fb-943a9450ccc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.news_view
+    - field.field.node.blog.body
+    - field.field.node.blog.field_tags
+    - node.type.blog
+  module:
+    - text
+    - user
+id: node.blog.news_view
+targetEntityType: node
+bundle: blog
+mode: news_view
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 0
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_tags:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+hidden:
+  links: true

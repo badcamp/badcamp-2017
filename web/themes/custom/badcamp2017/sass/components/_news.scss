@@ -1,9 +1,37 @@
 .blog-list-page{
-  .views-row{
-    border-bottom: 1px solid;
-    margin: 1em 0;
-    &:last-child{
-      border-bottom: 0px;
+  article {
+    .blog-header {
+      position: relative;
+      min-height: 125px;
     }
+
+    .date {
+      display: inline-block;
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      background: $bc-orange;
+      font-weight: 700;
+      padding: .75em 1em;
+      line-height: 1;
+
+      > span {
+        display: block;
+
+        &.date-day-only{
+          font-size: 3em;
+        }
+      }
+    }
+  }
+
+  .views-row.even .date{
+    background-color: $bc-green;
+  }
+  .views-row.odd .date{
+    background-color: $bc-orange;
   }
 }
