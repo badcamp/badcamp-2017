@@ -77,6 +77,7 @@
     <div class="columns small-12 medium-3">
         <h4>{{ content.field_event_date_and_time }}</h4>
         {{ content.register_button }}
+        {{ content.field_payment_info }}
     </div>
 
     <div class="columns small-12 medium-9">
@@ -96,7 +97,7 @@
         </div>
 
         <div class="content">
-            {{ content|without('field_event_date_and_time','flag_add_to_schedule','field_trainer','field_event_venue','field_session_skill_level','register_button')}}
+            {{ content|without('field_event_date_and_time','flag_add_to_schedule','field_trainer','field_event_venue','field_session_skill_level','register_button','field_payment_info')}}
         </div>
     </div>
 

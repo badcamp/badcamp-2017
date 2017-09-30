@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.news_view
     - core.entity_view_mode.node.teaser
     - node.type.blog
   module:
@@ -70,13 +71,15 @@ display:
             next: ››
       style:
         type: default
-      row:
-        type: fields
         options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
+          row_class: 'small-12 medium-6 large-4 columns'
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: news_view
       fields:
         rendered_entity:
           id: rendered_entity
@@ -185,12 +188,34 @@ display:
         - 'config:core.entity_view_display.node.article.default'
         - 'config:core.entity_view_display.node.article.rss'
         - 'config:core.entity_view_display.node.article.teaser'
-        - 'config:core.entity_view_display.node.blog.default'
+        - 'config:core.entity_view_display.node.badcamp_sponsor.full'
+        - 'config:core.entity_view_display.node.badcamp_sponsor.teaser'
         - 'config:core.entity_view_display.node.blog.teaser'
+        - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.schedule'
+        - 'config:core.entity_view_display.node.event.summit'
+        - 'config:core.entity_view_display.node.event.teaser'
+        - 'config:core.entity_view_display.node.job_posting.default'
+        - 'config:core.entity_view_display.node.job_posting.full'
+        - 'config:core.entity_view_display.node.job_posting.sponsor'
+        - 'config:core.entity_view_display.node.job_posting.teaser'
         - 'config:core.entity_view_display.node.page.default'
         - 'config:core.entity_view_display.node.page.teaser'
         - 'config:core.entity_view_display.node.program_details.default'
         - 'config:core.entity_view_display.node.program_details.teaser'
+        - 'config:core.entity_view_display.node.session.default'
+        - 'config:core.entity_view_display.node.session.full'
+        - 'config:core.entity_view_display.node.session.schedule'
+        - 'config:core.entity_view_display.node.session.teaser'
+        - 'config:core.entity_view_display.node.training.default'
+        - 'config:core.entity_view_display.node.training.schedule'
+        - 'config:core.entity_view_display.node.training.teaser'
+        - 'config:core.entity_view_display.node.venue.default'
+        - 'config:core.entity_view_display.node.venue.teaser'
+        - 'config:core.entity_view_display.node.badcamp_sponsor.default'
+        - 'config:core.entity_view_display.node.badcamp_sponsor.image_only'
+        - 'config:core.entity_view_display.node.blog.default'
+        - 'config:core.entity_view_display.node.blog.news_view'
   page_1:
     display_plugin: page
     id: page_1
@@ -210,9 +235,31 @@ display:
         - 'config:core.entity_view_display.node.article.default'
         - 'config:core.entity_view_display.node.article.rss'
         - 'config:core.entity_view_display.node.article.teaser'
+        - 'config:core.entity_view_display.node.badcamp_sponsor.default'
+        - 'config:core.entity_view_display.node.badcamp_sponsor.full'
+        - 'config:core.entity_view_display.node.badcamp_sponsor.image_only'
+        - 'config:core.entity_view_display.node.badcamp_sponsor.teaser'
         - 'config:core.entity_view_display.node.blog.default'
+        - 'config:core.entity_view_display.node.blog.news_view'
         - 'config:core.entity_view_display.node.blog.teaser'
+        - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.schedule'
+        - 'config:core.entity_view_display.node.event.summit'
+        - 'config:core.entity_view_display.node.event.teaser'
+        - 'config:core.entity_view_display.node.job_posting.default'
+        - 'config:core.entity_view_display.node.job_posting.full'
+        - 'config:core.entity_view_display.node.job_posting.sponsor'
+        - 'config:core.entity_view_display.node.job_posting.teaser'
         - 'config:core.entity_view_display.node.page.default'
         - 'config:core.entity_view_display.node.page.teaser'
         - 'config:core.entity_view_display.node.program_details.default'
         - 'config:core.entity_view_display.node.program_details.teaser'
+        - 'config:core.entity_view_display.node.session.default'
+        - 'config:core.entity_view_display.node.session.full'
+        - 'config:core.entity_view_display.node.session.schedule'
+        - 'config:core.entity_view_display.node.session.teaser'
+        - 'config:core.entity_view_display.node.training.default'
+        - 'config:core.entity_view_display.node.training.schedule'
+        - 'config:core.entity_view_display.node.training.teaser'
+        - 'config:core.entity_view_display.node.venue.default'
+        - 'config:core.entity_view_display.node.venue.teaser'
