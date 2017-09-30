@@ -1,9 +1,9 @@
-uuid: 6c8ddf6d-6345-4c51-b590-80bdd1d966f6
+uuid: 92f7f0f7-c045-41f7-808c-9207da7c8392
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:a8ddfbd6-4477-43bb-8207-8a0fc16f4257'
+    - 'block_content:basic:1c86fe5f-131b-48cf-9fe4-967cada56433'
   module:
     - block_content
     - system
@@ -14,9 +14,9 @@ theme: badcamp2017
 region: content
 weight: -12
 provider: null
-plugin: 'block_content:a8ddfbd6-4477-43bb-8207-8a0fc16f4257'
+plugin: 'block_content:1c86fe5f-131b-48cf-9fe4-967cada56433'
 settings:
-  id: 'block_content:a8ddfbd6-4477-43bb-8207-8a0fc16f4257'
+  id: 'block_content:1c86fe5f-131b-48cf-9fe4-967cada56433'
   label: 'Low Cost Drupal Training Description'
   provider: block_content
   label_display: '0'
