@@ -17,15 +17,6 @@
  * Sponsors Page
  */
 .path-sponsors{
-  @extend .path-frontpage;
-
-  #block-badcampsponsorstext{
-    text-align: center;
-    h2{
-      font-weight: bold;
-    }
-  }
-
   .sponsor-level{
     h3{
       color: white;

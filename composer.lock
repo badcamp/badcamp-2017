@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b264ce144a821297d87ca6afa114556d",
+    "content-hash": "c1619cfc697c017d9518800b14fa322d",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -202,16 +202,16 @@
         },
         {
             "name": "badcamp/badcamp_stripe_payment",
-            "version": "1.0.13",
+            "version": "1.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_stripe_payment.git",
-                "reference": "ea840eec87317693311b824e3849c141a982fe19"
+                "reference": "605ec2f5a9516cc1e7d1aa5e08a61fd30867f102"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/ea840eec87317693311b824e3849c141a982fe19",
-                "reference": "ea840eec87317693311b824e3849c141a982fe19",
+                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/605ec2f5a9516cc1e7d1aa5e08a61fd30867f102",
+                "reference": "605ec2f5a9516cc1e7d1aa5e08a61fd30867f102",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +235,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-09-27T20:36:17+00:00"
+            "time": "2017-09-30 08:56:45"
         },
         {
             "name": "commerceguys/addressing",
@@ -10146,6 +10146,7 @@
         "drupal/config_readonly": 10,
         "drupal/config_split": 10,
         "drupal/devel": 5,
+        "badcamp/badcamp_stripe_payment": 20,
         "drupal/geolocation": 20,
         "drupal/field_permissions": 10,
         "drupal/field_group": 5,
