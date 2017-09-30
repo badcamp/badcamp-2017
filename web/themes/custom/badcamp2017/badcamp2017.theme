@@ -144,6 +144,13 @@ function badcamp2017_preprocess_node__event__summit(&$vars) {
   $vars['day_of_week'] = strtolower(date('D', strtotime($vars['date'])));
 }
 
+/**
+ * Implements hook_node__node_type__view_mode().
+ */
+function badcamp2017_preprocess_node__event__full(&$vars) {
+  $vars['attributes']['class'][] = 'small-8';
+  $vars['attributes']['class'][] = 'small-push-2';
+}
 
 /**
  * Implements hook_node__node_type__view_mode().

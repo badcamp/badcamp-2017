@@ -1,8 +1,6 @@
-.schedule {
-  @extend .session-view;
-}
-
 .schedule{
+  @extend .session-view;
+
   .results {
     .session-title {
       color: white;
