@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.training.field_training_links
     - node.type.training
   module:
+    - badcamp_stripe_payment
     - datetime_range
     - text
     - user
@@ -49,6 +50,13 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_payment_info:
+    type: stripe_payment
+    weight: 5
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_session_skill_level:
     weight: 1
     label: hidden
@@ -67,7 +75,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_event_sponsors: true
-  field_payment_info: true
   field_training_files: true
   field_training_links: true
   flag_add_to_schedule: true

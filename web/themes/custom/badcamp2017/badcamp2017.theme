@@ -60,6 +60,18 @@ function badcamp2017_preprocess_field__node__field_tags__blog(&$vars){
 /**
  * Implements hook_preprocess_field();
  */
+function badcamp2017_preprocess_field__node__field_tags__blog__news_view(&$vars){
+  foreach($vars['items'] AS $key => &$item){
+    if (array_search('button', $item['content']['#attributes']['class']) !== FALSE) {
+      $index = array_search('button', $item['content']['#attributes']['class']);
+      unset($item['content']['#attributes']['class'][$index]);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_field();
+ */
 function badcamp2017_preprocess_field__node__field_event_sponsors(&$vars){
   $vars['attributes']['class'][] = 'row';
 
@@ -155,6 +167,22 @@ function badcamp2017_preprocess_node__event(&$vars) {
  */
 function badcamp2017_preprocess_node__event__summit(&$vars) {
   $vars['date'] = $vars['content']['field_event_date_and_time']['#items'][0]->getValue()['value'];
+  $vars['day_of_week'] = strtolower(date('D', strtotime($vars['date'])));
+}
+
+/**
+ * Implements hook_node__node_type__view_mode().
+ */
+function badcamp2017_preprocess_node__event__full(&$vars) {
+  $vars['attributes']['class'][] = 'small-8';
+  $vars['attributes']['class'][] = 'small-push-2';
+}
+
+/**
+ * Implements hook_node__node_type__view_mode().
+ */
+function badcamp2017_preprocess_node__blog__news_view(&$vars) {
+  $vars['date'] = $vars['node']->get('created')->getValue()[0]['value'];
   $vars['day_of_week'] = strtolower(date('D', strtotime($vars['date'])));
 }
 
