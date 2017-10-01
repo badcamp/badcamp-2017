@@ -145,13 +145,6 @@ function badcamp2017_preprocess_node__event(&$vars) {
   $sold_out = $vars['node']->get('field_sold_out')->first()->getValue()['value'];
 
   $max_reg = $vars['node']->get('field_maximum_registration')->first()->getValue()['value'];
-  if ($max_reg > 0) {
-    $vars['content']['flag_count'] = [
-      '#type' => 'markup',
-      '#markup' => ($max_reg - $flags['add_to_schedule']) . ' / ' . $max_reg . ' spaces available',
-      '#weight' => $vars['content']['flag_add_to_schedule']['#weight'] + 1
-    ];
-  }
 
   if (($sold_out == 1) || ($max_reg > 0 && $flags['add_to_schedule'] >= $max_reg)) {
     $vars['content']['flag_add_to_schedule'] = [
