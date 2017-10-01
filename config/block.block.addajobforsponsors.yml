@@ -12,7 +12,7 @@ dependencies:
 id: addajobforsponsors
 theme: badcamp2017
 region: content
-weight: -13
+weight: -14
 provider: null
 plugin: 'block_content:0e2ff868-b6f5-4aaa-907e-ffe819acdfd1'
 settings:
