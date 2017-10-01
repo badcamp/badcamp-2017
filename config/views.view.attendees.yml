@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.user.feature_attendee
     - field.storage.user.field_first_name
     - field.storage.user.field_last_name
     - field.storage.user.field_organization
@@ -630,6 +631,8 @@ display:
         filter_groups: false
         sorts: false
         css_class: false
+        style: false
+        row: false
       title: 'Featured Attendees'
       fields:
         uid:
@@ -1004,18 +1007,6 @@ display:
         groups:
           1: AND
       sorts:
-        count:
-          id: count
-          table: file_usage
-          field: count
-          relationship: field_profile_photo_target_id
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: standard
         random:
           id: random
           table: views
@@ -1028,7 +1019,30 @@ display:
           expose:
             label: ''
           plugin_id: random
-      css_class: 'callout secondary'
+        count:
+          id: count
+          table: file_usage
+          field: count
+          relationship: field_profile_photo_target_id
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
+      css_class: ''
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'entity:user'
+        options:
+          relationship: none
+          view_mode: feature_attendee
     cache_metadata:
       max-age: 0
       contexts:

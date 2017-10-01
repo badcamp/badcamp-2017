@@ -61,7 +61,9 @@
     "drupal/chosen": "^2.4",
     "drupal/flag": "^4.0@alpha",
     "drupal/empty_fields": "^1.0@alpha",
-    "drupal/masquerade": "^2.0@beta"
+    "drupal/masquerade": "^2.0@beta",
+    "drupal/libraries": "3.x-dev",
+    "drupal/swiper": "^1.0@alpha"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
