@@ -33,7 +33,7 @@
     "drupal/config_readonly": "^1.0@beta",
     "drupal/config_split": "^1.0@beta",
     "drupal/devel": "^1.0@RC",
-    "badcamp/badcamp_stripe_payment": "^1.0",
+    "badcamp/badcamp_stripe_payment": "dev-donate_redirect_rework",
     "drupal/recaptcha": "^2.2",
     "drupal/geolocation": "1.x-dev",
     "drupal/address": "^1.1",
