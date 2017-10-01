@@ -51,7 +51,7 @@
     ],
     "changed": [
         {
-            "value": 1505776423,
+            "value": 1506448911,
             "lang": "en"
         }
     ],
@@ -93,7 +93,7 @@
     ],
     "body": [
         {
-            "value": "<p>You'll learn something whether you're new to Drupal or already a pro. October 20 &amp; 21 will be full of great sessions for all levels of interest. Sessions schedule will be posted Sept 20.<\/p>\r\n\r\n<p><a class=\"button\" href=\"\/sessions-accepted\">Check out the Accepted Sessions<\/a><\/p>\r\n",
+            "value": "<p>You'll learn something whether you're new to Drupal or already a pro. October 20 &amp; 21 will be full of great sessions for all levels of interest. Sessions schedule has&nbsp;now been posted.<\/p>\r\n\r\n<p><a class=\"button\" href=\"\/schedule\">Check out the Session Schedule<\/a><\/p>\r\n",
             "format": "full_html",
             "summary": "",
             "lang": "en"
