@@ -35,13 +35,13 @@
     ],
     "info": [
         {
-            "value": "Free Drupal Training",
+            "value": "Drupal Training",
             "lang": "en"
         }
     ],
     "changed": [
         {
-            "value": 1502903437,
+            "value": 1506616817,
             "lang": "en"
         }
     ],
@@ -64,7 +64,7 @@
     ],
     "body": [
         {
-            "value": "<p>FREE Drupal Training is back! On October 18 &amp; 19, we're proud to offer lessons from top Drupal Experts. Registration opens in September.<\/p>\r\n\r\n<p><a class=\"button\" href=\"\/free-drupal-training\">See a Preview of What's to Come<\/a><\/p>\r\n",
+            "value": "<p>Awesome Drupal Training is back! On October 18 &amp; 19, we're proud to offer lessons from top Drupal Experts. Registration opens soon.<\/p>\r\n\r\n<p><a class=\"button\" href=\"\/drupal-training\">Available Trainings<\/a><\/p>\r\n",
             "format": "full_html",
             "summary": "",
             "lang": "en"
