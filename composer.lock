@@ -206,12 +206,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_stripe_payment.git",
-                "reference": "3732dfbac894cb4c5b96f38222c910214b96c786"
+                "reference": "eeed924ccc384a7e88fafa46eab55df669d4bd5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/3732dfbac894cb4c5b96f38222c910214b96c786",
-                "reference": "3732dfbac894cb4c5b96f38222c910214b96c786",
+                "url": "https://api.github.com/repos/badcamp/badcamp_stripe_payment/zipball/eeed924ccc384a7e88fafa46eab55df669d4bd5b",
+                "reference": "eeed924ccc384a7e88fafa46eab55df669d4bd5b",
                 "shasum": ""
             },
             "require": {
@@ -235,7 +235,7 @@
             "keywords": [
                 "drupal"
             ],
-            "time": "2017-10-01 19:59:37"
+            "time": "2017-10-02 06:53:36"
         },
         {
             "name": "commerceguys/addressing",
@@ -1446,14 +1446,6 @@
                 {
                     "name": "Mohamed Anis Taktak",
                     "homepage": "https://www.drupal.org/u/matio89"
-                },
-                {
-                    "name": "adriancid",
-                    "homepage": "https://www.drupal.org/user/1962106"
-                },
-                {
-                    "name": "bolbol",
-                    "homepage": "https://www.drupal.org/user/3400070"
                 },
                 {
                     "name": "eme",
@@ -3398,8 +3390,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.11+3-dev",
-                    "datestamp": "1505918044",
+                    "version": "8.x-1.11+2-dev",
+                    "datestamp": "1505915944",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
