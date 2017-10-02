@@ -202,7 +202,7 @@
         },
         {
             "name": "badcamp/badcamp_stripe_payment",
-            "version": "dev-donate_redirect_rework",
+            "version": "1.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/badcamp/badcamp_stripe_payment.git",
