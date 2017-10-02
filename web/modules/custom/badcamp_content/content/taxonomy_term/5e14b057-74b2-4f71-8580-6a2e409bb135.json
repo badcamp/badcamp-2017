@@ -41,7 +41,7 @@
     ],
     "changed": [
         {
-            "value": 1500958814,
+            "value": 1505956532,
             "lang": "en"
         }
     ],
@@ -49,6 +49,11 @@
         {
             "value": true,
             "lang": "en"
+        }
+    ],
+    "field_icon": [
+        {
+            "value": "fa-cog"
         }
     ]
 }
