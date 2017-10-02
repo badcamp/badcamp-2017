@@ -10,6 +10,7 @@ use Behat\Behat\Hook\Scope\AfterStepScope;
 use PHPUnit_Framework_Assert;
 
 use Drupal\DrupalExtension\Context\RawDrupalContext;
+use Behat\Behat\Tester\Exception\PendingException;
 
 /**
  * Define application features from the specific context.
@@ -301,4 +302,50 @@ class FeatureContext extends RawDrupalContext implements Context, SnippetAccepti
     throw new \Exception(strtr('No links with path @path were found', ['@path' => $arg1]));
   }
 
+  /**
+   * @Given I am in the :path path
+   */
+  public function iAmInThePath($path)
+  {
+    $this->path = $path;
+  }
+
+  /**
+   * @Then I should not see any keys for :esrvice
+   */
+  public function iShouldNotSeeAnyKeysFor($service)
+  {
+    switch($service) {
+      case 'mailchimp':
+        $value = \Symfony\Component\Yaml\Yaml::parse(file_get_contents( __DIR__  . '/../../../' . $this->path . '/mailchimp.settings.yml'));
+        PHPUnit_Framework_Assert::assertEmpty($value['api_key'], "Mailchimp does not contain any keys.");
+        break;
+      case 'stripe':
+        $value = \Symfony\Component\Yaml\Yaml::parse(file_get_contents(  __DIR__  . '/../../../' . $this->path . '/stripe_api.settings.yml'));
+
+        $file1 = \Symfony\Component\Yaml\Yaml::parse(file_get_contents(  __DIR__  . '/../../../' . $this->path . '/key.key.' . $value['test_secret_key'] . '.yml'));
+        PHPUnit_Framework_Assert::assertEquals($file1['key_provider'], 'file', 'Stripe test_secret_key does not contain a key');
+        PHPUnit_Framework_Assert::assertEquals($file1['key_input'], 'none', 'Stripe test_secret_key does not contain a key');
+
+        $file2 = \Symfony\Component\Yaml\Yaml::parse(file_get_contents(  __DIR__  . '/../../../' . $this->path . '/key.key.' . $value['test_public_key'] . '.yml'));
+        PHPUnit_Framework_Assert::assertEquals($file2['key_provider'], 'file', 'Stripe test_public_key does not contain a key');
+        PHPUnit_Framework_Assert::assertEquals($file1['key_input'], 'none', 'Stripe test_public_key does not contain a key');
+
+        $file3 = \Symfony\Component\Yaml\Yaml::parse(file_get_contents(  __DIR__  . '/../../../' . $this->path . '/key.key.' . $value['live_secret_key'] . '.yml'));
+        PHPUnit_Framework_Assert::assertEquals($file3['key_provider'], 'file', 'Stripe live_secret_key does not contain a key');
+        PHPUnit_Framework_Assert::assertEquals($file1['key_input'], 'none', 'Stripe live_secret_key does not contain a key');
+
+        $file4 = \Symfony\Component\Yaml\Yaml::parse(file_get_contents(  __DIR__  . '/../../../' . $this->path . '/key.key.' . $value['live_public_key'] . '.yml'));
+        PHPUnit_Framework_Assert::assertEquals($file4['key_provider'], 'file', 'Stripe live_public_key does not contain a key');
+        PHPUnit_Framework_Assert::assertEquals($file1['key_input'], 'none', 'Stripe live_public_key does not contain a key');
+
+        break;
+      case 'sendgrid':
+        $value = \Symfony\Component\Yaml\Yaml::parse(file_get_contents( __DIR__  . '/../../../' . $this->path . '/sendgrid_integration.settings.yml'));
+        PHPUnit_Framework_Assert::assertEmpty($value['apikey'], "Sendgrid does not contain any keys.");
+        break;
+      default:
+        throw new PendingException();
+    }
+  }
 }
