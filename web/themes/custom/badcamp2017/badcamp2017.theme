@@ -145,13 +145,6 @@ function badcamp2017_preprocess_node__event(&$vars) {
   $sold_out = $vars['node']->get('field_sold_out')->first()->getValue()['value'];
 
   $max_reg = $vars['node']->get('field_maximum_registration')->first()->getValue()['value'];
-  if ($max_reg > 0) {
-    $vars['content']['flag_count'] = [
-      '#type' => 'markup',
-      '#markup' => ($max_reg - $flags['add_to_schedule']) . ' / ' . $max_reg . ' spaces available',
-      '#weight' => $vars['content']['flag_add_to_schedule']['#weight'] + 1
-    ];
-  }
 
   if (($sold_out == 1) || ($max_reg > 0 && $flags['add_to_schedule'] >= $max_reg)) {
     $vars['content']['flag_add_to_schedule'] = [
@@ -346,6 +339,13 @@ function badcamp2017_status_messages($variables) {
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
+function badcamp2017_theme_suggestions_form_alter(&$suggestions, $vars) {
+  $suggestions[] = 'form__' . $vars['element']['#form_id'];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
 function badcamp2017_theme_suggestions_bef_checkboxes_alter(&$suggestions, $vars){
   $suggestions[] = 'bef_checkboxes__' . str_ireplace('-', '_', $vars['element']['#name']);
 }
@@ -480,6 +480,32 @@ function badcamp2017_preprocess_field__node__field_session_track(&$vars){
       $vars['items'][$id]['icon_class'] = $class;
     }
   }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function badcamp2017_form_mailchimp_signup_subscribe_block_badcamp_newsletter_form_alter(&$form, &$form_state) {
+  $form['container'] = [
+    '#prefix' => '<div class="row"><div class="large-12 column"><div class="row collapse">',
+    '#suffix' => '</div></div></div>'
+  ];
+
+  $form['mergevars']['#prefix'] = '<div class="small-9 columns">';
+  $form['mergevars']['#suffix'] = '</div>';
+  $form['mergevars']['EMAIL']['#title_display'] = 'invisible';
+  $form['mergevars']['EMAIL']['#attributes']['placeholder'] = 'E-mail Address';
+
+  $form['container']['mergevars'] = $form['mergevars'];
+  unset($form['mergevars']);
+
+  $form['actions']['submit']['#prefix'] = '<div class="small-3 columns">';
+  $form['actions']['submit']['#suffix'] = '</div>';
+  $form['actions']['submit']['#attributes']['class'][] = 'postfix';
+  $form['actions']['submit']['#attributes']['class'][] = 'expanded';
+
+  $form['container']['actions'] = $form['actions']['submit'];
+  unset($form['actions']);
 }
 
 /**

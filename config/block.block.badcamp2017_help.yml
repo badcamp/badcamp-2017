@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - help
+    - system
   theme:
     - badcamp2017
 _core:
@@ -19,4 +20,9 @@ settings:
   label: Help
   provider: help
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }
