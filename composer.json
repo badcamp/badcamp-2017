@@ -63,8 +63,8 @@
     "drupal/empty_fields": "^1.0@alpha",
     "drupal/masquerade": "^2.0@beta",
     "drupal/libraries": "3.x-dev",
-    "drupal/swiper": "^1.0@alpha",
-    "drupal/me_redirect": "^1.0@beta"
+    "drupal/me_redirect": "^1.0@beta",
+    "drupal/owlcarousel": "^1.0@alpha"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",

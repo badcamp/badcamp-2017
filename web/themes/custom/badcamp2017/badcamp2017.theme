@@ -340,7 +340,8 @@ function badcamp2017_status_messages($variables) {
  * Implements hook_theme_suggestions_HOOK_alter().
  */
 function badcamp2017_theme_suggestions_form_alter(&$suggestions, $vars) {
-  $suggestions[] = 'form__' . $vars['element']['#form_id'];
+  $suggestions[] = 'form__' . str_ireplace('-', '_', $vars['element']['#form_id']);
+  $suggestions[] = 'form__' . str_ireplace('-', '_', $vars['element']['#id']);
 }
 
 /**
@@ -506,6 +507,29 @@ function badcamp2017_form_mailchimp_signup_subscribe_block_badcamp_newsletter_fo
 
   $form['container']['actions'] = $form['actions']['submit'];
   unset($form['actions']);
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function badcamp2017_form_views_exposed_form_alter(&$form, &$form_state) {
+
+  switch($form['#id']){
+    case 'views-exposed-form-attendees-page-1':
+
+      $form['#prefix'] = '<div class="row">';
+      $form['#suffix'] = '</div>';
+
+      $form['first_name']['#prefix'] = '<div class="column small-6">';
+      $form['first_name']['#suffix'] = '</div>';
+      $form['last_name']['#prefix'] = '<div class="column small-6">';
+      $form['last_name']['#suffix'] = '</div>';
+      $form['actions']['submit']['#prefix'] = '<div class="column small-6">';
+      $form['actions']['submit']['#suffix'] = '</div>';
+      $form['actions']['submit']['#value'] = t('Search');
+
+      break;
+  }
 }
 
 /**

@@ -35,37 +35,31 @@
 {%
 set classes = [
 dom_id ? 'js-view-dom-id-' ~ dom_id,
-    'small-12',
-    'small-push-0',
     'medium-12',
     'medium-push-0',
     'large-12',
     'large-push-0',
-'clearfix',
-    'carousel-holder'
+    'clearfix',
+    'carousel-holder',
 ]
 %}
 <div{{ attributes.addClass(classes) }}>
-    <div class="clearfix">
-        <div class="carousel-info">
-            {{ title_prefix }}
-            {{ title }}
-            <h3 class="title-section">
-                <span>Featured</span>
-                <span>Attendees</span>
-            </h3>
-            {{ title_suffix }}
-            <div class="pager-buttons">
-                <span class="fa fa-2x fa-arrow-left swiper-fa-button-prev">&nbsp;</span>
-                <span class="fa fa-2x fa-arrow-right swiper-fa-button-next">&nbsp;</span>
-            </div>
+    <div class="carousel-info columns small-12 medium-3 large-2">
+        {{ title_prefix }}
+        {{ title }}
+        <h3 class="title-section">
+            <span>Featured</span>
+            <span>Attendees</span>
+        </h3>
+        {{ title_suffix }}
+        <div class="pager-buttons">
+            <span class="fa fa-2x fa-arrow-left swiper-fa-button-prev owl-prev" id="feature-attendees-prev">&nbsp;</span>
+            <span class="fa fa-2x fa-arrow-right swiper-fa-button-next owl-next" id="feature-attendees-next">&nbsp;</span>
         </div>
-        <div class="carousel-wrapper">
-            <div class="swiper-container">
-                <div class="swiper-wrapper" data-equalizer>
-                    {{ rows }}
-                </div>
-            </div>
+    </div>
+    <div class="carousel-wrapper columns small-12 medium-9 large-10">
+        <div class="swiper-container owl-carousel" data-equalizer>
+            {{ rows }}
         </div>
     </div>
 </div>

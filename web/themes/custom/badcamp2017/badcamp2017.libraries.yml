@@ -10,8 +10,21 @@ global-js:
     - core/jquery
     - core/drupal
 
+owlcarousel:
+  css:
+    theme:
+      node_modules/owl.carousel/dist/assets/owl.carousel.min.css: {}
+  js:
+    node_modules/owl.carousel/dist/owl.carousel.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
+
 featured-attendees:
   js:
     js/featured-attendees.js: {}
   dependencies:
-    - swiper/swiper
+    - badcamp2017/owlcarousel
+    #- swiper/swiper
