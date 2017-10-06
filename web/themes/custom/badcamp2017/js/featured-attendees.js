@@ -11,7 +11,6 @@ var swiper;
         loop: true,
         freeMode: true,
         uniqueNavElements: false,
-        centeredSlides: true,
         spaceBetween: 30,
         breakpoints: {
           0: {

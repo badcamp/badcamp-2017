@@ -1,8 +1,5 @@
 #block-views-block-attendees-block-1{
   margin: 2rem 0;
-  @include breakpoint(medium) {
-    min-height: 350px;
-  }
 
   .title-section{
     span {
@@ -15,6 +12,15 @@
       &:hover{
         cursor: pointer;
       }
+    }
+  }
+
+  .carousel-holder {
+    .carousel-info {
+
+    }
+    .carousel-wrapper {
+
     }
   }
 
@@ -48,9 +54,6 @@
     }
 
     .photo {
-      @include breakpoint(medium) {
-        min-width: 204px;
-      }
       > div {
         position: relative;
         left: -.5rem;
@@ -60,11 +63,6 @@
 
     .info {
       padding-top: .5rem;
-      min-width: 225px;
-
-      @include breakpoint(medium) {
-        min-width: 250px;
-      }
     }
 
     .name {

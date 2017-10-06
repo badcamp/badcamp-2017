@@ -41,12 +41,13 @@ dom_id ? 'js-view-dom-id-' ~ dom_id,
     'medium-push-0',
     'large-12',
     'large-push-0',
-'clearfix'
+'clearfix',
+    'carousel-holder'
 ]
 %}
 <div{{ attributes.addClass(classes) }}>
     <div class="clearfix">
-        <div class="column small-12 medium-2">
+        <div class="carousel-info">
             {{ title_prefix }}
             {{ title }}
             <h3 class="title-section">
@@ -59,7 +60,7 @@ dom_id ? 'js-view-dom-id-' ~ dom_id,
                 <span class="fa fa-2x fa-arrow-right swiper-fa-button-next">&nbsp;</span>
             </div>
         </div>
-        <div class="column small-12 medium-10">
+        <div class="carousel-wrapper">
             <div class="swiper-container">
                 <div class="swiper-wrapper" data-equalizer>
                     {{ rows }}

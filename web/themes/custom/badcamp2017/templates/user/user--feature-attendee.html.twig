@@ -22,7 +22,7 @@
     <div class="column small-4 no-margin photo">
         {{ content.field_profile_photo }}
     </div>
-    <div class="column small-5 no-margin info">
+    <div class="column small-8 no-margin info">
         <h4 class="name">{{ content.field_first_name.0 | raw }} {{ content.field_last_name.0 | raw }}</h4>
         <div>{{ current_user_name }}</div>
         <div>{{ content | without('field_profile_photo','field_first_name','field_last_name') }}</div>
