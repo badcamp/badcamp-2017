@@ -27,4 +27,3 @@ featured-attendees:
     js/featured-attendees.js: {}
   dependencies:
     - badcamp2017/owlcarousel
-    #- swiper/swiper
