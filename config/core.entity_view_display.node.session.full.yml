@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.session.field_event_date_and_time
+    - field.field.node.session.field_event_sponsors
     - field.field.node.session.field_event_venue
     - field.field.node.session.field_session_description
     - field.field.node.session.field_session_files
@@ -16,6 +17,7 @@ dependencies:
     - node.type.session
   module:
     - badcamp_content
+    - empty_fields
     - file
     - text
     - user
@@ -37,6 +39,18 @@ content:
       same_date_date_format: date_only
       same_date_time_format: time_only
     third_party_settings: {  }
+  field_event_sponsors:
+    type: entity_reference_entity_view
+    weight: 8
+    region: content
+    label: hidden
+    settings:
+      view_mode: image_only
+      link: false
+    third_party_settings:
+      empty_fields:
+        handler: ''
+        empty_text: ''
   field_event_venue:
     type: entity_reference_label
     weight: 1
@@ -95,12 +109,12 @@ content:
     type: video_embed_field_video
     region: content
   flag_add_to_schedule:
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   links:
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -55,6 +55,11 @@ content:
     third_party_settings: {  }
     type: image
     region: content
+  sponsored_events_entity_view_1:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   user_sponsors_entity_view_1:
     weight: 4
     region: content
