@@ -142,7 +142,7 @@ handlers:
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
-      html: true
+      html: false
       attachments: false
       debug: false
       reply_to: ''
@@ -173,7 +173,7 @@ handlers:
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
-      html: true
+      html: false
       attachments: false
       debug: false
       reply_to: ''
