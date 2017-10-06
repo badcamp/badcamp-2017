@@ -30,7 +30,9 @@ var owl;
           }
         },
         onInitialized: function (event) {
-          $(window).resize();
+          setTimeout(function(){
+            $(window).resize();
+          }, 500);
         }
       });
 
