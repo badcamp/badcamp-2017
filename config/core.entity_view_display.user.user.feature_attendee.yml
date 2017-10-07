@@ -1,0 +1,94 @@
+uuid: 9f7fc15e-d194-4c93-a4e7-02d16c52b244
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.feature_attendee
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_drupal_org_username
+    - field.field.user.user.field_featured
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_hearing_sponsors
+    - field.field.user.user.field_interested_drupal_jobs
+    - field.field.user.user.field_interests
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_make_my_schedule_public
+    - field.field.user.user.field_newsletter
+    - field.field.user.user.field_organization
+    - field.field.user.user.field_organization_website
+    - field.field.user.user.field_profile_photo
+    - field.field.user.user.field_social_media_links
+    - field.field.user.user.field_sponsor
+    - field.field.user.user.field_title
+    - field.field.user.user.field_volunteer
+    - image.style.attendees_profile_photo
+  module:
+    - empty_fields
+    - image
+    - user
+_core:
+  default_config_hash: L2mtwGWH_7wDRCMIR4r_Iu_jmvQ10DV1L8ht8iNZ5qY
+id: user.user.feature_attendee
+targetEntityType: user
+bundle: user
+mode: feature_attendee
+content:
+  field_first_name:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_last_name:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_organization:
+    type: string
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_profile_photo:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: attendees_profile_photo
+      image_link: content
+    third_party_settings:
+      empty_fields:
+        handler: text
+        empty_text: '<img src="/themes/custom/badcamp2017/images/badcamp-2017-default-user.png" />'
+    eld_social_media_links: null
+  my_schedule_entity_view_1:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_bio: true
+  field_drupal_org_username: true
+  field_featured: true
+  field_hearing_sponsors: true
+  field_interested_drupal_jobs: true
+  field_interests: true
+  field_make_my_schedule_public: true
+  field_newsletter: true
+  field_organization_website: true
+  field_social_media_links: true
+  field_sponsor: true
+  field_title: true
+  field_volunteer: true
+  masquerade: true
+  member_for: true
+  sessions_user_profile_view: true

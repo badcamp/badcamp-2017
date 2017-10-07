@@ -405,6 +405,8 @@ function badcamp2017_preprocess_user(&$vars) {
   if($vars['user']->get('field_make_my_schedule_public')->getString() != 1 && $vars['user']->id() != $account->id()){
     $vars['content']['my_schedule_my_schedule']['#access'] = FALSE;
   }
+
+  $vars['current_user_name'] = $vars['user']->getDisplayName();
 }
 
 /**
@@ -484,11 +486,10 @@ function badcamp2017_preprocess_field__node__field_session_track(&$vars){
  * Implements hook_form_alter().
  */
 function badcamp2017_form_mailchimp_signup_subscribe_block_badcamp_newsletter_form_alter(&$form, &$form_state) {
-
-  $form['container'] = array(
+  $form['container'] = [
     '#prefix' => '<div class="row"><div class="large-12 column"><div class="row collapse">',
     '#suffix' => '</div></div></div>'
-  );
+  ];
 
   $form['mergevars']['#prefix'] = '<div class="small-9 columns">';
   $form['mergevars']['#suffix'] = '</div>';
@@ -505,5 +506,18 @@ function badcamp2017_form_mailchimp_signup_subscribe_block_badcamp_newsletter_fo
 
   $form['container']['actions'] = $form['actions']['submit'];
   unset($form['actions']);
+}
 
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function badcamp2017_theme_suggestions_user_alter(&$suggestions, $vars){
+  $suggestions[] = 'user__' . $vars['elements']['#view_mode'];
+}
+
+/**
+ * Implements hook_preprocess_views_view__view_name__view_display().
+ */
+function badcamp2017_preprocess_views_view__attendees__block_1(&$vars) {
+  $vars['#attached']['library'][] = 'badcamp2017/featured-attendees';
 }

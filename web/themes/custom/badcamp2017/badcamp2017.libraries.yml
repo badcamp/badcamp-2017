@@ -9,3 +9,9 @@ global-js:
   dependencies:
     - core/jquery
     - core/drupal
+
+featured-attendees:
+  js:
+    js/featured-attendees.js: {}
+  dependencies:
+    - swiper/swiper

@@ -1,0 +1,74 @@
+#block-views-block-attendees-block-1{
+  margin: 2rem 0;
+  @include breakpoint(medium) {
+    min-height: 350px;
+  }
+
+  .title-section{
+    span {
+      display: block;
+    }
+  }
+
+  .pager-buttons{
+    span {
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+  .feature-attendee{
+    color: white;
+    margin-bottom: 1rem;
+    min-width: 350px;
+
+    @include breakpoint(medium) {
+      min-width: 455px;
+      max-width: 475px;
+    }
+
+    &.medium-green{
+      background-color: $bc_green;
+    }
+    &.medium-orange{
+      background-color: $bc_orange;
+    }
+    &.medium-blue{
+      background-color: $bc_blue;
+    }
+
+    img {
+      background: white;
+    }
+
+    .no-margin{
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .photo {
+      @include breakpoint(medium) {
+        min-width: 204px;
+      }
+      > div {
+        position: relative;
+        left: -.5rem;
+        top: .5rem;
+      }
+    }
+
+    .info {
+      padding-top: .5rem;
+      min-width: 225px;
+
+      @include breakpoint(medium) {
+        min-width: 250px;
+      }
+    }
+
+    .name {
+      font-weight: 700;
+    }
+  }
+}
