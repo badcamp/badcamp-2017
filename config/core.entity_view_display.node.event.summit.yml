@@ -75,3 +75,4 @@ hidden:
   field_sold_out: true
   field_summit_leaders: true
   links: true
+  summit_attendees_entity_view_1: true
