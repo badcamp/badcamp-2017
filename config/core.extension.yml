@@ -53,6 +53,7 @@ module:
   inline_form_errors: 0
   key: 0
   kint: 0
+  libraries: 0
   link: 0
   mailchimp: 0
   mailchimp_lists: 0

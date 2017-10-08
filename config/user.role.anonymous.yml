@@ -12,6 +12,7 @@ permissions:
   - 'access content'
   - 'access mailchimp signup pages'
   - 'access site-wide contact form'
+  - 'access user profiles'
   - 'create field_hearing_sponsors'
   - 'create field_interested_drupal_jobs'
   - 'search content'

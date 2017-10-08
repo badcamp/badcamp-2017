@@ -12,7 +12,7 @@ dependencies:
 id: homepageeventsataglancespecial
 theme: badcamp2017
 region: content_full
-weight: -7
+weight: -12
 provider: null
 plugin: 'block_content:010401b2-8a3d-424e-aed2-9c448c6bcadc'
 settings:
