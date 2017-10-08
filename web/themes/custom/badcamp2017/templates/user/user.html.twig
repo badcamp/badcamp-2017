@@ -19,13 +19,14 @@
 <article{{ attributes }}>
   {% if content %}
     <div class="row align-center">
-      <div class="columns small-12 medium-4 large-3">
+      <div class="columns small-12 medium-4 large-3 no-margin">
         <div class="thumbnail">
             {{ content.field_profile_photo }}
         </div>
       </div>
-      <div class="columns small-12 medium-8 large-9">
-          {{ content|without('field_profile_photo') }}
+      <div class="columns small-12 medium-8 large-9 no-margin">
+        <div>{{ content.field_first_name.0 | raw }} {{ content.field_last_name.0 | raw }}</div>
+        <div>{{ content | without('field_profile_photo','field_first_name','field_last_name') }}</div>
       </div>
     </div>
   {% endif %}
