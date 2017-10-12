@@ -17,6 +17,7 @@ permissions:
   - 'access user profiles'
   - 'add stripe payment entities'
   - 'create field_t_shirt_size'
+  - 'edit own event content'
   - 'edit own field_hearing_sponsors'
   - 'edit own field_interested_drupal_jobs'
   - 'edit own field_t_shirt_size'
