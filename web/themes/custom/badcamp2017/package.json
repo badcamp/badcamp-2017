@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "foundation-sites": "^6"
+    "foundation-sites": "^6",
+    "owl.carousel": "^2.2.0"
   }
 }

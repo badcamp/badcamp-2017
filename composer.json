@@ -18,7 +18,7 @@
     "rvtraveller/qs-composer-installer": "^1.1",
     "drupal-composer/drupal-scaffold": "^2.0.1",
     "cweagans/composer-patches": "^1.0",
-    "drupal/core": "~8",
+    "drupal/core": "8.3.7",
     "drupal/console": "~1.0",
     "drush/drush": "~8",
     "drupal/config_installer": "^1.0",
@@ -62,7 +62,9 @@
     "drupal/flag": "^4.0@alpha",
     "drupal/empty_fields": "^1.0@alpha",
     "drupal/masquerade": "^2.0@beta",
-    "drupal/me_redirect": "^1.0@beta"
+    "drupal/libraries": "3.x-dev",
+    "drupal/me_redirect": "^1.0@beta",
+    "drupal/owlcarousel": "^1.0@alpha"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",
@@ -136,7 +138,8 @@
     "composer-exit-on-patch-failure": true,
     "patches": {
       "drupal/core": {
-        "Issue: 2409059": "https://gist.githubusercontent.com/sean-e-dietrich/baf6d4039abbff086398c55da812f657/raw/ef1c8f700a061d9ddd8eb4bb591d409e35dc556c/core-new_textarea_typedata-2409059-37-8.0.patch"
+        "Issue: 2409059": "https://gist.githubusercontent.com/sean-e-dietrich/baf6d4039abbff086398c55da812f657/raw/ef1c8f700a061d9ddd8eb4bb591d409e35dc556c/core-new_textarea_typedata-2409059-37-8.0.patch",
+        "See Email": "https://www.drupal.org/files/issues/role_based_email_access-2799049-2.patch"
       },
       "drupal/default_content": {
         "Allow manual imports": "https://www.drupal.org/files/issues/allow_manual_imports-2640734-67.patch",

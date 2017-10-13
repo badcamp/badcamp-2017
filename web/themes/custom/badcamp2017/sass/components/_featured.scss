@@ -20,13 +20,15 @@
   }
 
   text-align: center;
-
-  margin-bottom: 4rem;
 }
 .zone-highlighted {
   p, h1, h2, div {
     color: white;
   }
+}
+
+.path-notfrontpage .zone-highlighted {
+  margin-bottom: 4rem;
 }
 
 #block-pagetitle{
@@ -91,7 +93,7 @@
 
     .banner-title{
       text-align: left;
-      margin-top: -2.5rem;
+      margin-top: 0 rem;
       line-height: 2.3;
       @include breakpoint(medium){
         text-align: center;

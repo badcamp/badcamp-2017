@@ -1,0 +1,30 @@
+uuid: eda52a47-995b-480e-b9d7-1397a7ff4e29
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.attendees
+  module:
+    - system
+    - views
+  theme:
+    - badcamp2017
+id: views_block__attendees_block_1
+theme: badcamp2017
+region: content_full
+weight: -13
+provider: null
+plugin: 'views_block:attendees-block_1'
+settings:
+  id: 'views_block:attendees-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

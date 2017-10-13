@@ -20,7 +20,7 @@ dependencies:
     - field.field.user.user.field_sponsor
     - field.field.user.user.field_title
     - field.field.user.user.field_volunteer
-    - image.style.medium
+    - image.style.attendees_profile_photo
   module:
     - empty_fields
     - image
@@ -93,7 +93,7 @@ content:
     region: content
     label: hidden
     settings:
-      image_style: medium
+      image_style: attendees_profile_photo
       image_link: ''
     third_party_settings:
       empty_fields:

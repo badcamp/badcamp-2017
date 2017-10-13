@@ -76,17 +76,22 @@
   <div{{ content_attributes }}>
     <div class="media-object stack-for-small">
       <div class="media-object-section main-section">
-        {{ content | without('user_sponsors_entity_view_1','field_sponsor_logo','field_link','attendees_sponsor_team') }}
+        {{ content | without('user_sponsors_entity_view_1','field_sponsor_logo','field_link','attendees_sponsor_team','sponsored_events_entity_view_1') }}
       </div>
       <div class="media-object-section middle">
         <a href="{{ sponsor_url }}" title="{{ title }}">{{ logo }}</a>
       </div>
     </div>
-    <div class="small-12">
-     {{ content.attendees_sponsor_team}}
-    </div>
-    <div class="small-12">
-      {{ content.user_sponsors_entity_view_1 }}
-    </div>
+
+      <div class="row">
+          {{ content.attendees_sponsor_team}}
+      </div>
+      <div class="row">
+        {{ content.user_sponsors_entity_view_1 }}
+      </div>
+      <div class="row">
+          {{ content.sponsored_events_entity_view_1 }}
+      </div>
+
   </div>
 </article>
