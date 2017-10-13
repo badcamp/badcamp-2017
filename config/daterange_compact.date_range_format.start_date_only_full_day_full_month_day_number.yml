@@ -1,0 +1,18 @@
+uuid: 250a6be3-5f01-400d-81a3-68b2ead768f2
+langcode: en
+status: true
+dependencies: {  }
+id: start_date_only_full_day_full_month_day_number
+label: 'Start Date Only: Full Day, Full Month, Day Number'
+date_settings:
+  default_pattern: 'l, F j'
+  separator: ''
+  same_month_start_pattern: 'l, F j'
+  same_month_end_pattern: ''
+  same_year_start_pattern: 'l, F j'
+  same_year_end_pattern: ''
+datetime_settings:
+  default_pattern: 'l, F j'
+  separator: ''
+  same_day_start_pattern: 'l, F j'
+  same_day_end_pattern: ' '

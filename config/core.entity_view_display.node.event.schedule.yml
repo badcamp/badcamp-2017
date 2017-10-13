@@ -18,6 +18,7 @@ dependencies:
     - node.type.event
   module:
     - datetime_range
+    - empty_fields
     - text
     - user
 id: node.event.schedule
@@ -31,10 +32,13 @@ content:
     region: content
     label: hidden
     settings:
-      timezone_override: ''
+      timezone_override: America/Los_Angeles
       format_type: time_only
       separator: '-'
-    third_party_settings: {  }
+    third_party_settings:
+      empty_fields:
+        handler: ''
+        empty_text: ''
   field_event_description:
     weight: 3
     label: hidden
