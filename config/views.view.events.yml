@@ -10,7 +10,7 @@ dependencies:
   content:
     - 'taxonomy_term:event_type:b76b00fd-af9d-4b2f-803e-5b7d565ba0cb'
   module:
-    - datetime_range
+    - daterange_compact
     - node
     - taxonomy
     - user
@@ -85,7 +85,7 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
+            alter_text: false
             text: '{{ field_event_date_and_time__value | date(''U'') | format_date(''full_day_with_month_and_date'') }}'
             make_link: false
             path: ''
@@ -124,11 +124,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: daterange_default
+          type: daterange_compact
           settings:
-            timezone_override: ''
-            format_type: medium
-            separator: '-'
+            format_type: start_date_only_full_day_full_month_day_number
           group_column: value
           group_columns: {  }
           group_rows: true
