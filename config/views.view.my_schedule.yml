@@ -10,7 +10,7 @@ dependencies:
   module:
     - badcamp_content
     - better_exposed_filters
-    - datetime_range
+    - daterange_compact
     - eva
     - flag
     - node
@@ -539,8 +539,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: '{{ field_event_date_and_time__value | date(''U'') | format_date(''full_day_with_month_and_date'') }}'
+            alter_text: false
+            text: '{{ field_event_date_and_time__value | date(''l, F j, Y Z'') }}'
             make_link: false
             path: ''
             absolute: false
@@ -578,11 +578,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: daterange_default
+          type: daterange_compact
           settings:
-            timezone_override: ''
-            format_type: full_day_with_month_and_date
-            separator: '-'
+            format_type: start_date_only_full_day_full_month_day_number
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -887,7 +885,7 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
+            alter_text: false
             text: '{{ field_event_date_and_time__value | date(''U'') | format_date(''full_day_with_month_and_date'') }}'
             make_link: false
             path: ''
@@ -926,11 +924,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: daterange_default
+          type: daterange_compact
           settings:
-            timezone_override: ''
-            format_type: full_day_with_month_and_date
-            separator: '-'
+            format_type: start_date_only_full_day_full_month_day_number
           group_column: value
           group_columns: {  }
           group_rows: true

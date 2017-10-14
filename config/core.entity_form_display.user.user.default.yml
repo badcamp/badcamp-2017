@@ -70,14 +70,14 @@ content:
     type: string_textfield
     region: content
   field_hearing_sponsors:
-    weight: 15
+    weight: 14
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_interested_drupal_jobs:
-    weight: 14
+    weight: 13
     settings:
       display_label: true
     third_party_settings: {  }
@@ -101,7 +101,7 @@ content:
     type: string_textfield
     region: content
   field_make_my_schedule_public:
-    weight: 16
+    weight: 15
     settings:
       display_label: true
     third_party_settings: {  }
@@ -144,7 +144,7 @@ content:
     type: social_media_links_field_default
     region: content
   field_sponsor:
-    weight: 17
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
@@ -157,15 +157,9 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_volunteer:
-    weight: 13
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
-    region: content
 hidden:
   contact: true
+  field_volunteer: true
   language: true
   path: true
   timezone: true

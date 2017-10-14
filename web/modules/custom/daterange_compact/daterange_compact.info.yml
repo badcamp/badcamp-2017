@@ -1,0 +1,12 @@
+name: 'Compact Date Range Formatter'
+type: module
+description: 'Provides a compact formatter for date range fields.'
+# core: 8.x
+dependencies:
+  - drupal:datetime_range
+
+# Information added by Drupal.org packaging script on 2017-06-12
+version: '8.x-1.x-dev'
+core: '8.x'
+project: 'daterange_compact'
+datestamp: 1497304144
