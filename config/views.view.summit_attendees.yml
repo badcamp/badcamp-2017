@@ -798,9 +798,9 @@ display:
           validate_options:
             bundles:
               event: event
-            operation: view
+            access: true
+            operation: update
             multiple: 0
-            access: false
           break_phrase: false
           not: false
           entity_type: node
