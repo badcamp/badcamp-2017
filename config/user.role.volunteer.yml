@@ -1,0 +1,25 @@
+uuid: aefb3f8f-573e-4659-bb20-384fe2a8080c
+langcode: en
+status: true
+dependencies: {  }
+id: volunteer
+label: Volunteer
+weight: 4
+is_admin: null
+permissions:
+  - 'create field_checked_in'
+  - 'create users'
+  - 'edit field_checked_in'
+  - 'edit own field_checked_in'
+  - 'edit users with role authenticated'
+  - 'edit users with role sponsor'
+  - 'edit users with role trainer'
+  - 'edit users with role v'
+  - 'flag checked_in'
+  - 'flag checked_in other user accounts'
+  - 'flag checked_in own user account'
+  - 'unflag checked_in'
+  - 'unflag checked_in other user accounts'
+  - 'unflag checked_in own user account'
+  - 'view field_checked_in'
+  - 'view own field_checked_in'

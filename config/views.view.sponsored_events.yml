@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.schedule
     - field.storage.node.field_event_date_and_time
   module:
+    - datetime
     - datetime_range
     - eva
     - node
@@ -156,7 +157,11 @@ display:
           group_type: group
           admin_label: ''
           operator: 'not empty'
-          value: ''
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
           group: 1
           exposed: false
           expose:
@@ -183,7 +188,8 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
+          plugin_id: datetime
+          entity_type: node
       sorts:
         field_event_date_and_time_value:
           id: field_event_date_and_time_value
@@ -196,7 +202,8 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          plugin_id: datetime
+          entity_type: node
       header: {  }
       footer: {  }
       empty: {  }

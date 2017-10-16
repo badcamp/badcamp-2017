@@ -9,6 +9,7 @@ dependencies:
   content:
     - 'taxonomy_term:event_type:8cd48d0e-f904-4849-81a9-ca565c562e0b'
   module:
+    - datetime
     - node
     - taxonomy
     - user
@@ -192,7 +193,8 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          plugin_id: datetime
+          entity_type: node
         title:
           id: title
           table: node_field_data

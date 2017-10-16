@@ -11,6 +11,7 @@ dependencies:
     - badcamp_content
     - better_exposed_filters
     - daterange_compact
+    - datetime
     - eva
     - flag
     - node
@@ -237,7 +238,8 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          plugin_id: datetime
+          entity_type: node
         field_event_date_and_time_end_value:
           id: field_event_date_and_time_end_value
           table: node__field_event_date_and_time
@@ -249,7 +251,8 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          plugin_id: datetime
+          entity_type: node
         title:
           id: title
           table: node_field_data
@@ -393,7 +396,11 @@ display:
           group_type: group
           admin_label: ''
           operator: 'not empty'
-          value: ''
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
           group: 1
           exposed: false
           expose:
@@ -420,7 +427,8 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
+          plugin_id: datetime
+          entity_type: node
         field_event_date_and_time_value_1:
           id: field_event_date_and_time_value_1
           table: node__field_event_date_and_time
@@ -429,7 +437,11 @@ display:
           group_type: group
           admin_label: ''
           operator: '='
-          value: ''
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
           group: 1
           exposed: true
           expose:
@@ -476,7 +488,8 @@ display:
                 title: Sat
                 operator: starts
                 value: '2017-10-21'
-          plugin_id: string
+          plugin_id: datetime
+          entity_type: node
         field_session_track_target_id:
           id: field_session_track_target_id
           table: node__field_session_track
@@ -728,7 +741,11 @@ display:
           group_type: group
           admin_label: ''
           operator: 'not empty'
-          value: ''
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
           group: 1
           exposed: false
           expose:
@@ -755,7 +772,8 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
+          plugin_id: datetime
+          entity_type: node
         field_event_date_and_time_value_1:
           id: field_event_date_and_time_value_1
           table: node__field_event_date_and_time
@@ -764,7 +782,11 @@ display:
           group_type: group
           admin_label: ''
           operator: '='
-          value: ''
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
           group: 1
           exposed: true
           expose:
@@ -811,7 +833,8 @@ display:
                 title: Sat
                 operator: starts
                 value: '2017-10-21'
-          plugin_id: string
+          plugin_id: datetime
+          entity_type: node
         field_session_track_target_id:
           id: field_session_track_target_id
           table: node__field_session_track

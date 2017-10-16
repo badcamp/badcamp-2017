@@ -1,0 +1,22 @@
+uuid: f093f25c-c077-4bbe-9e5f-a4ce5f5c5207
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - user
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: user.field_checked_in
+field_name: field_checked_in
+entity_type: user
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
