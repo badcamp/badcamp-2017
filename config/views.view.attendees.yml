@@ -14,7 +14,7 @@ dependencies:
     - image.style.attendees_profile_photo
     - node.type.badcamp_sponsor
     - user.role.administrator
-    - user.role.v
+    - user.role.volunteer
   module:
     - eva
     - file
