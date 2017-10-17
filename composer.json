@@ -64,7 +64,10 @@
     "drupal/masquerade": "^2.0@beta",
     "drupal/libraries": "3.x-dev",
     "drupal/me_redirect": "^1.0@beta",
-    "drupal/owlcarousel": "^1.0@alpha"
+    "drupal/owlcarousel": "^1.0@alpha",
+    "drupal/administerusersbyrole": "^2.0@alpha",
+    "drupal/login_destination": "1.x-dev",
+    "drupal/simple_pass_reset": "^1.0"
   },
   "require-dev": {
     "mikey179/vfsstream": "^1.2",

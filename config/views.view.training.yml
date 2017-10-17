@@ -7,6 +7,7 @@ dependencies:
     - field.storage.node.field_event_date_and_time
     - node.type.training
   module:
+    - datetime
     - datetime_range
     - node
     - user
@@ -222,7 +223,8 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          plugin_id: datetime
+          entity_type: node
         title:
           id: title
           table: node_field_data
@@ -260,6 +262,7 @@ display:
         - 'config:core.entity_view_display.node.badcamp_sponsor.image_only'
         - 'config:core.entity_view_display.node.badcamp_sponsor.teaser'
         - 'config:core.entity_view_display.node.blog.default'
+        - 'config:core.entity_view_display.node.blog.news_view'
         - 'config:core.entity_view_display.node.blog.teaser'
         - 'config:core.entity_view_display.node.event.default'
         - 'config:core.entity_view_display.node.event.schedule'
@@ -307,6 +310,7 @@ display:
         - 'config:core.entity_view_display.node.badcamp_sponsor.image_only'
         - 'config:core.entity_view_display.node.badcamp_sponsor.teaser'
         - 'config:core.entity_view_display.node.blog.default'
+        - 'config:core.entity_view_display.node.blog.news_view'
         - 'config:core.entity_view_display.node.blog.teaser'
         - 'config:core.entity_view_display.node.event.default'
         - 'config:core.entity_view_display.node.event.schedule'

@@ -11,6 +11,7 @@ dependencies:
     - 'taxonomy_term:event_type:b76b00fd-af9d-4b2f-803e-5b7d565ba0cb'
   module:
     - daterange_compact
+    - datetime
     - node
     - taxonomy
     - user
@@ -167,7 +168,11 @@ display:
           group_type: group
           admin_label: ''
           operator: 'not empty'
-          value: ''
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
           group: 1
           exposed: false
           expose:
@@ -194,7 +199,8 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
+          plugin_id: datetime
+          entity_type: node
         field_event_type_target_id:
           id: field_event_type_target_id
           table: node__field_event_type
@@ -251,7 +257,8 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          plugin_id: datetime
+          entity_type: node
       header: {  }
       footer: {  }
       empty: {  }

@@ -8,6 +8,7 @@ dependencies:
     - node.type.session
     - node.type.venue
   module:
+    - datetime
     - datetime_range
     - eva
     - node
@@ -372,7 +373,8 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          plugin_id: datetime
+          entity_type: node
         field_event_date_and_time_end_value:
           id: field_event_date_and_time_end_value
           table: node__field_event_date_and_time
@@ -384,7 +386,8 @@ display:
           exposed: false
           expose:
             label: ''
-          plugin_id: standard
+          plugin_id: datetime
+          entity_type: node
       header: {  }
       footer: {  }
       empty: {  }
@@ -463,16 +466,26 @@ display:
         - 'config:core.entity_view_display.node.badcamp_sponsor.image_only'
         - 'config:core.entity_view_display.node.badcamp_sponsor.teaser'
         - 'config:core.entity_view_display.node.blog.default'
+        - 'config:core.entity_view_display.node.blog.news_view'
         - 'config:core.entity_view_display.node.blog.teaser'
         - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.schedule'
+        - 'config:core.entity_view_display.node.event.summit'
         - 'config:core.entity_view_display.node.event.teaser'
+        - 'config:core.entity_view_display.node.job_posting.default'
+        - 'config:core.entity_view_display.node.job_posting.full'
+        - 'config:core.entity_view_display.node.job_posting.sponsor'
+        - 'config:core.entity_view_display.node.job_posting.teaser'
         - 'config:core.entity_view_display.node.page.default'
         - 'config:core.entity_view_display.node.page.teaser'
         - 'config:core.entity_view_display.node.program_details.default'
         - 'config:core.entity_view_display.node.program_details.teaser'
         - 'config:core.entity_view_display.node.session.default'
+        - 'config:core.entity_view_display.node.session.full'
+        - 'config:core.entity_view_display.node.session.schedule'
         - 'config:core.entity_view_display.node.session.teaser'
         - 'config:core.entity_view_display.node.training.default'
+        - 'config:core.entity_view_display.node.training.schedule'
         - 'config:core.entity_view_display.node.training.teaser'
         - 'config:core.entity_view_display.node.venue.default'
         - 'config:core.entity_view_display.node.venue.teaser'
@@ -504,16 +517,26 @@ display:
         - 'config:core.entity_view_display.node.badcamp_sponsor.image_only'
         - 'config:core.entity_view_display.node.badcamp_sponsor.teaser'
         - 'config:core.entity_view_display.node.blog.default'
+        - 'config:core.entity_view_display.node.blog.news_view'
         - 'config:core.entity_view_display.node.blog.teaser'
         - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.schedule'
+        - 'config:core.entity_view_display.node.event.summit'
         - 'config:core.entity_view_display.node.event.teaser'
+        - 'config:core.entity_view_display.node.job_posting.default'
+        - 'config:core.entity_view_display.node.job_posting.full'
+        - 'config:core.entity_view_display.node.job_posting.sponsor'
+        - 'config:core.entity_view_display.node.job_posting.teaser'
         - 'config:core.entity_view_display.node.page.default'
         - 'config:core.entity_view_display.node.page.teaser'
         - 'config:core.entity_view_display.node.program_details.default'
         - 'config:core.entity_view_display.node.program_details.teaser'
         - 'config:core.entity_view_display.node.session.default'
+        - 'config:core.entity_view_display.node.session.full'
+        - 'config:core.entity_view_display.node.session.schedule'
         - 'config:core.entity_view_display.node.session.teaser'
         - 'config:core.entity_view_display.node.training.default'
+        - 'config:core.entity_view_display.node.training.schedule'
         - 'config:core.entity_view_display.node.training.teaser'
         - 'config:core.entity_view_display.node.venue.default'
         - 'config:core.entity_view_display.node.venue.teaser'

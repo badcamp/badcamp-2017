@@ -1,0 +1,24 @@
+uuid: f1842192-90c0-41a8-99aa-52969b1efb8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_checked_in
+  module:
+    - user
+id: user.user.field_checked_in
+field_name: field_checked_in
+entity_type: user
+bundle: user
+label: 'Checked In'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

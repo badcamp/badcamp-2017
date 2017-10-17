@@ -1,0 +1,15 @@
+uuid: 664d82e1-d817-437c-8047-ce3caeec2df5
+langcode: en
+status: true
+dependencies: {  }
+name: volunteer_login
+label: 'Volunteer Login'
+triggers:
+  login: login
+destination_path: 'internal:/admin/reports/attendee-list'
+pages_type: 0
+pages: ''
+roles:
+  v: v
+weight: -10
+enabled: true

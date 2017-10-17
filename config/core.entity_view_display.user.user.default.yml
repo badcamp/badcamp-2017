@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_bio
+    - field.field.user.user.field_checked_in
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_featured
     - field.field.user.user.field_first_name
@@ -38,6 +39,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
+  field_checked_in:
+    weight: 11
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   field_drupal_org_username:
     type: string

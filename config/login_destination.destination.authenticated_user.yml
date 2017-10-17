@@ -1,0 +1,15 @@
+uuid: a09491c7-41f2-495e-a1b9-725a1ea1f3db
+langcode: en
+status: true
+dependencies: {  }
+name: authenticated_user
+label: 'Authenticated User'
+triggers:
+  login: login
+destination_path: 'internal:/schedule'
+pages_type: 0
+pages: ''
+roles:
+  authenticated: authenticated
+weight: -9
+enabled: true

@@ -1,0 +1,14 @@
+uuid: 91523c85-e6a9-46ef-b1c3-0363e8c3f014
+langcode: en
+status: true
+dependencies: {  }
+name: logout
+label: Logout
+triggers:
+  logout: logout
+destination_path: 'internal:/'
+pages_type: 0
+pages: ''
+roles: {  }
+weight: 0
+enabled: true
