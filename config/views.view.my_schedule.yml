@@ -470,24 +470,44 @@ display:
             group_items:
               1:
                 title: All
-                operator: starts
-                value: 2017-10-
+                operator: between
+                value:
+                  type: date
+                  value: ''
+                  min: '2017-10-18 00:00:00'
+                  max: '2017-10-21 23:59:59'
               2:
                 title: Wed
-                operator: starts
-                value: '2017-10-18'
+                operator: between
+                value:
+                  type: date
+                  value: ''
+                  min: '2017-10-18 00:00:00'
+                  max: '2017-10-18 23:59:59'
               3:
                 title: Thurs
-                operator: starts
-                value: '2017-10-19'
+                operator: between
+                value:
+                  type: date
+                  value: ''
+                  min: '2017-10-19 00:00:00'
+                  max: '2017-10-19 23:59:59'
               4:
                 title: Fri
-                operator: starts
-                value: '2017-10-20'
+                operator: between
+                value:
+                  type: date
+                  value: ''
+                  min: '2017-10-20 00:00:00'
+                  max: '2017-10-20 23:59:59'
               5:
                 title: Sat
-                operator: starts
-                value: '2017-10-21'
+                operator: between
+                value:
+                  type: date
+                  value: ''
+                  min: '2017-10-21 00:00:00'
+                  max: '2017-10-21 23:59:59'
           plugin_id: datetime
           entity_type: node
         field_session_track_target_id:
