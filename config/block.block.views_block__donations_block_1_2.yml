@@ -1,0 +1,40 @@
+uuid: 9b25fb99-85b6-41cb-b2fa-72edc5c82eb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.donations
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - seven
+id: views_block__donations_block_1_2
+theme: seven
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:donations-block_1'
+settings:
+  id: 'views_block:donations-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+      volunteer: volunteer
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }

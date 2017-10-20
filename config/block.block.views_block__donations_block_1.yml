@@ -1,0 +1,31 @@
+uuid: 13356e1d-54fc-47f4-9da2-da85c95a06fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.donations
+  module:
+    - system
+    - views
+  theme:
+    - badcamp2017
+id: views_block__donations_block_1
+theme: badcamp2017
+region: content
+weight: -14
+provider: null
+plugin: 'views_block:donations-block_1'
+settings:
+  id: 'views_block:donations-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }
