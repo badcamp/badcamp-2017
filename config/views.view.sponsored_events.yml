@@ -6,8 +6,7 @@ dependencies:
     - core.entity_view_mode.node.schedule
     - field.storage.node.field_event_date_and_time
   module:
-    - datetime
-    - datetime_range
+    - daterange_compact
     - eva
     - node
     - user
@@ -31,7 +30,7 @@ display:
         options:
           perm: 'access content'
       cache:
-        type: tag
+        type: none
         options: {  }
       query:
         type: views_query
@@ -82,7 +81,7 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
+            alter_text: false
             text: '{{ field_event_date_and_time__value | date(''U'') | format_date(''full_day_with_month_and_date'') }}'
             make_link: false
             path: ''
@@ -121,11 +120,9 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: daterange_default
+          type: daterange_compact
           settings:
-            timezone_override: ''
-            format_type: medium
-            separator: '-'
+            format_type: start_date_only_full_day_full_month_day_number
           group_column: value
           group_columns: {  }
           group_rows: true
