@@ -142,7 +142,8 @@
     "patches": {
       "drupal/core": {
         "Issue: 2409059": "https://gist.githubusercontent.com/sean-e-dietrich/baf6d4039abbff086398c55da812f657/raw/ef1c8f700a061d9ddd8eb4bb591d409e35dc556c/core-new_textarea_typedata-2409059-37-8.0.patch",
-        "See Email": "https://www.drupal.org/files/issues/role_based_email_access-2799049-2.patch"
+        "See Email": "https://www.drupal.org/files/issues/role_based_email_access-2799049-2.patch",
+        "Date Between Views": "https://www.drupal.org/files/issues/improve_the_views_integration_for_daterange_fields-2786577-60.patch"
       },
       "drupal/default_content": {
         "Allow manual imports": "https://www.drupal.org/files/issues/allow_manual_imports-2640734-67.patch",

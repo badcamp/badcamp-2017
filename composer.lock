@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "04eb71c558bdc2fb0b3ddd1af67d6871",
+    "content-hash": "d5c9d428f9e376a3b12c8383f0978307",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2658,7 +2658,8 @@
             "extra": {
                 "patches_applied": {
                     "Issue: 2409059": "https://gist.githubusercontent.com/sean-e-dietrich/baf6d4039abbff086398c55da812f657/raw/ef1c8f700a061d9ddd8eb4bb591d409e35dc556c/core-new_textarea_typedata-2409059-37-8.0.patch",
-                    "See Email": "https://www.drupal.org/files/issues/role_based_email_access-2799049-2.patch"
+                    "See Email": "https://www.drupal.org/files/issues/role_based_email_access-2799049-2.patch",
+                    "Date Between Views": "https://www.drupal.org/files/issues/improve_the_views_integration_for_daterange_fields-2786577-60.patch"
                 }
             },
             "autoload": {
