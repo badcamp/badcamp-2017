@@ -13,6 +13,7 @@ dependencies:
     - field.storage.user.field_title
     - image.style.attendees_profile_photo
     - node.type.badcamp_sponsor
+    - system.menu.main
     - user.role.administrator
     - user.role.volunteer
   module:
@@ -1269,7 +1270,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '='
+          operator: contains
           value: ''
           group: 1
           exposed: true
@@ -1286,7 +1287,10 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              sponsor: '0'
               administrator: '0'
+              trainer: '0'
+              volunteer: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -1307,7 +1311,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '='
+          operator: contains
           value: ''
           group: 1
           exposed: true
@@ -1324,7 +1328,10 @@ display:
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              sponsor: '0'
               administrator: '0'
+              trainer: '0'
+              volunteer: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -1512,7 +1519,7 @@ display:
         options:
           role:
             administrator: administrator
-            v: v
+            volunteer: volunteer
       sorts:
         field_last_name_value:
           id: field_last_name_value
@@ -1572,6 +1579,15 @@ display:
           tokenize: false
           content: '<a href="/admin/people/create" class="button large">Add a new user</a>'
           plugin_id: text_custom
+      menu:
+        type: normal
+        title: 'Check in attendees'
+        description: ''
+        expanded: false
+        parent: ''
+        weight: -40000
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: 0
       contexts:
