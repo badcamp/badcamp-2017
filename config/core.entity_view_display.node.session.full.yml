@@ -68,10 +68,10 @@ content:
     region: content
   field_session_files:
     weight: 7
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
-    type: file_table
+    type: file_default
     region: content
   field_session_skill_level:
     weight: 3
